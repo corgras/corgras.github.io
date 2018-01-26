@@ -1,0 +1,253 @@
+@charset "UTF-8";
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(//fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+@import url(//fonts.googleapis.com/css?family=Oswald:300,400,700);
+@import url(//fonts.googleapis.com/css?family=Roboto+Mono);
+
+/*==========================================================
+						NORMALIZE
+==========================================================*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:top;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block;}
+
+ol, ul{list-style:none;}
+blockquote, q{quotes:none;}
+blockquote:before, blockquote:after, q:before, q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+button, input[type='button']{background:none;border:none;display:inline-block;padding:0;outline:none;outline-offset:0;cursor:pointer;-webkit-appearance: none;}
+button::-moz-focus-inner, input[type='button']::-moz-focus-inner{border:none;padding:0;}
+
+
+
+/* * Globals */
+html {
+  height: 100%;
+  background-color: #151515;
+
+  }
+
+
+body{
+	font:400 14px/26px "Roboto", sans-serif;
+	-webkit-text-size-adjust:none;
+	height: 100%;
+	background-color: #151515;
+    background-image: url("/images/bg.jpg");
+    background-position: center center;
+    background-size: cover;
+	color: #333;
+	text-align: center;
+}
+img{
+	max-width:100%;
+	height:auto;
+}
+h1, h2, h3, h4, h5, h6{color:#fff;}
+h1{
+	font-size:36px;
+	line-height:1.5;
+	font-weight:500;
+}
+h2{
+	font-size:36px;
+	line-height:1.37;
+	color:#05519D;
+	margin-top:60px;
+	margin-bottom:20px;
+}
+h3{
+	color:#05519D;
+	font-size:28px;
+	line-height:1.47;
+	margin-top:60px;
+	margin-bottom:20px;
+}
+h4{
+	font-size:24px;
+	line-height:1.66;
+	margin-top:45px;
+	margin-bottom:20px;
+}
+h5{
+	font-size:20px;
+	line-height:1.7;
+	margin-top:40px;
+	margin-bottom:20px;
+}
+h6{
+	font-size:16px;
+	line-height:1.5;
+	margin-top:30px;
+	margin-bottom:20px;
+}
+p{
+	margin-top:20px;
+	margin-bottom:20px;
+}
+ul, ol{
+	margin-top:10px;
+	margin-bottom:20px;
+}
+ul figure:last-child, ol figure:last-child{margin-bottom:45px;}
+article{padding-top:40px;}
+article a{
+	color:#1d88de;
+    text-decoration:underline;
+}
+article a:hover{text-decoration:none;}
+figure{
+	margin-top:20px;
+	margin-bottom:40px;
+}
+em{
+	font-weight:400;
+	color:#000000;
+	font-style:italic;
+}
+a{
+	font:inherit;
+	color:inherit;
+	text-decoration:none;
+	-moz-transition:0.3s;
+	-o-transition:0.3s;
+	-webkit-transition:0.3s;
+	transition:0.3s;
+}
+a:focus{outline:none;}
+a:active{background-color:transparent;}
+a[href^="tel:"], a[href^="callto:"]{color:inherit;text-decoration:none;}
+
+/* Custom default button */
+.btn-default {
+  color: #333;
+  text-shadow: none;
+  /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 1px solid #333; }
+  .btn-default:hover, .btn-default:focus {
+    color: #333;
+    text-shadow: none;
+    /* Prevent inheritance from `body` */
+    background-color: #fff;
+    border: 1px solid #333; }
+
+
+  .section+.section{padding:5% 0;}
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+  /* For at least Firefox */
+  min-height: 100%;}
+
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top; }
+
+.cover-container {
+  margin-right: auto;
+  margin-left: auto; }
+
+/* Padding for spacing */
+.inner {
+  padding: 30px; }
+
+/*
+ * Header */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.masthead-nav > li {
+  display: inline-block; }
+  .masthead-nav > li + li {
+    margin-left: 20px; }
+  .masthead-nav > li > a {
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    /* IE8 proofing */
+    color: rgba(3, 3, 3, 0.75);
+    border-bottom: 2px solid transparent; }
+    .masthead-nav > li > a:hover, .masthead-nav > li > a:focus {
+      background-color: transparent;
+      border-bottom-color: #a9a9a9;
+      border-bottom-color: rgba(3, 3, 3, 0.25); }
+
+.masthead-nav > .active > a {
+  color: #333;
+  border-bottom-color: #333; }
+  .masthead-nav > .active > a:hover, .masthead-nav > .active > a:focus {
+    color: #333;
+    border-bottom-color: #333; }
+
+/*
+ * Cover */
+.cover {
+  padding: 0 20px; }
+  .cover .btn-lg {
+    padding: 10px 20px;
+    font-weight: bold; }
+
+/*
+ * Footer */
+.mastfoot {
+  color: #999;
+  /* IE8 proofing */
+  color: rgba(3, 3, 3, 0.5); }
+
+@media (min-width: 768px) {
+  .mastfoot {
+    position: fixed;
+    bottom: 0; }
+  .site-wrapper-inner {
+    vertical-align: middle; }
+  .masthead, .mastfoot, .cover-container {
+    width: 100%;
+ } }
+
+@media (min-width: 992px) {
+   .mastfoot, .cover-container {
+    width: 700px; } }
+
+
+
+#menu {
+    height: 60px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 70;
+    text-align: right;
+    background: #fff;
+}
+ 
+#menu li {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    color: #000;
+    display: inline-block;
+    margin: 10px;
+}
+ 
+/*Стиль ссылки когда активен соответствующий блок*/
+#menu li a, #menu li.active a {
+    display: block;
+    padding: 9px 18px;
+    text-decoration: none;
+    color:#ccc;
+}
+ 
+/*Стиль элемента списка когда активен соответствующий блок*/
+#menu li.active {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.block2{background:#fff;}
