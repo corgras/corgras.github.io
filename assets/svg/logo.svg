@@ -1,7 +1,6 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 365 315" style="enable-background:new 0 0 365 315;" xml:space="preserve">
 <style type="text/css">
-
 	.st1{fill-rule:evenodd;clip-rule:evenodd;}
 	.st2{fill-rule:evenodd;clip-rule:evenodd;}
 	.st3{fill-rule:evenodd;clip-rule:evenodd;}
@@ -19,38 +18,8 @@
 	.st15{stroke:#1C5A98;stroke-miterlimit:10;}
 	.st16{fill:none;stroke:#fff;stroke-miterlimit:0;}
 </style>
-
-
-
-
-
-
-
-
 <defs>
 	<style>
-		.st1,.st3,.st5,.st7{
-			-webkit-animation: opac 2s linear forwards;
-			-o-animation: opac 2s linear forwards;
-			-moz-animation: opac 2s linear forwards;
-			animation: opac 2s linear forwards;
-			-webkit-animation-delay: 2s;
-			-moz-animation-delay: 2s;
-			-o-animation-delay: 2s;
-			animation-delay: 2s;opacity:0
-		}
-		
-		.st2,.st6{
-			-webkit-animation: opac 2s linear forwards;
-			-o-animation: opac 2s linear forwards;
-			-moz-animation: opac 2s linear forwards;
-			animation: opac 2s linear forwards;
-			-webkit-animation-delay: 3s;
-			-moz-animation-delay: 3s;
-			-o-animation-delay: 3s;
-			animation-delay: 3s;opacity:0
-		}
-		
 		.st1{
 			fill:url(#SVGID_1_);
 		}
@@ -68,40 +37,6 @@
 		}
 		.st7{
 			fill:url(#SVGID_6_);
-		}
-		
-		
-		
-		@-webkit-keyframes opac{
-			from{
-				opacity:0
-			}
-			to{
-				opacity:1
-			}
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		.st9,.st10,.st11,.st12,.st13,.st14,.st15{
-			-webkit-animation: opacc 2s linear forwards;
-			-o-animation: opacc 2s linear forwards;
-			-moz-animation: opacc 2s linear forwards;
-			animation: opacc 2s linear forwards;
-			-webkit-animation-delay: 2s;
-			-moz-animation-delay: 2s;
-			-o-animation-delay: 2s;
-			animation-delay: 2s;opacity:0
 		}
 		.st9{
 			fill:url(#SVGID_7_);
@@ -123,96 +58,9 @@
 		}
 		.st15{
 			fill:url(#SVGID_13_);
-		}
-		
-		
-		
-		@-webkit-keyframes opacc{
-			from{
-				opacity:0
-			}
-			to{
-				opacity:1
-			}
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		.st4,.st8{
-			stroke-dasharray:2000;
-			stroke-dashoffset:0;
-			-webkit-animation: dash 7s linear forwards;
-			-o-animation: dash 7s linear forwards;
-			-moz-animation: dash 7s linear forwards;
-			animation: dash 7s linear forwards;
-			
-		}
-		@-webkit-keyframes dash{
-			0%{
-				stroke-dashoffset:2000;
-			}
-			50%{
-				stroke-dashoffset:0;
-			}
-			100%{
-				opacity:0;
-			}
-		}
-		
-		@keyframes chevronAnimation {
-		0%, 100% {
-			transform: translate(0px, 0px) scale(1, 1);
-		}
-		50% {
-			transform: translate(0px, 5px) scale(0.8, 0.8);
-		}
-		}
-		@keyframes chevronAnimation {
-		0%, 100% {
-			transform: translate(0px, 0px) scale(1, 1);
-		}
-		50% {
-			transform: translate(0px, 5px) scale(0.8, 0.8);
-		}
-		}
-		@keyframes chevronAnimation {
-		0%, 100% {
-			transform: translate(0px, 0px) scale(1, 1);
-		}
-		50% {
-			transform: translate(0px, 5px) scale(0.8, 0.8);
-		}
-		}
+		}	
 	</style>
 </defs>
-
-
-
-
-
-
-
-
-
-
-
 <g id="градиент_1_">
 	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="31.2206" y1="15.2095" x2="187.0838" y2="150.6993">
 		<stop  offset="0" style="stop-color:#fff"/>
