@@ -59,10 +59,10 @@
 					<i class="fa fa-copyright" aria-hidden="true"></i>
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-					<p class="copyright">Developed by the Studio <a href="">«CORGRAS»</a> 2017</p>
+					<p class="copyright">Developed by the Studio «CORGRAS» 2017</p>
 				</div>
 			</div>
-			<p class="copyright-active">Developed by the Studio <a href="">«CORGRAS»</a> © 2017 </p>
+			<p class="copyright-active">Developed by the Studio «CORGRAS» © 2017 </p>
 		</div>
 	</nav>
 	<div id="content">
@@ -72,17 +72,7 @@
 					<section class="tab-pane active" id="home" >
 						<article class="description">
 							<h2>Introduction</h2>
-							<p>This modifier will allow you to respond to customer reviews. Also, the modifier will allow you to:</p>	
-							<ul>
-								<li>To leave the response to a reviews;</li>
-								<li>Quickly change the status of the revocation;</li>
-								<li>The notification message of the client about the response by mail;</li>
-								<li>Added field of e-mail, to notify clients;</li>
-								<li>To change date of adding of a response (for versions is lower 2.3.x);</li>
-								<li>Enable / disable moderating reviews;</li>
-								<li>Enable / disable mandatory e-mail filling;</li>
-								<li>WYSIWYG editor for editing reviews.</li>
-							</ul>
+							
 						</article>
 					</section>
 					<section class="tab-pane" id="version">
@@ -93,6 +83,10 @@
 							</div>
 							<div class="x_content">
 								<div class="row">
+									<div class="col-md-2"><div class="box-reliz">3.0.2.0</div></div>
+									<div class="col-md-2"><div class="box-reliz">3.0.1.2</div></div>
+									<div class="col-md-2"><div class="box-reliz">3.0.1.1</div></div>
+									<div class="col-md-2"><div class="box-reliz">3.0.0.0</div></div>
 									<div class="col-md-2"><div class="box-reliz">2.3.0.2</div></div>
 									<div class="col-md-2"><div class="box-reliz">2.3.0.1</div></div>
 									<div class="col-md-2"><div class="box-reliz">2.3.0.0</div></div>
@@ -137,50 +131,39 @@
 					<section class="tab-pane" id="install">
 						<article class="description">
 							<h2>Installation</h2>
-							<p>Installation of the modifier consists of two parts. In each folder <strong>«Opencart v2.x»</strong> you will find two folders: <strong>«Step-1-Administration»</strong> и <strong>«Step-2-Templates»</strong>.</p>
-							<ol>						
-								<li>In the folder <strong>«Step-1-Administration»</strong> is the archive <strong class="red">«extra_description_category_backend.ocmod.zip»</strong> which contains the main functional, localization and scripts.</li>
-								<li>In the folder <strong>«Step-2-Templates»</strong> Find a list of modifiers for your template. The list will gradually be replenished for popular templates.</li>
-							</ol>
-							<br>
-							<hr>				
-							<h3>Step 1</h3>
-							<ol>						
-								<li>In the admin panel, go to <strong class="blue">«Extensions > Extension Installer»</strong> and install the file <strong class="red">«extra_description_category_backend.ocmod.zip»</strong>;</li>
-								<li>After the message of the successful installation in the <strong class="blue">«Extensions > Modifications»</strong> and click on the blue <strong class="blue">«Refresh»</strong> button (top right corner) <a href="/images/rtr/admin_mod_en.jpg">See example</a>;</li>
-								<li>If the functionality does not appear, check the error log.</li>
-							</ol>
-							<p class="alert alert-danger alert-dismissible">In the archive is a SQL file. If the database prefix is different from the standard one <strong>«oc_»</strong>, then before the installation, extract the file <strong>«install.sql»</strong> and replace the prefix with a text editor <strong>«oc_»</strong> on your prefix, then upload the file back to the archive.</p>
-							<br>
-							<hr>
-							<h3>Step 2</h3>						
-							<p>Select the desired modifier from the folder <strong>«Step-2-Templates»</strong> and follow these steps:</p>
+							<h3>Основные настройки модуля</h3>
 							<ol>
-								<li>In the admin panel, go to <strong class="blue">«Extensions > Extension Installer»</strong> and install the file <strong class="red">«extra_description_category_frontend.ocmod.xml»</strong> for your template;</li>
-								<li>After the message of the successful installation in the <strong class="blue">«Extensions > Modifications»</strong> and click on the blue <strong class="blue">«Refresh»</strong> button (top right corner) <a href="/images/rtr/admin_mod_en.jpg">See example</a>;</li>
-								<li>If the functionality does not appear, check the error log.</li>
-							</ol>						
+								<li><strong>Заголовок</strong>- </li>
+								<li><strong>Вид блоков</strong>- </li>
+								<li><strong>Колонки</strong>- </li>
+								<li><strong>Ширина изображения</strong>- </li>
+								<li><strong>Высота изображения</strong>- </li>
+								<li><strong>Знаков в описании</strong>- </li>
+								<li><strong>Ссылка в изображении или иконки</strong>- </li>
+								<li><strong>Ссылка в заголовке</strong>- </li>
+								<li><strong>Ссылка в виде кнопки</strong>- </li>
+							</ol>
+							<h3>Настройки блоков модуля</h3>
+							<ol>
+								<li><strong>Выберите статью</strong>- </li>
+								<li><strong>Статус</strong>- </li>
+								<li><strong>Изображение</strong>- </li>
+								<li><strong>Class иконки</strong>- </li>
+								<li><strong>Сортировка</strong>- </li>
+								<li><strong>Заголовок статьи</strong>- </li>
+								<li><strong>Краткое описание статьи</strong>- </li>								
+							</ol>
 						</article>
 					</section>
 					<section class="tab-pane" id="setting">
 						<article class="description">
 							<h2>Settings</h2>
-							<p>For each category description, there are your settings to go to:
-							<strong class="blue">«Catalog > Categories > Your category»</strong> inside go to the <strong class="blue">«Design»</strong> tab, there you will find the settings:</p>
-							<ul>
-								<li><strong>Read more «Expand / Collapse»</strong> - Enable / disable separator;</li>
-								<li><strong>The height of the visible part of the text</strong> - The height of the block of the visible description. The value is specified in pixels;</li>
-								<li><strong>Hide description with 2+ pages</strong> - Shows the description only on the first page of the category;</li>
-								<li><strong>Button «Read more» (Mobile)</strong> - For phones and tablets, an additional description is hidden completely and only the <strong class="blue">«Show Description»</strong> button is shown.</li>
-							</ul>
-							<div class="box-img"><img src="/images/rtr/settings_admin_en.jpg"></div>
 						</article>
 					</section>
 					<section class="tab-pane" id="design">
 						<article class="description">
 							<h2>Design</h2>
-							<p>If the standard design does not fit into your website design, you can modify the CSS styles in the <strong class="blue">«readmore.css»</strong>, file that is located:<p>
-							<p class="alert alert-info">catalog \ view \ javascript \ jquery \ readmore \ readmore.css</p>
+							
 						</article>
 					</section>
 					<section class="tab-pane" id="language">
@@ -192,15 +175,15 @@
 							<hr>
 							<h3>Admin-panel:</h3> 
 							<ul>
-								<li>Copy the file <strong class="red">«extra_category_description.php»</strong> from the folder:<p class="alert alert-info">admin \ language \ russian \ catalog \ extra_category_description.php</p></li>
-								<li>Paste into the folder and then transfer the contents of the file:<p class="alert alert-info">admin \ language \ YOUR_LANGUAGE \ catalog \ extra_category_description.php</p></li>
+								<li>Copy the file <strong class="red">«information_blocks.php»</strong> from the folder:<p class="alert alert-info">admin \ language \ russian \ module \ information_blocks.php</p></li>
+								<li>Paste into the folder and then transfer the contents of the file:<p class="alert alert-info">admin \ language \ YOUR_LANGUAGE \ module \ information_blocks.php</p></li>
 							</ul>
 							<br>
 							<hr>
 							<h3>Store Front:</h3> 
 							<ul>
-								<li>Copy the file <strong class="red">«extra_category_description.php»</strong> from the folder: <p class="alert alert-info">catalog \ language \ russian \ product \ extra_category_description.php</p></li>
-								<li>Paste into the folder and then transfer the contents of the file:<p class="alert alert-info">catalog \ language \ YOUR_LANGUAGE \ product \ extra_category_description.php</p></li>
+								<li>Copy the file <strong class="red">«information_blocks.php»</strong> from the folder: <p class="alert alert-info">catalog \ language \ russian \ module \ information_blocks.php</p></li>
+								<li>Paste into the folder and then transfer the contents of the file:<p class="alert alert-info">catalog \ language \ YOUR_LANGUAGE \ module \ information_blocks.php</p></li>
 							</ul>
 						</article>
 					</section>
@@ -234,111 +217,8 @@
 								<li>
 									<div class="block">
 										<div class="tags">
-											<h5 class="title release">
-												<span class="version">v4.0</span><span class="date">01.05.2017</span>
-											</h5>
-											<p class="tag"><span>Latest release</span></p>
-										</div>
-										<div class="block_content">
-											<ul class="excerpt">
-												<li>Combining v3.1 and v3.2.1 into a single version;</li>
-												<li>Optimized code for working on assemblies Opencart / Opencart.pro / ocStore;</li>
-												<li>Works with version 2.0.1.0 and higher;</li>
-												<li>The modifier is divided into BackEnd and FrontEnd;</li>
-												<li>Language localization is made in a separate file;</li>
-												<li>Updated <a href="https://github.com/jedfoster/Readmore.js" title="Github plugin">Readmore.js to v2.2.0;</a></li>
-												<li>Template support XDS Coloring Theme v1.3.7.2 / v1.6.1;</li>
-												<li>Template support Journal Theme v2.7.6 - v2.9.5</li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="block">
-										<div class="tags">
 											<h5 class="title">
-												<span class="version">v3.2.1</span><span class="date">01.08.2016</span>
-											</h5>
-										</div>
-										<div class="block_content">
-											<ul class="excerpt">
-												<li>Bug fixes;</li>
-												<li>Added support 2.3.0.x;</li>
-												<li>Language localization is made in a separate file.</li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="block">
-										<div class="tags">
-											<h5 class="title">
-												<span class="version">v3.2</span><span class="date">15.05.2016</span>
-											</h5>
-										</div>
-										<div class="block_content">
-											<ul class="excerpt">
-												<li>For OpenCart 2.2.0.0</li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="block">
-										<div class="tags">
-											<h5 class="title">
-												<span class="version">v3.1</span><span class="date">01.06.2016</span>
-											</h5>
-										</div>
-										<div class="block_content">
-											<ul class="excerpt">
-												<li>Work in the modifier assembly Opencart.pro;</li>
-												<li>Work in the modifier assembly ocStore;</li>
-												<li>Separator «Expand/Collapse» for description and further description;​</li>
-												<li>Function hide descriptions and images in this category with 2+ pages;</li>
-												<li>Setting the delimiter «Expand/Collapse»;</li>
-												<li>Added a css and js;</li>
-												<li>Button «Show description» for a further description of the mobile version​;</li>
-												<li>Optimized code.</li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="block">
-										<div class="tags">
-											<h5 class="title">
-												<span class="version">v2.2</span><span class="date">07.03.2016</span>
-											</h5>
-										</div>
-										<div class="block_content">
-											<ul class="excerpt">
-												<li>For OpenCart 2.2.0.0</li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="block">
-										<div class="tags">
-											<h5 class="title">
-												<span class="version">v2.1</span><span class="date">25.02.2016</span>
-											</h5>
-										</div>
-										<div class="block_content">
-											<ul class="excerpt">
-												<li>Added: Button «Hide/Show description» mobile and table adaptation​;</li>
-												<li>Added: Function to hide the description of the category with 2+ pages;</li>
-												<li>Fixed minor bugs.</li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="block">
-										<div class="tags">
-											<h5 class="title">
-												<span class="version">v2.0</span><span class="date">19.02.2016</span>
+												<span class="version">v1.0</span><span class="date">10.12.2017</span>
 											</h5>
 										</div>
 										<div class="block_content">
@@ -353,50 +233,10 @@
 						<article class="description">
 							<h4 style="margin-top:0px;">Dear Clients!</h4><p>Before you write, please read the documentation.<br>If you still have questions left, then leave your request and the developer will contact you within 48 hours.</p>
 							<br>
-							<div class="formArea">
-								<form id="thirdForm" class="form" autocomplete="off">
-									<p class="formTitle"></p>
-									<p class="msgs"></p>
-									<fieldset class="form-fieldset ui-input __first">
-										<input name="uname" type="text" id="username" tabindex="0"/>
-										<label for="username">
-											<span data-text="Your name:">Your name:</span>
-										</label>
-									</fieldset>
-									<fieldset class="form-fieldset ui-input __second">
-										<input name="uemail" type="email" id="email" tabindex="0" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,5}$"/>
-										<label for="email">
-											<span data-text="Your e-mail:">Your e-mail:</span>
-										</label>
-									</fieldset>
-									<fieldset class="form-fieldset ui-input __third">
-										<input name="uorder" type="text" id="userorder" tabindex="0"/>
-										<label for="userorder">
-											<span data-text="№ Order number:">№ Order number:</span>
-										</label>
-									</fieldset>
-									<fieldset class="form-fieldset ui-input __fourth">
-										<input name="usubject" type="text" id="usersubject" tabindex="0"/>
-										<label for="usersubject">
-											<span data-text="Your subject:">Your subject:</span>
-										</label>
-									</fieldset>
-									<fieldset class="form-fieldset ui-input __five">
-										<textarea type="text" name="utext" class="form-control" id="usertext" ></textarea>
-										<label for="usertext">
-											<span data-text="Your message:">Your message:</span>
-										</label>
-									</fieldset>
-									<input name="formInfo" class="formInfo" type="hidden" value=""/>
-									<div class="form-footer">
-										<input type="submit" class="formBtn" value="Send an application" />
-									</div>
-								</form>
-							</div>
 							<noindex>
 								<div class="info-url">
-									<h4 class="">Additional contacts</h4>
-									<p>Also you can send your message to us on the mail or leave your message in the social network.</p>
+									<h4 class="">Contacts</h4>
+									<p>You can send your message to us on the mail or leave your message in the social network.</p>
 									<div class="row">
 										<div class="col-sm-4 text-center">
 <script type="text/javascript" language="JavaScript">
@@ -427,7 +267,6 @@ document.write('<a rel="nofollow" class="btn-contact" href="'+url+'">'+email2+'<
 <script src="/assets/js/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="/assets/js/bootstrap.min.js"></script>
-<script src="/assets/js/form_en.js"></script>
 <script src="/assets/js/stickUp.min.js"></script>
 <script src="/assets/js/script.js"></script>
 </body>
