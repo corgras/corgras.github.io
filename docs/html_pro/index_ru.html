@@ -161,14 +161,43 @@
 							<h3>Общие настройки</h3>							
 							<ul>	
 								<li><strong>Заголовок</strong> - текст над блоками</li>
-								<li><strong>Class / ID для родительского DIV-а</strong> - главный блок, который включает все последующие блоки.
-									<div class="m1"><div class="m-parent"></div></div>
-									
+								<li><strong>Class / ID для родительского DIV-а</strong> - родительский блок, который включает все блоки.
+									<div class="m1">
+									<div class="m-parent">
+										<div class="m-parent-child">
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+										</div>
+									</div>
+									</div>
 								</li>			
-								<li><strong>Class / ID для контейнера блоков</strong> - родительский контейнер для созданных блоков
+								<li><strong>Class / ID для контейнера блоков</strong> - контейнер который будет включать в себя колонки
 									<div class="m2">
 									<div class="m-parent">
-										<div class="m-parent-child"></div>
+										<div class="m-parent-child">
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+										</div>
 									</div>
 									</div>
 								</li>
@@ -185,18 +214,27 @@
 							</ul>
 							<h3>Настройки блоков Class / ID</h3>							
 							<ul>
-								<li><strong>Class / ID Родительский блок</strong> - 
+								<li><strong>Class / ID Родительский блок</strong> - для стилизации колонок
 									<div class="m3">
 									<div class="m-parent">
 										<div class="m-parent-child">
-											<div class="m-item"></div>
-											<div class="m-item"></div>
-											<div class="m-item"></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
 										</div>
 									</div>
 									</div>
 								</li>
-								<li><strong>Class / ID Дочерний блок</strong> - 
+								<li><strong>Class / ID Дочерний блок</strong> - дополнительный вложенный DIV
 									<div class="m4">
 									<div class="m-parent">
 										<div class="m-parent-child">
@@ -211,9 +249,18 @@
 									<div class="m5">
 									<div class="m-parent">
 										<div class="m-parent-child">
-											<div class="m-item"><div class="m-item-img"></div></div>
-											<div class="m-item"><div class="m-item-img"></div></div>
-											<div class="m-item"><div class="m-item-img"></div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
 										</div>
 									</div>
 									</div>
@@ -222,9 +269,18 @@
 									<div class="m6">
 									<div class="m-parent">
 										<div class="m-parent-child">
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text"></div></div>
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text"></div></div>
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text"></div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
 										</div>
 									</div>
 									</div>
@@ -240,7 +296,8 @@
 											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
 											<div class="m-item-h"></div>
 											<div class="m-item-t"></div>
-											</div></div><div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
 											<div class="m-item-h"></div>
 											<div class="m-item-t"></div>
 											</div></div>
