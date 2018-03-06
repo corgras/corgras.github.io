@@ -72,8 +72,16 @@
 					<section class="tab-pane active" id="home" >
 						<article class="description">
 							<h2>Introduction</h2>
-							<p>Expected</p>	
-							
+							<p>Html Pro allows the user to create a grid with an unlimited number of text blocks. The module is not tied to a specific CSS framework, thus making it possible to use any CSS framework, CSS grid or apply its CSS styles for design, just by assigning the desired CLASS and / or ID to the block.</p>
+							<ul>
+								<li>Display text blocks on the site;</li>
+								<li>Creating an unlimited number of blocks</li>
+								<li>Using icon fonts; </li>
+								<li>Not tied to the CSS framework (Bootstrap 3);</li>
+								<li>Multi-language;</li>
+								<li>Assign: image and / or icon;</li>
+								<li>Assign class and / or id.</li>
+							</ul>
 						</article>
 					</section>
 					<section class="tab-pane" id="version">
@@ -132,21 +140,198 @@
 					<section class="tab-pane" id="install">
 						<article class="description">
 							<h2>Installation</h2>
-							<p>Expected</p>	
-													
+							<ol>
+								<li>From the <strong>«upload»</strong> folder, copy the <strong>«admin»</strong> and <strong>«catalog»</strong> folders</li>
+								<li>In the admin panel, go to <strong class="blue">«System > User Groups»</strong> and set the access rights for the administrator (in the <strong>«Allow browsing»</strong> and <strong>«Allow to edit»</strong> tick the extension/module/html_pro);</li>
+								<li>In the module list <strong class="blue">«Extensions -> Modules»</strong> install the <strong>HTML Pro</strong> module;</li>
+								<li>In <strong class="blue">«Design -> Layout»</strong> select the store page and position the module in the desired position.</li>
+							</ol>
 						</article>
 					</section>
 					<section class="tab-pane" id="setting">
 						<article class="description">
 							<h2>Settings</h2>
-							<p>Expected</p>	
-							
+							<ul>
+								<li><strong>Module Name</strong> - name that will be displayed in the admin panel.</li>
+								<li><strong>Status</strong> - turn on / off the module.</li>
+							</ul>
+							<h3>General settings</h3>							
+							<ul>	
+								<li><strong>Title</strong> - text above the blocks</li>
+								<li><strong>Class / ID Parent DIV</strong> - a parent block that includes all blocks.
+									<div class="m1">
+									<div class="m-parent">
+										<div class="m-parent-child">
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+										</div>
+									</div>
+									</div>
+								</li>							
+								<li><strong>Class / ID container item</strong> - a container that will include columns
+									<div class="m2">
+									<div class="m-parent">
+										<div class="m-parent-child">
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+										</div>
+									</div>
+									</div>
+								</li>
+							</ul>
+							<h3>Item</h3>
+							<ul>							
+								<li><strong>Image</strong> - is an image assignment</li>
+								<li><strong>Class icon</strong> - Icon classes can be viewed on the FontAwesome website</li>
+								<li><strong>Status</strong> - show or hide an image or icon</li>
+								<li><strong>Title</strong> - block header</li>
+								<li><strong>Link</strong> - link in the header</li>
+								<li><strong>Description</strong> - block text</li>
+								<li><strong>Sort</strong> - assign order of blocks</li>	
+							</ul>
+							<h3>Setting Item Class / ID</h3>							
+							<ul>
+								<li><strong>Class / ID Parent item</strong> - to stylize the columns
+									<div class="m3">
+									<div class="m-parent">
+										<div class="m-parent-child">
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+										</div>
+									</div>
+									</div>
+								</li>
+								<li><strong>Class / ID Child block</strong> - additional embedded DIV
+									<div class="m4">
+									<div class="m-parent">
+										<div class="m-parent-child">
+											<div class="m-item"><div class="m-item-child"></div></div>
+											<div class="m-item"><div class="m-item-child"></div></div>
+											<div class="m-item"><div class="m-item-child"></div></div>
+										</div>
+									</div>
+									</div>
+								</li>
+								<li><strong>Class / ID Block for image or icon</strong>
+									<div class="m5">
+									<div class="m-parent">
+										<div class="m-parent-child">
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+										</div>
+									</div>
+									</div>
+								</li>
+								<li><strong>Class / ID Parent block for title and description</strong>
+									<div class="m6">
+									<div class="m-parent">
+										<div class="m-parent-child">
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+										</div>
+									</div>
+									</div>
+								</li>
+								<li><strong>Class / ID Block title</strong>
+									<div class="m7">
+									<div class="m-parent">
+										<div class="m-parent-child">
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+										</div>
+									</div>
+									</div>
+								</li>
+								<li><strong>Class / ID Block description</strong>
+									<div class="m8">
+									<div class="m-parent">
+										<div class="m-parent-child">
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
+											<div class="m-item-h"></div>
+											<div class="m-item-t"></div>
+											</div></div>
+										</div>
+									</div>
+									</div>
+								</li>
+							</ul>							
 						</article>
 					</section>
 					<section class="tab-pane" id="design">
 						<article class="description">
 							<h2>Design</h2>
-							<p>Expected</p>
+							<p class="alert alert-warning alert-dismissible">The module goes without styling blocks.</p>
+							<p>To create blocks, you need to take ready-made CSS styles or write your own CSS styles and place in the <strong class="blue">«stylesheet.css»</strong> file, which is:</p>
+							<p class="alert alert-info">catalog \ view \ stylesheet \ stylesheet.css</p>
+							<p>Then in the module settings, in the required fields, assign <strong>Class</strong> or <strong>Id</strong>.</p>
 						</article>
 					</section>
 					<section class="tab-pane" id="language">
