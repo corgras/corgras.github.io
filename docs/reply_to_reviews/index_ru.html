@@ -78,12 +78,11 @@
 							<ul>
 								<li>Оставить ответ на отзыв;</li>
 								<li>Быстро изменять статус отзыва;</li>
-								<li>Уведомление клиента об ответе по почте;</li>
-								<li>Добавлено поле e-mail, для уведомления клиентов;</li>
+								<li>Отправить уведомление клиенту об ответе по почте;</li>
 								<li>Изменять дату добавления отзыва (для версий ниже 2.3.x);</li>
 								<li>Включать / отключать модерацию отзывов;</li>
 								<li>Включать / отключать обязательное заполнения e-mail;</li>
-								<li>WYSIWYG-редактор для редактирование отзывов.</li>
+								<li>WYSIWYG-редактор для редактирование отзывов.</li>	
 							</ul>
 						</article>
 					</section>
@@ -144,6 +143,7 @@
 							<div class="x_content">
 								<div class="row">
 									<div class="col-md-4"><div class="box-reliz">Default</div></div>
+									<div class="col-md-4"><div class="box-reliz">Journal Theme</div></div>
 									<div class="col-md-12"><div class="box-reliz">Добавление других шаблонов будет производиться после обращений клиентов.</div></div>
 								</div>
 							</div>
@@ -152,24 +152,25 @@
 					<section class="tab-pane" id="install">
 						<article class="description">
 							<h2>Установка</h2>
-							<p>Установка модификатора состоит из двух частей. В каждой папке <strong>«Opencart v2.x»</strong> вы обнаружите две папки: <strong>«Step-1 - Admin Panel»</strong> и <strong>«Step-2 - Store Front»</strong>.</p>
+							<p>Установка модификатора состоит из двух частей. В каждом архиве<strong>«Install Opencart»</strong> вы обнаружите модификаторы:</p>
 							<ol>						
-								<li>В папке <strong>«Step-1 - Admin Panel»</strong> найдете архив <strong class="red">«ReplyToReviews_AdminPanel.ocmod.zip»</strong> в котором содержится основной функционал, локализация для админ панели.</li>
-								<li>В папке <strong>«Step-2 - Store Front»</strong> найдете список модификаторов для своего шаблона. Список постепенно будет пополняться после обращений клиентов.</li>
+								<li><strong>«ReplyToReviews_AdminPanel.ocmod.zip»</strong> - содержит основной функционал для Админ-панели.
+								<p class="alert alert-danger alert-dismissible">В архиве находится SQL файл. Если преффикс базы данных у Вас отличается от стандартного <strong>«oc_»</strong>, то перед установкой извлеките файл <strong>«install.sql»</strong> и через тексторый редактор замените преффикс <strong>«oc_»</strong> на свой, после чего загрузите файл обратно в архив.</p>
+								</li>
+								<li><strong>«ReplyToReviews_StoreFront_Default.ocmod.zip»</strong> - функционал для шаблона по умолчанию.</li>
+								<li><strong>«ReplyToReviews_StoreFront_Journal.ocmod.zip»</strong> - функционал для шаблона Journal.</li>
 							</ol>
 							<br>
 							<hr>				
 							<h3>Шаг 1</h3>
 							<ol>						
 								<li>В админке перейдите <strong class="blue">«Модули > Установка расширений»</strong> и установите файл <strong class="red">«ReplyToReviews_AdminPanel.ocmod.zip»</strong>;</li>
-								<li>Получаем сообщение об успешной установке и идем в <strong class="blue">«Модули > Модификаторы»</strong> и кликаем по кнопке <strong class="blue">«Обновить»</strong> в правом верхнем углу <a href="/images/rtr/admin_mod_ru.jpg">См. пример</a>;</li>
+								<li>Получаем сообщение об успешной установке, переходим в <strong class="blue">«Модули > Модификаторы»</strong> и кликаем по кнопке <strong class="blue">«Обновить»</strong> в правом верхнем углу <a href="/images/rtr/admin_mod_ru.jpg">См. пример</a>;</li>
 								<li>Если не появился функционал, проверяем лог на ошибки.</li>
 							</ol>
-							<p class="alert alert-danger alert-dismissible">В архиве находится SQL файл. Если преффикс базы данных у Вас отличается от стандартного <strong>«oc_»</strong>, то перед установкой извлеките файл <strong>«install.sql»</strong> и через тексторый редактор замените преффикс <strong>«oc_»</strong> на свой, после чего загрузите файл обратно в архив.</p>
-							<br>
 							<hr>
 							<h3>Шаг 2</h3>
-							<p>Выберите нужный модификатор из папки <strong>«Step-2 - Store Front»</strong> и выполните следующие действия:</p>
+							<p>Выберите модификатор для вашего шаблона и выполните следующие действия:</p>
 							<ol>
 								<li>В админке перейдите <strong class="blue">«Модули > Установка расширений»</strong> и установите файл <strong class="red">«ReplyToReviews_StoreFront_*.ocmod.zip»</strong> для вашего шаблона;</li>
 								<li>Получаем сообщение об успешной установке и идем в <strong class="blue">«Модули > Модификаторы»</strong> и кликаем по кнопке <strong class="blue">«Обновить»</strong> в правом верхнем углу <a href="/images/rtr/admin_mod_ru.jpg">См. пример</a>;</li>
@@ -185,28 +186,20 @@
 							<hr>							
 							<h3>Шаг 1</h3>
 							<ol>	
-								<li>В админке перейдите <strong class="blue">«Модули > Модификаторы»</strong> и удалите модификатор 2 версии;</li>
-								<li>В папке <strong>«Update»</strong> найдете файл <strong class="red">«update.sql»</strong>;
-									<p class="alert alert-danger alert-dismissible">Если преффикс базы данных у Вас отличается от стандартного <strong>«oc_»</strong>, то перед выполнением запроса, замените преффикс на свой, после чего выполните запрос.</p>
-								</li>
-								<li>Выполните запрос который находится файле в <strong>«PhpMyAdmin»</strong>;</li>
-								<li>Проверьте что в таблице <strong>«oc_review»</strong> появилось поле <strong>«Email»</strong>;</li>
-								<li>Из архива <strong class="red">«ReplyToReviews_AdminPanel.ocmod.zip»</strong> удалите файл <strong class="red">«install.sql»</strong>.</li>
+								<li>В админке перейдите <strong class="blue">«Модули > Модификаторы»</strong> и удалите модификатор <strong class="red">Answer to the commentary</strong>;</li>
+								<li>Распокуйте архив<strong>«Update Opencart»</strong>;</li>
+								<li>В админке перейдите <strong class="blue">«Модули > Установка расширений»</strong> и установите файл <strong class="red">«ReplyToReviews_AdminPanel.ocmod.zip»</strong>;</li>
+								<li>Получаем сообщение об успешной установке, переходим в <strong class="blue">«Модули > Модификаторы»</strong> и кликаем по кнопке <strong class="blue">«Обновить»</strong> в правом верхнем углу <a href="/images/rtr/admin_mod_ru.jpg">См. пример</a>;</li>
+								<li>Если не появился функционал, проверяем лог на ошибки.</li>
 							</ol>
+							<p class="alert alert-danger alert-dismissible">В архиве <strong>«ReplyToReviews_AdminPanel.ocmod.zip»</strong> находится SQL файл. Если преффикс базы данных у Вас отличается от стандартного <strong>«oc_»</strong>, то перед установкой извлеките файл <strong>«install.sql»</strong> и через тексторый редактор замените преффикс <strong>«oc_»</strong> на свой, после чего загрузите файл обратно в архив.</p>
+							
 							<br>
 							<hr>				
 							<h3>Шаг 2</h3>
-							<ol>						
-								<li>В админке перейдите <strong class="blue">«Модули > Установка расширений»</strong> и установите файл <strong class="red">«ReplyToReviews_AdminPanel.ocmod.zip»</strong>;</li>
-								<li>Получаем сообщение об успешной установке и идем в <strong class="blue">«Модули > Модификаторы»</strong> и кликаем по кнопке <strong class="blue">«Обновить»</strong> в правом верхнем углу <a href="/images/rtr/admin_mod_ru.jpg">См. пример</a>;</li>
-								<li>Если не появился функционал, проверяем лог на ошибки.</li>
-							</ol>
-							<br>
-							<hr>
-							<h3>Шаг 3</h3>
-							<p>Выберите нужный модификатор для вашего шаблона <strong>«Step-2 - Store Front»</strong> и выполните следующие действия:</p>
+							<p>Выберите модификатор для вашего шаблона и выполните следующие действия:</p>
 							<ol>
-								<li>В админке перейдите <strong class="blue">«Модули > Установка расширений»</strong> и установите файл <strong class="red">«ReplyToReviews_StoreFront_*.ocmod.zip»</strong>;</li>
+								<li>В админке перейдите <strong class="blue">«Модули > Установка расширений»</strong> и установите файл <strong class="red">«ReplyToReviews_StoreFront_*.ocmod.zip»</strong> для вашего шаблона;</li>
 								<li>Получаем сообщение об успешной установке и идем в <strong class="blue">«Модули > Модификаторы»</strong> и кликаем по кнопке <strong class="blue">«Обновить»</strong> в правом верхнем углу <a href="/images/rtr/admin_mod_ru.jpg">См. пример</a>;</li>
 								<li>Возникли проблемы / ошибки, проверяем лог на ошибки.</li>
 							</ol>
@@ -215,13 +208,11 @@
 					<section class="tab-pane" id="setting">
 						<article class="description">
 							<h2>Настройки</h2>
-							<p>Для каждого описания категорий, есть свои настройки, чтоб их настроить перейдите:
-							<strong class="blue">«Каталог > Категории > Ваша созданная категория»</strong> внутри перейдите во вкладку <strong class="blue">«Дизайн»</strong>, там найдете настройки:</p>
+							<p>Для настройки перейдите:
+							<strong class="blue">«Настройки > Настройки магазина»</strong> внутри перейдите во вкладку <strong class="blue">«Опции»</strong>, в разделе <strong class="blue">«Отзывы»</strong> найдете дополнительные настройки:</p>
 							<ul>
-								<li><strong>Разделитель текста «Развернуть / Свернуть»</strong> - Включение / выключение разделителя;</li>
-								<li><strong>Высота видимой части текста</strong> - Высота блока видимого описания. Значение указывается в пикселях;</li>
-								<li><strong>Скрывать описание со 2+ страниц</strong> - Показывает описание только на первой странице категории;</li>
-								<li><strong>Кнопка «Показать описание»</strong> - Для телефонов и планшетов допольнительное описание скрывается полностью и показывается только кнопка <strong class="blue">«Показать описание»</strong></li>
+								<li><strong>Отключить модерацию»</strong> - Отключает одобрение отзывов администратором;</li>
+								<li><strong>Обязательное поле Email?</strong> - Включает или отключает обязательность заполнения поля Email;</li>
 							</ul>
 							<div class="box-img"><img src="/images/rtr/settings_admin_ru.jpg"></div>
 						</article>
