@@ -1,66 +1,351 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favicon.ico">
-   	<title>Раздел с разработками</title>
-	<link href="/assets/css/bootstrap4.min.css" rel="stylesheet">
-	<link href="/assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/assets/css/home.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="favicon.ico">
+	<title>Модули и расширения под OpenCart - CORGRAS</title>
+	<meta name="description" content="CORGRAS - Дополнения для интернет-магазинов на базе CMS OpenCart" />
+	<meta property="og:title" content="corgras.github.io" />
+	<meta property="og:type" content="website"/>
+	<meta property="og:image" content="https://corgras.github.io/img/logo/logo.png" />
+	<meta property="og:url" content="https://corgras.github.io/" />
+	<meta property="og:site_name" content="corgras.github.io" />
+
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+
+	<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="/assets/css/mdb.min.css" rel="stylesheet">
+	<link href="/assets/css/home.css" rel="stylesheet">
 	<link href="/assets/css/media.css" rel="stylesheet">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<link href="/assets/css/owl.carousel.min.css" rel="stylesheet">
+	<link href="/assets/css/owl.theme.default.min.css" rel="stylesheet">
+</head>
+<body class="fixed-sn black-skin">
+  <header class="flex align-items-center view jarallax" data-jarallax='{"speed": 0.2}' >
+	<div id="slide-out" class="side-nav fixed d-flex flex-column justify-content-center align-items-center" style="transform: translateX(-100%);">
+	  <nav class="navbar double-nav">
+		<div class="button-close">
+		  <a href="#" class="button-collapse"><i class="fas fa-times"></i></a>
+		</div>
+	  </nav>
+	  <ul class="menu d-flex flex-column justify-content-around align-items-center">
+		<li><a href="/">Главная</a></li>
+		<li><a href="/product.html">Модули</a></li>
+		<li><a href="/services.html">Услуги</a></li>
+		<li><a href="/portfolio.html">Портфолио</a></li>
+		<li><a href="/support.html">Поддержка</a></li>
+	  </ul>
+	  <div class="sidenav-bg mask-strong d-none"></div>
+    </div>
+	<nav class="navbar double-nav d-md-none d-xl-none">
+	  <div class="float-right">
+		<a href="#" data-activates="slide-out" class="button-collapse"><i class="fas fa-bars"></i></a>
+	  </div>
+	</nav>
+	<div class="container-fluid header-content">
+	  <div class="course-logo text-center">
+		<img src="/img/logo/logo.png" alt="Студия CORGRAS" class="img-responsive">
+	  </div>
+	  <div class="header-title">
+		<h1>Модули и расширения для CMS OpenCart</h1>
+		<p class="d-none d-sm-block">Установка на движок. Адаптация. Доработка.</p>
+	  </div>
+	  <div class="d-none d-md-block">
+		<a href="/product.html" class="button waves-effect" target="_blank" rel="nofollow">Наши модули</a>
+		<a href="/portfolio.html" class="button button-white waves-effect" target="_blank" rel="nofollow">Портфолио</a>
+		<a href="/support.html" class="button button-white waves-effect" target="_blank" rel="nofollow">Поддержка</a>
+	  </div>
+	</div>
+	<div class="social d-md-none d-xl-none">
+	  <a href="https://vk.com/studio_corgras" class="icons-sm"><i class="icons fab fa-vk"></i></a>
+	  <a href="https://www.youtube.com/channel/UC5tI7DjZD0TNDDm3PKv07lQ" class="icons-sm"><i class="icons fab fa-youtube"></i></a>		
+	</div>
+  </header>
+  <section class="s-block-3 npb">
+	<div id="sync1" class="owl-carousel owl-theme">
+	  <div class="item">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-6 text-center d-none d-lg-block">
+			  <img src="/img/product/html_pro.png" alt="HTML Pro" class="img-responsive">
+			</div>
+			<div class="col-md-12 col-lg-6">
+			  <div class="row">
+				<div class="col-md-12 m-icon card d-lg-none d-xl-none">
+				  <div class="d-flex justify-content-center">
+                    <div class="card-circle d-flex justify-content-center align-items-center">
+                      <i class="fas fa-th"></i>
+                    </div>
+                  </div>
+				</div>
+				<div class="col-md-12 m-name">
+				  <h3><strong>Модуль 1.</strong> HTML Pro</h3>
+				</div>
+				<div class="col-md-12 m-ver"><span>Версия 1</span>
+				<span>Opencart 2.x | Opencart 3.x</span></div>
+				<div class="col-md-12 m-desc">
+				  <p>Html Pro даёт возможность пользователю самому создавать сетку с неограниченным количеством текстовых блоков. Модуль не привязан к определенному CSS-фреймворку, тем самым дает возможность использовать любой CSS-фреймворк, CSS-сетку или применить свои CSS-стили для оформления, всего лишь назначив для блока нужный CLASS и/или ID.</p>
+				</div>
+				<div class="col-md-6 m-read"><a href="/docs/html_pro/" class="button waves-effect">Подробнее</a></div> 
+				<div class="col-md-6 m-price"><span class="price-t">Стоимость:</span> <span class="price">300</span><i class="fas fa-ruble-sign"></i></div>			  
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="item">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-6 text-center d-none d-lg-block">
+			  <img src="/img/product/information_blocks.png" alt="Информационные блоки" class="img-responsive">
+			</div>
+			<div class="col-md-12 col-lg-6">
+			  <div class="row">
+				<div class="col-md-12 m-icon card d-lg-none d-xl-none">
+				  <div class="d-flex justify-content-center">
+                    <div class="card-circle d-flex justify-content-center align-items-center">
+                      <i class="fas fa-th"></i>
+                    </div>
+                  </div>
+				</div>
+				<div class="col-md-12 m-name">
+				  <h3><strong>Модуль 2.</strong> Информационные блоки</h3>
+				</div>
+				<div class="col-md-12 m-ver"><span>Версия 1</span><span>Opencart 2.x | Opencart 3.x</span></div>
+				<div class="col-md-12 m-desc">
+				  <p>Модуль позволяет отображать информационные страницы (О нас, Информация о доставке, Политика Безопасности, Условия соглашения и т.д.) в виде блоков с кратким описанием.</p>
+				</div>
+				<div class="col-md-6 m-read"><a href="/docs/information_blocks/" class="button waves-effect">Подробнее</a></div> 
+				<div class="col-md-6 m-price"><span class="price-t">Стоимость:</span> <span class="price">300</span><i class="fas fa-ruble-sign"></i></div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="item">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-6 text-center d-none d-lg-block">
+			  <img src="/img/product/additional_description_category.png" alt="Дополнительное описание категориям" class="img-responsive">
+			</div>
+			<div class="col-md-12 col-lg-6">
+			  <div class="row">
+				<div class="col-md-12 m-icon card d-lg-none d-xl-none">
+				  <div class="d-flex justify-content-center">
+                    <div class="card-circle d-flex justify-content-center align-items-center">
+                      <i class="fas fa-file-alt"></i>
+                    </div>
+                  </div>
+				</div>
+				<div class="col-md-12 m-name">
+				  <h3><strong>Модуль 3.</strong> Доп. описание категориям</h3>
+				</div>
+				<div class="col-md-12 m-ver"><span>Версия 1</span><span class="pull-right">Opencart 3.x</span></div>
+				<div class="col-md-12 m-desc">
+				  <p>Данный модификатор поможет вам добавить текст, баннер или HTML-код в нижней части страниц категорий, который будет отличаться от описания категорий по-умолчанию.</p>
+				</div>
+				<div class="col-md-6 m-read"><a href="/docs/additional_description_category/" class="button waves-effect">Подробнее</a></div> 
+				<div class="col-md-6 m-price"><span class="price-t">Стоимость:</span> <span class="price">300</span><i class="fas fa-ruble-sign"></i></div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="item">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-6 text-center d-none d-lg-block">
+			  <img src="/img/product/reply_to_reviews.png" alt="Ответ на комментарии" class="img-responsive">
+			</div>
+			<div class="col-md-12 col-lg-6">
+			  <div class="row">
+				<div class="col-md-12 m-icon card d-lg-none d-xl-none">
+				  <div class="d-flex justify-content-center">
+                    <div class="card-circle d-flex justify-content-center align-items-center">
+                      <i class="far fa-comment-alt"></i>
+                    </div>
+                  </div>
+				</div>
+				<div class="col-md-12 m-name">
+				  <h3><strong>Модуль 4.</strong> Ответ на комментарии</h3>
+				</div>
+				<div class="col-md-12 m-ver"><span>Версия 3</span><span class="pull-right">Opencart 2.x | Opencart 3.x</span></div>
+				<div class="col-md-12 m-desc">
+				  <p>Модификатор добавляет поле для ответа администратора магазина на комментарии покупателя; Возможность изменять дату добавления отзыва; Возможность изменять имя администратора, если поле не заполнено, подставляется название "Группы пользователя".</p>
+				</div>
+				<div class="col-md-6 m-read"><a href="/docs/additional_description_category/" class="button waves-effect">Подробнее</a></div> 
+				<div class="col-md-6 m-price"><span class="price-t">Стоимость:</span> <span class="price">300</span><i class="fas fa-ruble-sign"></i></div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<nav id="menu-mod" class="d-none d-md-block">
+	  <div class="container">
+		<div id="sync2" class="owl-carousel owl-theme">
+		  <div class="item">
+			<span>HTML Pro<small>Позволяет самостоятельно оформить блоки/сетку</small></span>
+		  </div>
+		  <div class="item">
+			<span>Инфо. блоки<small>Вывести информационные статьи в виде блоков</small></span>
+		  </div>
+		  <div class="item">
+			<span>Доп. описание<small>Дополнительный текст внизу на странице категорий Opencart2</small></span>
+		  </div>
+		  <div class="item">
+			<span>Ответ на отзыв<small>Позволяет оставлять ответ на комментарий</small></span>
+		  </div>
+		</div>
+	  </div>
+	</nav>
+  </section>
+  <section class="s-block-3">
+	<div class="container">
+	  <div class="row justify-content-md-center numcounters">
+		<div class="col-sm-4">
+		  <div class="numcounter" data-appear-animation="fadeInUp" data-appear-animation-delay="100">
+			<i class="icons fas fa-user"></i>
+			<strong class='numscroller' data-min='0' data-max='200' data-delay='2' data-increment='1'>200</strong><strong>+</strong>
+			<label>Клиентов</label>
+		  </div>
+		</div>
+		<div class="col-sm-4">
+		  <div class="numcounter" data-appear-animation="fadeInUp" data-appear-animation-delay="100">
+			<i class="icons fas fa-desktop"></i>
+			<strong class='numscroller' data-min='0' data-max='100' data-delay='2' data-increment='1'>100</strong><strong>+</strong>
+			<label>Готовых проектов</label>
+		  </div>
+		</div>
+		<div class="col-sm-4">
+		  <div class="numcounter" data-appear-animation="fadeInUp" data-appear-animation-delay="300">
+			<i class="icons far fa-clock"></i>
+			<strong class='numscroller' data-min='0' data-max='24' data-delay='1' data-increment='1'>24</strong>
+			<strong>/</strong>
+			<strong class='numscroller' data-min='0' data-max='7' data-delay='1' data-increment='1'>7</strong>
+			<label>Служба поддержка</label>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+  <section class="s-block-2 testimonials">
+	<div class="container">
+	  <div class="row justify-content-md-center">
+		<div class="col-sm-12">
+		  <div class="reviews text-center my-1">
+			<div class="owl-carousel owl-theme reviews" id="owl-carousel-reviews">
+			  <div class="review-item">
+				<div class="testimonial">
+				  <h4 class="font-weight-bold">Mavo</h4>
+				  <p><i class="icons fas fa-angle-double-left"></i> Really professional and fast support. Thanks. <i class="icons fas fa-angle-double-right"></i></p>
+				  <p class="name-module">Reply To Reviews (Opencart.com)</p>
+				</div>
+			  </div>
+			  <div class="review-item">
+			    <div class="testimonial">
+				  <h4 class="font-weight-bold">Richardvosicky</h4>
+				  <p><i class="icons fas fa-angle-double-left"></i> Perfect ideas. Save me a lot of time... <i class="icons fas fa-angle-double-right"></i></p>
+				  <p class="name-module">HTML Pro - (Opencart.com)</p>
+				</div>
+			  </div>
+			  <div class="review-item">
+				<div class="testimonial">
+				  <h4 class="font-weight-bold">Investique</h4>
+				  <p><i class="icons fas fa-angle-double-left"></i> Great extension and truly amazing support! <i class="icons fas fa-angle-double-right"></i></p>
+				  <p class="name-module">Additional Description Category - (Opencart.com)</p>
+				</div>
+			  </div>
+			  <div class="review-item">
+				<div class="testimonial">
+				  <h4 class="font-weight-bold">Almazry</h4>
+				  <p><i class="icons fas fa-angle-double-left"></i> Extention works geat, documentation is clear. For others reading this: its 100% OCMod. <i class="icons fas fa-angle-double-right"></i></p>
+				  <p class="name-module">Additional Description Category - (Opencart.com)</p>
+				</div>
+			  </div>		  
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+  <section class="s-block-3 partner">
+	<div class="container">
+	  <div class="row justify-content-md-center">
+		<div class="col-sm-12">
+		  <div class="owl-carousel owl-theme partners" id="owl-carousel-partners">
+			<div class="col text-center">
+			  <a href="https://beget.com/?id=199204" target="_blank">
+				<i class="icons fas fa-server"></i>
+				<label>Хостинг "Beget"</label>
+			  </a>
+			</div>
+			<div class="col text-center">
+			  <a href="https://ukraine.com.ua/?page=26391" title="Хостинг Украина" target="_blank">
+				<i class="icons fas fa-server"></i>
+				<label>Хостинг Украина</label>
+			  </a>
+			</div>
+			<div class="col text-center">
+			  <a href="https://www.opencart.com/index.php?route=marketplace/extension&filter_member=RoS" target="_blank">
+				<i class="icons fab fa-opencart"></i>
+				<label>Opencart.com</label>
+			  </a>
+			</div>
+			<div class="col text-center">
+			  <a href="https://liveopencart.ru/ros" target="_blank">
+				<i class="icons fab fa-opencart"></i>
+				<label>Liveopencart.ru</label>
+			  </a>
+			</div>
+			<div class="col text-center">
+			  <a href="https://shop.opencart-russia.ru/ros" target="_blank">
+				<i class="icons fab fa-opencart"></i>
+				<label>Opencart-Russian.ru</label>
+			  </a>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+  <footer class="main-foot text-center">
+	<div class="footer-bottom">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-sm-12 col-md-6">
+			<div class="soc">
+			  <a href="https://vk.com/studio_corgras"><i class="icons fab fa-vk"></i></a>
+			  <a href="https://www.youtube.com/channel/UC5tI7DjZD0TNDDm3PKv07lQ"><i class="icons fab fa-youtube"></i></a>
+			</div>
+		  </div>
+		  <div class="col-sm-12  col-md-6 copyrights">
+			<div class="copyright">© 2017 CORGRAS. Все права защищены <a class="sitemap" href="/sitemap.html">Карта сайта</a></div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </footer>  
+<!-- SCRIPTS -->
+<script type="text/javascript" src="/assets/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/mdb.min.js"></script>
+<script type="text/javascript" src="/assets/js/numscroller-1.0.js"></script>
+<script type="text/javascript" src="/assets/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/assets/js/common.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92523979-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-92523979-1');
 </script>
-
-</head>
-<body>
-<div class="section-header animated fadeInDown">
-	<div class="nav-top">
-	<div class="container">
-		<nav class="navbar navbar-expand">
-			<ul class="navbar-nav ml-auto">
-			  <li class="nav-item active">
-				<a class="nav-link" href="index.html">Главная</a>
-			  </li>
-			  <!--<li class="nav-item">
-				<a class="nav-link" href="services.html">Услуги</a>
-			  </li>-->
-			  <li class="nav-item">
-				<a class="nav-link" href="product.html">Модули OC</a>
-			  </li>
-			  <!--<li class="nav-item">
-				<a class="nav-link" href="contact.html">Контакты</a>
-			  </li>-->
-			</ul>
-		</nav>		
-	</div>
-	</div>
-	<div class="logotip">  
-		<div class="lt-logo"> 
-			<object><embed src="/assets/svg/logo.svg" width="300" ></object>
-			<p class="logo-intro">Основные направления — разработка сайтов, создание модулей под Opencart, проектирование 3D интерьеров.</p> 
-		</div> 	
-		<div class="form-container"> 
-			<div class="button"> 
-				<a id="loginLink" href="">Подробнее</a>
-			</div> 
-		</div> 
-	</div> 
-	<div class="copyrights">
-		<!--<a target="_blank" href="#" id="user_privacy">Политика конфиденциальности</a> | 
-		<a target="_blank" href="#" id="user_agreement">Условия использования</a> |--> <span id="rights_reserved">© 2017-2018 Corgras. Все права защищены</span> 
-	</div> 
-</div>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"  crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
-<script src="/assets/js/bootstrap4.min.js"></script>
 </body>
 </html>
