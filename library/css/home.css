@@ -2,7 +2,7 @@
 @-ms-viewport{width:device-width}
 html{-webkit-box-sizing:border-box;box-sizing:border-box;-ms-overflow-style:scrollbar}
 *,::after,::before{-webkit-box-sizing:inherit;box-sizing:inherit}
-body{font-size:17px;min-width:320px;position:relative;line-height:1.65;font-family:roboto-lp,sans-serif;overflow-x:hidden;color:#333}
+body{font-size:17px;min-width:320px;position:relative;line-height:1.65;font-family:roboto-lp,sans-serif;overflow-x:hidden;color:#1d2127}
 .card{border-radius:0;webkit-box-shadow:none;box-shadow: none;border: 0;background:none}
 b,strong{font-weight:700}
 h1,h2,h3,h4,h5,h6{line-height:1.45;font-weight:200}
@@ -18,7 +18,8 @@ svg:not(:root){overflow:hidden}
 .img-responsive.img-width{width:100%}
 .npb{padding-bottom:0px;}
 .s-block-2,header{background-color:#171717;color:#fff;background-position:center;-webkit-background-size:cover;background-size:cover;position:relative}
-.s-block-2::before,header::before{content:'';background-color:#171717;opacity:.54;position:absolute;width:100%;height:100%;left:0;top:0}
+.s-block-1{background:#f4f4f4;}
+header::before{content:'';background-color:#171717;opacity:.54;position:absolute;width:100%;height:100%;left:0;top:0}
 .s-block-2 img{margin-top:0px}
 .s-block-3 h4{margin-bottom:40px;font-weight:700;font-size:17px}
 section{padding:85px 0}
@@ -26,15 +27,15 @@ section h2{margin:0 0 32px;font-size:36px}
 section h3{margin:0 0 9.33333px;font-size:30px}
 section h2 strong,section h3 strong{font-weight:700}
 
-.side-nav {width: 100%;}
-header .navbar {
+.side-nav{width:100%;}
+header .navbar{
 	position:absolute;
 	top:15px;
 	right:15px;
 	background:none !important;
 	box-shadow:none !important;
 }
-.black-skin .page-footer, .black-skin .side-nav{background:#111;}
+header .side-nav{background:#111;}
 header .side-nav {height:100vh;position:relative;margin:0}
 header .side-nav .menu {height:50%;}
 header .side-nav .navbar {
@@ -94,12 +95,91 @@ header.flex{text-align:center;padding:0;display:flex;height:100vh;min-height:100
 .button-white:hover{background-color:rgba(255,255,255,.2);border:2px solid #fff}
 
 /*SLIDER PRODUCT*/
+.m-price button.btn{
+	color:#0088CC;
+	background:none;
+	box-shadow:none;
+	font-size:15px;
+	font-weight:400;
+	padding:0;
+	margin:0
+}
+.m-price .btn:not([disabled]):not(.disabled).active, .m-price .btn:not([disabled]):not(.disabled):active{
+	box-shadow:none;
+}
+.prices .list-group li{
+	border-bottom:1px solid rgba(0,0,0,.1);
+	padding:.5rem 0;
+}
+.prices .list-group li:last-child{
+	border-bottom:0px solid rgba(0,0,0,.1)
+}
+.prices .list-group li a{text-decoration:none;color:#1d2127;}
+.prices .list-group li a:hover{color:#0088CC;text-decoration:none;}
+.prices .list-group li .price-t{
+	font-size:15px;
+	font-weight:400;
+}
+
+
 /*FOOTER*/
-.main-foot{background-color:#171717;color:#516473;font-size:14px;text-align:center;padding:0 0}
-.footer-bottom{background-color:#171717;margin-top:0px;padding:20px 0}
-.footer-bottom .icons{line-height:23px;display:inline-block;color:#fff;font-size:21px;vertical-align:middle;}
-.footer-bottom .icons:first-child{margin-right:20px;}
-.footer-bottom .copyright{line-height:2;display:block;color:#fff;font-size:12px}
+.main-foot{background-color:#0e0e0e;color:#516473;font-size:14px;text-align:center;padding:0 0}
+.footer-bottom{background-color:#060606;margin-top:0px;padding:20px 0}
+.footer-bottom .soc{text-align:center;}
+.footer-bottom .soc a{color:#777;}
+.footer-bottom .soc a:hover{color:#fff;}
+.footer-bottom .icons{line-height:23px;display:inline-block;font-size:21px;vertical-align:middle;}
+.footer-bottom .icons:first-child{margin-right:10px;}
+.footer-bottom .icons:last-child{margin-left:10px;}
+.footer-bottom .copyright{line-height:2;display:block;color:#777;font-size:12px;text-align:left}
+.footer-bottom .info{text-align:right;line-height:2;display:block;font-size:12px}
+.footer-bottom .info a{color:#fff}
+.footer-bottom .info a:hover{color:#fff}
+
+
+
+/*documentation*/
+.documentation h2{margin-bottom:9.33333px}
+.documentation p{margin-bottom:0}
+.documentation .m-icon{font-size:4rem;color:#FFF;}
+.documentation .card .card-circle {
+    height: 8.5rem;
+    width: 8.5rem;
+}
+
+
+
+.feature-box .feature-box-icon {
+    background: #CCC;
+    border-radius: 35px;
+    color: #FFF;
+    display: inline-block;
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    margin-right: 10px;
+    position: relative;
+    text-align: center;
+    top: 5px;
+    width: 35px;
+}
+
+.feature-box .feature-box-info h4{margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 10px;}
+.feature-box .feature-box-info {
+    padding-left: 50px;
+}
+
+.feature-box.feature-box-style-6 .feature-box-icon {
+    border: 1px solid #cecece;
+    background: transparent;
+    line-height: 32px;
+}
+.text-color-primary{
+color: #0088CC !important;
+}
+
 
 /*Counters*/
 .numcounters .numcounter {text-align: center;}
@@ -128,9 +208,11 @@ header.flex{text-align:center;padding:0;display:flex;height:100vh;min-height:100
 .review-item .name-module{font-size:14px;}
 .review-item .name-module::before{content:'';display:block; background:#0088CC;height:2px;width:20%;margin:auto;margin-top:1.4rem;margin-bottom:1.4rem}
 .review-item p{margin:0; padding:0; font-weight:400;}
+
 /*Partner*/
+.partner{background:#0e0e0e;}
 .partner a{
-	color:#333;
+	color:#1d2127;
 	cursor:pointer
 }
 .partner a:hover, .partner a:focus{
@@ -154,6 +236,33 @@ header.flex{text-align:center;padding:0;display:flex;height:100vh;min-height:100
 	cursor:pointer;
 	color:#0088CC;
 }
+.partner .footer-ribbon {
+    background: #0088CC;
+    position: absolute;
+    margin: -101px 0 0 14px;
+    padding: 10px 20px 6px 20px;
+}
+.partner .footer-ribbon:before {
+    border-right: 10px solid #646464;
+    border-top: 16px solid transparent;
+    content: "";
+    display: block;
+    height: 0;
+    left: -10px;
+    position: absolute;
+    top: 0;
+    width: 7px;
+}
+.partner .footer-ribbon:before {
+    border-right-color: #005580;
+    border-left-color: #005580;
+}
+.partner .footer-ribbon span {
+    color: #FFF;
+    font-size: 1em;
+    font-family: "Shadows Into Light", cursive;
+}
+
 
 /*SITEMAP*/
 .mb-xl {
@@ -203,3 +312,10 @@ ul.nav-list li ul {
 	margin: 0 0 0 25px;
 	padding: 0;
 }
+
+
+
+
+
+
+
