@@ -1,10 +1,21 @@
 new WOW().init();
 
-        // SideNav Options
-$('.button-collapse').sideNav({
-edge: 'right', // Choose the horizontal origin
-closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+$('.menu-btn').on('click', function(e) {
+  e.preventDefault();
+  $(this).toggleClass('is-active');
+  $('.menu-nav').toggleClass('is-active');
 });
+
+$('.menu-btn').on('click', function(e) {
+  $('.menu-block').toggleClass('is-f-active');
+});
+
+$('.menu-btn-l').on('click', function(e) {
+  e.preventDefault();
+  $(this).toggleClass('menu-btn-l_active');
+  $('.menu-nav-l').toggleClass('menu-nav-l_active');
+});
+
 $(document).ready(function() {
 	var sync1 = $("#sync1");
 	var sync2 = $("#sync2");
@@ -108,27 +119,34 @@ $("#owl-carousel-reviews").owlCarousel({
 	
 });
 
-
 $("#owl-carousel-partners").owlCarousel({
 	loop:true,
 	responsiveClass:true,
-	autoplay:true,
 	smartSpeed:5000,
 	autoplayTimeout:7000,
 	responsive:{
 	  0:{
 		items:1,
 		nav:false,
-		dots:false
+		dots:false,
+		autoplay:true
 	  },
 	  576:{
 		items:2,
 		nav:false,
+		autoplay:true,
 		dots:false
 	  },
 	  992:{
-		items:3,
-		nav:true,
+		items:4,
+		nav:false,
+		autoplay:true,
+		dots:false
+	  },
+	  1200:{
+		items:5,
+		nav:false,
+		autoplay:false,
 		dots:false
 	  }
 	}
