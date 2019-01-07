@@ -190,6 +190,7 @@
 }
 /* Custom, iPhone Retina */
 @media only screen and (max-width:320px){
+	.logo{width:100%;}
 	.course-logo img{width:calc(100% - 30px);}
 	.header-title{margin:20px 0 0}
 	.header-title h1{margin:0 15px;font-size:20px; padding:0;text-transform:uppercase;}
