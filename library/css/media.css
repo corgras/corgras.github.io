@@ -186,7 +186,9 @@
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width:480px){
+	.logo{width:100%;}
 	.course-logo img{width:calc(100% - 130px);}
+	.lang-menu-block{bottom:20px;}
 }
 /* Custom, iPhone Retina */
 @media only screen and (max-width:320px){
