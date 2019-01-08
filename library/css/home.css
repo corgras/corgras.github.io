@@ -160,6 +160,13 @@ footer .info a:first-child::before{display:none;}
 .feature-box .feature-box-info{padding-left:50px;}
 .feature-box .feature-box-icon{border:1px solid var(--bg2-color);background:transparent;line-height:32px;color:var(--tertiary-color) !important;font-size:14px;}
 
+/*News*/
+.news-box-col{margin-bottom:10px;}
+.news-box-col:last-child{margin-bottom:0px;}
+.news-box-col h4{font-size:20px; padding:0 0 10px; margin:0;font-weight:400;}
+.news-box{clear:both;}
+
+
 /*Reviews*/
 .reviews{text-align:center;position:relative;}
 .review-item h4{margin:0 0 1.4rem;font-size:24px;}
