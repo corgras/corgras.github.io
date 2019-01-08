@@ -148,7 +148,7 @@
 }
  .lang-menu-block ul.menu { text-align: left;
 }
- .lang-menu-block{top:22px;z-index:2;left:30px}
+ .lang-menu-block{top:22px;z-index:2;left:30px;right:none;bottom:none;}
  
 }
 /* Extra Small Devices, Phones */
