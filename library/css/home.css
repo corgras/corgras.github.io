@@ -81,7 +81,7 @@ header.flex{text-align:center;padding:0;display:flex;height:100vh;min-height:100
 .header-title p{font-weight:200;margin:20px 0 0;font-size:18px}
 
 /*MENU*/
-.menu-block{display:flex;justify-content:flex-end;align-items:center;right:15px;left:15px;
+.menu-block{display:flex;justify-content:flex-end;align-items:center;right:15px;
 position:absolute;top:15px;z-index:4}
 .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before,.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before{background:#fff}
 .hamburger:hover .hamburger-inner, .hamburger:hover .hamburger-inner:after, .hamburger:hover .hamburger-inner:before, .hamburger.is-active:hover .hamburger-inner, .hamburger.is-active:hover .hamburger-inner:after, .hamburger.is-active:hover .hamburger-inner:before{opacity:1;background:var(--tertiary-color);}
