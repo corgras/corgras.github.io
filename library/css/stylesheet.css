@@ -71,7 +71,8 @@ section, article{padding:85px 0;}
 .btn-block .btn{
    padding: 1.2rem 4rem;
 }
-.page-product .btn{font-size:1.7rem;padding:.7rem 3rem;}
+.page-product .btn,
+.page-blog .btn{font-size:1.7rem;padding:.7rem 3rem;}
 .strong{font-weight:600}
 .danger{color:var(--bs-danger);}
 .accordion-button{font-size:1.7rem;}
@@ -263,7 +264,7 @@ footer .info a:hover{color:var(--bs-blue);text-decoration:none;}
 footer .info a::before{display:inline-block;width:1px;background:#a6a6a6;content:'';height:16px;margin:0 7px;top:4px;position:relative;}
 footer .info a:first-child::before{display:none;}
 
-
+/*Страница модулей*/
 .page-product .card-body {
 	padding: 4rem 4rem 2rem;
 	text-align:center
@@ -278,6 +279,22 @@ footer .info a:first-child::before{display:none;}
 	text-align:center
 }
 
+/*Страница блога*/
+.page-blog .card-body {
+	padding: 4rem 4rem 2rem;
+	text-align:center
+}
+.page-blog .card-title {
+    margin-bottom: 1rem;
+}
+.page-blog .card-footer {
+	padding: 0rem 4rem 4rem;
+	background:none;
+    border-top:none;
+	text-align:center
+}
+
+/*Аккордион*/
 .accordion-button:not(.collapsed) {
     color: #212529;
     background-color: #fff;
@@ -285,18 +302,14 @@ footer .info a:first-child::before{display:none;}
 }
 .accordion-button:focus{box-shadow:none}
 
-
-
-
-
-
-
-
-
+/*Документация*/
 .documentations{font-size:18px;}
 .documentations li{margin:10px 0;}
 
+/**/
+.page-article i{font-size:inherit;}
 
+/*Список изменений*/
 .time-clock{padding-left:158px;}
 .time-circle{
 	background:#0d6efd none repeat scroll 0 0;
