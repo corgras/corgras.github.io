@@ -251,7 +251,7 @@ h2 i.i45,
 .section-partner a{color:#a6a6a6}
 
 .section-news{display:none}
-.section-google{background-color:var(--sec-w);margin:0;padding:0;display:none}
+.section-google{background-color:var(--sec-w);margin:0;padding:0;}
 
 
 
