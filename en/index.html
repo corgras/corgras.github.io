@@ -1,536 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
 	<meta charset="utf-8">
 	<base href="/">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>«CORGRAS - Add-ons for online stores based on CMS OpenCart»</title>
-	<meta name="description" content="CORGRAS - Add-ons for online stores based on CMS OpenCart">
-	<meta name="keywords" content="CORGRAS, add-ons, online shopping, OpenCart, ocStore">
-	<meta property="og:title" content="corgras.github.io">
-	<meta property="og:type" content="website">
-	<meta property="og:image" content="https://corgras.github.io/img/logo/logo.png">
-	<meta property="og:url" content="https://corgras.github.io/">
-	<meta property="og:site_name" content="corgras.github.io">
-	<meta name="google-site-verification" content="8yBPWf7Koa5XJV8vnxLNeDYC9Ro45_uyPLCDFyjs0UY">
-	<link rel="alternate" hreflang="ru-RU" href="http://corgras.github.io/">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>«CORGRAS» - Modules for creating your online store on OpenCart</title>
+	<meta name="description" content="We present a catalog of modules and modifiers - a choice of solutions for creating your online store on OpenCart">
+	<meta name="keywords" content="CORGRAS, modules, modifiers, OpenCart, ocStore">
 	
-	<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
-	<link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/img/favicon/android-chrome-192x192.png" sizes="192x192">
-	<link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
-	<link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16">
+	<meta property="og:title" content="We present a catalog of modules and modifiers - a choice of solutions for creating your online store on OpenCart.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://corgras.github.io/library/logo/logo.png">
+	<meta property="og:url" content="https://corgras.github.io/en">
+	<meta property="og:site_name" content="CORGRAS">
+	<meta property="og:description" content="Modules for creating your online store on OpenCart" />
+	<meta property="og:locale" content="en-GB">
+	
+	<meta name="google-site-verification" content="8yBPWf7Koa5XJV8vnxLNeDYC9Ro45_uyPLCDFyjs0UY">
+	<meta name="yandex-verification" content="c384b7882bff7809">
+	
+	<link rel="alternate" hreflang="ru_RU" href="http://corgras.github.io/index.html">
+	<link rel="alternate" hreflang="uk-UA" href="http://corgras.github.io/ua/index.html">
+	
+	<link rel="apple-touch-icon" sizes="57x57" href="/library/favicon/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/library/favicon/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/library/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/library/favicon/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/library/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/library/favicon/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/library/favicon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/library/favicon/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/library/favicon/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/library/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/library/favicon/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/library/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/library/favicon/favicon-16x16.png" sizes="16x16">
 	<meta name="msapplication-TileColor" content="#171717">
-	<meta name="msapplication-TileImage" content="/img/favicon/mstile-144x144.png">
+	<meta name="msapplication-TileImage" content="/library/favicon/mstile-144x144.png">
 	<meta name="theme-color" content="#171717">
 	<meta name="apple-mobile-web-app-status-bar-style" content="#171717">
 	<meta name="msapplication-navbutton-color" content="#171717">
-	
+		
 	<link href="/library/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/library/css/fontawesome.min.css" rel="stylesheet">
-	<link href="/library/css/mdb.min.css" rel="stylesheet">
 	<link href="/library/css/hamburgers.min.css" rel="stylesheet">
-	<link href="/library/css/home.css" rel="stylesheet">
-	<link href="/library/css/media.css" rel="stylesheet">
-	<link href="/library/css/owl.carousel.min.css" rel="stylesheet">
-	<link href="/library/css/owl.theme.default.min.css" rel="stylesheet">
-
+	<link href="/library/css/stylesheet.css" rel="stylesheet">
+	
+	<script data-ad-client="ca-pub-3691122404353666" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92523979-1"></script>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body>
-  <header class="flex align-items-center">
-	<div class="menu-block">
-	  <button class="hamburger hamburger--spin-r menu-btn" type="button">
-		<span class="hamburger-box">
-		  <span class="hamburger-inner"></span>
-		</span>
-	  </button>
-	</div>
-	<nav class="menu-nav">
-	  <ul class="menu">
-		<li><a href="/en/"><i class="fal fa-home"></i><span>Home</span><span>Home page of the site</span></a></li>
-		<li><a href="/en/product.html"><i class="fal fa-archive"></i><span>Modules</span><span>Add-ons for CMS Opencart</span></a></li>
-		<li><a href="/en/services.html"><i class="fal fa-clipboard-list"></i><span>Services</span><span>Available services</span></a></li>
-		<li><a href="/en/demo.html"><i class="fal fa-eye"></i><span>Demo</span><span>Demonstration of modules</span></a></li>
-		<li><a href="/en/blog.html"><i class="fal fa-rss"></i><span>Blog</span><span>Latest news and articles</span></a></li>
-		<li><a href="/en/support.html"><i class="fal fa-life-ring"></i><span>Support</span><span>Ways to contact us</span></a></li>
-	  </ul>
-	</nav>
-	<div class="lang-menu-block">
-	  <nav class="lang-nav">
+  <header>
+	<div class="header-content">
+	  <div class="menu-block">
+		<button class="hamburger hamburger--spin-r menu-btn" type="button">
+		  <span class="hamburger-box">
+			<span class="hamburger-inner"></span>
+		  </span>
+		</button>
+	  </div>
+	  <nav class="menu-nav">
 		<ul class="menu">
-		  <li><a href="/index.html" hreflang="ru">Rus</a></li>
+		  <li><a href="/en/"><i class="fal fa-home-lg"></i><span>Home</span><span>Site's home page</span></a></li>
+		  <li><a href="/en/product.html"><i class="fal fa-archive"></i><span>Module</span><span>Add-ons for CMS Opencart</span></a></li>
+		  <li><a href="/en/services.html"><i class="fal fa-clipboard-list"></i><span>Services</span><span>Available services</span></a></li>
+		  <li><a href="/en/demo.html"><i class="fal fa-eye"></i><span>Demo</span><span>Demonstration of modules</span></a></li>
+		  <li><a href="/en/blog.html"><i class="fal fa-blog"></i><span>Blog</span><span>Latest news and articles</span></a></li>
+		  <li><a href="/en/support.html"><i class="fal fa-life-ring"></i><span>Support</span><span>How to contact us</span></a></li>
 		</ul>
 	  </nav>
-	</div>
-	<div class="container-fluid header-content">
-	  <div class="logo text-center">
-		<object type="image/svg+xml" data="/img/logo/logo.svg" >
-			<img src="/img/logo/logo.png" alt="«CORGRAS»" class="img-responsive">
-		</object>
+	  <div class="header-content-info">
+		<div class="logo text-center">
+		  <img src="/library/logo/logo.webp" alt="Logo «CORGRAS»" class="img-responsive">
+		</div>
+		<div class="header-title">
+		  <h1>Modules and extensions for CMS OpenCart</h1>
+		  <p class="d-none d-sm-block">Solutions for creating your online store.</p>
+		</div>
 	  </div>
-	  <div class="header-title">
-		<h1>Modules and Extensions for CMS OpenCart</h1>
-		<p class="d-none d-sm-block">Installation on the engine. Adaptation. Revision.</p>
+	  <div class="course-header-bottom">
+		<div class="container-fluid">
+		  <div class="row course-info">
+			<div class="col"><span>Язык сайта:</span> <a href="/blog.html" hreflang="en">Русский</a></div>
+			<div class="col"><span>Site language:</span> English</div>
+			<div class="col"><span>Мова сайту:</span> <a href="/ua/index.html" hreflang="uk">Українська</a></div>
+		  </div>
+		</div>
 	  </div>
-	  <div class="d-none d-md-block">
-		<a href="/en/product.html" class="button waves-effect" target="_blank" rel="nofollow">Modules</a>
-		<a href="/en/services.html" class="button button-white waves-effect" target="_blank" rel="nofollow">Services</a>
-		<a href="/en/support.html" class="button button-white waves-effect" target="_blank" rel="nofollow">Support</a>
-	  </div>
-	</div>
-	<div class="social d-md-none d-xl-none">
-	  <a href="https://vk.com/corgras" class="icons-sm"><i class="icons fab fa-vk"></i></a>
-	  <a href="https://www.youtube.com/channel/UC5tI7DjZD0TNDDm3PKv07lQ" class="icons-sm"><i class="icons fab fa-youtube"></i></a>
 	</div>
   </header>
-  <section class="s-block-1 npb">
-	<div id="sync1" class="owl-carousel owl-theme">
-	  <div class="item" itemscope itemtype="http://schema.org/Product">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-6 text-center d-none d-lg-block">
-			  <img src="/img/product/html_pro.png" alt="HTML Pro" class="img-responsive" itemprop="image">
-			</div>
-			<div class="col-md-12 col-lg-6">
-			  <div class="row">
-				<div class="col-md-12 m-icon card d-lg-none d-xl-none">
-				  <div class="d-flex justify-content-center">
-					<div class="card-circle d-flex justify-content-center align-items-center">
-					  <i class="fas fa-th"></i>
-					</div>
-				  </div>
-				</div>
-				<div class="col-md-12 m-name">
-				  <h3><strong>Module 1.</strong> <span itemprop="name">HTML Pro</span></h3>
-				</div>
-				<div class="col-md-12 m-ver"><span>Version 1</span>
-				<span>Opencart 2.x | Opencart 3.x</span></div>
-				<div class="col-md-12 m-desc">
-				  <div class="collapse clearfix show collapse1">
-					<p itemprop="description">Html Pro allows the user to create a grid with an unlimited number of text blocks. The module is not bound to a specific CSS framework, thus making it possible to use any CSS framework, CSS grid, or apply its CSS styles for design, just by assigning the desired CLASS and / or ID to the block.</p>
-				  </div>
-				  <div class="collapse clearfix prices collapse2">
-					<ul class="list-group">
-					  <li class="d-flex justify-content-between align-items-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-						<a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=33310&filter_member=RoS"><span class="price-t">Opencart.com 2.x</span></a>
-						<a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=33312&filter_member=RoS"><span class="price-t">Opencart.com 3.x</span></a>
-						<span class="price">22<i class="far fa-dollar-sign"></i></span>
-						<meta itemprop="price" content="22.00">
-						<meta itemprop="priceCurrency" content="USD">
-					  </li>
-					  <li class="d-flex justify-content-between align-items-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-						<a href="https://liveopencart.ru/opencart-moduli-shablony/moduli/novosti-stati/html-pro-tekstovyie-bloki-dlya-opencart-2-x"><span class="price-t">LiveOpencart.ru 2.x</span></a>
-						<a href="https://liveopencart.ru/opencart-moduli-shablony/moduli/novosti-stati/html-pro-tekstovyie-bloki-dlya-opencart-3-x"><span class="price-t">LiveOpencart.ru 3.x</span></a>
-						<span class="price">320<i class="far fa-ruble-sign"></i></span>
-						<meta itemprop="price" content="320.00">
-						<meta itemprop="priceCurrency" content="RUB">
-					  </li>
-					  <li class="d-flex justify-content-between align-items-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-						<a href="https://shop.opencart-russia.ru/oc2_html_pro"><span class="price-t">Russian-Opencart.ru 2.x</span></a>
-						<a href="https://shop.opencart-russia.ru/oc3_html_pro"><span class="price-t">Russian-Opencart.ru 3.x</span></a>
-						<span class="price">300<i class="far fa-ruble-sign"></i></span>
-						<meta itemprop="price" content="300.00">
-						<meta itemprop="priceCurrency" content="RUB">
-					  </li>
-					</ul>
-				  </div>
-				</div>
-				<div class="col-md-6 m-read">
-					<a href="/docs/html_pro/" class="button waves-effect" itemprop="url">Read more <i class="far fa-angle-right"></i></a>
-				</div> 
-				<div class="col-md-6 m-price">
-					<button class="btn" data-toggle="collapse" data-target=".collapse1,.collapse2">Shop <i class="far fa-angle-up"></i></button>
-				</div>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </div>
-	  <div class="item" itemscope itemtype="http://schema.org/Product">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-6 text-center d-none d-lg-block">
-			  <img src="/img/product/information_blocks.png" alt="Information Blocks" class="img-responsive" itemprop="image">
-			</div>
-			<div class="col-md-12 col-lg-6">
-			  <div class="row">
-				<div class="col-md-12 m-icon card d-lg-none d-xl-none">
-				  <div class="d-flex justify-content-center">
-					<div class="card-circle d-flex justify-content-center align-items-center">
-					  <i class="fas fa-th"></i>
-					</div>
-				  </div>
-				</div>
-				<div class="col-md-12 m-name">
-				  <h3><strong>Module 2.</strong> <span itemprop="name">Information Blocks</span></h3>
-				</div>
-				<div class="col-md-12 m-ver"><span>Version 1</span><span>Opencart 2.x | Opencart 3.x</span></div>
-				<div class="col-md-12 m-desc">
-				  <div class="collapse clearfix show collapse3">
-					<p itemprop="description">The module allows you to display information pages (About Us, Delivery Information, Security Policy, Terms of Agreement, etc.) as blocks with a brief description.</p>
-				  </div>
-				  <div class="collapse clearfix prices collapse4">
-					<ul class="list-group">
-					  <li class="d-flex justify-content-between align-items-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-						<a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=32690&filter_member=RoS"><span class="price-t">Opencart.com 2.x</span></a>
-						<a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=32702&filter_member=RoS"><span class="price-t">Opencart.com 3.x</span></a>
-						<span class="price">22<i class="far fa-dollar-sign"></i></span>
-						<meta itemprop="price" content="22.00">
-						<meta itemprop="priceCurrency" content="USD">
-					  </li>
-					  <li class="d-flex justify-content-between align-items-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-						<a href="https://liveopencart.ru/opencart-moduli-shablony/moduli/vneshniy-vid/informatsionnyie-bloki-dlya-opencart-2-x"><span class="price-t">LiveOpencart.ru 2.x</span></a>
-						<a href="https://liveopencart.ru/opencart-moduli-shablony/moduli/vneshniy-vid/informatsionnyie-bloki-dlya-opencart-3-x"><span class="price-t">LiveOpencart.ru 3.x</span></a>
-						<span class="price">320<i class="far fa-ruble-sign"></i></span>
-						<meta itemprop="price" content="320.00">
-						<meta itemprop="priceCurrency" content="RUB">
-					  </li>
-					  <li class="d-flex justify-content-between align-items-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-						<a href="https://shop.opencart-russia.ru/oc2_information_blocks"><span class="price-t">Russian-Opencart.ru 2.x</span></a>
-						<a href="https://shop.opencart-russia.ru/oc3_information_blocks"><span class="price-t">Russian-Opencart.ru 3.x</span></a>
-						<span class="price">300<i class="far fa-ruble-sign"></i></span>
-						<meta itemprop="price" content="300.00">
-						<meta itemprop="priceCurrency" content="RUB">
-					  </li>
-					</ul>
-				  </div>
-				</div>
-				<div class="col-md-6 m-read"><a href="/docs/information_blocks/" class="button waves-effect" itemprop="url">Read more <i class="far fa-angle-right"></i></a></div> 
-				<div class="col-md-6 m-price"><button class="btn" data-toggle="collapse" data-target=".collapse3,.collapse4">Shop <i class="far fa-angle-up"></i></button></div>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </div>
-	  <div class="item" itemscope itemtype="http://schema.org/Product">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-6 text-center d-none d-lg-block">
-			  <img src="/img/product/additional_description_category.png" alt="Additional Description Category" class="img-responsive" itemprop="image">
-			</div>
-			<div class="col-md-12 col-lg-6">
-			  <div class="row">
-				<div class="col-md-12 m-icon card d-lg-none d-xl-none">
-				  <div class="d-flex justify-content-center">
-					<div class="card-circle d-flex justify-content-center align-items-center">
-					  <i class="fas fa-file-alt"></i>
-					</div>
-				  </div>
-				</div>
-				<div class="col-md-12 m-name">
-				  <h3><strong>Module 3.</strong> <span itemprop="name">Add. Description Category</span></h3>
-				</div>
-				<div class="col-md-12 m-ver"><span>Version 1</span><span class="pull-right">Opencart 3.x</span></div>
-				<div class="col-md-12 m-desc">
-				  <div class="collapse clearfix show collapse5">
-					<p itemprop="description">This modifier will help you add text, banner or HTML code at the bottom of the category pages, which will differ from the description of the default categories.</p>
-				  </div>
-				  <div class="collapse clearfix prices collapse6">
-					<ul class="list-group">
-					  <li class="d-flex justify-content-between align-items-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-						<a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=32689&filter_member=RoS" class=""><span class="price-t">Opencart.com</span></a> <span class="price">22<i class="far fa-dollar-sign"></i></span>
-						<meta itemprop="price" content="22.00">
-						<meta itemprop="priceCurrency" content="USD">
-					  </li>
-					  <li class="d-flex justify-content-between align-items-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-						<a href="https://liveopencart.ru/opencart-moduli-shablony/moduli/vneshniy-vid/dopolnitelnoe-opisanie-kategoriyam-dlya-opencart-3-x"><span class="price-t">LiveOpencart.ru</span></a> <span class="price">320<i class="far fa-ruble-sign"></i></span>
-						<meta itemprop="price" content="320.00">
-						<meta itemprop="priceCurrency" content="RUB">
-					  </li>
-					  <li class="d-flex justify-content-between align-items-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-						<a href="https://shop.opencart-russia.ru/additional_description_categories_3_x"><span class="price-t">Russian-Opencart.ru</span></a> <span class="price">300<i class="far fa-ruble-sign"></i></span>
-						<meta itemprop="price" content="300.00">
-						<meta itemprop="priceCurrency" content="RUB">
-					  </li>
-					</ul>
-				  </div>
-				</div>
-				<div class="col-md-6 m-read"><a href="/docs/additional_description_category/" class="button waves-effect" itemprop="url">Read more <i class="far fa-angle-right"></i></a></div> 
-				<div class="col-md-6 m-price"><button class="btn" data-toggle="collapse" data-target=".collapse5,.collapse6">Shop <i class="far fa-angle-up"></i></button></div>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </div>
-	  <div class="item" itemscope itemtype="http://schema.org/Product">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-6 text-center d-none d-lg-block">
-			  <img src="/img/product/reply_to_reviews.png" alt="Reply To Reviews" class="img-responsive" itemprop="image">
-			</div>
-			<div class="col-md-12 col-lg-6">
-			  <div class="row">
-				<div class="col-md-12 m-icon card d-lg-none d-xl-none">
-				  <div class="d-flex justify-content-center">
-					<div class="card-circle d-flex justify-content-center align-items-center">
-					  <i class="far fa-comment-alt"></i>
-					</div>
-				  </div>
-				</div>
-				<div class="col-md-12 m-name">
-				  <h3><strong>Module 4.</strong> <span itemprop="name">Reply To Reviews</span></h3>
-				</div>
-				<div class="col-md-12 m-ver"><span>Version 3</span><span class="pull-right">Opencart 2.x | Opencart 3.x</span></div>
-				<div class="col-md-12 m-desc">
-				  <div class="collapse clearfix show collapse7">
-					<p itemprop="description">The modifier adds a field for the store administrator's response to customer comments; Ability to change the date of adding a review; Ability to change the name of the administrator, if the field is not filled in, the name "User Group" is substituted.</p>
-				  </div>
-				  <div class="collapse clearfix prices collapse8">
-					<ul class="list-group">
-					  <li class="d-flex justify-content-between align-items-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-						<a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=34500&filter_member=RoS" class=""><span class="price-t">Opencart.com</span></a> <span class="price">22<i class="far fa-dollar-sign"></i></span>
-						<meta itemprop="price" content="22.00">
-						<meta itemprop="priceCurrency" content="USD">
-					  </li>
-					  <li class="d-flex justify-content-between align-items-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-						<a href="https://liveopencart.ru/opencart-moduli-shablony/moduli/sotsialnyie-seti/otvet-na-kommentarii"><span class="price-t">LiveOpencart.ru</span></a> <span class="price">320<i class="far fa-ruble-sign"></i></span>
-						<meta itemprop="price" content="320.00">
-						<meta itemprop="priceCurrency" content="RUB">
-					  </li>
-					  <li class="d-flex justify-content-between align-items-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-						<a href="https://shop.opencart-russia.ru/otvet-na-otzivi-ocmod"><span class="price-t">Russian-Opencart.ru</span></a> <span class="price">300<i class="far fa-ruble-sign"></i></span>
-						<meta itemprop="price" content="300.00">
-						<meta itemprop="priceCurrency" content="RUB">
-					  </li>
-					</ul>
-				  </div>
-				</div>
-				<div class="col-md-6 m-read"><a href="/docs/reply_to_reviews/" class="button waves-effect" itemprop="url">Read more <i class="far fa-angle-right"></i></a></div> 
-				<div class="col-md-6 m-price"><button class="btn" data-toggle="collapse" data-target=".collapse7,.collapse8">Shop <i class="far fa-angle-up"></i></button></div>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </div>
-	</div>
-	<nav id="menu-mod" class="d-none d-md-block">
-	  <div class="container">
-		<div id="sync2" class="owl-carousel owl-theme">
-		  <div class="item">
-			<span>HTML Pro<small>Allows you to arrange blocks/grid</small></span>
-		  </div>
-		  <div class="item">
-			<span>Info. blocks<small>Print informational articles as blocks</small></span>
-		  </div>
-		  <div class="item">
-			<span>Add. description<small>Additional text at the bottom of the OC3 categories page</small></span>
-		  </div>
-		  <div class="item">
-			<span>Reply To Reviews<small>Allows you to leave a response to the comment</small></span>
-		  </div>
-		</div>
-	  </div>
-	</nav>
-  </section>
-  <section class="s-block-1">
+  <section class="section-info">
 	<div class="container">
-	  <div class="row justify-content-md-center numcounters">
-		<div class="col-sm-4">
-		  <div class="numcounter" data-appear-animation="fadeInUp" data-appear-animation-delay="100">
-			<i class="icons fas fa-user"></i>
-			<strong class='numscroller' data-min='0' data-max='200' data-delay='2' data-increment='1'>200</strong><strong>+</strong>
-			<span>Client</span>
-		  </div>
+	  <div class="row justify-content-md-center">
+		<div class="col-12 text-center">
+		  <h2 class="h2-m-b-70"><i class="fab fa-opencart i65"></i>We present a catalog of modules and modifiers - a choice of solutions for creating your online store on OpenCart.</h2>
 		</div>
-		<div class="col-sm-4">
-		  <div class="numcounter" data-appear-animation="fadeInUp" data-appear-animation-delay="100">
-			<i class="icons fas fa-desktop"></i>
-			<strong class='numscroller' data-min='0' data-max='100' data-delay='2' data-increment='1'>100</strong><strong>+</strong>
-			<span>Finished projects</span>
-		  </div>
+		<div class="col cards">
+		  <i class="fad fa-brackets-curly"></i>
+		  <h3>OPEN SOURCE</h3>
+		  <p>Open source means transparency. This is why all modules are open source, which you can modify.</p>
 		</div>
-		<div class="col-sm-4">
-		  <div class="numcounter" data-appear-animation="fadeInUp" data-appear-animation-delay="300">
-			<i class="icons far fa-clock"></i>
-			<strong class='numscroller' data-min='0' data-max='24' data-delay='1' data-increment='1'>24</strong>
-			<strong>/</strong>
-			<strong class='numscroller' data-min='0' data-max='7' data-delay='1' data-increment='1'>7</strong>
-			<span>Service support</span>
-		  </div>
+		<div class="col cards">
+		  <i class="far fa-shield-alt"></i>
+		  <h3>100% QUALITY ASSURANCE/h3>
+		  <p>We guarantee you will be happy with your choice! Building a successful online store with OpenCart is easy!</p>
+		</div>
+		<div class="col cards">
+		  <i class="far fa-hand-holding-usd"></i>
+		  <h3>REFUND</h3>
+		  <p>We want our clients to feel confident. If there is an issue we cannot fix, you will receive a refund.</p>
+		</div>
+		<div class="col-12 text-center btn-block">
+		  <a href="/en/product.html" class="btn btn-primary">Go to catalog</a>
 		</div>
 	  </div>
 	</div>
   </section>
-  <section class="s-block-2 documentation">
+  <section class="section-feature">
 	<div class="container">
 	  <div class="row">
-		<div class="col-md-12 col-xl-3 m-icon card justify-content-center align-items-center">
-		  <div class="d-flex justify-content-center">
-			<div class="card-circle d-flex justify-content-center align-items-center">
-			  <i class="fal fa-file-alt"></i>
-			</div>
-		  </div>
-		</div>
-		<div class="col-md-12 col-xl-9">
-		  <h3>High Quality<strong> Documentation</strong></h3>
-		  <p>The extensions come with extensive and as complete documentation as possible, where each section and its features are described in a simple form for perception, it also comes with a large number of screenshots to help you. If there is not enough documentation, contact us for support.</p>
-		</div>
-	  </div>
-	</div>
-  </section>
-  <section class="s-block-1 ">
-	<div class="container">
-	  <div class="row">
-		<div class="col-md-12 text-center">
-		  <h3>Key <strong>Features</strong></h3>
+		<div class="col-12 text-center mb-5">
+		  <h2 class="h2-m-b-10">Key Features</h2>
 		  <p class="lead">Reasons to choose extensions, here are a few points:</p>
-		  <hr class="invisible">
 		</div>
 	  </div>
-	  <div class="row">
-		<div class="col-sm-12 col-md-6 col-xl-3 feature-box-col">
-		  <div class="feature-box">
-			<div class="feature-box-icon">
-			  <i class="fa fa-check"></i>
-			</div>
-			<div class="feature-box-info">
-			  <h4><strong class="semi-bold">HTML5+JS+CSS</strong></h4>
-			</div>
-		  </div>
+	  <div class="row cards mt-3">
+		<div class="col">
+		  <i class="far fa-check"></i>
+		  <h3>HTML5 / JS / CSS</h3>
 		</div>
-		<div class="col-sm-12 col-md-6 col-xl-3 feature-box-col">
-		  <div class="feature-box">
-			<div class="feature-box-icon">
-			  <i class="fa fa-check"></i>
-			</div>
-			<div class="feature-box-info">
-			  <h4><strong class="semi-bold">Bootstrap 3+</strong></h4>
-			</div>
-		  </div>
+		<div class="col">
+		  <i class="far fa-check"></i>
+		  <h3>Bootstrap</h3>
 		</div>
-		<div class="col-sm-12 col-md-6 col-xl-3 feature-box-col">
-		  <div class="feature-box">
-			<div class="feature-box-icon">
-			  <i class="fa fa-check"></i>
-			</div>
-			<div class="feature-box-info">
-			  <h4><strong class="semi-bold">SEO Optimized</strong></h4>
-			</div>
-		  </div>
+		<div class="col">
+		  <i class="far fa-check"></i>
+		  <h3>SEO Optimized</h3>
 		</div>
-		<div class="col-sm-12 col-md-6 col-xl-3 feature-box-col">
-		  <div class="feature-box">
-			<div class="feature-box-icon">
-			  <i class="fa fa-check"></i>
-			</div>
-			<div class="feature-box-info">
-			  <h4><strong class="semi-bold">Support for OC builds</strong></h4>
-			</div>
-		  </div>
+		<div class="col">
+		  <i class="far fa-check"></i>
+		  <h3>Support for OC assemblies</h3>
 		</div>
 	  </div>
 	</div>
   </section>
-  <section class="s-block-2 news">
+  <section class="section-documentation">
 	<div class="container">
-	  <div class="row">
-		<div class="col-md-12 text-center">
-		  <h3>Latest <strong> News</strong></h3>
-		  <hr class="invisible">
+	  <div class="row row-cols-1">
+		<div class="col text-center">
+		  <h2 class="h2-m-b-30"><i class="fal fa-file-alt i45"></i>High Quality Documentation</h2>
 		</div>
-	  </div>
-	  <div class="row">
-		<div class="col-sm-12 col-md-6 col-xl-6 news-box-col">
-		  <h4>Upgrade HTML Pro to version 2</h4>
-		  <p>Started updating HTML Pro module. The updated version will be fixed bugs. Added: additional block, subtitle field, display control for groups of customers.</p>
-		</div>
-		<div class="col-sm-12 col-md-6 col-xl-6 news-box-col">
-		  <h4>New Year discounts -38%</strong></h4>
-		  <p>The site <a href="https://liveopencart.ru/ros" target="_blank">Liveopencart.ru</a> are Christmas discounts up to 19.01.2019 for all modules.</p>
+		<div class="col text-center">
+		  <p>The extension comes with extensive and as complete documentation as possible, where each <br> section and its features are described in an easy-to-read way, it also comes with lots of screenshots to help you. If the documentation is not sufficient, <a href="/en/support.html"> contact us </a>.</p>
 		</div>
 	  </div>
 	</div>
   </section>
-  <section class="s-block-3 testimonials">
+  <section class="section-google">
 	<div class="container">
 	  <div class="row justify-content-md-center">
-		<div class="col-sm-12">
-		  <div class="reviews text-center my-1">
-			<div class="owl-carousel owl-theme reviews" id="owl-carousel-reviews">
-			  <div class="review-item">
-				<div class="testimonial">
-				  <h4 class="font-weight-bold">Mavo</h4>
-				  <blockquote><i class="icons far fa-angle-double-left"></i> Really professional and fast support. Thanks. <i class="icons far fa-angle-double-right"></i></blockquote>
-				  <p class="name-module">Reply To Reviews (Opencart.com)</p>
-				</div>
-			  </div>
-			  <div class="review-item">
-				<div class="testimonial">
-				  <h4 class="font-weight-bold">Richardvosicky</h4>
-				  <blockquote><i class="icons far fa-angle-double-left"></i> Perfect ideas. Save me a lot of time... <i class="icons far fa-angle-double-right"></i></blockquote>
-				  <p class="name-module">HTML Pro - (Opencart.com)</p>
-				</div>
-			  </div>
-			  <div class="review-item">
-				<div class="testimonial">
-				  <h4 class="font-weight-bold">Investique</h4>
-				  <blockquote><i class="icons far fa-angle-double-left"></i> Great extension and truly amazing support! <i class="icons far fa-angle-double-right"></i></blockquote>
-				  <p class="name-module">Additional Description Category - (Opencart.com)</p>
-				</div>
-			  </div>
-			  <div class="review-item">
-				<div class="testimonial">
-				  <h4 class="font-weight-bold">Almazry</h4>
-				  <blockquote><i class="icons far fa-angle-double-left"></i> Extention works geat, documentation is clear. For others reading this: its 100% OCMod. <i class="icons far fa-angle-double-right"></i></blockquote>
-				  <p class="name-module">Additional Description Category - (Opencart.com)</p>
-				</div>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </div>
-	</div>
-  </section>
-  <section class="s-block-2 partner">
-	<div class="container">
-	  <div class="row justify-content-md-center">
-		<div class="col-sm-12">
-		  <div class="footer-ribbon">
-			<h6>Partners</h6>
-		  </div>
-		  <div class="owl-carousel owl-theme partners" id="owl-carousel-partners">
-			<div class="col text-center">
-			  <a href="https://beget.com/?id=199204" target="_blank">
-				<i class="icons fal fa-server"></i>
-				<span>Hosting "Beget"</span>
-			  </a>
-			</div>
-			<div class="col text-center">
-			  <a href="https://ukraine.com.ua/?page=26391" title="Hosting Ukraine" target="_blank">
-				<i class="icons fal fa-server"></i>
-				<span>Hosting Ukraine</span>
-			  </a>
-			</div>
-			<div class="col text-center">
-			  <a href="https://www.opencart.com/index.php?route=marketplace/extension&filter_member=RoS" target="_blank">
-				<i class="icons fab fa-opencart"></i>
-				<span>Opencart.com</span>
-			  </a>
-			</div>
-			<div class="col text-center">
-			  <a href="https://liveopencart.ru/ros" target="_blank">
-				<i class="icons fab fa-opencart"></i>
-				<span>Liveopencart.ru</span>
-			  </a>
-			</div>
-			<div class="col text-center">
-			  <a href="https://shop.opencart-russia.ru/ros" target="_blank">
-				<i class="icons fab fa-opencart"></i>
-				<span>Opencart-Russian.ru</span>
-			  </a>
-			</div>
-		  </div>
+		<div class="col">
+		  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		  <!-- Новый -->
+		  <ins class="adsbygoogle"
+			style="display:block"
+			data-ad-client="ca-pub-3691122404353666"
+			data-ad-slot="1894357796"
+			data-ad-format="auto"
+			data-full-width-responsive="true"></ins>
+		  <script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		  </script>
 		</div>
 	  </div>
 	</div>
@@ -538,49 +181,32 @@
   <footer class="text-center">
 	<div class="container">
 	  <div class="row">
-		<div class="col-sm-12 col-md-6 copyrights">
-		  <div class="copyright">© 2017 CORGRAS. All rights reserved</div>
+		<div class="col copyrights">
+		  <div class="copyright">© 2020 CORGRAS. All rights reserved</div>
 		</div>
-		<div class="col-sm-12 col-md-6 info">
-		  <a href="https://vk.com/corgras">VK group</a>
-		  <a href="https://www.youtube.com/channel/UC5tI7DjZD0TNDDm3PKv07lQ">Youtube channel</a>
-		  <a class="sitemap" href="/en/support.html">Support</a>
-		  <a class="sitemap" href="/en/sitemap.html">Sitemap</a>
+		<div class="col info">
+		  <a class="sitemap" href="/en/support.html">Support</a> 
 		</div>
 	  </div>
 	</div>
   </footer>
-<!-- SCRIPTS -->
-<script src="/library/js/jquery-3.3.1.min.js"></script>
-<script src="/library/js/numscroller-1.0.js"></script>
-<script src="/library/js/popper.min.js"></script>
-<script src="/library/js/bootstrap.min.js"></script>
-<script src="/library/js/mdb.min.js"></script>
-<script src="/library/js/owl.carousel.min.js"></script>
-<script src="/library/js/common.js"></script>
-
-<!-- Analytics -->
-<script>
+  <!-- SCRIPTS -->
+  <script src="/library/js/bootstrap.min.js"></script>
+  <script src="/library/js/common.js"></script>
+  <!-- Analytics -->
+  <script>
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
 	gtag('config', 'UA-92523979-1');
-</script>
-
-<!-- Adsense -->
-<script>
+  </script>
+  <!-- Adsense -->
+  <script>
 	(adsbygoogle = window.adsbygoogle || []).push({
 		google_ad_client: "ca-pub-3691122404353666",
 		enable_page_level_ads: true
 	});
-</script>
-
-<!-- Yandex.Metrika informer -->
-<a href="https://metrika.yandex.ru/stat/?id=43028959&amp;from=informer" target="_blank" rel="nofollow" class="d-none"><img src="https://informer.yandex.ru/informer/43028959/3_0_FFFFFFFF_EFEFEFFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="43028959" data-lang="ru" /></a> 
-<!-- /Yandex.Metrika informer -->
-<!-- Yandex.Metrika counter -->
-<script> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter43028959 = new Ya.Metrika({ id:43028959, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://d31j93rd8oukbv.cloudfront.net/metrika/watch_ua.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> 
-<noscript><div><img src="https://mc.yandex.ru/watch/43028959" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+  </script>
+  <!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ua/stat/?id=43028959&amp;from=informer" target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/43028959/3_0_FFFFFFFF_EFEFEFFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="43028959" data-lang="ru" /></a> <!-- /Yandex.Metrika informer --> <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(43028959, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/43028959" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 </body>
 </html>
