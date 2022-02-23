@@ -17,15 +17,21 @@ menu_btn.onclick = function(e) {
 //  document.querySelector('.menu-nav-l').toggleClass('menu-nav-l_active');
 //});
 
-
-    $("#glava").on("click","a", function (event) {
-        //отменяем стандартную обработку нажатия по ссылке
+document.querySelector("#glava").addEventListener("click","a", function (event) {
         event.preventDefault();
-        //забираем идентификатор бока с атрибута href
-		var id  = $(this).attr('href'),
-       //узнаем высоту от начала страницы до блока на который ссылается якорь
-       top = $(id).offset().top;
-       //анимируем переход на расстояние - top за 1500 мс
-        $('body,html').animate({scrollTop: top}, 1500);
+      var id  = document.querySelector(this).attr('href'),
+       top = document.querySelector(id).offset().top;
+        document.querySelector('body,html').animate({scrollTop: top}, 1500);
 
     });
+    //$("#glava").on("click","a", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+  //      event.preventDefault();
+        //забираем идентификатор бока с атрибута href
+	//	var id  = $(this).attr('href'),
+       //узнаем высоту от начала страницы до блока на который ссылается якорь
+      // top = $(id).offset().top;
+       //анимируем переход на расстояние - top за 1500 мс
+       // $('body,html').animate({scrollTop: top}, 1500);
+
+    //});
