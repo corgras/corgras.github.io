@@ -69,7 +69,7 @@
 	  <div class="header-content-info">
 		<div class="header-title">
 		  <h1>Дополнительное описание категориям - Документация</h1>
-		  <p class="d-sm-flex"><span>Создан: 13/11/2017</span> <span>Последнее обновление: 27/12/2018</span> <span>Версия 1.1</span></p>
+		  <p class="d-sm-flex"><span>Создан: 13/11/2017</span> <span>Последнее обновление: 10/03/2022</span> <span>Версия 2.0</span></p>
 		  <div class="container">
 			<div class="row">
 			  <div class="col-12 text-center mb-5">
@@ -117,9 +117,9 @@
 		<div class="col-4">
 		  <div class="row row-cols-5 g-4">
 			<div class="col-1 strong text-center">5.</div>
-			<div class="col-11"><a href="#glava5">Проблемы и решения</a></div>
+			<div class="col-11"><a href="#glava5">Стилизация</a></div>
 			<div class="col-1 strong text-center">6.</div>
-			<div class="col-11"><a href="#glava6">Список изменений</a></div>
+			<div class="col-11"><a href="#glava6">Проблемы и решения</a></div>
 		  </div>
 		</div>
 	  </div>
@@ -131,7 +131,7 @@
 	  <div class="row">
 		<div class="col-12 text-center mb-5 text-danger">
 		  <h2 class="h2-m-b-10"><strong>Предупреждение</strong></h2>
-		  <p class="lead">Модификатор тестировался на стандартном шаблоне и на чистом Opencart.<br>Для каждого сайта могут понадобиться некоторые доработки.</p>
+		  <p class="lead">Модификатор тестировался на стандартном шаблоне и на чистой системе Opencart и ocStore.<br>Для некоторых сайтов могут понадобиться некоторые доработки.</p>
 		</div>
 	  </div>
 	</div>
@@ -147,8 +147,8 @@
 	  </div>
 	  <div class="row">
 		<div class="col">
-		  <p><strong>«AD_Category_AdminPanel.ocmod.zip»</strong> - содержит основной функционал для Админ-панели, локализация и необходимые скрипты.</p>
-		  <p><strong>«AD_Category_FrontEnd_Default.ocmod.zip»</strong> - модификатор для шаблона сайта по-умолчанию.</p>
+		  <p><strong>«AD_Category.ocmod.zip»</strong> - содержит основной функционал.</p>
+		  <p><strong>«AD_Category_FrontEnd_Default.ocmod.zip»</strong> - модификатор для отображения описания в шаблоне сайта.</p>
 		  <div class="bd-callout bd-callout-danger text-danger">
 			<div class="row align-items-center">
 			  <div class="col-1 text-center icon"><i class="fal fa-exclamation-triangle"></i></div>
@@ -158,7 +158,7 @@
 			  </div>
 			</div>
 		  </div>
-		  <p><strong>1.</strong> В админке перейдите <strong>«Модули &gt; Установка расширений»</strong> и установите файл <strong>«AD_Category_AdminPanel.ocmod.zip»</strong>;</p>
+		  <p><strong>1.</strong> В админке перейдите <strong>«Модули &gt; Установка расширений»</strong> и установите файл <strong>«AD_Category.ocmod.zip»</strong>;</p>
 		  <p><strong>2.</strong> Получаем сообщение об успешной установке и идем в <strong>«Модули &gt; Модификаторы»</strong> и кликаем по кнопке <strong>«Обновить»</strong> в правом верхнем углу <a href="/library/images/install/module_install_ru.jpg" class="spotlight">[скриншот]</a>;</p>
 		  <p><strong>3.</strong> В админке перейдите <strong class="blue">«Модули &gt; Установка расширений»</strong> и установите файл <strong class="red">«AD_Category_FrontEnd_Default.ocmod.zip»</strong>;</p>
 		  <p><strong>4.</strong> Получаем сообщение об успешной установке и идем в <strong class="blue">«Модули &gt; Модификаторы»</strong> и кликаем по кнопке <strong class="blue">«Обновить»</strong> в правом верхнем углу <a href="/library/images/install/module_install_ru.jpg" class="spotlight">[скриншот]</a>;</p>
@@ -173,18 +173,25 @@
 	  <div class="row">
 		<div class="col-12 text-center mb-5">
 		  <h2 class="h2-m-b-10"><strong>Настройка модуля</strong></h2>
-		  <p class="lead">Для описаний категорий, есть настройки по-умолчанию, чтоб их настроить перейдите:
+		  <p class="lead">Для настройки модуля перейдите:
 		  </br><strong>«Модули &gt; Дополнительное Описание Категориям»</strong></p>
 		</div>
 	  </div>
 	  <div class="row">
 		<div class="col">
-		  <p><strong>1. Во вкладке «Общие»:</strong>
-		  <p><strong>-</strong> Можете назначить текст для состояния когда, блок «Развернут» и когда блок «Свернут»;</p>
-		  <p><strong>-</strong> Можете назначить иконки;</p>
-		  <p><strong>-</strong> Скорость анимации при развертывании и свертывании блока;</p>
-		  <p><strong>-</strong> Статус отвечает за включение настроек;</p>
-		  <p><strong>2. Во вкладке «Статус БД»</strong> - можете проверить установлены нужные поля в таблице или нет. Также можете их удалить или установить.</p>
+		  <p><strong>«Основные настройки»:</strong></p>
+		  <p><strong>Описание на страницах пагинации -</strong> отображение текста на первой странице или на всех;</p>
+		  <p><strong>Разрешение экрана -</strong> на каких разрешениях экрана будет срабатывать скрипт;</p>
+		  <p><strong>Скорость анимации -</strong> скорость анимации при развертывании и свертывании блока;</p>
+		  <p><strong>Статус -</strong> статус модуля отвечает за включение настроек;</p>
+		  <p><strong>«Настройки описаний»</strong></p>
+		  <p><strong>Позиции описаний -</strong> поменять местами верхнее и нижнее описание местами;</p>
+		  <p><strong>Статус верхнего/нижнего описания -</strong> отображение блока описания;</p>
+		  <p><strong>Статус кнопки «Подробнее» -</strong> включение/выключение скрипта для всех описаний категорий;</p>
+		  <p><strong>Высота видимого текста -</strong> которая будет читаемая, а другая часть текста будет скрыта. Для всех описаний категорий;</p>
+		  <p><strong>Статус изображения -</strong> отображать изображение категории возле описания;</p>
+		  <p><strong>«Статус БД»</strong></p>
+		  <p>Отображение статуса полей в таблице. Также можно управлять устанавливать/удалять из базы.</p>
 		</div>
 	  </div>
 	</div>
@@ -195,15 +202,14 @@
 	  <div class="row">
 		<div class="col-12 text-center mb-5">
 		  <h2 class="h2-m-b-10"><strong>Настройка в категориях</strong></h2>
-		  <p class="lead">Для каждого описания категорий, есть свои настройки, чтоб их настроить:</p>
+		  <p class="lead">Если в настройках модуля <strong>«Статус кнопки Подробнее»</strong> - выключен, можете активировать его внутри категории во вкладке <strong>«Дизайн»</strong>:</p>
 		</div>
 	  </div>
 	  <div class="row">
 		<div class="col">
-		  <p>Внутри категории перейдите во вкладку <strong>«Дизайн»</strong>, там найдете настройки.</p>	
-		  <p><strong>- Разделитель текста «Развернуть / Свернуть»</strong> - Включение / выключение разделителя;</p>
-		  <p><strong>- Высота видимой части текста</strong> - Высота блока видимого описания. Значение указывается в пикселях;</p>
-		  <p><strong>- Скрывать описание со 2+ страниц</strong> - Показывает описание только на первой странице категории;</p>	
+		  <p></p>	
+		  <p><strong>Статус кнопки «Подробнее» -</strong> включение/выключение скрипта;</p>
+		  <p><strong>Высота видимого текста -</strong> которая будет читаемая, а другая часть текста будет скрыта;</p>	
 		</div>
 	  </div>
 	</div>
@@ -214,6 +220,23 @@
 	  <div class="row">
 		<div class="col-12 text-center mb-5">
 		  <h2 class="h2-m-b-10"><strong>Внешний вид</strong></h2>
+		  <p class="lead">Изменить верстку блоков с описанием можно в файлах которые находятся:</p>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col text-center">
+		   <p><strong>« \ catalog \ view \ theme \ default \ template \ custom_templates \ addons \ category_desc_top.twig »</strong></p>
+		   <p><strong>« \ catalog \ view \ theme \ default \ template \ custom_templates \ addons \ category_desc_bottom.twig »</strong></p>
+		</div>
+	  </div>
+	</div>
+  </article>
+
+  <article class="section" id="glava5">
+	<div class="container">
+	  <div class="row">
+		<div class="col-12 text-center mb-5">
+		  <h2 class="h2-m-b-10"><strong>Стилизация</strong></h2>
 		  <p class="lead">Если стандартный дизайн кнопки «Развернуть / Свернуть» не вписывается в ваш дизайн сайта, вы можете подправить CSS стили в файле <strong>«readmore.css»</strong>, который находится:</p>
 		</div>
 	  </div>
@@ -225,7 +248,7 @@
 	</div>
   </article>
   
-  <article class="section" id="glava5">
+  <article class="section" id="glava6">
 	<div class="container">
 	  <div class="row">
 		<div class="col-12 text-center mb-5">
@@ -239,49 +262,7 @@
 	  </div>
 	</div>
   </article>
-    
-  <article class="section" id="glava6">
-	<div class="container">
-	  <div class="row">
-		<div class="col-12 text-center mb-5">
-		  <h2 class="h2-m-b-10"><strong>Список изменений</strong></h2>
-		</div>
-	  </div>
-	  <div class="row">
-		<div class="col-12">
-		  <ul class="list-unstyled timeline">
-			<li>
-				<div class="block">
-					<div class="tags">
-						<h5 class="title release">
-							<span class="version">v1.1</span><span class="date">27/12/2018</span>
-						</h5>
-						<p class="tag"><span>Последний релиз</span></p>
-					</div>
-					<div class="block_content">
-						<ul class="excerpt">
-							<li>Поддержка шаблонов Journal2 и Journal3.</li>
-						</ul>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="block">
-					<div class="tags">
-						<h5 class="title">
-							<span class="version">v1.0</span><span class="date">13/11/2017</span>
-						</h5>
-					</div>
-					<div class="block_content">
-						<ul class="excerpt"><li>Начальная версия.</li></ul>
-					</div>
-				</div>
-			</li>
-		  </ul>
-		</div>
-	  </div>
-	</div>
-  </article>
+
   <section class="section-google">
 	<div class="container">
 	  <div class="row justify-content-md-center">
