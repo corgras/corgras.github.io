@@ -17,7 +17,7 @@ menu_btn.onclick = function(e) {
 //  document.querySelector('.menu-nav-l').toggleClass('menu-nav-l_active');
 //});
 
-document.querySelector("#glava").addEventListener("click", function (event) {
+document.querySelector("#glava a").addEventListener("click", (event) => function () {
         event.preventDefault();
       var id  = document.querySelector(this).attr('href'),
        top = document.querySelector(id).offset().top;
