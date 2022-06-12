@@ -459,3 +459,15 @@ ul.timeline li ul li{
 .timeline .byline{padding:.25em 0}
 
 .ym-advanced-informer{display:none !important}
+
+.stop-war {
+    background: url(/img/bg/stop_war.svg) left bottom no-repeat;
+    background-size: contain;
+    left: 0;
+    top: 0px;
+    right: auto;
+    width: 80px;
+	position: fixed;
+	z-index: 10000;
+    border: 0;
+}
