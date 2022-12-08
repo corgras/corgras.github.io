@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="utf-8">
+	<!--<base href="http://corgras.github.io/">-->
+
+	<title>Ответы на самые частые проблемы</title>
+	<meta name="description" content="При установке некоторых модулей или модификаторов Opencart можно столкнуться с ошибками. Мы собрали решение на самые частые проблемы.">
+
+	<link rel="icon" href="/libs/images/favicon.png">
+	<link rel="stylesheet" href="/libs/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/libs/css/fontawesome.min.css">
+	<link rel="stylesheet" href="/libs/css/hamburgers.min.css">
+	
+	<link rel="stylesheet" href="/libs/css/main.css">
+	<link rel="stylesheet" media="screen and (max-width: 991.98px)" href="/libs/css/mobile.css">
+	<link rel="stylesheet" media="screen and (min-width: 992px)" href="/libs/css/desktop.css">
+
+	<link rel="alternate" href="http://corgras.github.io/en/faq.html" hreflang="en-GB">
+	<link rel="alternate" href="http://corgras.github.io/faq.html" hreflang="x-default">
+	<link rel="alternate" href="http://corgras.github.io/ru/faq.html" hreflang="ru-RU">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="msapplication-TileColor" content="#141414">
+	<meta name="theme-color" content="#141414">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#141414">
+	<meta name="msapplication-navbutton-color" content="#141414">
+
+	<meta name="google-site-verification" content="8yBPWf7Koa5XJV8vnxLNeDYC9Ro45_uyPLCDFyjs0UY">
+	<meta name="yandex-verification" content="c384b7882bff7809">
+</head>
+<body>
+<header class="header">
+	<a class="header__logo" href="/ru/">
+		<img src="/libs/images/logo_text.svg" class="logotip" alt="«CORGRAS»">
+	</a>
+	<nav class="header__navigation">
+		<ul class="navigation__list">
+			<li>
+				<a href="/ru/" class="link" data-title="Главная">
+					<i class="fal fa-home-lg"></i><span>Главная</span><span>Главная страница сайта</span>
+				</a>
+			</li>
+			<li>
+				<a href="/ru/extensions.html" class="link" data-title="Расширения">
+					<i class="fal fa-archive"></i><span>Расширения</span><span>Дополнения для Opencart/ocStore</span>
+				</a>
+			</li>
+			<li>
+				<a href="/ru/services.html" class="link" data-title="Услуги">
+					<i class="fal fa-clipboard-list"></i><span>Услуги</span><span>Предоставляемые услуги</span>
+				</a>
+			</li>
+			<!--<li><a href="/demo.html"><i class="fal fa-eye"></i><span>Демо</span><span>Демонстрация модулей</span></a></li>-->
+			<li class="active">
+				<a href="/ru/faq.html" class="active link" data-title="Вопрос-ответ">
+					<i class="fal fa-comment-alt-lines"></i><span>Вопрос-ответ</span><span>Ответы на часто задаваемые вопросы</span>
+				</a>
+			</li>
+			<li>
+				<a href="/ru/support.html" class="link" data-title="Техподдержка">
+					<i class="fal fa-life-ring"></i><span>Техподдержка</span><span>Способы связи с нами</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="header__navigation-icon">
+		<div class="navigation-icon__lang dropdown-right">
+			<button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				<svg width="256px" height="256px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+					<path d="M239.13184,212.42188l-56-112a8.0001,8.0001,0,0,0-14.31055,0L147.12378,143.817a88.01219,88.01219,0,0,1-47.15234-16.89991A103.63932,103.63932,0,0,0,127.67187,64h24.30469a8,8,0,0,0,0-16h-56V32a8,8,0,0,0-16,0V48h-56a8,8,0,0,0,0,16h87.63257a87.71326,87.71326,0,0,1-23.64038,52.34106A87.6285,87.6285,0,0,1,68.98682,85.332a7.99985,7.99985,0,1,0-15.083,5.33789A103.55961,103.55961,0,0,0,75.9856,126.93945,87.52745,87.52745,0,0,1,23.97656,144a8,8,0,0,0,0,16,103.48476,103.48476,0,0,0,64.01331-22.09045A104.14165,104.14165,0,0,0,139.43115,159.202l-26.60986,53.21985a8.00006,8.00006,0,0,0,14.31055,7.15625L140.9209,192h70.11133l13.78906,27.57813a8.00006,8.00006,0,0,0,14.31055-7.15625ZM148.9209,176l27.05566-54.11133L203.03223,176Z"/>
+				</svg>
+			</button>
+			<div class="dropdown-menu min-w-0" aria-labelledby="dropdownMenuLang">
+				<a class="dropdown-item link" href="/en/faq.html" hreflang="en" data-title="English"><span>English</span></a>
+				<a class="dropdown-item link active" href="#" hreflang="ru" data-title="Русский"><span>Русский</span></a>
+				<a class="dropdown-item link" href="/faq.html" hreflang="uk" data-title="Українська"><span>Українська</span></a>
+			</div>
+		</div>
+		<button class="hamburger hamburger--spin-r nav-hamburger__btn" type="button">
+			<span class="hamburger-box"><span class="hamburger-inner"></span></span>
+		</button>
+	</div>
+</header>
+<section class="section faq-section section__white section-xl">
+	<div class="container">
+		<div class="heading-content">
+			<h1 class="header-section__h1">Ответы на самые частые проблемы</h1>
+			<p class="header-section__text">При установке модулей или модификаторов, можно столкнуться с ошибками.<br>Мы собрали решение на самые частые проблемы</p>
+		</div>
+		<div class="accordion accordion-flush" id="accordionFaq">
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq1">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse1" aria-expanded="false" aria-controls="faq-collapse1">
+						1. «Директория не доступна для записи!» или «Папка не разрешена для записи!»
+					</button>
+				</h2>
+				<div id="faq-collapse1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#accordionFaq">
+					<div class="accordion-body">
+						<ul class="ul">
+							<li>Скачайте и установите дополнение <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=40663">Localcopy OCMOD</a>;</li>
+							<li>После установки этого дополнения нужно перейти в раздел <i>«Модификаторы»</i> и нажать кнопку <i>«Обновить модификаторы»</i>;</li>
+							<li>Теперь можно устанавливать другие модули.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq2">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse2" aria-expanded="false" aria-controls="faq-collapse2">
+						2. Модуль установлен и работает в админке, но на сайте ничего не отображается
+					</button>
+				</h2>
+				<div id="faq-collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#accordionFaq">
+					<div class="accordion-body">
+						<p>Возможно несколько проблем и вариантов их решения:</p>
+						<ul class="ul">
+							<li>Не сброшен кэш шаблона  - нужно обновить кэш;</li>
+							<li>Вы раньше редактировали файлы шаблона через админку в разделе <i>«Редактор темы»</i>, тогда этот файл сохранился в базе данных и на него уже не влияют ocmod-модификаторы, это проблема Opencart 3. Вам нужно установить фикс <a href="https://drive.google.com/file/d/1RtABqBTtBOFrLpmCFtgw5m1_IdS1ptAB/view?usp=sharing">[скачать]</a> и обновить модификации в админке;</li>
+							<li>Ваш шаблон устроен на TPL-файлах (*.tpl), в то время, когда в Opencart 3 шаблоны должны быть в формате TWIG (*.twig). Проблема в том, что ocmod-модификаторы не влияют на TPL-файлы - все изменения нужно вносить в эти файлы вручную.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq3">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse3" aria-expanded="false" aria-controls="faq-collapse3">
+						3. Не работает модуль на Opencart 3.0.3.6
+					</button>
+				</h2>
+				<div id="faq-collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#accordionFaq">
+					<div class="accordion-body">
+						<p>В официальных сборках Opencart 3.0.3.5 - 3.0.3.6 есть баг - там модификаторы не работают с twig-файлами из-за ошибки в стандартном модификаторе <i>«/system/modification.xml»</i> - вторая операция из этого модификатора не срабатывает.</p>
+						<p>Проблема есть на оф. гитхабе и предложено решение: <a href="https://github.com/opencart/opencart/blob/3.0.x.x_Maintenance/upload/system/modification.xml">https://github.com/opencart/opencart/blob/3.0.x.x_Maintenance/upload/system/modification.xml</a></p>
+						<p>Мы сделали фикс-модификатор по этим рекомендациям, он заменит файл <i>«/system/modification.xml»</i> на правильный.</p>
+						<p><strong>Решение проблемы:</strong></p>
+						<ul class="ul">
+							<li>Сделайте резервную копию вашего файла <i>«/system/modification.xml»</i>;</li>
+							<li>Скачайте фикс-модификатор <a href="https://drive.google.com/file/d/1-n9S2WgKVectDWkW1GBTEHkOtWBmI8pr/view?usp=sharing">[скачать]</a> и установите его у себя в админке;</li>
+							<li>Обновите кэш модификаторов;</li>
+							<li>Обновите кэш twig-шаблонов.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq4">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse4" aria-expanded="false" aria-controls="faq-collapse4">
+						4. Модуль не реагирует на ваши действия
+					</button>
+				</h2>
+				<div id="faq-collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#accordionFaq">
+					<div class="accordion-body">
+						<p>Если модуль не реагирует на ваши действия, будь-то нажатие на кнопку или загрузка карты или выбор даты или на любое другое действие которое есть в функционале модуля - скорее всего произошел конфликт в JS-скриптах.</p>
+						<p>Нажмите F12 на проблемной странице в браузере - откроется панель вебмастера, где на вкладке <i>«Console»</i> можно увидеть конфликты в скриптах, если они есть. Данное действие доступно в браузерах Chrome, Opera, Firefox.</p>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq5">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse5" aria-expanded="false" aria-controls="faq-collapse5">
+						5. SyntaxError: Unexpected token in JSON at position 0
+					</button>
+				</h2>
+				<div id="faq-collapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#accordionFaq">
+					<div class="accordion-body">
+						<ul class="ul">
+							<li>Скачайте и установите фикс <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=18892">Localcopy</a>;</li>
+							<li>Обновите модификации в админке;</li>
+							<li>Загрузите модуль заново.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq6">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse6" aria-expanded="false" aria-controls="faq-collapse6">
+						6. Ошибка 500 - Internal Server Error
+					</button>
+				</h2>
+				<div id="faq-collapse6" class="accordion-collapse collapse" aria-labelledby="faq6" data-bs-parent="#accordionFaq">
+					<div class="accordion-body">
+						<p>Ошибка 500 после установки модуля означает, что случилась какая-то критическая ошибка в php.</p>
+						<p><strong>Для определение проблемы можно:</strong></p>
+						<ul class="ul">
+							<li>Открыть файл <i>«logs/error.log»</i> на вашем сервере. В конце этого файла будут все последние критические ошибки.</li>
+							<li>Открыть в админке <i>«Инструменты > Логи ошибок»</i> - в этом месте отображаются ошибки, но не всегда.</li>
+							<li>
+								<p>Включить вывод ошибок php на экран - добавить следующий код в конец файла .htaccess:</p>
+								<pre>php_value display_errors 1</pre>
+								<pre>php_value display_startup_errors 1</pre>
+								<pre>php_value error_reporting E_ALL</pre>
+							</li>
+						</ul>
+						<p>Теперь вместо ошибки 500 должен отображаться код ошибки, который укажет на проблему.</p>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq7">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse7" aria-expanded="false" aria-controls="faq-collapse7">
+						7. Модуль установлен, но его нет в списке модулей
+					</button>
+				</h2>
+				<div id="faq-collapse7" class="accordion-collapse collapse" aria-labelledby="faq7" data-bs-parent="#accordionFaq">
+					<div class="accordion-body">
+						<p><strong>Возможные причины:</strong></p>
+						<ul class="ul">
+							<li>Если вы раньше не загружали модули в архиве через админку - вам нужно установить бесплатную модификацию <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=18892">Localcopy OCMOD</a> согласно инструкции и после этого переустановить модуль;</li>
+							<li>Возможно, в устанавливаемом модуле нет собственной страницы настроек, и соответственно его не будет в списке модулей.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq8">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse8" aria-expanded="false" aria-controls="faq-collapse8">
+						8. Ошибка: FTP должен быть включен в настройках
+					</button>
+				</h2>
+				<div id="faq-collapse8" class="accordion-collapse collapse" aria-labelledby="faq8" data-bs-parent="#accordionFaq">
+					<div class="accordion-body">
+						<p><strong>Два варианта решения:</strong></p>
+						<p>1. Если при установке модуля из админки вылетает эта ошибка - вам нужно установить бесплатную <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=18892">FTP QuickFix модификацию localcopy.ocmod.xml</a>. Она установиться без проблем через тот же установщик дополнений, только после установки не забудьте обновить модификации и затем можете приступать к установке любых модулей на Opencart 2.</p>
+						<p>2. Также решить эту ошибку можно по-другому: прописать доступы к FTP в админке <i>«Система > Настройки > Магазин > вкладка FTP»</i>.</p>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq9">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse9" aria-expanded="false" aria-controls="faq-collapse9">
+						9. Ошибка: Доступ запрещен!
+					</button>
+				</h2>
+				<div id="faq-collapse9" class="accordion-collapse collapse" aria-labelledby="faq9" data-bs-parent="#accordionFaq">
+					<div class="accordion-body">
+						<p>Если вы видите сообщение <i>«Доступ запрещен!  У Вас нет прав для доступа к этой странице. Если она Вам нужна, обратитесь к администратору»</i> - нужно дать права администраторам на управление модулем или страницей.</p>
+						<p><strong>Решение:</strong> в админке Opencart 2 переходим в <i>«Система > Пользователи > Группы пользователей»</i> и здесь нажимаем <i>«Выделить все»</i> ниже обоих блоков, затем Сохранить.</p>
+						<p>Еще одной причиной появления этой ошибки может быть не правильная установка модуля - файлы не загрузились на свои места. Загрузите файлы модуля вручную на сервер или установите фикс <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=18892">localcopy.ocmod.xml</a> и переустановите модуль.</p>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq10">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse10" aria-expanded="false" aria-controls="faq-collapse10">
+						10. Не добавился пункт модуля в боковое меню админки
+					</button>
+				</h2>
+				<div id="faq-collapse10" class="accordion-collapse collapse" aria-labelledby="faq10" data-bs-parent="#accordionFaq">
+					<div class="accordion-body">
+						<p>В админке Opencart 2 переходим в <i>«Система > Пользователи > Группы пользователей»</i> и здесь нажимаем <i>«Выделить все»</i> ниже обоих блоков, затем Сохранить.</p>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq11">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse11" aria-expanded="false" aria-controls="faq-collapse11">
+						11. Ошибка: Недопустимый тип файла!
+					</button>
+				</h2>
+				<div id="faq-collapse11" class="accordion-collapse collapse" aria-labelledby="faq11" data-bs-parent="#accordionFaq">
+					<div class="accordion-body">
+						<p>Если модуль - это один XML файл,  то его расширение должно быть .ocmod.xml</p>
+						<p>Если модуль - это ocmod.zip архив, то его не нужно распаковывать, а устанавливать как есть. В таком архиве обязательно должна быть папка upload (может быть пустой), а также могут быть файлы модификаций: install.xml, install.php, install.sql. Никаких других файлов в корне архива быть не должно.</p>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq12">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse12" aria-expanded="false" aria-controls="faq-collapse12">
+						12. Ошибка: Каталог, содержащий файлы для загрузки не может быть найден!
+					</button>
+				</h2>
+				<div id="faq-collapse12" class="accordion-collapse collapse" aria-labelledby="faq12" data-bs-parent="#accordionFaq">
+					<div class="accordion-body">
+						<p>Эта ошибка означает, что в загружаемом архиве отсутствует папка upload. Даже если у модуля нет файлов, кроме модификаций - эта папка должна присутствовать в архиве модуля .ocmod.zip, тогда она должна оставаться пустой.</p>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq13">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse13" aria-expanded="false" aria-controls="faq-collapse13">
+						13. Ошибка: Модификатор использует тот же ID код который вы пытаетесь загрузить!
+					</button>
+				</h2>
+				<div id="faq-collapse13" class="accordion-collapse collapse" aria-labelledby="faq13" data-bs-parent="#accordionFaq">
+					<div class="accordion-body">
+						<p>Эта ошибка означает, что вы пытаетесь установить модификатор, который уже установлен или, возможно, у какого-то вашего модуля такой же ID.</p>
+						<p>Для решения этой ошибки вам нужно перед установкой удалить старую версию модификации в разделе <i>«Модули > Модификации»</i>.</p>
+						<p>Если такого модуля у вас нет, но совпадает ID, тогда нужно поменять значение параметра <strong>code</strong> в устанавливаемом модификаторе XML, сделать этот параметр уникальным дописав несколько символов.</p>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq14">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse14" aria-expanded="false" aria-controls="faq-collapse14">
+						14. Ошибка: Warning: DOMDocument::loadXML(): CData section not finished
+					</button>
+				</h2>
+				<div id="faq-collapse14" class="accordion-collapse collapse" aria-labelledby="faq14" data-bs-parent="#accordionFaq">
+					<div class="accordion-body">
+						<p>Эта ошибка означает, что вы пытаетесь установить слишком объемный xml-модификатор.</p>
+						<p>Количество символов в ocmod.xml файле не должно превышать 65535.</p>
+						<p>Для решения ошибки нужно разбить xml-файл модификации на несколько частей, главное - не забыть задавать каждой уникальное значение в <strong>&lt;code&gt;</strong>, можно добавлять к текущему значению цифры 1,2,3... как идентификаторы части.</p><p>Еще одним способом решения есть изменения типа в поля, где храняться модификации, в таблице <strong>'oc_modification'</strong> базы данных.</p>
+						<p>Нужно выполнить следующий SQL-запрос:</p>
+						<pre>ALTER TABLE oc_modification CHANGE xml MEDIUMTEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ;</pre> 
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq15">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse15" aria-expanded="false" aria-controls="faq-collapse15">
+						15. Ошибка: Fatal error: Uncaught exception '...' with message '...' in
+					</button>
+				</h2>
+				<div id="faq-collapse15" class="accordion-collapse collapse" aria-labelledby="faq15" data-bs-parent="#accordionFaq">
+					<div class="accordion-body">
+						<ul class="ul">
+							<li>Похоже, вы установили на Opencart 2.3.x.x модуль для более старых версий этой системы, то есть не совместимый модуль. Нужно удалить все файлы этого модуля, иначе ошибка не исчезнет.</li>
+							<li>Также данная ошибка может возникать, если скрипт обращается к несуществующей таблице в базе данных. То есть, таблица модуля не создалась при установке. Читайте инструкцию по установке и переустановите модуль.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq16">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse16" aria-expanded="false" aria-controls="faq-collapse16">
+						16. Не редактируется шаблон, не меняется текст на сайте
+					</button>
+				</h2>
+				<div id="faq-collapse16" class="accordion-collapse collapse" aria-labelledby="faq16" data-bs-parent="#accordionFaq">
+					<div class="accordion-body">
+						<p>Есть несколько причин почему не меняется что то на сайте. В основном это происходит в OpenCart 3-й версии, но может и во 2-й тоже.</p>
+						<ul class="ul">
+							<li><strong>Вы не обновили кеш модификатора.</strong> Его нужно обновлять после редактирования файла, если он "проходит" через модификатор. О модификаторах читайте в документации и на форуме.</li>
+							<li><strong>Не обновлен или не выключен кеш TWIG .</strong> Да, по умолчанию он включен, но при внесении изменений он мешает. Его нужно или обновлять или отключать.</li>
+							<li><strong>Были изменения через Редактор шаблона.</strong> Вот одни редактируют через админку, а другие через FTP. Везде написано, что лучше редактировать только через FTP, но некоторым все же удается все сломать. Поэтому, перед тем как редактировать через FTP, необходимо удалить все изменения в Дизайн - Редактор шаблона.</li>
+							<li><strong>Редактируете не те файлы.</strong> Да и такое бывает. То редактируют другой сайт, то другой шаблон, то забывают обновить кеш браузера нажатием CTRL+F5 , то пытаются редактировать что то в кеше модификатора т.е в директории STORAG и тд. Внимательно изучайте структуру. Об этом есть информация в документации.</li>
+							<li><strong>Хостин с задержкой.</strong> Да бывают хостеры, которые задерживают изменения в файлах. Т.е редактируешь, а изменения применяются через минуту. За минуту можно весь сайт сломать, а виноват оказывается хостер.</li>
+							<li><strong>Кривой шаблон или шаблон с кешем.</strong> Некоторые шаблоны настолько перекешированы, что начинаешь редактировать, а изменений нет. Виной кеш самомго шаблона. Обычно это распространено в многофункциональных шаблонах, поэтому внимательней изучайте функционал.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p class="section__minitext">Если у Вас есть вопросы, Вы можете написать нам лично. Рассмотрение вопроса происходит в течение 48 часов.</p>
+		<div class="buttons">
+			<a href="mailto:corgras.dev@gmail.com" class="btn btn-dark btn-default btn-w240 ripple"><span>Написать нам</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
+		</div>
+	</div>
+</section>
+<section class="section section__grey section-xl text-center">
+	<div class="container">
+		<h2 class="section__h2">Поддержать автора</h2>
+		<p class="section__minitext">Если вы хотите поддержать или поблагодарить автора, вы можете сделать это с помощью:<br>PayPal или Кредитной картой</p>
+		<div class="buttons">
+			<a href="https://www.paypal.com/donate/?hosted_button_id=DMETJT5YE55HN" class="btn btn-dark btn-default btn-w240 ripple"><span>Поддержать</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
+		</div>
+	</div>
+</section>
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col footer__copyrights"><span>© 2022 CORGRAS. Все права защищены</span></div>
+		</div>
+	</div>
+</footer>
+
+<a id="scrollTop" class="btn btn-scrollTop"><i class="fas fa-chevron-up"></i></a>
+
+<a target="_blank" href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi" class="stop-war"></a>
+
+<!-- SCRIPT -->
+<script src="/libs/js/bootstrap.bundle.min.js"></script>
+<script src="/libs/js/jquery.min.js"></script>
+<script src="/libs/js/common.js"></script>
+<!-- END SCRIPT -->
+
+<!-- ANALYTICS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3LWW5QT15W"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());	
+	gtag('config', 'G-3LWW5QT15W');
+</script>
+</body>
+</html>
