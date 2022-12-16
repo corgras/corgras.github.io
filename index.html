@@ -31,10 +31,10 @@
 </head>
 <body>
 <header class="header">
-	<a class="header__logo" href="/">
+	<a class="col-2 header__logo" href="/">
 		<img src="/libs/images/logo_text.svg" class="logotip" alt="«CORGRAS»">
 	</a>
-	<nav class="header__navigation">
+	<nav class="col header__navigation">
 		<ul class="navigation__list">
 			<li class="active">
 				<a href="/" class="active link" data-title="Головна">
@@ -64,7 +64,7 @@
 			</li>
 		</ul>
 	</nav>
-	<div class="header__navigation-icon">
+	<div class="col-2 header__navigation-icon">
 		<div class="navigation-icon__lang dropdown-right">
 			<button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 				<svg width="256px" height="256px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
@@ -90,7 +90,7 @@
 		<div class="slide-el slide-oculos" id="slide-oculos"><img src="/libs/images/header/header_oculos.png"></div>
 		<div class="slide-el slide-tablet" id="slide-tablet"><img src="/libs/images/header/header_tablet.png"></div>
 		<div class="slide-el slide-pen" id="slide-pen"><img src="/libs/images/header/header_pen.png"></div>
-		<a href="#extensions-section" class="scroll-btn" id="scroll-btn"><span></span></a>
+		<a href="#cards" class="scroll-btn" id="scroll-btn"><span></span></a>
 	</div>
 	<div class="header-section__content">
 		<div class="header-section__logo">
@@ -100,10 +100,10 @@
 		<p class="header-section__text">Рішення для створення інтернет-магазину</p>
 	</div>
 </section>
-<section class="section section__white section-xl">
+<section class="section section__white section-xl" id="cards">
 	<div class="container">
-		<h2 class="section__h2"><i class="fab fa-opencart i65"></i>Нові модулі та модифікатори</h2>
-		<div class="row cards">
+		<h2 class="section__h2"><i class="fab fa-opencart i50"></i>Нові модулі та модифікатори</h2>
+		<div class="row g-5 cards">
 			<div class="col">
 				<a href="/docs/product_description_readmore.html">
 					<div class="card h-100">
@@ -111,7 +111,7 @@
 							<h3 class="card-title">JS Readmore для опису товару</h3>
 							<p class="card-text">Дозволяє приховати частину довгого тексту, з можливістю приховувати / розгортати текст</p>
 						</div>
-						<div class="card-footer buttons">
+						<div class="card-footer card-buttons">
 							<span class="extensions-release">Реліз: 10.12.2022</span>
 							<button class="btn btn-light btn-small ripple"><span>Детальніше</span><i class="far fa-long-arrow-right btn-icon-left"></i></button>
 						</div>
@@ -125,7 +125,7 @@
 							<h3 class="card-title">Додатковий опис категоріям + налаштування</h3>
 							<p class="card-text">Дозволяє додати текст, банер або HTML-код у нижній частині сторінок категорій, який відрізнятиметься від опису категорій за промовчанням. І має інші налаштування</p>
 						</div>
-						<div class="card-footer buttons">
+						<div class="card-footer card-buttons">
 							<span class="extensions-release">Реліз: 30.11.2022</span>
 							<button class="btn btn-light btn-small ripple"><span>Детальніше</span><i class="far fa-long-arrow-right btn-icon-left"></i></button>
 						</div>
@@ -133,29 +133,28 @@
 				</a>
 			</div>
 		</div>
-		<div class="buttons">
-			<a href="/extensions.html" class="btn btn-blue btn-default btn-w240 ripple"><span>Перейти до каталогу</span> <i class="far fa-long-arrow-right btn-icon-left"></i></a>
+		<div class="buttons mt-xl">
+			<a href="/extensions.html" class="btn btn-dark btn-default btn-w240 ripple"><span>Перейти до каталогу</span> <i class="far fa-long-arrow-right btn-icon-left"></i></a>
 		</div>
 	</div>
 </section>
 <section class="section section__dark section-xl">
 	<div class="container">
-		<h2 class="section__h2">Чому обирають нас?</h2>
 		<div class="row justify-content-md-center сhoices">
 			<div class="col сhoice">
 				<i class="fal fa-code"></i>
-				<h3 class="сhoice-title">Чистий та відкритий код</h3>
-				<p class="сhoice-text">Вихідний код модуля повністю відкритий, не потребує дешифраторів, легко читаємо і який ви можете змінити.</p>
+				<h3 class="сhoice-title">Відкритий код</h3>
+				<p class="сhoice-text">Вихідний код повністю відкритий, не потребує дешифраторів і легко читаємо</p>
 			</div>
 			<div class="col сhoice">
 				<i class="fal fa-shield-check"></i>
-				<h3 class="сhoice-title">100% Гарантія якості</h3>
-				<p class="сhoice-text">Ми гарантуємо, що ви залишитеся задоволені своїм вибором!</p>
+				<h3 class="сhoice-title">100% Гарантія</h3>
+				<p class="сhoice-text">Ми гарантуємо, що ви залишитеся задоволені своїм вибором</p>
 			</div>
 			<div class="col сhoice">
 				<i class="fal fa-sliders-v"></i>
 				<h3 class="сhoice-title">Корисні функції</h3>
-				<p class="сhoice-text">Модулі мають гнучкі налаштування та інтуїтивно-зрозумілий інтерфейс.</p>
+				<p class="сhoice-text">Модулі мають гнучкі налаштування та інтуїтивно-зрозумілий інтерфейс</p>
 			</div>
 		</div>
 	</div>
@@ -179,7 +178,7 @@
 
 <a id="scrollTop" class="btn btn-scrollTop"><i class="fas fa-chevron-up"></i></a>
 
-<a target="_blank" class="stop-war" href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi"></a>
+<a target="_blank" href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi" class="stop-war"></a>
 
 <!-- SCRIPT -->
 <script src="/libs/js/bootstrap.bundle.min.js"></script>

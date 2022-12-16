@@ -31,10 +31,10 @@
 </head>
 <body>
 <header class="header">
-	<a class="header__logo" href="/en/">
+	<a class="col-2 header__logo" href="/en/">
 		<img src="/libs/images/logo_text.svg" class="logotip" alt="«CORGRAS»">
 	</a>
-	<nav class="header__navigation">
+	<nav class="col header__navigation">
 		<ul class="navigation__list">
 			<li class="active">
 				<a href="/en/" class="active link" data-title="Home">
@@ -64,7 +64,7 @@
 			</li>
 		</ul>
 	</nav>
-	<div class="header__navigation-icon">
+	<div class="col-2 header__navigation-icon">
 		<div class="navigation-icon__lang dropdown-right">
 			<button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 				<svg width="256px" height="256px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
@@ -90,7 +90,7 @@
 		<div class="slide-el slide-oculos" id="slide-oculos"><img src="/libs/images/header/header_oculos.png"></div>
 		<div class="slide-el slide-tablet" id="slide-tablet"><img src="/libs/images/header/header_tablet.png"></div>
 		<div class="slide-el slide-pen" id="slide-pen"><img src="/libs/images/header/header_pen.png"></div>
-		<a href="#extensions-section" class="scroll-btn" id="scroll-btn"><span></span></a>
+		<a href="#cards" class="scroll-btn" id="scroll-btn"><span></span></a>
 	</div>
 	<div class="header-section__content">
 		<div class="header-section__logo">
@@ -100,10 +100,10 @@
 		<p class="header-section__text">Solutions for creating an online store</p>
 	</div>
 </section>
-<section class="section section__white section-xl">
+<section class="section section__white section-xl" id="cards">
 	<div class="container">
-		<h2 class="section__h2"><i class="fab fa-opencart i65"></i>New modules and modifications</h2>
-		<div class="row cards">
+		<h2 class="section__h2"><i class="fab fa-opencart i50"></i>New modules and modifications</h2>
+		<div class="row g-5 cards">
 			<div class="col">
 				<a href="/en/docs/product_description_readmore.html">
 					<div class="card h-100">
@@ -111,7 +111,7 @@
 							<h3 class="card-title">JS Readmore for product description</h3>
 							<p class="card-text">Allows you to hide part of a long text, with the ability to hide / expand the text</p>
 						</div>
-						<div class="card-footer buttons">
+						<div class="card-footer card-buttons">
 							<span class="extensions-release">Release: 10.12.2022</span>
 							<button class="btn btn-light btn-small ripple"><span>More details</span><i class="far fa-long-arrow-right btn-icon-left"></i></button>
 						</div>
@@ -125,7 +125,7 @@
 							<h3 class="card-title">Additional description of categories + settings</h3>
 							<p class="card-text">Allows you to add text, banner or HTML code at the bottom of the category pages, which will be different from the default description. And it has other settings</p>
 						</div>
-						<div class="card-footer buttons">
+						<div class="card-footer card-buttons">
 							<span class="extensions-release">Release: 30.11.2022</span>
 							<button class="btn btn-light btn-small ripple"><span>More details</span><i class="far fa-long-arrow-right btn-icon-left"></i></button>
 						</div>
@@ -133,29 +133,28 @@
 				</a>
 			</div>
 		</div>
-		<div class="buttons">
-			<a href="/en/extensions.html" class="btn btn-blue btn-default btn-w240 ripple"><span>Go to catalog</span> <i class="far fa-long-arrow-right btn-icon-left"></i></a>
+		<div class="buttons mt-xl">
+			<a href="/en/extensions.html" class="btn btn-dark btn-default btn-w240 ripple"><span>Go to catalog</span> <i class="far fa-long-arrow-right btn-icon-left"></i></a>
 		</div>
 	</div>
 </section>
 <section class="section section__dark section-xl">
 	<div class="container">
-		<h2 class="section__h2">Why choose us?</h2>
 		<div class="row justify-content-md-center сhoices">
 			<div class="col сhoice">
 				<i class="fal fa-code"></i>
-				<h3 class="сhoice-title">Clean and open source</h3>
-				<p class="сhoice-text">The source code of the module is completely open, does not require decoders, is easy to read and can be changed.</p>
+				<h3 class="сhoice-title">Open source</h3>
+				<p class="сhoice-text">The source code is completely open, does not require decryptors and is easy to read</p>
 			</div>
 			<div class="col сhoice">
 				<i class="fal fa-shield-check"></i>
-				<h3 class="сhoice-title">100% Quality guarantee.</h3>
-				<p class="сhoice-text">We guarantee that you will be satisfied with your choice!</p>
+				<h3 class="сhoice-title">100% Guarantee</h3>
+				<p class="сhoice-text">We guarantee that you will be satisfied with your choice</p>
 			</div>
 			<div class="col сhoice">
 				<i class="fal fa-sliders-v"></i>
-				<h3 class="сhoice-title">Useful features.</h3>
-				<p class="сhoice-text">The modules have flexible settings and an intuitive interface.</p>
+				<h3 class="сhoice-title">Useful features</h3>
+				<p class="сhoice-text">The modules have flexible settings and an intuitive interface</p>
 			</div>
 		</div>
 	</div>
