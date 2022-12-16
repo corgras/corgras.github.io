@@ -9,7 +9,7 @@
 		background-color:var(--bg-d);
 		box-shadow:0 0 60px 0 rgb(29 31 32 / 7%);
 	}
-	.header__logo{
+	.header__logo img{
 		display:none;
 	}
 
