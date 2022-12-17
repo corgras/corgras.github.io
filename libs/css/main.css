@@ -1094,7 +1094,7 @@ ul.ul >li{
 
 /* -- BANNER -- */
 .stop-war {
-	background:url(/libs/images/stop-war-in-ukraine.png) left bottom no-repeat;
+	background:url(/libs/images/banner/stop-war-in-ukraine.png) left bottom no-repeat;
 	background-size:contain;
 	left:0;
 	top:0px;
