@@ -98,7 +98,7 @@
 					<div class="accordion-body">
 						<ul class="ul">
 							<li>Download and install the add-on <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=40663">Localcopy OCMOD</a>;</li>
-							<li>After installing this add-on, you need to go to the section <i>«Modifications»</i> and click the button <i>«Update Modifications»</i>;</li>
+							<li>After installing this add-on, you need to go to the section <span class="path">«Modifications»</span> and click the button <span class="path">«Update Modifications»</span> ;</li>
 							<li>Now you can install other modules.</li>
 						</ul>
 					</div>
@@ -115,7 +115,7 @@
 						<p>There are several possible problems and possible solutions:</p>
 						<ul class="ul">
 							<li>The template cache has not been reset - you need to update the cache;</li>
-							<li>You previously edited template files through the admin panel in the <i>«Theme Editor»</i> section, then this file was saved in the database and it is no longer affected by ocmod modifiers, this is an Opencart 3 problem. You need to install a fix <a href="https://drive.google.com/file/d/1RtABqBTtBOFrLpmCFtgw5m1_IdS1ptAB/view?usp=sharing">[download]</a> and update modifications in admin panel;</li>
+							<li>You previously edited template files through the admin panel in the <span class="path">«Theme Editor»</span> section, then this file was saved in the database and it is no longer affected by ocmod modifiers, this is an Opencart 3 problem. You need to install a fix <a href="https://drive.google.com/file/d/1RtABqBTtBOFrLpmCFtgw5m1_IdS1ptAB/view?usp=sharing">[download]</a> and update modifications in admin panel;</li>
 							<li>Your template is based on TPL files (*.tpl), while in Opencart 3 templates should be in TWIG format (*.twig). The problem is that ocmod modifiers do not affect TPL files - all changes must be made to these files manually.</li>
 						</ul>
 					</div>
@@ -129,12 +129,12 @@
 				</h2>
 				<div id="faq-collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#accordionFaq">
 					<div class="accordion-body">
-						<p>There is a bug in the official builds of Opencart 3.0.3.5 - 3.0.3.6 - there modifiers do not work with twig files due to an error in the standard modification <i>«/system/modification.xml»</i> - the second operation from this modification does not work.</p>
+						<p>There is a bug in the official builds of Opencart 3.0.3.5 - 3.0.3.6 - there modifiers do not work with twig files due to an error in the standard modification <span class="path">«/system/modification.xml»</span> - the second operation from this modification does not work.</p>
 						<p>The problem is at the office github and suggested solution: <a href="https://github.com/opencart/opencart/blob/3.0.x.x_Maintenance/upload/system/modification.xml">https://github.com/opencart/opencart/blob/3.0.x.x_Maintenance/upload/system/modification.xml</a></p>
-						<p>We made a fix modification according to these recommendations, it will replace the <i>«/system/modification.xml»</i> file with the correct one.</p>
+						<p>We made a fix modification according to these recommendations, it will replace the <span class="path">«/system/modification.xml»</span> file with the correct one.</p>
 						<p><strong>Solution:</strong></p>
 						<ul class="ul">
-							<li>Make a backup copy of your file <i>«/system/modification.xml»</i>;</li>
+							<li>Make a backup copy of your file <span class="path">«/system/modification.xml»</span>;</li>
 							<li>Download fix modification <a href="https://drive.google.com/file/d/1-n9S2WgKVectDWkW1GBTEHkOtWBmI8pr/view?usp=sharing">[download]</a> and install it in your admin;</li>
 							<li>Refresh modifier cache;</li>
 							<li>Update the twig template cache.</li>
@@ -151,7 +151,7 @@
 				<div id="faq-collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#accordionFaq">
 					<div class="accordion-body">
 						<p>If the module does not respond to your actions, whether it is pressing a button or loading a map, or selecting a date, or any other action that is in the functionality of the module, there is most likely a conflict in JS scripts.</p>
-						<p>Press F12 on the problem page in the browser - the webmaster panel will open, where on the <i>«Console»</i> tab you can see conflicts in the scripts, if any. This action is available in Chrome, Opera, Firefox browsers.</p>
+						<p>Press F12 on the problem page in the browser - the webmaster panel will open, where on the <span class="path">«Console»</span> tab you can see conflicts in the scripts, if any. This action is available in Chrome, Opera, Firefox browsers.</p>
 					</div>
 				</div>
 			</div>
@@ -164,7 +164,7 @@
 				<div id="faq-collapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#accordionFaq">
 					<div class="accordion-body">
 						<ul class="ul">
-							<li>Download and install fix <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=18892">Localcopy</a>;</li>
+							<li>Download and install fix <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=40663">Localcopy</a>;</li>
 							<li>Update the modifications in the admin;</li>
 							<li>Reload the module.</li>
 						</ul>
@@ -182,8 +182,8 @@
 						<p>Error 500 after installing the module means that some critical error has occurred in php.</p>
 						<p><strong>To identify the problem, you can:</strong></p>
 						<ul class="ul">
-							<li>Open file <i>«logs/error.log»</i> on your server. At the end of this file will be all the latest critical errors.</li>
-							<li>Open in admin panel <i>«Tools > Error Logs»</i> - errors are displayed in this place, but not always.</li>
+							<li>Open file <span class="path">«logs/error.log»</span> on your server. At the end of this file will be all the latest critical errors.</li>
+							<li>Open in admin panel <span class="path">«Tools > Error Logs»</span> - errors are displayed in this place, but not always.</li>
 							<li>
 								<p>Enable php error output on the screen - add the following code to the end of the .htaccess file:</p>
 								<pre>php_value display_errors 1</pre>
@@ -205,7 +205,7 @@
 					<div class="accordion-body">
 						<p><strong>Possible reasons:</strong></p>
 						<ul class="ul">
-							<li>If you have not loaded modules in the archive through the admin panel before, you need to install a free modification <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=18892">Localcopy OCMOD</a> according to the instructions and then reinstall the module;</li>
+							<li>If you have not loaded modules in the archive through the admin panel before, you need to install a free modification <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=40663">Localcopy OCMOD</a> according to the instructions and then reinstall the module;</li>
 							<li>It is possible that the module being installed does not have its own settings page, and accordingly it will not be in the list of modules.</li>
 						</ul>
 					</div>
@@ -233,7 +233,7 @@
 				</h2>
 				<div id="faq-collapse9" class="accordion-collapse collapse" aria-labelledby="faq9" data-bs-parent="#accordionFaq">
 					<div class="accordion-body">
-						<p>If you see the message <i>Access Denied! You do not have permission to access this page. If you need it, contact the administrator»</i> - you need to give administrators the rights to manage the module or page.</p>
+						<p>If you see the message <i>Access Denied! You do not have permission to access this page. If you need it, contact the administrator»</span> - you need to give administrators the rights to manage the module or page.</p>
 						<p><strong>Solution:</strong> in the Opencart 2 admin panel, go to <i>"System > Users > User Groups"</i> and here click <i>"Select All"</i> below both blocks, then Save.</p>
 						<p>Another reason for the appearance of this error may be incorrect installation of the module - the files were not loaded into their places. Upload the module files manually to the server or install a fix <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=18892">localcopy.ocmod.xml</a> and reinstall the module.</p>
 					</div>
@@ -337,6 +337,22 @@
 							<li><strong>Editing the wrong files.</strong> Yes, and this happens. Either they edit another site, then another template, then they forget to update the browser cache by pressing CTRL + F5 , then they try to edit something in the modifier cache, i.e. in the STORAG directory, etc. Study the structure carefully. There is information about this in the documentation.</li>
 							<li><strong>Host with a delay.</strong> Yes, there are hosts that delay changes to files. That is, you edit, and the changes are applied in a minute. In a minute, you can break the entire site, but the hoster is to blame.</li>
 							<li><strong>A crooked template or a template with a cache.</strong> Some templates are so cached that you start editing, but there are no changes. The fault is the cache of the template itself. This is usually common in multifunctional templates, so study the functionality carefully.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq17">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse17" aria-expanded="false" aria-controls="faq-collapse17">
+						17. Error: This directory is not writable!
+					</button>
+				</h2>
+				<div id="faq-collapse17" class="accordion-collapse collapse" aria-labelledby="faq17" data-bs-parent="#accordionFaq">
+					<div class="accordion-body">
+						<ul class="ul">
+							<li>Download and install the add-on <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=40663">Localcopy OCMOD</a>;</li>
+							<li>After installing this add-on, you need to go to the section <span class="path">«Modifications»</span> and click the button <span class="path">«Update Modifications»</span>;</li>
+							<li>Now you can install other modules.</li>
 						</ul>
 					</div>
 				</div>
