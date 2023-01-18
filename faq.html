@@ -99,7 +99,7 @@
 					<div class="accordion-body">
 						<ul class="ul">
 							<li>Завантажте та встановіть додаток <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=40663">Localcopy OCMOD</a>;</li>
-							<li>Після встановлення цього додатка потрібно перейти до розділу <i>«Модифікатори»</i> та натиснути кнопку <i>«Оновити модифікатори»</i>;</li>
+							<li>Після встановлення цього додатка потрібно перейти до розділу <span class="path">«Модифікатори»</span> та натиснути кнопку <span class="path">«Оновити модифікатори»</span>;</li>
 							<li>Тепер можна інсталювати інші модулі.</li>
 						</ul>
 					</div>
@@ -116,7 +116,7 @@
 						<p>Можливо кілька проблем та варіантів їх вирішення:</p>
 						<ul class="ul">
 							<li>Не скинутий кеш шаблону – потрібно оновити кеш;</li>
-							<li>Ви раніше редагували файли шаблону через адмінку в розділі <i>«Редактор теми»</i>, тоді цей файл зберігся в базі даних і на нього вже не впливають ocmod-модифікатори, це проблема Opencart 3. Вам потрібно встановити фікс <a href="https://drive.google.com/file/d/1RtABqBTtBOFrLpmCFtgw5m1_IdS1ptAB/view?usp=sharing">[завантажити]</a> та оновити модифікації в адмінці;</li>
+							<li>Ви раніше редагували файли шаблону через адмінку в розділі <span class="path">«Редактор теми»</span>, тоді цей файл зберігся в базі даних і на нього вже не впливають ocmod-модифікатори, це проблема Opencart 3. Вам потрібно встановити фікс <a href="https://drive.google.com/file/d/1RtABqBTtBOFrLpmCFtgw5m1_IdS1ptAB/view?usp=sharing">[завантажити]</a> та оновити модифікації в адмінці;</li>
 							<li>Ваш шаблон влаштований на TPL-файлах (*.tpl), у той час, коли в Opencart 3 шаблони мають бути у форматі TWIG (*.twig). Проблема в тому, що ocmod модифікатори не впливають на TPL-файли - всі зміни потрібно вносити в ці файли вручну.</li>
 						</ul>
 					</div>
@@ -130,12 +130,12 @@
 				</h2>
 				<div id="faq-collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#accordionFaq">
 					<div class="accordion-body">
-						<p>В офіційних збірках Opencart 3.0.3.5 - 3.0.3.6 є баг - там модифікатори не працюють з twig-файлами через помилку в стандартному модифікаторі <i>«/system/modification.xml»</i> - друга операція цього модифікатора не спрацьовує.</p>
+						<p>В офіційних збірках Opencart 3.0.3.5 - 3.0.3.6 є баг - там модифікатори не працюють з twig-файлами через помилку в стандартному модифікаторі <span class="path">«/system/modification.xml»</span> - друга операція цього модифікатора не спрацьовує.</p>
 						<p>Проблема є на оф. гітхабе та запропоновано рішення: <a href="https://github.com/opencart/opencart/blob/3.0.x.x_Maintenance/upload/system/modification.xml">https://github.com/opencart/opencart/blob/3.0.x.x_Maintenance/upload/system/modification.xml</a></p>
-						<p>Ми зробили фікс-модифікатор за цими рекомендаціями, він замінить файл <i>«/system/modification.xml»</i> на правильний.</p>
+						<p>Ми зробили фікс-модифікатор за цими рекомендаціями, він замінить файл <span class="path">«/system/modification.xml»</span> на правильний.</p>
 						<p><strong>Рішення проблеми:</strong></p>
 						<ul class="ul">
-							<li>Зробіть резервну копію файлу <i>«/system/modification.xml»</i>;</li>
+							<li>Зробіть резервну копію файлу <span class="path">«/system/modification.xml»</span>;</li>
 							<li>Завантажте фікс-модифікатор <a href="https://drive.google.com/file/d/1-n9S2WgKVectDWkW1GBTEHkOtWBmI8pr/view?usp=sharing">[завантажити]</a> та встановіть його у себе в адмінці;</li>
 							<li>Оновіть кеш модифікаторів;</li>
 							<li>Обновіть кеш twig-шаблонів.</li>
@@ -152,7 +152,7 @@
 				<div id="faq-collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#accordionFaq">
 					<div class="accordion-body">
 						<p>Якщо модуль не реагує на ваші дії, будь-то натискання на кнопку або завантаження карти або вибір дати або на будь-яку іншу дію, яка є у функціоналі модуля, швидше за все стався конфлікт у JS-скриптах.</p>
-						<p>Натисніть F12 на проблемній сторінці в браузері - відкриється панель вебмайстра, де на вкладці <i>«Console»</i> можна побачити конфлікти в скриптах, якщо вони є. Ця дія доступна в браузерах Chrome, Opera, Firefox.</p>
+						<p>Натисніть F12 на проблемній сторінці в браузері - відкриється панель вебмайстра, де на вкладці <span class="path">«Console»</span> можна побачити конфлікти в скриптах, якщо вони є. Ця дія доступна в браузерах Chrome, Opera, Firefox.</p>
 					</div>
 				</div>
 			</div>
@@ -165,7 +165,7 @@
 				<div id="faq-collapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#accordionFaq">
 					<div class="accordion-body">
 						<ul class="ul">
-							<li>Завантажте та встановіть фікс <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=18892">Localcopy</a>;</li>
+							<li>Завантажте та встановіть фікс <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=40663">Localcopy</a>;</li>
 							<li>Оновіть модифікації в адмінці;</li>
 							<li>Завантажте модуль знову.</li>
 						</ul>
@@ -183,8 +183,8 @@
 						<p>Помилка 500 після встановлення модуля означає, що трапилася якась критична помилка у php.</p>
 						<p><strong>Для визначення проблеми можна.:</strong></p>
 						<ul class="ul">
-							<li>Відкрити файл <i>«logs/error.log»</i> на вашому сервері. Наприкінці цього файлу будуть усі останні критичні помилки.</li>
-							<li>Відкрити в адмінці <i>«Інструменти > Логи помилок»</i> - тут відображаються помилки, але не завжди.</li>
+							<li>Відкрити файл <span class="path">«logs/error.log»</span> на вашому сервері. Наприкінці цього файлу будуть усі останні критичні помилки.</li>
+							<li>Відкрити в адмінці <span class="path">«Інструменти > Логи помилок»</span> - тут відображаються помилки, але не завжди.</li>
 							<li>
 								<p>Включить вывод ошибок php на экран - добавить следующий код в конец файла .htaccess:</p>
 								<pre>php_value display_errors 1</pre>
@@ -206,7 +206,7 @@
 					<div class="accordion-body">
 						<p><strong>Можливі причини:</strong></p>
 						<ul class="ul">
-							<li>Якщо ви раніше не завантажували модулі в архіві через адмінку - вам потрібно встановити безкоштовну модифікацію <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=18892">Localcopy OCMOD</a> згідно з інструкцією та після цього перевстановити модуль;</li>
+							<li>Якщо ви раніше не завантажували модулі в архіві через адмінку - вам потрібно встановити безкоштовну модифікацію <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=40663">Localcopy OCMOD</a> згідно з інструкцією та після цього перевстановити модуль;</li>
 							<li>Можливо, у модулі немає власної сторінки налаштувань, і відповідно його не буде в списку модулів.</li>
 						</ul>
 					</div>
@@ -222,7 +222,7 @@
 					<div class="accordion-body">
 						<p><strong>Два варіанти вирішення:</strong></p>
 						<p>1. Якщо під час встановлення модуля з адмінки вилітає ця помилка - вам потрібно встановити безкоштовну <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=18892">FTP QuickFix модификацию localcopy.ocmod.xml</a>. Вона встановлюється без проблем через той самий інсталятор додатків, тільки після встановлення не забудьте оновити модифікації і потім можете приступати до встановлення будь-яких модулів на Opencart 2</p>
-						<p>2. Також вирішити цю помилку можна інакше: прописати доступи до FTP в адмінці <i>«Система > Налаштування > Магазин > вкладка FTP»</i>.</p>
+						<p>2. Також вирішити цю помилку можна інакше: прописати доступи до FTP в адмінці <span class="path">«Система > Налаштування > Магазин > вкладка FTP»</span>.</p>
 					</div>
 				</div>
 			</div>
@@ -234,8 +234,8 @@
 				</h2>
 				<div id="faq-collapse9" class="accordion-collapse collapse" aria-labelledby="faq9" data-bs-parent="#accordionFaq">
 					<div class="accordion-body">
-						<p>Якщо ви бачите повідомлення <i>«Доступ заборонено! У вас немає прав на доступ до цієї сторінки. Якщо вона вам потрібна, зверніться до адміністратора»</i> - потрібно надати права адміністраторам на керування модулем або сторінкою.</p>
-						<p><strong>Рішення:</strong> в адмінці Opencart 2 переходимо в <i>«Система > Користувачі > Групи користувачів»</i> і тут натискаємо <i>«Виділити все»</i> нижче за обидва блоки, потім Зберегти.</p>
+						<p>Якщо ви бачите повідомлення <span class="path">«Доступ заборонено! У вас немає прав на доступ до цієї сторінки. Якщо вона вам потрібна, зверніться до адміністратора»</span> - потрібно надати права адміністраторам на керування модулем або сторінкою.</p>
+						<p><strong>Рішення:</strong> в адмінці Opencart 2 переходимо в <span class="path">«Система > Користувачі > Групи користувачів»</span> і тут натискаємо <span class="path">«Виділити все»</span> нижче за обидва блоки, потім Зберегти.</p>
 						<p>Ще однією причиною появи цієї помилки може бути неправильне встановлення модуля - файли не завантажилися на свої місця. Завантажте файли модуля вручну на сервер або встановіть фікс <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=18892">localcopy.ocmod.xml</a> та перевстановіть модуль.</p>
 					</div>
 				</div>
@@ -248,7 +248,7 @@
 				</h2>
 				<div id="faq-collapse10" class="accordion-collapse collapse" aria-labelledby="faq10" data-bs-parent="#accordionFaq">
 					<div class="accordion-body">
-						<p>В адмінці Opencart 2 переходимо в <i>«Система > Користувачі > Групи користувачів»</i> і тут натискаємо <i>«Виділити все»</i> нижче за обидва блоки, потім Зберегти.</p>
+						<p>В адмінці Opencart 2 переходимо в <span class="path">«Система > Користувачі > Групи користувачів»</span> і тут натискаємо <span class="path">«Виділити все»</span> нижче за обидва блоки, потім Зберегти.</p>
 					</div>
 				</div>
 			</div>
@@ -286,7 +286,7 @@
 				<div id="faq-collapse13" class="accordion-collapse collapse" aria-labelledby="faq13" data-bs-parent="#accordionFaq">
 					<div class="accordion-body">
 						<p>Ця помилка означає, що ви намагаєтеся встановити модифікатор, який вже встановлено або, можливо, у якогось вашого модуля такий самий ID.</p>
-						<p>Для вирішення цієї помилки вам потрібно перед встановленням видалити стару версію модифікації в розділі <i>«Модулі > Модифікації»</i>.</p>
+						<p>Для вирішення цієї помилки вам потрібно перед встановленням видалити стару версію модифікації в розділі <span class="path">«Модулі > Модифікації»</span>.</p>
 						<p>Якщо такого модуля у вас немає, але збігається ID, тоді потрібно змінити значення параметра <strong>code</strong> у встановлюваному модифікаторі XML, зробити цей параметр унікальним, дописавши кілька символів.</p>
 					</div>
 				</div>
@@ -338,6 +338,22 @@
 							<li><strong>Редагуєте не ті файли.</strong> Та й таке буває. То редагують інший сайт, то інший шаблон, то забувають оновити кеш браузера натисканням CTRL+F5 , то намагаються редагувати щось у кеші модифікатора, тобто в директорії STORAG і тд. Уважно вивчайте структуру. Про це є інформація у документації.</li>
 							<li><strong>Хостин із затримкою.</strong> Так бувають хостери, які затримують зміни у файлах. Тобто редагуєш, а зміни застосовуються за хвилину. За хвилину можна весь сайт зламати, а винний виявляється хостер.</li>
 							<li><strong>Кривий шаблон або шаблон із кешем.</strong> Деякі шаблони настільки перекешовані, що починаєш редагувати, а змін немає. Виною кеш шаблону. Зазвичай це поширене у багатофункціональних шаблонах, тому уважніше вивчайте функціонал.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq17">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse17" aria-expanded="false" aria-controls="faq-collapse17">
+						17. Помилка: Цей каталог недоступний для запису!
+					</button>
+				</h2>
+				<div id="faq-collapse17" class="accordion-collapse collapse" aria-labelledby="faq17" data-bs-parent="#accordionFaq">
+					<div class="accordion-body">
+						<ul class="ul">
+							<li>Завантажте та встановіть додаток <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=40663">Localcopy OCMOD</a>;</li>
+							<li>Після встановлення цього додатка потрібно перейти до розділу <span class="path">«Модифікатори»</span> та натиснути кнопку <span class="path">«Оновити модифікатори»</span>;</li>
+							<li>Тепер можна інсталювати інші модулі.</li>
 						</ul>
 					</div>
 				</div>
