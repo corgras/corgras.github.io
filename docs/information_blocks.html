@@ -190,7 +190,7 @@
 	<div class="container">
 		<h2 class="section__h2"><i class="fal fa-clipboard-list-check i50"></i>Можливості модуля</h2>
 		<ul class="ul mb-xxl">
-			<li>Підтримка 3 мов: Українська, Англійська, Російська;</li>
+			<li>Локалізація 3 мов: Українська, Англійська, Російська;</li>
 			<li>Призначити зображення або іконку для блоку;</li>
 			<li>Призначити кількість колонок для різної ширини екрану;</li>
 			<li>Перевизначити заголовок;</li>
@@ -227,8 +227,8 @@
 	<div class="container">
 		<h2 class="section__h2 mb-xl"><i class="fal fa-tools i50"></i>Встановлення розширення</h2>
 		<ul class="ul">
-			<li>В Адмін-панелі перейдіть <strong>«Розширення -> Встановлення розширень»</strong> та виберіть файл <strong>«Information_Blocks_v3_OpenCart_x.ocmod.zip»</strong>;</li>
-			<li>Отримуємо повідомлення про успішне встановлення, переходимо <strong>«Система -> Групи користувачів»</strong> і для адміністратора встановити права доступу (в блоках <strong>«Дозволити перегляд»</strong> та <strong>«Дозволити редагувати»</strong> відзначити галочкою <strong>«extension/module/cs_info_blocks»</strong>);</li>
+			<li>В Адмін-панелі перейдіть <strong>«Розширення -> Встановлення розширень»</strong> та встановіть файл <strong class="path">«Information_Blocks_v3_OpenCart_x.ocmod.zip»</strong>;</li>
+			<li>Отримуємо повідомлення про успішне встановлення, переходимо <strong>«Система -> Групи користувачів»</strong> і для адміністратора встановити права доступу (в блоках «Дозволити перегляд» та «Дозволити редагувати» відзначити галочкою <strong class="path">«extension/module/cs_info_blocks»</strong> );</li>
 			<li>У списку модулів <strong>«Розширення -> Модулі»</strong> встановіть модуль <strong>«Інформаційні блоки»</strong>.</li>
 		</ul>
 	</div>
@@ -236,12 +236,13 @@
 <section class="section section-xl section__white" id="setting_extension">
 	<div class="container">
 		<h2 class="section__h2 mb-xl"><i class="fal fa-sliders-h i50"></i>Налаштування розширення</h2>
-		<p>Для налаштування модуля перейдіть: <strong>«Розширення -> Модулі -> Інформаційні блоки»</strong></p>
+		<p>Для налаштування модуля перейдіть <strong>«Розширення -> Модулі -> Інформаційні блоки»</strong></p>
+		<p class="chapter">Загальні налаштування:</p>
 		<ul class="ul">
 			<li><strong>Назва модуля -</strong> назва, яка відображатиметься в адмін-панелі;</li>
 			<li><strong>Статус -</strong> статус модуля відповідає за увімкнення налаштувань.</li>
 		</ul>
-		<p class="chapter">Загальні налаштування:</p>
+		<p class="chapter">Налаштування розділу:</p>
 		<ul class="ul">
 			<li><strong>Назва розділу -</strong> заголовок, який будуть відображатися над блоками;</li>
 			<li><strong>Колонки -</strong> яка буде читана, а інша частина тексту буде прихована;</li>
@@ -271,19 +272,19 @@
 	</div>
 </section>
 <section class="section section-xl section__white" id="template">
-	<div class="container text-center">
+	<div class="container">
 		<h2 class="section__h2 mb-xl"><i class="fal fa-file-code i50"></i>Шаблон</h2>
-		<p>Можете створити свій шаблон модуля, взявши за основу стандартний шаблон:</p>
-		<p><strong>« catalog \ view \ theme \ default \ template \ extension \ module \ cs_info_blocks.(twig.tpl) »</strong></p>
-		<p class="mt40">Та розмістити свій в папку:</p>
-		<p><strong>« catalog \ view \ theme \ default \ template \ custom_templates \ module \ info_blocks \ ім'я файлу на латиниці.(twig.tpl) »</strong></p>
+		<p>Створіть шаблон модуля і розмістіть його в папці:</p>
+		<p class="path text-center"><strong>« catalog / view / theme / default / template / custom_templates / module / info_blocks / ім'я файлу на латиниці .(twig.tpl) »</strong></p>
+		<p class="mt40">За основу можете взяти стандартний шаблон на шляху:</p>
+		<p class="path text-center"><strong>« catalog / view / theme / default / template / extension / module / cs_info_blocks.(twig.tpl) »</strong></p>
 	</div>
 </section>				
 <section class="section section-xl section__white" id="stylization">
-	<div class="container text-center">
+	<div class="container">
 		<h2 class="section__h2 mb-xl"><i class="fal fa-palette i50"></i>Стилізація</h2>
-		<p>Если стандартный дизайн не вписывается в ваш дизайн сайта, вы можете подправить CSS стили в файле <strong>«cs_info_blocks.min.css»</strong>, который находится:</p>
-		<p><strong>« catalog \ view \ cs_libs \ css \ cs_info_blocks.min.css »</strong></p>
+		<p>Якщо стандартний дизайн не вписується у ваш дизайн сайту, ви можете підправити стилі CSS у файлі <strong>«cs_info_blocks.min.css»</strong>, який знаходиться:</p>
+		<p class="path text-center"><strong>« catalog / view / cs_libs / css / cs_info_blocks.min.css »</strong></p>
 	</div>
 </section>
 <section class="section section-xl section__grey" id="problems">
@@ -291,7 +292,7 @@
 		<h2 class="section__h2"><i class="fal fa-toolbox i50"></i>Проблеми та рішення</h2>
 		<p class="section__minitext">Якщо виникли проблеми, можете ознайомитися з рішеннями <a href="/faq.html">в цьому розділі</a>.<br>Не знайшли відповіді на свої запитання – напишіть нам.</p> 
 		<div class="buttons">
-			<a href="mailto:corgras.dev@gmail.com" class="btn btn-dark btn-default btn-w240 ripple"><span>Написати нам</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
+			<a href="mailto:corgras.dev@gmail.com" class="btn btn-light btn-default btn-w240 ripple"><span>Написати нам</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
 		</div>
 	</div>
 </section>
@@ -343,7 +344,7 @@
 							<li>Перевизначити короткий опис;</li>
 							<li>Керувати кількістю символів для короткого опису;</li>
 							<li>Керувати розміром зображення;</li>
-							<li>Керувати посиланнями (зображення/іконка, заголовок, кнопка).</li>
+							<li>Керувати посиланнями (зображення / іконка, заголовок, кнопка).</li>
 						</ul>
 					</div>
 				</div>
@@ -356,7 +357,7 @@
 		<h2 class="section__h2">Підтримати автора</h2>
 		<p class="section__minitext">Якщо хочете підтримати або подякувати автору, ви можете зробити це за допомогою:<br>PayPal або Кредитною карткою</p>
 		<div class="buttons">
-			<a href="https://www.paypal.com/donate/?hosted_button_id=DMETJT5YE55HN" class="btn btn-dark btn-default btn-w240 ripple"><span>Підтримати</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
+			<a href="https://www.paypal.com/donate/?hosted_button_id=DMETJT5YE55HN" class="btn btn-light btn-default btn-w240 ripple"><span>Підтримати</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
 		</div>
 	</div>
 </section>
