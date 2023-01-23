@@ -185,7 +185,7 @@
 	<div class="container">
 		<h2 class="section__h2"><i class="fal fa-clipboard-list-check i50"></i>Возможности модуля</h2>
 		<ul class="ul mb-xxl">
-			<li>Поддержка 3 языков: Украинский, Английский, Русский;</li>
+			<li>Локализация 3 языков: Украинский, Английский, Русский;</li>
 			<li>Управление скриптом «Подробнее»;</li>
 			<li>Управление на какие разрешения экранов будет работать скрипт;</li>
 			<li>Управление уровнем заголовка H1-H6;</li>
@@ -218,8 +218,8 @@
 	<div class="container">
 		<h2 class="section__h2 mb-xl"><i class="fal fa-tools i50"></i>Установка расширения</h2>
 		<ul class="ul">
-			<li>В Админ-панели перейдите <strong>«Расширения -> Установка расширений»</strong> и выберите файл <strong>«HTML_Content_Plus_v4_OpenCart_x.ocmod.zip»</strong>;</li>
-			<li>Получаем сообщение об успешной установке, переходим <strong>«Система -> Группы пользователей»</strong> и для администратора установить права доступа (в блоках <strong>«Разрешить просмотр»</strong> и <strong>«Разрешить редактировать»</strong> отметить галочкой <strong>«extension/module/cs_html_plus»</strong>);</li>
+			<li>В Админ-панели перейдите <strong>«Расширения -> Установка расширений»</strong> и установите файл <strong class="path">«HTML_Content_Plus_v4_OpenCart_x.ocmod.zip»</strong>;</li>
+			<li>Получаем сообщение об успешной установке, переходим <strong>«Система -> Группы пользователей»</strong> и для администратора установить права доступа (в блоках «Разрешить просмотр» и «Разрешить редактировать» отметить галочкой <strong class="path">«extension/module/cs_html_plus»</strong> );</li>
 			<li>В списке модулей <strong>«Расширение -> Модули»</strong> установите модуль <strong>«Текстовий блок HTML PLUS»</strong>.</li>
 		</ul>
 	</div>
@@ -227,7 +227,8 @@
 <section class="section section-xl section__white" id="setting_extension">
 	<div class="container">
 		<h2 class="section__h2 mb-xl"><i class="fal fa-sliders-h i50"></i>Настройка расширения</h2>
-		<p>Для настройки модуля перейдите: <strong>«Расширения -> Модули -> Текстовый блок HTML PLUS»</strong></p>
+		<p>Для настройки модуля перейдите <strong>«Расширения -> Модули -> Текстовый блок HTML PLUS»</strong></p>
+		<p class="chapter">Общие настройки:</p>
 		<ul class="ul">
 			<li><strong>Название модуля -</strong> название, которое будет отображаться в админ-панели;</li>
 			<li><strong>Статус -</strong> статус модуля отвечает за включение настроек;</li>
@@ -242,19 +243,19 @@
 	</div>
 </section> 
 <section class="section section-xl section__white" id="template">
-	<div class="container text-center">
+	<div class="container">
 		<h2 class="section__h2 mb-xl"><i class="fal fa-file-code i50"></i>Шаблон</h2>
-		<p>Можете создать свой шаблон модуля, взяв за основу стандартный шаблон:</p>
-		<p><strong>« catalog \ view \ theme \ default \ template \ extension \ module \ cs_html_plus.(twig.tpl) »</strong></p>
-		<p class="mt40">И разместить свой в папке:</p>
-		<p><strong>« catalog \ view \ theme \ default \ template \ custom_templates \ module \ html_plus \ имя файла на латинице.(twig.tpl) »</strong></p>
+		<p>Создайте шаблон модуля и разместите его в папке:</p>
+		<p class="path text-center"><strong>« catalog / view / theme / default / template / custom_templates / module / html_plus / имя файла на латинице .(twig.tpl) »</strong></p>
+		<p class="mt40">За основу можете взять стандартный шаблон по пути:</p>
+		<p class="path text-center"><strong>« catalog / view / theme / default / template / extension / module / cs_html_plus.(twig.tpl) »</strong></p>
 	</div>
 </section>
 <section class="section section-xl section__white" id="stylization">
-	<div class="container text-center">
+	<div class="container">
 		<h2 class="section__h2 mb-xl"><i class="fal fa-palette i50"></i>Стилизация</h2>
-		<p>Если стандартный дизайн кнопки <strong>«Развернуть / Свернуть»</strong> не вписывается в ваш дизайн сайта, вы можете подправить CSS стили в файле <strong>«cs_html_plus.min.css»</strong>, который находится:</p>
-		<p><strong>« catalog \ view \ cs_libs \ css \ cs_html_plus.min.css »</strong></p>
+		<p>Если стандартный дизайн кнопки «Развернуть / Свернуть» не вписывается в ваш дизайн сайта, вы можете подправить CSS стили в файле <strong>«cs_html_plus.min.css»</strong>, который находится:</p>
+		<p class="path text-center"><strong>« catalog / view / cs_libs / css / cs_html_plus.min.css »</strong></p>
 	</div>
 </section>
 <section class="section section-xl section__grey" id="problems">
@@ -262,7 +263,7 @@
 		<h2 class="section__h2"><i class="fal fa-toolbox i50"></i>Проблемы и решения</h2>
 		<p class="section__minitext">Если возникли проблемы, можете ознакомиться с решениями <a href="/ru/faq.html">в этом разделе</a>.<br>Не нашли ответа на свои вопросы – напишите нам.</p>
 		<div class="buttons">
-			<a href="mailto:corgras.dev@gmail.com" class="btn btn-dark btn-default btn-w240 ripple"><span>Написати нам</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
+			<a href="mailto:corgras.dev@gmail.com" class="btn btn-light btn-default btn-w240 ripple"><span>Написати нам</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
 		</div>
 	</div>
 </section>
@@ -340,7 +341,7 @@
 		<h2 class="section__h2">Поддержать автора</h2>
 		<p class="section__minitext">Если хотите поддержать или поблагодарить автора, вы можете сделать это с помощью:<br>PayPal или Кредитной картой</p>
 		<div class="buttons">
-			<a href="https://www.paypal.com/donate/?hosted_button_id=DMETJT5YE55HN" class="btn btn-dark btn-default btn-w240 ripple"><span>Поддержать</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
+			<a href="https://www.paypal.com/donate/?hosted_button_id=DMETJT5YE55HN" class="btn btn-light btn-default btn-w240 ripple"><span>Поддержать</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
 		</div>
 	</div>
 </section>
