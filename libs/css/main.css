@@ -47,6 +47,9 @@
 	--bg-orange:var(--corgras-orange);
 	--bg-green:var(--corgras-green);
 }
+
+.color-d{color:var(--color-d);}
+
 /* SCROLLBAR */
 ::-webkit-scrollbar-track{
 	-webkit-box-shadow:inset 0 0 8px rgba(0,0,0,.3);
@@ -102,6 +105,7 @@ main,
 nav,
 section{
 	display:block;
+	position:relative
 }
 hr{
 	-webkit-box-sizing:content-box;
@@ -109,7 +113,7 @@ hr{
 	height:0;
 	overflow:visible;
 }
-.strong{
+.strong, strong{
 	font-weight:500;
 }
 h1,h2,h3,h4,h5,h6{
@@ -803,9 +807,10 @@ footer .footer__copyrights{
 	outline:none;
 	color:var(--color-d);
 	background:var(--bg-w);
-	border:1px solid var(--bg-d);
+	border:1px solid var(--bg-w);
 	font-size:1.3rem;
 	padding:10px 40px;
+	display:none
 }
 .extensions-update{
 	border-radius:6px;
@@ -862,16 +867,23 @@ footer .footer__copyrights{
 }
 .contents-section__nav a{
 	text-align:center;
+	transition:all 0.4s;
 }
 .contents-section__nav a i{
 	font-size:3rem;
 	margin-bottom:15px;
 	display:block;
+	transition:all 0.4s;
 }
 .contents-section__nav a span{
 	display:block;
 	font-weight:500;
 	color:var(--color-d);
+	transition:all 0.4s;
+}
+.contents-section__nav a:hover span,
+.contents-section__nav a:focus span{
+	color:var(--color-bd);
 }
 
 /* -- CAPTION -- */
@@ -898,6 +910,7 @@ footer .footer__copyrights{
 .faq-section .accordion .accordion-button{
 	font-size:1.5rem;
 	padding:25px 30px;
+	font-weight:300;
 }
 .faq-section .accordion .accordion-item:nth-child(even) .accordion-button{
 	background-color:var(--bg-gl);
@@ -1094,8 +1107,11 @@ ul.ul >li{
 	border:0;
 }
 
+
+.path{color:var(--color-b);}
 .chapter{
 	margin-top: 30px;
     font-size: 17px;
     font-weight: 500;
+	color:var(--color-b);
 }
