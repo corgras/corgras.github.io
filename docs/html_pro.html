@@ -4,22 +4,23 @@
 	<meta charset="utf-8">
 	<!--<base href="http://corgras.github.io/">-->
 
-	<title>Розширення для створення інтернет-магазину OpenCart</title>
-	<meta name="description" content="Представляємо каталог модулів та модифікаторів для створення інтернет-магазину на OpenCart або ocStore">
+	<title>HTML PRO - Документація</title>
+	<meta name="description" content="Документація модуля 'HTML PRO' - рішення для Вашого інтернет-магазину на OpenCart або ocStore">
 
-	<link rel="icon" href="/libs/images/favicon.png">
+	<link rel="icon" href="/libs/images/logo/favicon.png">
 	<link rel="stylesheet" href="/libs/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/libs/css/fontawesome.min.css">
 	<link rel="stylesheet" href="/libs/css/hamburgers.min.css">
 	<link rel="stylesheet" href="/libs/css/spotlight.min.css">
+	<link rel="stylesheet" href="/libs/css/itc-slider.min.css">
 	
 	<link rel="stylesheet" href="/libs/css/main.css">
 	<link rel="stylesheet" media="screen and (max-width: 991.98px)" href="/libs/css/mobile.css">
 	<link rel="stylesheet" media="screen and (min-width: 992px)" href="/libs/css/desktop.css">
 
-	<link rel="alternate" href="http://corgras.github.io/en/docs/custom_templates.html" hreflang="en-GB">
-	<link rel="alternate" href="http://corgras.github.io/docs/custom_templates.html" hreflang="x-default">
-	<link rel="alternate" href="http://corgras.github.io/ru/docs/custom_templates.html" hreflang="ru-RU">
+	<link rel="alternate" href="http://corgras.github.io/en/docs/html_pro.html" hreflang="en-GB">
+	<link rel="alternate" href="http://corgras.github.io/docs/html_pro.html" hreflang="x-default">
+	<link rel="alternate" href="http://corgras.github.io/ru/docs/html_pro.html" hreflang="ru-RU">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="msapplication-TileColor" content="#141414">
@@ -32,10 +33,10 @@
 </head>
 <body>
 <header class="header">
-	<a class="header__logo" href="/">
-		<img src="/libs/images/logo_text.svg" class="logotip" alt="«CORGRAS»">
+	<a class="col-2 header__logo" href="/">
+		<img src="/libs/images/logo/logo_text.svg" class="logotip" alt="«CORGRAS»">
 	</a>
-	<nav class="header__navigation">
+	<nav class="col header__navigation">
 		<ul class="navigation__list">
 			<li>
 				<a href="/" class="link" data-title="Головна">
@@ -52,7 +53,6 @@
 					<i class="fal fa-clipboard-list"></i><span>Послуги</span><span>Надання послуг</span>
 				</a>
 			</li>
-			<!--<li><a href="/demo.html"><i class="fal fa-eye"></i><span>Демо</span><span>Демонстрація модулів</span></a></li>-->
 			<li>
 				<a href="/faq.html" class="link" data-title="Питання-відповідь">
 					<i class="fal fa-comment-alt-lines"></i><span>Питання-відповідь</span><span>Відповіді на найчастіші питання</span>
@@ -65,7 +65,7 @@
 			</li>
 		</ul>
 	</nav>
-	<div class="header__navigation-icon">
+	<div class="col-2 header__navigation-icon">
 		<div class="navigation-icon__lang dropdown-right">
 			<button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 				<svg width="256px" height="256px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
@@ -73,8 +73,8 @@
 				</svg>
 			</button>
 			<div class="dropdown-menu min-w-0" aria-labelledby="dropdownMenuLang">
-				<a class="dropdown-item link" href="/en/docs/custom_templates.html" hreflang="en" data-title="English"><span>English</span></a>
-				<a class="dropdown-item link" href="/ru/docs/custom_templates.html" hreflang="ru" data-title="Русский"><span>Русский</span></a>
+				<a class="dropdown-item link" href="/en/docs/html_pro.html" hreflang="en" data-title="English"><span>English</span></a>
+				<a class="dropdown-item link" href="/ru/docs/html_pro.html" hreflang="ru" data-title="Русский"><span>Русский</span></a>
 				<a class="dropdown-item link active" href="#" hreflang="uk" data-title="Українська"><span>Українська</span></a>
 			</div>
 		</div>
@@ -83,453 +83,238 @@
 		</button>
 	</div>
 </header>
-<section class="header-section">
-	<div class="header-section__slides">
-		<div class="slide-el slide-book" id="slide-book"><img src="/libs/images/header/header_book.png"></div>
-		<div class="slide-el slide-paperclip1" id="slide-paperclip1"><img src="/libs/images/header/header_paperclip.png"></div>
-		<div class="slide-el slide-paperclip2" id="slide-paperclip2"><img src="/libs/images/header/header_paperclip.png"></div>
-		<div class="slide-el slide-oculos" id="slide-oculos"><img src="/libs/images/header/header_oculos.png"></div>
-		<div class="slide-el slide-tablet" id="slide-tablet"><img src="/libs/images/header/header_tablet.png"></div>
-		<div class="slide-el slide-pen" id="slide-pen"><img src="/libs/images/header/header_pen.png"></div>
-		<a href="#product-section" class="scroll-btn" id="scroll-btn"><span></span></a>
-	</div>
-	<div class="header-section__content">
-		<div class="header-section__logo">
-			<img src="/libs/images/logo.svg" class="logotip" alt="«CORGRAS»">
+<section class="section extensions-section section__white main-screen">
+	<div class="container section__container">
+		<div class="heading-content mb-xl">
+			<h1 class="header-section__h1">HTML PRO</h1>
+			<!--<p class="header-section__text">Позволяет создавать неограниченное количеством текстовых блоков. Модуль не привязан к определенному CSS-фреймворку, тем самым дает возможность использовать любой CSS-фреймворк, CSS-сетку или применить свои CSS-стили для оформления, всего лишь назначив для блока нужный CLASS и/или ID.
+			</p>-->
 		</div>
-		<h1 class="header-section__h1">Каталог розширень для CMS OpenCart</h1>
-		<p class="header-section__text">Модулі та модифікатори для створення інтернет-магазину.</p>
-		<div class="header-section__lang dropdown-center">
-			<button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Мова сайту: Українська</button>
-			<div class="dropdown-menu min-w-0" aria-labelledby="dropdownMenuLang">
-				<a class="dropdown-item" href="/en/index.html" hreflang="en">English</a>
-				<a class="dropdown-item" href="/ru/index.html" hreflang="ru">Русский</a>
-				<a class="dropdown-item active" href="#" hreflang="uk">Українська</a>
+		<div class="documentation-gallery spotlight-group">
+			<!--<div class="itc-slider" data-autoplay="false" data-loop="false" data-refresh="true" data-slider="itc-slider">
+				<div class="itc-slider__container">
+					<div class="itc-slider__wrapper">
+						<div class="itc-slider__items">
+							<div class="itc-slider__item">
+								<a class="spotlight" href="/libs/images/docs/html_pro/html_pro_general.jpg">
+									<img src="/libs/images/docs/html_pro/html_pro_general.jpg">
+								</a>
+							</div>
+							<div class="itc-slider__item">
+								<a class="spotlight" href="/libs/images/docs/html_pro/html_pro_access_design.jpg">
+									<img src="/libs/images/docs/html_pro/html_pro_access_design.jpg">
+								</a>
+							</div>
+							<div class="itc-slider__item">
+								<a class="spotlight" href="/libs/images/docs/html_pro/html_pro_frontend.jpg">
+									<img src="/libs/images/docs/html_pro/html_pro_frontend.jpg">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="itc-slider__btn itc-slider__btn_prev" data-slide="prev"></button>
+				<button class="itc-slider__btn itc-slider__btn_next" data-slide="next"></button>
+			</div>-->
+		</div>
+	</div>
+</section>
+<section class="section section-xs section__dark">
+	<div class="container">
+		<div class="row gx-5 documentation__info">
+			<div class="col-4"><i class="fal fa-code-branch"></i>Версія: 2.0</div>
+			<div class="col-4"><i class="fab fa-opencart"></i>OpenCart: 2.1 | 2.2 | 2.3 | 3.x</div>
+			<div class="col-4"><i class="fal fa-history"></i>Реліз: Оновлюється</div> 
+		</div>
+	</div>
+</section>
+<section class="section section-xl  section__white">
+	<div class="container">
+		<div class="row gx-5 contents-section__nav">
+			<div class="col-4">
+				<a href="#possibility">
+					<i class="fal fa-clipboard-list-check"></i>
+					<span>1. Можливості модуля</span>
+				</a>
+			</div>
+			<div class="col-4">
+				<a href="#demo">
+					<i class="fal fa-chalkboard-teacher"></i>
+					<span>2. Демонстрація</span>
+				</a>
+			</div>
+			<div class="col-4">
+				<a href="#installer">
+					<i class="fal fa-tools"></i>
+					<span>3. Встановлення розширення</span>
+				</a>
+			</div>
+			<div class="col-4">
+				<a href="#setting_extension">
+					<i class="fal fa-sliders-h"></i>
+					<span>4. Налаштування розширення</span>
+				</a>
+			</div>
+			<div class="col-4">
+				<a href="#template">
+					<i class="fal fa-file-code"></i>
+					<span>5. Шаблон</span>
+				</a>
+			</div>
+			<div class="col-4">
+				<a href="#stylization">
+					<i class="fal fa-palette"></i>
+					<span>6. Стилізація</span>
+				</a>
+			</div>
+			<div class="col-4">
+				<a href="#problems">
+					<i class="fal fa-toolbox"></i>
+					<span>7. Проблеми та рішення</span>
+				</a>
+			</div>
+			<div class="col-4">
+				<a href="#changes">
+					<i class="fal fa-history"></i>
+					<span>8. Список змін</span>
+				</a>
 			</div>
 		</div>
 	</div>
 </section>
-
-HTML Pro</span> Документация</h1>
-			<div class="rd-mobilepanel_titler pull-right">
-				<span>Создан: 31/10/2017</span>
-				<span>Последнее обновление: 31/10/2017</span>
-				<span>Версия 1</span>
-			</div>
-			<div class="mobile-button-menu">
-				<div id="menu-mobile" class="dropdown">
-					<a type="button" id="button-menu-mobile" class="dropdown-toggle" data-toggle="dropdown">Меню<i class="fa fa-dedent fa-lg"></i></a>
-					<ul class="menu-mobile-nav dropdown-menu" role="menu" aria-labelledby="button-menu-mobile">
-						<li class="active"><a href="#home" data-toggle="tab"><i class="fa fa-home"></i><span>Основная информация</span></a></li>
-						<li><a href="#version" data-toggle="tab"><i class="fa fa-code-fork"></i><span>Поддержка версий</span></a></li>
-						<li><a href="#install" data-toggle="tab"><i class="fa fa-cogs"></i><span>Установка</span></a></li>
-						<!--<li><a href="#update" data-toggle="tab"><i class="fa fa-wrench"></i><span>Обновление</span></a></li>-->
-						<li><a href="#setting" data-toggle="tab"><i class="fa fa-sliders"></i><span>Настройка</span></a></li>
-						<li><a href="#design" data-toggle="tab"><i class="fa fa-desktop"></i><span>Внешний вид</span></a></li>
-						<li><a href="#language" data-toggle="tab"><i class="fa fa-language"></i><span>Локализация</span></a></li>
-						<li><a href="#faq" data-toggle="tab"><i class="fa fa-question"></i><span>Частые вопросы</span></a></li>
-						<li><a href="#changelog" data-toggle="tab"><i class="fa fa-history"></i><span>Список изменений</span></a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>	
-	<nav id="column-left">
-		<ul id="menu">
-			<li class="active"><a href="#home" data-toggle="tab"><i class="fa fa-home"></i><span>Основная информация</span></a></li>
-			<li><a href="#version" data-toggle="tab"><i class="fa fa-code-fork"></i><span>Поддержка версий</span></a></li>
-			<li><a href="#install" data-toggle="tab"><i class="fa fa-cogs"></i><span>Установка</span></a></li>
-			<!--<li><a href="#update" data-toggle="tab"><i class="fa fa-wrench"></i><span>Обновление</span></a></li>-->
-			<li><a href="#setting" data-toggle="tab"><i class="fa fa-sliders"></i><span>Настройка</span></a></li>
-			<li><a href="#design" data-toggle="tab"><i class="fa fa-desktop"></i><span>Внешний вид</span></a></li>
-			<li><a href="#language" data-toggle="tab"><i class="fa fa-language"></i><span>Локализация</span></a></li>
-			<li><a href="#faq" data-toggle="tab"><i class="fa fa-question"></i><span>Частные вопросы</span></a></li>
-			<li><a href="#changelog" data-toggle="tab"><i class="fa fa-history"></i><span>Список изменений</span></a></li>
+<section class="section section-xl section__grey" id="possibility">
+	<div class="container">
+		<h2 class="section__h2"><i class="fal fa-clipboard-list-check i50"></i>Можливості модуля</h2>
+		<ul class="ul mb-xxl">
+			<li>Локалізація 3 мов: Українська, Англійська, Російська;</li>
+			<!--<li>Отображение на страницах сайта текстовые блоки;</li>
+			<li>Создание неограниченного количества блоков;</li>
+			<li>Использование иконочных шрифтов;</li>
+			<li>Не привязан к CSS-фреймворку (Bootstrap 3);</li>
+			<li>Мультиязычность;</li>
+			<li>Назначать: изображение и/или иконку;</li>
+			<li>Назначать class и/или id.</li>-->
 		</ul>
-		<div class="rd-copyright">
-			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<i class="fa fa-copyright" aria-hidden="true"></i>
-				</button>
-				<div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-					<p class="copyright">Developed by the Studio «CORGRAS» 2017</p>
+	</div>
+</section>
+<section class="section section-xl section__dark" id="demo">
+	<div class="container">
+		<h2 class="section__h2"><i class="fal fa-chalkboard-teacher i50"></i>Демонстрація</h2>
+		<p class="section__minitext">Ви можете спробувати модуль, не встановлюючи його, натиснувши на одне з наведених нижче демонстраційних посилань, щоб переглянути демонстрацію зовнішнього інтерфейсу та адміністрування.</p>
+		<div class="row">
+			<div class="col-6">
+				<div class="buttons">
+					<a href="http://corgras.byethost16.com/oc3/" class="btn btn-blue btn-default btn-w240 ripple"><span>Вітрина</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
 				</div>
 			</div>
-			<p class="copyright-active">Developed by the Studio «CORGRAS» © 2017</p>
-		</div>
-	</nav>
-	<div id="content">	
-		<div class="page">
-			<div id="main">
-				<div class="tab-content">
-					<section class="tab-pane active" id="home" >
-						<article class="description">
-							<h2>Введение</h2>
-							<p>Html Pro даёт возможность пользователю самому создавать сетку с неограниченным количеством текстовых блоков. Модуль не привязан к определенному CSS-фреймворку, тем самым дает возможность использовать любой CSS-фреймворк, CSS-сетку или применить свои CSS-стили для оформления, всего лишь назначив для блока нужный CLASS и/или ID.</p>		
-							<ul>
-								<li>Отображение на страницах сайта текстовые блоки;</li>
-								<li>Создание неограниченного количества блоков;</li>
-								<li>Использование иконочных шрифтов;</li>
-								<li>Не привязан к CSS-фреймворку (Bootstrap 3);</li>
-								<li>Мультиязычность;</li>
-								<li>Назначать: изображение и/или иконку;</li>
-								<li>Назначать class и/или id.</li>
-							</ul>
-						</article>
-					</section>
-					<section class="tab-pane" id="version">
-						<article class="description version">
-							<h2>Совместимость версий OpenCart</h2>
-							<div class="x_title">
-								<h5>Opencart</h5>
-							</div>
-							<div class="x_content">
-								<div class="row">
-									<div class="col-md-2"><div class="box-reliz">3.0.2.0</div></div>
-									<div class="col-md-2"><div class="box-reliz">3.0.1.2</div></div>
-									<div class="col-md-2"><div class="box-reliz">3.0.1.1</div></div>
-									<div class="col-md-2"><div class="box-reliz">3.0.0.0</div></div>
-									<div class="col-md-2"><div class="box-reliz">2.3.0.2</div></div>
-									<div class="col-md-2"><div class="box-reliz">2.3.0.1</div></div>
-									<div class="col-md-2"><div class="box-reliz">2.3.0.0</div></div>
-									<div class="col-md-2"><div class="box-reliz">2.2.0.0</div></div>
-									<div class="col-md-2"><div class="box-reliz">2.1.0.2</div></div>
-									<div class="col-md-2"><div class="box-reliz">2.1.0.1</div></div>
-									<div class="col-md-2"><div class="box-reliz">2.0.3.1</div></div>
-									<div class="col-md-2"><div class="box-reliz">2.0.2.0</div></div>
-									<div class="col-md-2"><div class="box-reliz">2.0.1.1</div></div>
-									<div class="col-md-2"><div class="box-reliz">2.0.1.0</div></div>
-								</div>
-							</div>
-							<hr>
-							<div class="x_title">
-								<h5>Opencart.pro</h5>
-							</div>
-							<div class="x_content">
-								<div class="row">
-									<div class="col-md-2"><div class="box-reliz">2.3.0.2.x</div></div>
-									<div class="col-md-2"><div class="box-reliz">2.1.0.2.x</div></div>
-									<div class="col-md-2"><div class="box-reliz">2.1.0.1.x</div></div>
-									<div class="col-md-2"><div class="box-reliz">2.0.3.1</div></div>
-								</div>
-							</div>
-							<hr>
-							<div class="x_title">
-								<h5>ocStore</h5>
-							</div>
-							<div class="x_content">
-								<div class="row">
-									<div class="col-md-2"><div class="box-reliz">2.3.0.2.2</div></div>
-									<div class="col-md-2"><div class="box-reliz">2.3.0.2.1</div></div>
-									<div class="col-md-2"><div class="box-reliz">2.3.0.2</div></div>
-									<div class="col-md-2"><div class="box-reliz">2.1.0.2.1</div></div>
-									<div class="col-md-2"><div class="box-reliz">2.1.0.2</div></div>
-									<div class="col-md-2"><div class="box-reliz">2.1.0.1.1</div></div>
-									<div class="col-md-2"><div class="box-reliz">2.1.0.1</div></div>
-								</div>
-							</div>
-						</article>
-					</section>
-					<section class="tab-pane" id="install">
-						<article class="description">
-							<h2>Установка</h2>
-							<ol>
-								<li>Из папки <strong>«upload»</strong> скопируйте папки <strong>«admin»</strong> и <strong>«catalog»</strong>;</li>
-								<li>В админ-панели перейти в <strong class="blue">«Система > Группы пользователей»</strong> и для администратора установить права доступа (в блоках <strong>«Разрешить просмотр»</strong> и <strong>«Разрешить редактировать»</strong> отметить галочкой extension/module/html_pro);</li>
-								<li>В списке модулей <strong class="blue">«Расширения -> Модули»</strong> установите модуль <strong>HTML Pro</strong>;</li>
-								<li>В <strong class="blue">«Дизайн -> Схема»</strong> выберите страницу магазина и расположите модуль в нужной позиции.</li>
-							</ol>
-						</article>
-					</section>
-					<section class="tab-pane" id="setting">
-						<article class="description">
-							<h2>Настройка модуля</h2>
-							<ul>
-								<li><strong>Название модуля</strong> - название которое будет отображаться в админ-панели</li>
-								<li><strong>Статус</strong> - включение/выключение модуля</li>
-							</ul>
-							<h3>Общие настройки</h3>							
-							<ul>	
-								<li><strong>Заголовок</strong> - текст над блоками</li>
-								<li><strong>Class / ID для родительского DIV-а</strong> - родительский блок, который включает все блоки.
-									<div class="m1">
-									<div class="m-parent">
-										<div class="m-parent-child">
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-										</div>
-									</div>
-									</div>
-								</li>			
-								<li><strong>Class / ID для контейнера блоков</strong> - контейнер который будет включать в себя колонки
-									<div class="m2">
-									<div class="m-parent">
-										<div class="m-parent-child">
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-										</div>
-									</div>
-									</div>
-								</li>
-							</ul>
-							<h3>Блоки</h3>
-							<ul>		
-								<li><strong>Изображение</strong>- назначение изображения;</li>
-								<li><strong>Class иконки</strong>- классы иконок можно посмотреть на сайте FontAwesome;</li>
-								<li><strong>Статус</strong> - показывать или не показывать изображение или иконку</li>	
-								<li><strong>Заголовок</strong> - заголовок блока</li>
-								<li><strong>Ссылка</strong> - ссылка в заголовке</li>
-								<li><strong>Описание</strong> - текст блока</li>
-								<li><strong>Сортировка</strong> - назначить порядок блоков</li>
-							</ul>
-							<h3>Настройки блоков Class / ID</h3>							
-							<ul>
-								<li><strong>Class / ID Родительский блок</strong> - для стилизации колонок
-									<div class="m3">
-									<div class="m-parent">
-										<div class="m-parent-child">
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-										</div>
-									</div>
-									</div>
-								</li>
-								<li><strong>Class / ID Дочерний блок</strong> - дополнительный вложенный DIV
-									<div class="m4">
-									<div class="m-parent">
-										<div class="m-parent-child">
-											<div class="m-item"><div class="m-item-child"></div></div>
-											<div class="m-item"><div class="m-item-child"></div></div>
-											<div class="m-item"><div class="m-item-child"></div></div>
-										</div>
-									</div>
-									</div>
-								</li>
-								<li><strong>Class / ID Блок для изображения или иконки</strong>
-									<div class="m5">
-									<div class="m-parent">
-										<div class="m-parent-child">
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-										</div>
-									</div>
-									</div>
-								</li>
-								<li><strong>Class / ID Родительский блок для заголовка и описания</strong> 
-									<div class="m6">
-									<div class="m-parent">
-										<div class="m-parent-child">
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-										</div>
-									</div>
-									</div>
-								</li>
-								<li><strong>Class / ID Блок для заголовока</strong>
-									<div class="m7">
-									<div class="m-parent">
-										<div class="m-parent-child">
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-										</div>
-									</div>
-									</div>
-								</li>
-								<li><strong>Class / ID Блок для описания</strong>
-									<div class="m8">
-									<div class="m-parent">
-										<div class="m-parent-child">
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-											<div class="m-item"><div class="m-item-img"></div><div class="m-item-text">
-											<div class="m-item-h"></div>
-											<div class="m-item-t"></div>
-											</div></div>
-										</div>
-									</div>
-									</div>
-								</li>
-							</ul>						
-						</article>
-					</section>
-					<section class="tab-pane" id="design">
-						<article class="description">
-							<h2>Внешний вид</h2>
-							<p class="alert alert-warning alert-dismissible">Модуль идет без стилизации блоков.</p>
-							<p>Для оформления блоков, Вам нужно взять готовые CSS стили или написать свои CSS стили и разместить в файле <strong class="blue">«stylesheet.css»</strong>, который находится:<p>
-							<p class="alert alert-info">catalog / view / theme / ВАША ТЕМА / stylesheet / stylesheet.css</p>
-							<p>Потом в настройках модуля, в нужных полях, назначить <strong>Class</strong> или <strong>Id</strong>.</p>
-						</article>
-					</section>
-					<section class="tab-pane" id="language">
-						<article class="description">
-							<h2>Локализация</h2>
-							<p>Модификатор имеет полную поддержку нескольких языков. По умолчанию устанавливается английский и русский язык.<br>Ниже вы найдете инструкцию, как добавить и перевести модификатор на свой язык.</p>
-							<p class="alert alert-warning alert-dismissible">В зависимости от версии OpenCart папка может называться «russian» или «ru-ru»</p>
-							<br>
-							<hr>
-							<h3>Админ-панель:</h3> 
-							<ul>
-								<li>Скопируйте файл <strong class="red">«html_pro.php»</strong> из папки:<p class="alert alert-info">admin / language / russian / module / html_pro.php</p>
-								</li>
-								<li>Вставьте в папку и после чего переведите содержимое файла:
-								<p class="alert alert-info">admin / language / ВАШ_ЯЗЫК / module / html_pro.php</p></li>
-							</ul>
-							<br>
-						</article>
-					</section>
-					<section class="tab-pane" id="faq">
-						<article class="description">
-							<!--<div class="panel-group" id="accordion">
-							  <div class="panel panel-default">
-								<div class="panel-heading">
-								  <h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-									Не устанавливается</a>
-								  </h4>
-								</div>
-								<div id="collapse1" class="panel-collapse collapse in">
-								  <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-								  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-								  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-								  commodo consequat.</div>
-								</div>
-							  </div>
-							  <div class="panel panel-default">
-								<div class="panel-heading">
-								  <h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-									Collapsible Group 2</a>
-								  </h4>
-								</div>
-								<div id="collapse2" class="panel-collapse collapse">
-								  <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-								  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-								  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-								  commodo consequat.</div>
-								</div>
-							  </div>
-							  <div class="panel panel-default">
-								<div class="panel-heading">
-								  <h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-									Collapsible Group 3</a>
-								  </h4>
-								</div>
-								<div id="collapse3" class="panel-collapse collapse">
-								  <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-								  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-								  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-								  commodo consequat.</div>
-								</div>
-							  </div>
-							</div> -->
-						</article>
-					</section>
-					<section class="tab-pane" id="changelog">
-						<article class="description">
-							<div class="time-clock">
-								<div class="time-circle"><i class="fa fa-history" aria-hidden="true"></i></div>
-								<span>Список изменений</span>
-							</div>
-							<ul class="list-unstyled timeline">
-								<li>
-									<div class="block">
-										<div class="tags">
-											<h5 class="title">
-												<span class="version">v1.0</span><span class="date">31.10.2017</span>
-											</h5>
-										</div>
-										<div class="block_content">
-											<ul class="excerpt"><li>Начальная версия.</li></ul>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</article>
-					</section>
-					
+			<div class="col-6">
+				<div class="buttons">
+					<a href="http://corgras.byethost16.com/oc3/admin/" class="btn btn-blue btn-default btn-w240 ripple"><span>Адмін панель</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
 				</div>
+				<p class="caption text-center">Логін &amp; Пароль: demo</p>
 			</div>
 		</div>
 	</div>
-</div>
-
-
-
-
-<section class="section donate-section section__grey">
-	<div class="container section__container">
+</section>
+<section class="section section-xl section__white" id="installer">
+	<div class="container">
+		<h2 class="section__h2 mb-xl"><i class="fal fa-tools i50"></i>Встановлення розширення</h2>
+		<div class="bd-callout bd-callout-6 bd-callout-primary text-primary">
+			<div class="row align-items-center">
+				<div class="col-1 icon"><i class="fal fa-info-square"></i></div>
+				<div class="col">
+					<h4>Модуль не встановлюється?</h4>
+					<p class="color-d">Встановіть <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=40663" >«Localcopy OCMOD»</a>, після чого спробуйте встановити модуль знову.</p>
+				</div>
+			</div>
+		</div>
+		<ul class="ul">
+			<li>В Адмін-панелі перейдіть <strong>«Розширення -> Встановлення розширень»</strong> та встановіть файл <strong class="path">«HTML_Pro_v2_OpenCart_x.ocmod.zip»</strong>;</li>
+			<li>Отримуємо повідомлення про успішне встановлення, переходимо <strong>«Система -> Групи користувачів»</strong> і для адміністратора встановити права доступу (в блоках «Дозволити перегляд» та «Дозволити редагувати» відзначити галочкою <strong class="path">«extension/module/cs_html_pro»</strong> );</li>
+			<li>У списку модулів <strong>«Розширення -> Модулі»</strong> встановіть модуль <strong>«HTML PRO»</strong>.</li>
+		</ul>
+	</div>
+</section>
+<section class="section section-xl section__white" id="setting_extension">
+	<div class="container">
+		<h2 class="section__h2 mb-xl"><i class="fal fa-sliders-h i50"></i>Налаштування розширення</h2>
+		<p>Для налаштування модуля перейдіть <strong>«Розширення -> Модулі -> HTML PRO»</strong></p>
+		<p class="chapter">Загальні налаштування:</p>
+		<ul class="ul">
+			<li><strong>Назва модуля -</strong> назва, яка відображатиметься в адмін-панелі;</li>
+			<li><strong>Статус -</strong> статус модуля відповідає за увімкнення налаштувань;</li>
+			<li><strong>Шаблон -</strong> після створення шаблону для модуля, можете вибрати його тут.</li>
+		</ul>
+	</div>
+</section>
+<section class="section section-xl section__white" id="template">
+	<div class="container">
+		<h2 class="section__h2 mb-xl"><i class="fal fa-file-code i50"></i>Шаблон</h2>
+		<p>Створіть шаблон модуля і розмістіть його в папці:</p>
+		<p class="path text-center"><strong>« catalog / view / theme / default / template / custom_templates / module / html_pro / ім'я файлу на латиниці .(twig.tpl) »</strong></p>
+		<p class="mt40">За основу можете взяти стандартний шаблон на шляху:</p>
+		<p class="path text-center"><strong>« catalog / view / theme / default / template / extension / module / cs_html_pro.(twig.tpl) »</strong></p>
+	</div>
+</section>
+<section class="section section-xl section__white" id="stylization">
+	<div class="container">
+		<h2 class="section__h2 mb-xl"><i class="fal fa-palette i50"></i>Стилізація</h2>
+		<p>Якщо стандартний дизайн не вписується у ваш дизайн сайту, ви можете підправити CSS стилі у файлі <strong>«cs_html_pro.min.css»</strong>, який знаходиться:</p>
+		<p class="path text-center"><strong>« catalog / view / cs_libs / css / cs_html_pro.min.css »</strong></p>
+	</div>
+</section>
+<section class="section section-xl section__grey" id="problems">
+	<div class="container">
+		<h2 class="section__h2"><i class="fal fa-toolbox i50"></i>Проблеми та рішення</h2>
+		<p class="section__minitext">Якщо виникли проблеми, можете ознайомитися з рішеннями <a href="/faq.html">в цьому розділі</a>.<br>Не знайшли відповіді на свої запитання – напишіть нам.</p> 
+		<div class="buttons">
+			<a href="mailto:corgras.dev@gmail.com" class="btn btn-light btn-default btn-w240 ripple"><span>Написати нам</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
+		</div>
+	</div>
+</section>
+<section class="section section-xl section__white" id="changes">
+	<div class="container">
+		<h2 class="section__h2"><i class="fal fa-history i50"></i>Список змін</h2>
+		<ul class="list-unstyled timeline">
+			<li>
+				<div class="block">
+					<div class="tags">
+						<h5 class="title release">
+							<span class="version">v2.0</span><span class="date">Оновлюється</span>
+						</h5>
+						<p class="tag"><span>Останній реліз</span></p>
+					</div>
+					<div class="block_content">
+						<p><strong>Додано:</strong></p>
+						<ul class="ul">
+							<li></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="block">
+					<div class="tags">
+						<h5 class="title">
+							<span class="version">v1.0</span><span class="date">31.10.2017</span>
+						</h5>
+					</div>
+					<div class="block_content">
+						<p><strong>Додано:</strong></p>
+						<ul class="ul">
+							<li></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
+<section class="section section__grey section-xl text-center">
+	<div class="container">
 		<h2 class="section__h2">Підтримати автора</h2>
-		<p>Якщо ви хочете підтримати або подякувати автору, ви можете зробити це за допомогою:<br>PayPal або Кредитною карткою</p>
-		<div class="section-btns">
+		<p class="section__minitext">Якщо хочете підтримати або подякувати автору, ви можете зробити це за допомогою:<br>PayPal або Кредитною карткою</p>
+		<div class="buttons">
 			<a href="https://www.paypal.com/donate/?hosted_button_id=DMETJT5YE55HN" class="btn btn-light btn-default btn-w240 ripple"><span>Підтримати</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
 		</div>
 	</div>
@@ -542,11 +327,21 @@ HTML Pro</span> Документация</h1>
 	</div>
 </footer>
 
-<a target="_blank" href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi" class="stop-war"></a>
+<a id="scrollTop" class="btn btn-scrollTop"><i class="fas fa-chevron-up"></i></a>
+
+<a target="_blank" class="stop-war" href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi"></a>
+
+<!-- STYLE -->
+<style>
+@media (min-width: 1200px){.itc-slider__btn{display:none}}
+</style>
+<!-- END STYLE -->
 
 <!-- SCRIPT -->
 <script src="/libs/js/bootstrap.bundle.min.js"></script>
+<script src="/libs/js/jquery.min.js"></script>
 <script src="/libs/js/spotlight.min.js"></script>
+<script src="/libs/js/itc-slider.min.js"></script>
 <script src="/libs/js/common.js"></script>
 <!-- END SCRIPT -->
 
