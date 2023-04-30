@@ -100,13 +100,28 @@
 								</a>
 							</div>
 							<div class="itc-slider__item">
-								<a class="spotlight" href="/libs/images/docs/html_plus/html_plus_access_design.jpg">
-									<img src="/libs/images/docs/html_plus/html_plus_access_design.jpg">
+								<a class="spotlight" href="/libs/images/docs/html_plus/html_plus_settings.jpg">
+									<img src="/libs/images/docs/html_plus/html_plus_settings.jpg">
 								</a>
 							</div>
 							<div class="itc-slider__item">
-								<a class="spotlight" href="/libs/images/docs/html_plus/html_plus_frontend.jpg">
-									<img src="/libs/images/docs/html_plus/html_plus_frontend.jpg">
+								<a class="spotlight" href="/libs/images/docs/html_plus/html_plus_access.jpg">
+									<img src="/libs/images/docs/html_plus/html_plus_access.jpg">
+								</a>
+							</div>
+							<div class="itc-slider__item">
+								<a class="spotlight" href="/libs/images/docs/html_plus/html_plus_design.jpg">
+									<img src="/libs/images/docs/html_plus/html_plus_design.jpg">
+								</a>
+							</div>
+							<div class="itc-slider__item">
+								<a class="spotlight" href="/libs/images/docs/html_plus/html_plus_frontend_1.jpg">
+									<img src="/libs/images/docs/html_plus/html_plus_frontend_1.jpg">
+								</a>
+							</div>
+							<div class="itc-slider__item">
+								<a class="spotlight" href="/libs/images/docs/html_plus/html_plus_frontend_2.jpg">
+									<img src="/libs/images/docs/html_plus/html_plus_frontend_2.jpg">
 								</a>
 							</div>
 						</div>
@@ -121,9 +136,9 @@
 <section class="section section-xs section__dark">
 	<div class="container">
 		<div class="row gx-5 documentation__info">
-			<div class="col-4"><i class="fal fa-code-branch"></i>Version: 4.0</div>
+			<div class="col-4"><i class="fal fa-code-branch"></i>Version: 5.0</div>
 			<div class="col-4"><i class="fab fa-opencart"></i>OpenCart: 2.1 | 2.2 | 2.3 | 3.x</div>
-			<div class="col-4"><i class="fal fa-history"></i>Release: 29.11.2022</div> 
+			<div class="col-4"><i class="fal fa-history"></i>Release: 01.05.2023</div> 
 		</div>
 	</div>
 </section>
@@ -191,6 +206,10 @@
 			<li>H1-H6 heading level control;</li>
 			<li>Using a custom template for a module;</li>
 			<li>Control access to content;</li>
+			<li>Inserting images for different screen sizes;</li>
+			<li>Delayed loading of images by means of the browser;</li>
+			<li>Insert video;</li>
+			<li>Position of the content in relation to the image or video;</li>
 			<li>Multilanguage.</li>
 		</ul>
 	</div>
@@ -202,12 +221,12 @@
 		<div class="row">
 			<div class="col-6">
 				<div class="buttons">
-					<a href="http://corgras.byethost16.com/oc3/index.php?route=information/information&information_id=8" class="btn btn-blue btn-default btn-w240 ripple"><span>Store Front</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
+					<a href="http://corgras.byethost16.com/oc3/index.php?route=information/information&information_id=8" target="_blank" class="btn btn-blue btn-default btn-w240 ripple"><span>Store Front</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
 				</div>
 			</div>
 			<div class="col-6">
 				<div class="buttons">
-					<a href="http://corgras.byethost16.com/oc3/admin/" class="btn btn-blue btn-default btn-w240 ripple"><span>Administration</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
+					<a href="http://corgras.byethost16.com/oc3/admin/" target="_blank" class="btn btn-blue btn-default btn-w240 ripple"><span>Administration</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
 				</div>
 				<p class="caption text-center">Login &amp; Password: demo</p>
 			</div>
@@ -227,8 +246,8 @@
 			</div>
 		</div>
 		<ul class="ul">	
-			<li>In the admin panel go to <strong>«Extensions -> Installer»</strong> and install the file <strong class="path">«HTML_Content_Plus_v4_OpenCart_x.ocmod.zip»</strong>;</li>
-			<li>We get a message about successful installation, go to <strong>«System -> User Groups»</strong> and set permissions for administrator (in blocks «Access Permission» и «Modify Permission» mark with a tick <strong class="path">«extension/module/cs_html_plus»</strong> );</li>
+			<li>In the admin panel go to <strong>«Extensions -> Installer»</strong> and install the file <strong class="path">«HTML_Content_Plus_v5_OpenCart_x.ocmod.zip»</strong>;</li>
+			<li>We get a message about successful installation, go to <strong>«System -> User Groups»</strong> and set permissions for administrator (in blocks «Access Permission» и «Modify Permission» mark with a tick <strong class="path">«extension/module/cs_html_content_plus»</strong> );</li>
 			<li>In the list of modules <strong>«Extensions -> Extensions»</strong> install the module <strong>«HTML-Content Plus»</strong>.</li>
 		</ul>
 	</div>
@@ -241,6 +260,10 @@
 		<ul class="ul">
 			<li><strong>Module name -</strong> name that will be displayed in the admin panel;</li>
 			<li><strong>Status -</strong> module status is responsible for enabling settings;</li>
+			<li><strong>Image -</strong> insert images for different screen sizes or one for all;</li>
+			<li><strong>Video list -</strong> choose where the video will be inserted;</li>
+			<li><strong>Video link -</strong> for supported services, it is enough to insert any video link, for others, copy links from <strong>« iframe src="" »</strong>;</li>
+			<li><strong>Position of the content -</strong> location of the text in relation to the image or video;</li>
 			<li><strong>«Read More» Button status -</strong> enable / disable the script;</li>
 			<li><strong>Visible text height -</strong> which will be readable and the rest of the text will be hidden;</li>
 			<li><strong>Screen extension -</strong> at what screen resolutions the script will work;</li>
@@ -255,16 +278,16 @@
 	<div class="container">
 		<h2 class="section__h2 mb-xl"><i class="fal fa-file-code i50"></i>Template</h2>
 		<p>Create a module template and place it in the folder:</p>
-		<p class="path text-center"><strong>« catalog / view / theme / default / template / custom_templates / module / html_plus / file name in latin .(twig.tpl) »</strong></p>
+		<p class="path text-center"><strong>« catalog / view / theme / default / template / custom_templates / module / html_content_plus / file name in latin .(twig.tpl) »</strong></p>
 		<p class="mt40">As a basis, you can take the standard template on the path:</p>
-		<p class="path text-center"><strong>« catalog / view / theme / default / template / extension / module / cs_html_plus.(twig.tpl) »</strong></p>
+		<p class="path text-center"><strong>« catalog / view / theme / default / template / extension / module / cs_html_content_plus.(twig.tpl) »</strong></p>
 	</div>
 </section>
 <section class="section section-xl section__white" id="stylization">
 	<div class="container">
 		<h2 class="section__h2 mb-xl"><i class="fal fa-palette i50"></i>Stylization</h2>
-		<p>If the standard design of the «Expand / Collapse» button does not fit into your site design, you can tweak the CSS styles in the <strong>«cs_html_plus.min.css»</strong> file, which is located:</p>
-		<p class="path text-center"><strong>« catalog / view / cs_libs / css / cs_html_plus.min.css »</strong></p>
+		<p>If the standard design of the «Expand / Collapse» button does not fit into your site design, you can tweak the CSS styles in the <strong>«cs_html_content_plus.min.css»</strong> file, which is located:</p>
+		<p class="path text-center"><strong>« catalog / view / javascript / cs_libs / css / cs_html_content_plus.min.css »</strong></p>
 	</div>
 </section>
 <section class="section section-xl section__grey" id="problems">
@@ -284,9 +307,31 @@
 				<div class="block">
 					<div class="tags">
 						<h5 class="title release">
-							<span class="version">v4.0</span><span class="date">29.11.2022</span>
+							<span class="version">v5.0</span><span class="date">01.05.2023</span>
 						</h5>
 						<p class="tag"><span>Latest release</span></p>
+					</div>
+					<div class="block_content">
+						<p><strong>Added:</strong></p>
+						<ul class="ul">
+							<li>Inserting images for different screen sizes;</li>
+							<li>Delayed loading of images by means of the browser;</li>
+							<li>Position of the content in relation to the image or video;</li>
+							<li>Insert video.</li>
+						</ul>
+						<p><strong>Changed:</strong></p>
+						<ul class="ul">
+							<li>Fixed some bugs.</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="block">
+					<div class="tags">
+						<h5 class="title">
+							<span class="version">v4.0</span><span class="date">29.11.2022</span>
+						</h5>
 					</div>
 					<div class="block_content">
 						<p><strong>Added:</strong></p>
@@ -365,12 +410,6 @@
 <a id="scrollTop" class="btn btn-scrollTop"><i class="fas fa-chevron-up"></i></a>
 
 <a target="_blank" class="stop-war" href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi"></a>
-
-<!-- STYLE -->
-<style>
-@media (min-width: 1200px){.itc-slider__btn{display:none}}
-</style>
-<!-- END STYLE -->
 
 <!-- SCRIPT -->
 <script src="/libs/js/bootstrap.bundle.min.js"></script>
