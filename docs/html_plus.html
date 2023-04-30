@@ -121,9 +121,9 @@
 <section class="section section-xs section__dark">
 	<div class="container">
 		<div class="row gx-5 documentation__info">
-			<div class="col-4"><i class="fal fa-code-branch"></i>Версія: 4.0</div>
+			<div class="col-4"><i class="fal fa-code-branch"></i>Версія: 5.0</div>
 			<div class="col-4"><i class="fab fa-opencart"></i>OpenCart: 2.1 | 2.2 | 2.3 | 3.x</div>
-			<div class="col-4"><i class="fal fa-history"></i>Реліз: 29.11.2022</div> 
+			<div class="col-4"><i class="fal fa-history"></i>Реліз: 01.05.2023</div> 
 		</div>
 	</div>
 </section>
@@ -227,8 +227,8 @@
 			</div>
 		</div>
 		<ul class="ul">
-			<li>В Адмін-панелі перейдіть <strong>«Розширення -> Встановлення розширень»</strong> та встановіть файл <strong class="path">«HTML_Content_Plus_v4_OpenCart_x.ocmod.zip»</strong>;</li>
-			<li>Отримуємо повідомлення про успішне встановлення, переходимо <strong>«Система -> Групи користувачів»</strong> і для адміністратора встановити права доступу (в блоках «Дозволити перегляд» та «Дозволити редагувати» відзначити галочкою <strong class="path">«extension/module/cs_html_plus»</strong> );</li>
+			<li>В Адмін-панелі перейдіть <strong>«Розширення -> Встановлення розширень»</strong> та встановіть файл <strong class="path">«HTML_Content_Plus_v5_OpenCart_x.ocmod.zip»</strong>;</li>
+			<li>Отримуємо повідомлення про успішне встановлення, переходимо <strong>«Система -> Групи користувачів»</strong> і для адміністратора встановити права доступу (в блоках «Дозволити перегляд» та «Дозволити редагувати» відзначити галочкою <strong class="path">«extension/module/cs_html_content_plus»</strong> );</li>
 			<li>У списку модулів <strong>«Розширення -> Модулі»</strong> встановіть модуль <strong>«Текстовий блок HTML PLUS»</strong>.</li>
 		</ul>
 	</div>
@@ -241,6 +241,9 @@
 		<ul class="ul">
 			<li><strong>Назва модуля -</strong> назва, яка відображатиметься в адмін-панелі;</li>
 			<li><strong>Статус -</strong> статус модуля відповідає за увімкнення налаштувань;</li>
+			<li><strong>Зображення -</strong> увімкнення / вимкнення скрипту;</li>
+			<li><strong>Відео список -</strong> вибір звідки буде вставлено відео;</li>
+			<li><strong>Посилання на відео -</strong> для сервісів, що підтримуються, достатньо вставити будь-яке посилання на відео для інших скопіювати посилання з <pre><iframe src=""></iframe></pre>;</li>
 			<li><strong>Статус кнопки «Детальніше» -</strong> увімкнення / вимкнення скрипту;</li>
 			<li><strong>Висота видимого тексту -</strong> яка буде читана, а інша частина тексту буде прихована;</li>
 			<li><strong>Розширення екрану -</strong> на яких дозволах екрану працюватиме скрипт;</li>
@@ -255,16 +258,16 @@
 	<div class="container">
 		<h2 class="section__h2 mb-xl"><i class="fal fa-file-code i50"></i>Шаблон</h2>
 		<p>Створіть шаблон модуля і розмістіть його в папці:</p>
-		<p class="path text-center"><strong>« catalog / view / theme / default / template / custom_templates / module / html_plus / ім'я файлу на латиниці .(twig.tpl) »</strong></p>
+		<p class="path text-center"><strong>« catalog / view / theme / default / template / custom_templates / module / html_content_plus / ім'я файлу на латиниці .(twig.tpl) »</strong></p>
 		<p class="mt40">За основу можете взяти стандартний шаблон на шляху:</p>
-		<p class="path text-center"><strong>« catalog / view / theme / default / template / extension / module / cs_html_plus.(twig.tpl) »</strong></p>
+		<p class="path text-center"><strong>« catalog / view / theme / default / template / extension / module / cs_html_content_plus.(twig.tpl) »</strong></p>
 	</div>
 </section>
 <section class="section section-xl section__white" id="stylization">
 	<div class="container">
 		<h2 class="section__h2 mb-xl"><i class="fal fa-palette i50"></i>Стилізація</h2>
-		<p>Якщо стандартний дизайн кнопки «Розгорнути / Згорнути» не вписується у ваш дизайн сайту, ви можете підправити CSS стилі у файлі <strong>«cs_html_plus.min.css»</strong>, який знаходиться:</p>
-		<p class="path text-center"><strong>« catalog / view / cs_libs / css / cs_html_plus.min.css »</strong></p>
+		<p>Якщо стандартний дизайн кнопки «Розгорнути / Згорнути» не вписується у ваш дизайн сайту, ви можете підправити CSS стилі у файлі <strong>«cs_html_content_plus.min.css»</strong>, який знаходиться:</p>
+		<p class="path text-center"><strong>« catalog / view / cs_libs / css / cs_html_content_plus.min.css »</strong></p>
 	</div>
 </section>
 <section class="section section-xl section__grey" id="problems">
@@ -284,9 +287,26 @@
 				<div class="block">
 					<div class="tags">
 						<h5 class="title release">
-							<span class="version">v4.0</span><span class="date">29.11.2022</span>
+							<span class="version">v5.0</span><span class="date">01.05.2023</span>
 						</h5>
 						<p class="tag"><span>Останній реліз</span></p>
+					</div>
+					<div class="block_content">
+						<p><strong>Додано:</strong></p>
+						<ul class="ul">
+							<li>Додавання зображення до різних екранів;</li>
+							<li>Відкладене завантаження зображень засобами браузера;</li>
+							<li>Додавання відео.</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="block">
+					<div class="tags">
+						<h5 class="title">
+							<span class="version">v4.0</span><span class="date">29.11.2022</span>
+						</h5>
 					</div>
 					<div class="block_content">
 						<p><strong>Додано:</strong></p>
