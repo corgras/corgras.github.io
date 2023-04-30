@@ -100,13 +100,28 @@
 								</a>
 							</div>
 							<div class="itc-slider__item">
-								<a class="spotlight" href="/libs/images/docs/html_plus/html_plus_access_design.jpg">
-									<img src="/libs/images/docs/html_plus/html_plus_access_design.jpg">
+								<a class="spotlight" href="/libs/images/docs/html_plus/html_plus_settings.jpg">
+									<img src="/libs/images/docs/html_plus/html_plus_settings.jpg">
 								</a>
 							</div>
 							<div class="itc-slider__item">
-								<a class="spotlight" href="/libs/images/docs/html_plus/html_plus_frontend.jpg">
-									<img src="/libs/images/docs/html_plus/html_plus_frontend.jpg">
+								<a class="spotlight" href="/libs/images/docs/html_plus/html_plus_access.jpg">
+									<img src="/libs/images/docs/html_plus/html_plus_access.jpg">
+								</a>
+							</div>
+							<div class="itc-slider__item">
+								<a class="spotlight" href="/libs/images/docs/html_plus/html_plus_design.jpg">
+									<img src="/libs/images/docs/html_plus/html_plus_design.jpg">
+								</a>
+							</div>
+							<div class="itc-slider__item">
+								<a class="spotlight" href="/libs/images/docs/html_plus/html_plus_frontend_1.jpg">
+									<img src="/libs/images/docs/html_plus/html_plus_frontend_1.jpg">
+								</a>
+							</div>
+							<div class="itc-slider__item">
+								<a class="spotlight" href="/libs/images/docs/html_plus/html_plus_frontend_2.jpg">
+									<img src="/libs/images/docs/html_plus/html_plus_frontend_2.jpg">
 								</a>
 							</div>
 						</div>
@@ -123,7 +138,7 @@
 		<div class="row gx-5 documentation__info">
 			<div class="col-4"><i class="fal fa-code-branch"></i>Версия: 4.0</div>
 			<div class="col-4"><i class="fab fa-opencart"></i>OpenCart: 2.1 | 2.2 | 2.3 | 3.x</div>
-			<div class="col-4"><i class="fal fa-history"></i>Релиз: 29.11.2022</div> 
+			<div class="col-4"><i class="fal fa-history"></i>Релиз: 01.05.2023</div> 
 		</div>
 	</div>
 </section>
@@ -191,6 +206,10 @@
 			<li>Управление уровнем заголовка H1-H6;</li>
 			<li>Использование кастомного шаблона для модуля;</li>
 			<li>Управление доступом к контенту;</li>
+			<li>Вставка изображений для разных размеров экранов;</li>
+			<li>Отложенная загрузка изображений средствами браузера;</li>
+			<li>Вставка видео;</li>
+			<li>Размещение контента по изображению или видео;</li>
 			<li>Мультиязычность.</li>
 		</ul>
 	</div>
@@ -202,12 +221,12 @@
 		<div class="row">
 			<div class="col-6">
 				<div class="buttons">
-					<a href="http://corgras.byethost16.com/oc3/index.php?route=information/information&information_id=8" class="btn btn-blue btn-default btn-w240 ripple"><span>Витрина</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
+					<a href="http://corgras.byethost16.com/oc3/index.php?route=information/information&information_id=8" target="_blank" class="btn btn-blue btn-default btn-w240 ripple"><span>Витрина</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
 				</div>
 			</div>
 			<div class="col-6">
 				<div class="buttons">
-					<a href="http://corgras.byethost16.com/oc3/admin/" class="btn btn-blue btn-default btn-w240 ripple"><span>Админ-панель</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
+					<a href="http://corgras.byethost16.com/oc3/admin/" target="_blank" class="btn btn-blue btn-default btn-w240 ripple"><span>Админ-панель</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
 				</div>
 				<p class="caption text-center">Логин &amp; Пароль: demo</p>
 			</div>
@@ -227,8 +246,8 @@
 			</div>
 		</div>
 		<ul class="ul">
-			<li>В Админ-панели перейдите <strong>«Расширения -> Установка расширений»</strong> и установите файл <strong class="path">«HTML_Content_Plus_v4_OpenCart_x.ocmod.zip»</strong>;</li>
-			<li>Получаем сообщение об успешной установке, переходим <strong>«Система -> Группы пользователей»</strong> и для администратора установить права доступа (в блоках «Разрешить просмотр» и «Разрешить редактировать» отметить галочкой <strong class="path">«extension/module/cs_html_plus»</strong> );</li>
+			<li>В Админ-панели перейдите <strong>«Расширения -> Установка расширений»</strong> и установите файл <strong class="path">«HTML_Content_Plus_v5_OpenCart_x.ocmod.zip»</strong>;</li>
+			<li>Получаем сообщение об успешной установке, переходим <strong>«Система -> Группы пользователей»</strong> и для администратора установить права доступа (в блоках «Разрешить просмотр» и «Разрешить редактировать» отметить галочкой <strong class="path">«extension/module/cs_html_content_plus»</strong> );</li>
 			<li>В списке модулей <strong>«Расширение -> Модули»</strong> установите модуль <strong>«Текстовий блок HTML PLUS»</strong>.</li>
 		</ul>
 	</div>
@@ -241,6 +260,10 @@
 		<ul class="ul">
 			<li><strong>Название модуля -</strong> название, которое будет отображаться в админ-панели;</li>
 			<li><strong>Статус -</strong> статус модуля отвечает за включение настроек;</li>
+			<li><strong>Изображение -</strong> вставка изображений для разных размеров экранов или одно для всех;</li>
+			<li><strong>Видео список -</strong> выбор откуда будет вставлен видео;</li>
+			<li><strong>Ссылка на видео -</strong> для поддерживаемых сервисов достаточно вставить любую ссылку на видео для других скопировать ссылки с <strong>« iframe src="" »</strong>;</li>
+			<li><strong>Позиция контента -</strong> расположение текста в отношении изображения или видео;</li>
 			<li><strong>Статус кнопки «Подробнее» -</strong> включение / выключение скрипта;</li>
 			<li><strong>Высота видимого текста -</strong> которая будет читаема, а остальная часть текста будет скрыта;</li>
 			<li><strong>Расширение экрана -</strong> на каких разрешениях экрана будет работать скрипт;</li>
@@ -255,16 +278,16 @@
 	<div class="container">
 		<h2 class="section__h2 mb-xl"><i class="fal fa-file-code i50"></i>Шаблон</h2>
 		<p>Создайте шаблон модуля и разместите его в папке:</p>
-		<p class="path text-center"><strong>« catalog / view / theme / default / template / custom_templates / module / html_plus / имя файла на латинице .(twig.tpl) »</strong></p>
+		<p class="path text-center"><strong>« catalog / view / theme / default / template / custom_templates / module / html_content_plus / имя файла на латинице .(twig.tpl) »</strong></p>
 		<p class="mt40">За основу можете взять стандартный шаблон по пути:</p>
-		<p class="path text-center"><strong>« catalog / view / theme / default / template / extension / module / cs_html_plus.(twig.tpl) »</strong></p>
+		<p class="path text-center"><strong>« catalog / view / theme / default / template / extension / module / cs_html_content_plus.(twig.tpl) »</strong></p>
 	</div>
 </section>
 <section class="section section-xl section__white" id="stylization">
 	<div class="container">
 		<h2 class="section__h2 mb-xl"><i class="fal fa-palette i50"></i>Стилизация</h2>
-		<p>Если стандартный дизайн кнопки «Развернуть / Свернуть» не вписывается в ваш дизайн сайта, вы можете подправить CSS стили в файле <strong>«cs_html_plus.min.css»</strong>, который находится:</p>
-		<p class="path text-center"><strong>« catalog / view / cs_libs / css / cs_html_plus.min.css »</strong></p>
+		<p>Если стандартный дизайн кнопки «Развернуть / Свернуть» не вписывается в ваш дизайн сайта, вы можете подправить CSS стили в файле <strong>«cs_html_content_plus.min.css»</strong>, который находится:</p>
+		<p class="path text-center"><strong>« catalog / view / javascript / cs_libs / css / cs_html_content_plus.min.css »</strong></p>
 	</div>
 </section>
 <section class="section section-xl section__grey" id="problems">
@@ -284,9 +307,31 @@
 				<div class="block">
 					<div class="tags">
 						<h5 class="title release">
-							<span class="version">v4.0</span><span class="date">29.11.2022</span>
+							<span class="version">v5.0</span><span class="date">01.05.2023</span>
 						</h5>
 						<p class="tag"><span>Последний релиз</span></p>
+					</div>
+					<div class="block_content">
+						<p><strong>Добавлено:</strong></p>
+						<ul class="ul">
+							<li>Вставка изображений для разных размеров экранов;</li>
+							<li>Отложенная загрузка изображений средствами браузера;</li>
+							<li>Размещение контента по изображению или видео;</li>
+							<li>Вставка видео.</li>
+						</ul>
+						<p><strong>Изменено:</strong></p>
+						<ul class="ul">
+							<li>Исправлены некоторые ошибки.</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="block">
+					<div class="tags">
+						<h5 class="title">
+							<span class="version">v4.0</span><span class="date">29.11.2022</span>
+						</h5>
 					</div>
 					<div class="block_content">
 						<p><strong>Добавлено:</strong></p>
@@ -365,12 +410,6 @@
 <a id="scrollTop" class="btn btn-scrollTop"><i class="fas fa-chevron-up"></i></a>
 
 <a target="_blank" class="stop-war" href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi"></a>
-
-<!-- STYLE -->
-<style>
-@media (min-width: 1200px){.itc-slider__btn{display:none}}
-</style>
-<!-- END STYLE -->
 
 <!-- SCRIPT -->
 <script src="/libs/js/bootstrap.bundle.min.js"></script>
