@@ -313,8 +313,6 @@
 
 <a id="scrollTop" class="btn btn-scrollTop"><i class="fas fa-chevron-up"></i></a>
 
-<a target="_blank" class="stop-war" href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi"></a>
-
 <!-- SCRIPT -->
 <script src="/libs/js/bootstrap.bundle.min.js"></script>
 <script src="/libs/js/jquery.min.js"></script>
@@ -322,6 +320,15 @@
 <script src="/libs/js/itc-slider.min.js"></script>
 <script src="/libs/js/common.js"></script>
 <!-- END SCRIPT -->
+
+<script>
+	$.get("https://ipinfo.io", function(response) {
+		if (response.country == 'RU') {
+			$('.stop-war').css('display', 'none');
+		}
+	}, "jsonp")
+</script>
+<a target="_blank" href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi" class="stop-war"></a>
 
 <!-- ANALYTICS -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3LWW5QT15W"></script>
