@@ -39,28 +39,28 @@
 	<nav class="col header__navigation">
 		<ul class="navigation__list">
 			<li>
-				<a href="/ru/" class="link" data-title="Главная">
-					<i class="fal fa-home-lg"></i><span>Главная</span><span>Главная страница сайта</span>
-				</a>
-			</li>
-			<li>
 				<a href="/ru/extensions.html" class="link" data-title="Расширения">
-					<i class="fal fa-archive"></i><span>Расширения</span><span>Дополнения для Opencart/ocStore</span>
+					<i class="fal fa-archive"></i><span>Расширения</span>
 				</a>
 			</li>
 			<li>
 				<a href="/ru/services.html" class="link" data-title="Услуги">
-					<i class="fal fa-clipboard-list"></i><span>Услуги</span><span>Предоставляемые услуги</span>
+					<i class="fal fa-clipboard-list"></i><span>Услуги</span>
 				</a>
 			</li>
 			<li>
 				<a href="/ru/faq.html" class="link" data-title="Вопрос-ответ">
-					<i class="fal fa-comment-alt-lines"></i><span>Вопрос-ответ</span><span>Ответы на часто задаваемые вопросы</span>
+					<i class="fal fa-comment-alt-lines"></i><span>Вопрос-ответ</span>
+				</a>
+			</li>
+			<li>
+				<a href="/ru/warez.html" class="link" data-title="Варез">
+					<i class="fal fa-shield-check"></i><span>Варез</span>
 				</a>
 			</li>
 			<li>
 				<a href="/ru/support.html" class="link" data-title="Техподдержка">
-					<i class="fal fa-life-ring"></i><span>Техподдержка</span><span>Способы связи с нами</span>
+					<i class="fal fa-life-ring"></i><span>Техподдержка</span>
 				</a>
 			</li>
 		</ul>
@@ -84,6 +84,10 @@
 	</div>
 </header>
 <section class="section extensions-section section__white main-screen">
+	<video class="video" playsinline="" autoplay="" muted="" loop=""> 
+		<source src="/libs/video/video_bg.mp4" type="video/mp4"> 
+		<source src="/libs/video/video_bg.webm" type="video/webm">
+	</video>
 	<div class="container section__container">
 		<div class="heading-content mb-xl">
 			<h1 class="header-section__h1">Пользовательские шаблоны</h1>
@@ -131,9 +135,9 @@
 <section class="section section-xs section__dark">
 	<div class="container">
 		<div class="row gx-5 documentation__info">
-			<div class="col-4"><i class="fal fa-code-branch"></i>Версия: 1.1</div>
+			<div class="col-4"><i class="fal fa-code-branch"></i>Версия: 1.2</div>
 			<div class="col-4"><i class="fab fa-opencart"></i>OpenCart: 3.x</div>
-			<div class="col-4"><i class="fal fa-history"></i>Релиз: 5.12.2022</div> 
+			<div class="col-4"><i class="fal fa-history"></i>Релиз: 31.05.2023</div> 
 		</div>
 	</div>
 </section>
@@ -223,7 +227,7 @@
 			</div>
 		</div>
 		<ul class="ul">
-			<li>В админ-панели перейдите <strong>«Расширения -> Установка расширений»</strong> и установите файл <strong class="path">«Custom_Templates_v1.1_Opencart_3.ocmod.zip»</strong>;</li>
+			<li>В админ-панели перейдите <strong>«Расширения -> Установка расширений»</strong> и установите файл <strong class="path">«Custom_Templates_v1.2_Opencart_3.ocmod.zip»</strong>;</li>
 			<li>Получаем сообщение об успешной установке, переходим <strong>«Расширения -> Модификаторы»</strong> и в правом верхнем углу нажимаем кнопку <strong>«Обновить»</strong>;</li>
 			<li>После перейдите в <strong>«Система -> Группы пользователей»</strong> и для администратора установить права доступа (в блоках «Разрешить просмотр» и «Разрешить редактировать» отметить галочкой <strong class="path">«extension/module/cs_custom_templates»</strong> );</li>
 			<li>В списке модулей <strong>«Расширения -> Модули»</strong> установите модуль <strong>«Пользовательские шаблоны»</strong>.</li>
@@ -263,12 +267,27 @@
 				<div class="block">
 					<div class="tags">
 						<h5 class="title release">
-							<span class="version">v1.1</span><span class="date">5.12.2022</span>
+							<span class="version">v1.2</span><span class="date">31.05.2023</span>
 						</h5>
 						<p class="tag"><span>Последний релиз</span></p>
 					</div>
 					<div class="block_content">
-						<p><strong>Обновлено:</strong></p>
+						<p><strong>Изменено:</strong></p>
+						<ul class="ul">
+							<li>Коррекция в коде.</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="block">
+					<div class="tags">
+						<h5 class="title">
+							<span class="version">v1.1</span><span class="date">5.12.2022</span>
+						</h5>
+					</div>
+					<div class="block_content">
+						<p><strong>Изменено:</strong></p>
 						<ul class="ul">
 							<li>Исправлены недочеты.</li>
 						</ul>
@@ -296,17 +315,17 @@
 </section>
 <section class="section section__grey section-xl text-center">
 	<div class="container">
-		<h2 class="section__h2">Поддержать автора</h2>
-		<p class="section__minitext">Если хотите поддержать или поблагодарить автора, вы можете сделать это с помощью:<br>PayPal или Кредитной картой</p>
+		<h2 class="section__h2">Если хотите поблагодарить автора</h2>
+		<p class="section__minitext">Вы можете сделать это с помощью: PayPal или Кредитной картой</p>
 		<div class="buttons">
-			<a href="https://www.paypal.com/donate/?hosted_button_id=DMETJT5YE55HN" class="btn btn-light btn-default btn-w240 ripple"><span>Поддержать</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
+			<a href="https://www.paypal.com/donate/?hosted_button_id=DMETJT5YE55HN" class="btn btn-light btn-default btn-w240 ripple"><span>Задонатить</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
 		</div>
 	</div>
 </section>
 <footer class="footer">
 	<div class="container">
 		<div class="row">
-			<div class="col footer__copyrights"><span>© 2022 CORGRAS. Все права защищены</span></div>
+			<div class="col footer__copyrights"><span>© 2022 - <script>new Date().getFullYear()>2022&&document.write(new Date().getFullYear());</script> CORGRAS. Все права защищены</span></div>
 		</div>
 	</div>
 </footer>

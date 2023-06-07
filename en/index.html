@@ -36,29 +36,29 @@
 	</a>
 	<nav class="col header__navigation">
 		<ul class="navigation__list">
-			<li class="active">
-				<a href="/en/" class="active link" data-title="Home">
-					<i class="fal fa-home-lg"></i><span>Home</span><span>Main page of the site</span>
-				</a>
-			</li>
 			<li>
 				<a href="/en/extensions.html" class="link" data-title="Extension">
-					<i class="fal fa-archive"></i><span>Extension</span><span>Add-ons for Opencart/ocStore</span>
+					<i class="fal fa-archive"></i><span>Extension</span>
 				</a>
 			</li>
 			<li>
 				<a href="/en/services.html" class="link" data-title="Services">
-					<i class="fal fa-clipboard-list"></i><span>Services</span><span>Provision of services</span>
+					<i class="fal fa-clipboard-list"></i><span>Services</span>
 				</a>
 			</li>
 			<li>
 				<a href="/en/faq.html" class="link" data-title="FAQ">
-					<i class="fal fa-comment-alt-lines"></i><span>FAQ</span><span>Answers to the most frequent questions</span>
+					<i class="fal fa-comment-alt-lines"></i><span>FAQ</span>
+				</a>
+			</li>
+			<li>
+				<a href="/warez.html" class="link" data-title="Warez">
+					<i class="fal fa-shield-check"></i><span>Warez</span>
 				</a>
 			</li>
 			<li>
 				<a href="/en/support.html" class="link" data-title="Support">
-					<i class="fal fa-life-ring"></i><span>Support</span><span>Ways to contact us</span>
+					<i class="fal fa-life-ring"></i><span>Support</span>
 				</a>
 			</li>
 		</ul>
@@ -107,11 +107,11 @@
 		<h2 class="section__h2"><i class="fab fa-opencart i50"></i>New modules and modifications</h2>
 		<div class="row g-5 cards">
 			<div class="col">
-				<a href="/en/docs/product_description_readmore.html">
+				<a href="/en/docs/html_pro.html">
 					<div class="card h-100">
 						<div class="card-body">
-							<h3 class="card-title">JS Readmore for product description</h3>
-							<p class="card-text">Allows you to hide part of a long text, with the ability to expand / collapse the product description</p>
+							<h3 class="card-title">HTML-Content PRO</h3>
+							<p class="card-text">Allows you to create a grid with an unlimited number of text blocks and customize them</p>
 						</div>
 						<div class="card-footer card-buttons">
 							<button class="btn btn-light btn-small ripple"><span>More details</span><i class="far fa-long-arrow-right btn-icon-left"></i></button>
@@ -120,11 +120,11 @@
 				</a>
 			</div>
 			<div class="col">
-				<a href="/en/docs/additional_description_categories.html">
+				<a href="/en/docs/category_description_readmore.html">
 					<div class="card h-100">
 						<div class="card-body">
-							<h3 class="card-title">Additional description of categories + settings</h3>
-							<p class="card-text">Allows you to add text, banner or HTML code at the bottom of the category pages, which will be different from the default description. And it has other settings</p>
+							<h3 class="card-title">JS Readmore for category description</h3>
+							<p class="card-text">Allows you to hide part of a long text, with the ability to expand / collapse the category description</p>
 						</div>
 						<div class="card-footer card-buttons">
 							<button class="btn btn-light btn-small ripple"><span>More details</span><i class="far fa-long-arrow-right btn-icon-left"></i></button>
@@ -156,10 +156,24 @@
 		</div>
 	</div>
 </section>
+<section class="section section__white section-xl">
+	<div class="container">
+		<h2 class="section__h2"><i class="fal fa-shield-virus i50"></i>Protection against pirated modules</h2>
+		<div class="row g-5">			
+			<div class="col">
+				<p>Before paying for the module on the Internet, check if the site on which you are going to pay is not located in the Opencart pirate resource database: <a href="https://warez.rip/" target="_blank">https://warez.rip/</a></p>
+				<p>If it is, then we do not recommend using such modules, because all this can lead to a denial of technical support, hacking your site and infecting it with malicious code, leaking personal data and payment information of your customers, and other problems.</p>
+				<div class="buttons">
+					<a href="https://warez.rip/" target="_blank" class="btn btn-light btn-default btn-w240 ripple"><span>Verify</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 <section class="section section__grey section-xl text-center">
 	<div class="container">
-		<h2 class="section__h2">Make a donation</h2>
-		<p class="section__minitext">If you want to support or thank the author, you can do it with:<br>PayPal or Credit Card</p>
+		<h2 class="section__h2">Thank the author</h2>
+		<p class="section__minitext">You can do this with help: PayPal or Credit Card</p>
 		<div class="buttons">
 			<a href="https://www.paypal.com/donate/?hosted_button_id=DMETJT5YE55HN" class="btn btn-light btn-default btn-w240 ripple"><span>Donate</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
 		</div>
@@ -168,7 +182,7 @@
 <footer class="footer">
 	<div class="container">
 		<div class="row">
-			<div class="col footer__copyrights"><span>© 2022 CORGRAS. All rights reserved</span></div>
+			<div class="col footer__copyrights"><span>© 2022 - <script>new Date().getFullYear()>2022&&document.write(new Date().getFullYear());</script> CORGRAS. All rights reserved</span></div>
 		</div>
 	</div>
 </footer>
