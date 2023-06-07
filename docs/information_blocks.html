@@ -39,28 +39,28 @@
 	<nav class="col header__navigation">
 		<ul class="navigation__list">
 			<li>
-				<a href="/" class="link" data-title="Головна">
-					<i class="fal fa-home-lg"></i><span>Головна</span><span>Головна сторінка сайту</span>
-				</a>
-			</li>
-			<li>
 				<a href="/extensions.html" class="link" data-title="Розширення">
-					<i class="fal fa-archive"></i><span>Розширення</span><span>Додатки для Opencart/ocStore</span>
+					<i class="fal fa-archive"></i><span>Розширення</span>
 				</a>
 			</li>
 			<li>
 				<a href="/services.html" class="link" data-title="Послуги">
-					<i class="fal fa-clipboard-list"></i><span>Послуги</span><span>Надання послуг</span>
+					<i class="fal fa-clipboard-list"></i><span>Послуги</span>
 				</a>
 			</li>
 			<li>
 				<a href="/faq.html" class="link" data-title="Питання-відповідь">
-					<i class="fal fa-comment-alt-lines"></i><span>Питання-відповідь</span><span>Відповіді на найчастіші питання</span>
+					<i class="fal fa-comment-alt-lines"></i><span>Питання-відповідь</span>
+				</a>
+			</li>
+			<li>
+				<a href="/warez.html" class="link" data-title="Варез">
+					<i class="fal fa-shield-check"></i><span>Варез</span>
 				</a>
 			</li>
 			<li>
 				<a href="/support.html" class="link" data-title="Техпідтримка">
-					<i class="fal fa-life-ring"></i><span>Техпідтримка</span><span>Способи зв'язку з нами</span>
+					<i class="fal fa-life-ring"></i><span>Техпідтримка</span>
 				</a>
 			</li>
 		</ul>
@@ -84,6 +84,10 @@
 	</div>
 </header>
 <section class="section extensions-section section__white main-screen">
+	<video class="video" playsinline="" autoplay="" muted="" loop=""> 
+		<source src="/libs/video/video_bg.mp4" type="video/mp4"> 
+		<source src="/libs/video/video_bg.webm" type="video/webm">
+	</video>
 	<div class="container section__container">
 		<div class="heading-content mb-xl">
 			<h1 class="header-section__h1">Інформаційні блоки</h1>
@@ -363,17 +367,17 @@
 </section>
 <section class="section section__grey section-xl text-center">
 	<div class="container">
-		<h2 class="section__h2">Підтримати автора</h2>
-		<p class="section__minitext">Якщо хочете підтримати або подякувати автору, ви можете зробити це за допомогою:<br>PayPal або Кредитною карткою</p>
+		<h2 class="section__h2">Якщо хочете подякувати автору</h2>
+		<p class="section__minitext">Ви можете зробити це за допомогою: PayPal або Кредитною карткою</p>
 		<div class="buttons">
-			<a href="https://www.paypal.com/donate/?hosted_button_id=DMETJT5YE55HN" class="btn btn-light btn-default btn-w240 ripple"><span>Підтримати</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
+			<a href="https://www.paypal.com/donate/?hosted_button_id=DMETJT5YE55HN" target="_blank" class="btn btn-light btn-default btn-w240 ripple"><span>Задонатити</span><i class="far fa-long-arrow-right btn-icon-left"></i></a>
 		</div>
 	</div>
 </section>
 <footer class="footer">
 	<div class="container">
 		<div class="row">
-			<div class="col footer__copyrights"><span>© 2022 CORGRAS. Всі права захищені</span></div>
+			<div class="col footer__copyrights"><span>© 2022 - <script>new Date().getFullYear()>2022&&document.write(new Date().getFullYear());</script> CORGRAS. Всі права захищені</span></div>
 		</div>
 	</div>
 </footer>
