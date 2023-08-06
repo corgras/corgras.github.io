@@ -88,15 +88,15 @@
 			<h1 class="header-section__h1">Answers to the most common problems</h1>
 			<p class="header-section__text">When installing modules or modifiers, you may encounter errors.<br>We have compiled a solution to the most common problems</p>
 		</div> 
-		<div class="accordion accordion-flush" id="accordionFaq">
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="faq1">
+		<div class="accordion accordion-flush" id="accordionFaq" itemscope itemtype="https://schema.org/FAQPage">>
+			<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<h2 class="accordion-header" itemprop="name" id="faq1">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse1" aria-expanded="false" aria-controls="faq-collapse1">
 						1. «The directory is not writable!» or «The folder is not writable!»
 					</button>
 				</h2>
-				<div id="faq-collapse1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#accordionFaq">
-					<div class="accordion-body">
+				<div id="faq-collapse1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#accordionFaq" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div class="accordion-body" itemprop="text">
 						<ul class="ul">
 							<li>Download and install the add-on <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=40663">Localcopy OCMOD</a>;</li>
 							<li>After installing this add-on, you need to go to the section <strong>«Modifications»</strong> and click the button <strong>«Update Modifications»</strong>;</li>
@@ -105,14 +105,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="faq2">
+			<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<h2 class="accordion-header" itemprop="name" id="faq2">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse2" aria-expanded="false" aria-controls="faq-collapse2">
 						2. The module is installed and working in the admin panel, but nothing is displayed on the site
 					</button>
 				</h2>
-				<div id="faq-collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#accordionFaq">
-					<div class="accordion-body">
+				<div id="faq-collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#accordionFaq" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div class="accordion-body" itemprop="text">
 						<p>There are several possible problems and possible solutions:</p>
 						<ul class="ul">
 							<li>The template cache has not been reset - you need to update the cache;</li>
@@ -122,14 +122,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="faq3">
+			<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<h2 class="accordion-header" itemprop="name" id="faq3">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse3" aria-expanded="false" aria-controls="faq-collapse3">
 						3. The Opencart module does not work. 3.0.3.6
 					</button>
 				</h2>
-				<div id="faq-collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#accordionFaq">
-					<div class="accordion-body">
+				<div id="faq-collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#accordionFaq" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div class="accordion-body" itemprop="text">
 						<p>There is a bug in the official builds of Opencart 3.0.3.5 - 3.0.3.6 - there modifiers do not work with twig files due to an error in the standard modification <strong>«/system/modification.xml»</strong> - the second operation from this modification does not work.</p>
 						<p>The problem is at the office github and suggested solution: <a href="https://github.com/opencart/opencart/blob/3.0.x.x_Maintenance/upload/system/modification.xml">https://github.com/opencart/opencart/blob/3.0.x.x_Maintenance/upload/system/modification.xml</a></p>
 						<p>Fix modifier following these recommendations, it will replace the file <strong>«/system/modification.xml»</strong> file with the correct one.</p>
@@ -143,27 +143,27 @@
 					</div>
 				</div>
 			</div>
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="faq4">
+			<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<h2 class="accordion-header" itemprop="name" id="faq4">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse4" aria-expanded="false" aria-controls="faq-collapse4">
 						4. The module does not respond to your actions
 					</button>
 				</h2>
-				<div id="faq-collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#accordionFaq">
-					<div class="accordion-body">
+				<div id="faq-collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#accordionFaq" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div class="accordion-body" itemprop="text">
 						<p>If the module does not respond to your actions, whether it is pressing a button or loading a map, or selecting a date, or any other action that is in the functionality of the module, there is most likely a conflict in JS scripts.</p>
 						<p>Press F12 on the problem page in the browser - the webmaster panel will open, where on the <strong>«Console»</strong> tab you can see conflicts in the scripts, if any. This action is available in Chrome, Opera, Firefox browsers.</p>
 					</div>
 				</div>
 			</div>
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="faq5">
+			<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<h2 class="accordion-header" itemprop="name" id="faq5">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse5" aria-expanded="false" aria-controls="faq-collapse5">
 						5. SyntaxError: Unexpected token in JSON at position 0
 					</button>
 				</h2>
-				<div id="faq-collapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#accordionFaq">
-					<div class="accordion-body">
+				<div id="faq-collapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#accordionFaq" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div class="accordion-body" itemprop="text">
 						<ul class="ul">
 							<li>Download and install fix <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=40663">Localcopy</a>;</li>
 							<li>Update the modifications in the admin;</li>
@@ -172,14 +172,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="faq6">
+			<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<h2 class="accordion-header" itemprop="name" id="faq6">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse6" aria-expanded="false" aria-controls="faq-collapse6">
 						6. Ошибка 500 - Internal Server Error
 					</button>
 				</h2>
-				<div id="faq-collapse6" class="accordion-collapse collapse" aria-labelledby="faq6" data-bs-parent="#accordionFaq">
-					<div class="accordion-body">
+				<div id="faq-collapse6" class="accordion-collapse collapse" aria-labelledby="faq6" data-bs-parent="#accordionFaq" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div class="accordion-body" itemprop="text">
 						<p>Error 500 after installing the module means that some critical error has occurred in php.</p>
 						<p><strong>To identify the problem, you can:</strong></p>
 						<ul class="ul">
@@ -196,14 +196,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="faq7">
+			<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<h2 class="accordion-header" itemprop="name" id="faq7">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse7" aria-expanded="false" aria-controls="faq-collapse7">
 						7. The module is installed, but it is not in the list of modules
 					</button>
 				</h2>
-				<div id="faq-collapse7" class="accordion-collapse collapse" aria-labelledby="faq7" data-bs-parent="#accordionFaq">
-					<div class="accordion-body">
+				<div id="faq-collapse7" class="accordion-collapse collapse" aria-labelledby="faq7" data-bs-parent="#accordionFaq" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div class="accordion-body" itemprop="text">
 						<p><strong>Possible reasons:</strong></p>
 						<ul class="ul">
 							<li>If you have not loaded modules in the archive through the admin panel before, you need to install a free modification <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=40663">Localcopy OCMOD</a> according to the instructions and then reinstall the module;</li>
@@ -212,93 +212,93 @@
 					</div>
 				</div>
 			</div>
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="faq8">
+			<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<h2 class="accordion-header" itemprop="name" id="faq8">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse8" aria-expanded="false" aria-controls="faq-collapse8">
 						8. Error: FTP must be enabled in settings
 					</button>
 				</h2>
-				<div id="faq-collapse8" class="accordion-collapse collapse" aria-labelledby="faq8" data-bs-parent="#accordionFaq">
-					<div class="accordion-body">
+				<div id="faq-collapse8" class="accordion-collapse collapse" aria-labelledby="faq8" data-bs-parent="#accordionFaq" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div class="accordion-body" itemprop="text">
 						<p><strong>Two Solutions:</strong></p>
 						<p>1. If this error occurs when installing a module from the admin panel, you need to install a free <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=18892">FTP QuickFix modification localcopy.ocmod.xml</a>. It will be installed without problems through the same add-ons installer, only after installation do not forget to update the modifications and then you can start installing any modules on Opencart 2.</p>
 						<p>2. You can also solve this error in another way: register access to FTP in the admin panel <strong>«System > Settings > Store > FTP tab»</strong>.</p>
 					</div>
 				</div>
 			</div>
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="faq9">
+			<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<h2 class="accordion-header" itemprop="name" id="faq9">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse9" aria-expanded="false" aria-controls="faq-collapse9">
 						9. Error: Access denied!
 					</button>
 				</h2>
-				<div id="faq-collapse9" class="accordion-collapse collapse" aria-labelledby="faq9" data-bs-parent="#accordionFaq">
-					<div class="accordion-body">
+				<div id="faq-collapse9" class="accordion-collapse collapse" aria-labelledby="faq9" data-bs-parent="#accordionFaq" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div class="accordion-body" itemprop="text">
 						<p>If you see the message <strong>«Access Denied! You do not have permission to access this page. If you need it, contact the administrator»</strong> - you need to give administrators the rights to manage the module or page.</p>
 						<p><strong>Solution:</strong> in the Opencart 2 admin panel, go to <strong>«System > Users > User Groups»</strong> and here click <strong>«Select All»</strong> below both blocks, then <strong>«Save»</strong>.</p>
 						<p>Another reason for the appearance of this error may be incorrect installation of the module - the files were not loaded into their places. Upload the module files manually to the server or install a fix <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=18892">localcopy.ocmod.xml</a> and reinstall the module.</p>
 					</div>
 				</div>
 			</div>
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="faq10">
+			<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<h2 class="accordion-header" itemprop="name" id="faq10">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse10" aria-expanded="false" aria-controls="faq-collapse10">
 						10. The module item was not added to the side menu of the admin panel
 					</button>
 				</h2>
-				<div id="faq-collapse10" class="accordion-collapse collapse" aria-labelledby="faq10" data-bs-parent="#accordionFaq">
-					<div class="accordion-body">
+				<div id="faq-collapse10" class="accordion-collapse collapse" aria-labelledby="faq10" data-bs-parent="#accordionFaq" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div class="accordion-body" itemprop="text">
 						<p>In the Opencart 2 admin panel, go to <strong>«System > Users > User Groups»</strong> and here click <strong>«Select All»</strong> below both blocks, then <strong>«Save»</strong></p>
 					</div>
 				</div>
 			</div>
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="faq11">
+			<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<h2 class="accordion-header" itemprop="name" id="faq11">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse11" aria-expanded="false" aria-controls="faq-collapse11">
 						11. Error: Invalid file type!
 					</button>
 				</h2>
-				<div id="faq-collapse11" class="accordion-collapse collapse" aria-labelledby="faq11" data-bs-parent="#accordionFaq">
-					<div class="accordion-body">
+				<div id="faq-collapse11" class="accordion-collapse collapse" aria-labelledby="faq11" data-bs-parent="#accordionFaq" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div class="accordion-body" itemprop="text">
 						<p>If the module is a single XML file, then its extension must be .ocmod.xml</p>
 						<p>If the module is an ocmod.zip archive, then it does not need to be unpacked, but installed as is. Such an archive must contain the upload folder (may be empty), and there may also be modification files: install.xml, install.php, install.sql. There should not be any other files in the root of the archive.</p>
 					</div>
 				</div>
 			</div>
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="faq12">
+			<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<h2 class="accordion-header" itemprop="name" id="faq12">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse12" aria-expanded="false" aria-controls="faq-collapse12">
 						12. Error: The directory containing the files to be uploaded could not be found!
 					</button>
 				</h2>
-				<div id="faq-collapse12" class="accordion-collapse collapse" aria-labelledby="faq12" data-bs-parent="#accordionFaq">
-					<div class="accordion-body">
+				<div id="faq-collapse12" class="accordion-collapse collapse" aria-labelledby="faq12" data-bs-parent="#accordionFaq" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div class="accordion-body" itemprop="text">
 						<p>This error means that the upload folder is missing in the uploaded archive. Even if the module has no files other than modifications - this folder must be present in the module's .ocmod.zip archive, then it must remain empty.</p>
 					</div>
 				</div>
 			</div>
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="faq13">
+			<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<h2 class="accordion-header" itemprop="name" id="faq13">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse13" aria-expanded="false" aria-controls="faq-collapse13">
 						13. Error: Modifier uses the same ID code you are trying to upload!
 					</button>
 				</h2>
-				<div id="faq-collapse13" class="accordion-collapse collapse" aria-labelledby="faq13" data-bs-parent="#accordionFaq">
-					<div class="accordion-body">
+				<div id="faq-collapse13" class="accordion-collapse collapse" aria-labelledby="faq13" data-bs-parent="#accordionFaq" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div class="accordion-body" itemprop="text">
 						<p>This error means that you are trying to install a modifier that is already installed, or perhaps one of your modules has the same ID.</p>
 						<p>To solve this error, you need to remove the old version of the modification in the <strong>«Modules > Modifications»</strong> section before installing.</p>
 						<p>If you do not have such a module, but the ID matches, then you need to change the value of the <strong>&lt;code&gt;</strong> parameter in the XML modifier being set, make this parameter unique by adding a few characters.</p>
 					</div>
 				</div>
 			</div>
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="faq14">
+			<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<h2 class="accordion-header" itemprop="name" id="faq14">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse14" aria-expanded="false" aria-controls="faq-collapse14">
 						14. Error: Warning: DOMDocument::loadXML(): CData section not finished
 					</button>
 				</h2>
-				<div id="faq-collapse14" class="accordion-collapse collapse" aria-labelledby="faq14" data-bs-parent="#accordionFaq">
-					<div class="accordion-body">
+				<div id="faq-collapse14" class="accordion-collapse collapse" aria-labelledby="faq14" data-bs-parent="#accordionFaq" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div class="accordion-body" itemprop="text">
 						<p>This error means that you are trying to set an oversized xml modifier.</p>
 						<p>The number of characters in the ocmod.xml file must not exceed 65535.</p>
 						<p>To solve the error, you need to split the modification xml file into several parts, the main thing is not to forget to set a unique value for each in <strong>&lt;code&gt;</strong>, you can add the numbers 1,2,3... to the current value as identifiers parts.</p><p>Another solution is to change the type of the fields where modifications are stored in the <strong>«oc_modification»</strong> table of the database.</p>
@@ -307,14 +307,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="faq15">
+			<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<h2 class="accordion-header" itemprop="name" id="faq15">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse15" aria-expanded="false" aria-controls="faq-collapse15">
 						15. Error: Fatal error: Uncaught exception '...' with message '...' in
 					</button>
 				</h2>
-				<div id="faq-collapse15" class="accordion-collapse collapse" aria-labelledby="faq15" data-bs-parent="#accordionFaq">
-					<div class="accordion-body">
+				<div id="faq-collapse15" class="accordion-collapse collapse" aria-labelledby="faq15" data-bs-parent="#accordionFaq" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div class="accordion-body" itemprop="text">
 						<ul class="ul">
 							<li>It looks like you installed a module for older versions of this system on Opencart 2.3.x.x, that is, an incompatible module. You need to delete all files of this module, otherwise the error will not disappear;</li>
 							<li>Also, this error can occur if the script accesses a non-existent table in the database. That is, the module table was not created during installation. Read the installation instructions and reinstall the module.</li>
@@ -322,14 +322,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="faq16">
+			<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<h2 class="accordion-header" itemprop="name" id="faq16">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse16" aria-expanded="false" aria-controls="faq-collapse16">
 						16. The template is not edited, the text on the site does not change
 					</button>
 				</h2>
-				<div id="faq-collapse16" class="accordion-collapse collapse" aria-labelledby="faq16" data-bs-parent="#accordionFaq">
-					<div class="accordion-body">
+				<div id="faq-collapse16" class="accordion-collapse collapse" aria-labelledby="faq16" data-bs-parent="#accordionFaq" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div class="accordion-body" itemprop="text">
 						<p>There are several reasons why something on the site does not change. This mainly happens in OpenCart 3rd version, but maybe in the 2nd one too.</p>
 						<ul class="ul">
 							<li><strong>You have not updated the modifier cache.</strong> It needs to be updated after editing the file if it "passes" through the modifier. Read about modifiers in the documentation and on the forum.</li>
@@ -342,14 +342,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="faq17">
+			<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<h2 class="accordion-header" itemprop="name" id="faq17">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse17" aria-expanded="false" aria-controls="faq-collapse17">
 						17. Error: This directory is not writable!
 					</button>
 				</h2>
-				<div id="faq-collapse17" class="accordion-collapse collapse" aria-labelledby="faq17" data-bs-parent="#accordionFaq">
-					<div class="accordion-body">
+				<div id="faq-collapse17" class="accordion-collapse collapse" aria-labelledby="faq17" data-bs-parent="#accordionFaq" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div class="accordion-body" itemprop="text">
 						<ul class="ul">
 							<li>Download and install the add-on <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=40663">Localcopy OCMOD</a>;</li>
 							<li>After installing this add-on, you need to go to the section <strong>«Modifications»</strong> and click the button <strong>«Update Modifications»</strong>;</li>
