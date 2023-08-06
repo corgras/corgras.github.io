@@ -1,23 +1,4 @@
 User-agent: *
-Disallow: /library/
-Disallow: /assets/
-Disallow: /images/
-Disallow: /img/bg/
-Allow: /docs/
-
-User-agent: Googlebot
-Allow: /library/
-Allow: /assets/
-Disallow: /images/
-Disallow: /img/bg/
-Allow: /docs/
-
-User-agent: Yandex
-Disallow: /library/
-Disallow: /assets/
-Disallow: /images/
-Disallow: /img/bg/
-Allow: /docs/
 Clean-param: tracking
 
 Host: corgras.github.io
