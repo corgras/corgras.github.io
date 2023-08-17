@@ -7,7 +7,7 @@
 	<title>Дополнительное описание категориям для Opencart и ocStore - CORGRAS</title>
 	<meta name="description" content="Модуль позволяет добавить текст, баннер или HTML-код в нижней части страниц категорий, который будет отличаться от описания по умолчанию для Вашего интернет-магазина на Opencart, ocStore">
 
-	<link rel="icon" href="/libs/images/logo/favicon.png">
+	<link rel="icon" href="/libs/images/logo/favicon.svg">
 	<link rel="stylesheet" href="/libs/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/libs/css/fontawesome.min.css">
 	<link rel="stylesheet" href="/libs/css/hamburgers.min.css">
@@ -84,11 +84,24 @@
 		</button>
 	</div>
 </header>
-<section class="section extensions-section section__white main-screen">
+<section class="section extensions-section section__white main-screen" itemscope itemtype="https://schema.org/Product">
 	<div class="container section__container">
 		<div class="heading-content mb-xl">
-			<h1 class="header-section__h1">Дополнительное описание категориям + настройки</h1>
-			<p class="header-section__text">Позволяет добавить текст, баннер или HTML-код в нижней части страниц категорий, который будет отличаться от описания по умолчанию. Также модификатор может скрыть часть длинного текста для верхнего и нижнего описания и другие настройки</p>
+			<h1 class="header-section__h1" itemprop="name">Дополнительное описание категориям + настройки</h1>
+			<p class="header-section__text" itemprop="description">Позволяет добавить текст, баннер или HTML-код в нижней части страниц категорий, который будет отличаться от описания по умолчанию. Также модификатор может скрыть часть длинного текста для верхнего и нижнего описания и другие настройки</p>
+			<link itemprop="image" href="/libs/images/docs/additional_description_categories/ad_category_logo.webp">
+			<div class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+				<meta itemprop="priceCurrency" content="USD">
+				<meta itemprop="price" content="8">
+				<meta itemprop="priceValidUntil" content="2029-12-31">
+				<link itemprop="availability" href="https://schema.org/InStock">
+				<meta itemprop="brand" content="RoS">
+				<meta itemprop="manufacturer" content="RoS" />
+			</div>
+			<div class="rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+				<meta itemprop="ratingValue" content="5">
+				<meta itemprop="reviewCount" content="250">
+			</div>
 		</div>
 		<div class="documentation-gallery spotlight-group">
 			<div class="itc-slider" data-autoplay="false" data-loop="false" data-refresh="true" data-slider="itc-slider">
@@ -96,28 +109,28 @@
 					<div class="itc-slider__wrapper">
 						<div class="itc-slider__items">
 							<div class="itc-slider__item">
-								<a class="spotlight" href="/libs/images/docs/additional_description_categories/ad_category_mod_top.jpg">
-									<img src="/libs/images/docs/additional_description_categories/ad_category_mod_top.jpg">
+								<a class="spotlight" href="/libs/images/docs/additional_description_categories/ad_category_mod_top.webp">
+									<img src="/libs/images/docs/additional_description_categories/ad_category_mod_top.webp">
 								</a>
 							</div>
 							<div class="itc-slider__item">
-								<a class="spotlight" href="/libs/images/docs/additional_description_categories/ad_category_mod_bottom.jpg">
-									<img src="/libs/images/docs/additional_description_categories/ad_category_mod_bottom.jpg">
+								<a class="spotlight" href="/libs/images/docs/additional_description_categories/ad_category_mod_bottom.webp">
+									<img src="/libs/images/docs/additional_description_categories/ad_category_mod_bottom.webp">
 								</a>
 							</div>
 							<div class="itc-slider__item">
-								<a class="spotlight" href="/libs/images/docs/additional_description_categories/ad_category_form.jpg">
-									<img src="/libs/images/docs/additional_description_categories/ad_category_form.jpg">
+								<a class="spotlight" href="/libs/images/docs/additional_description_categories/ad_category_form.webp">
+									<img src="/libs/images/docs/additional_description_categories/ad_category_form.webp">
 								</a>
 							</div>
 							<div class="itc-slider__item">
-								<a class="spotlight" href="/libs/images/docs/additional_description_categories/ad_category_design.jpg">
-									<img src="/libs/images/docs/additional_description_categories/ad_category_design.jpg">
+								<a class="spotlight" href="/libs/images/docs/additional_description_categories/ad_category_design.webp">
+									<img src="/libs/images/docs/additional_description_categories/ad_category_design.webp">
 								</a>
 							</div>
 							<div class="itc-slider__item">
-								<a class="spotlight" href="/libs/images/docs/additional_description_categories/ad_category_frontend.jpg">
-									<img src="/libs/images/docs/additional_description_categories/ad_category_frontend.jpg">
+								<a class="spotlight" href="/libs/images/docs/additional_description_categories/ad_category_frontend.webp">
+									<img src="/libs/images/docs/additional_description_categories/ad_category_frontend.webp">
 								</a>
 							</div>
 						</div>

@@ -7,7 +7,7 @@
 	<title>JS Readmore для описания категории Opencart и ocStore - CORGRAS</title>
 	<meta name="description" content="Модуль позволяет скрыть часть длинного текста, с возможностью скрывать / развертывать описание категории для Вашего интернет-магазина на Opencart, ocStore">
 
-	<link rel="icon" href="/libs/images/logo/favicon.png">
+	<link rel="icon" href="/libs/images/logo/favicon.svg">
 	<link rel="stylesheet" href="/libs/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/libs/css/fontawesome.min.css">
 	<link rel="stylesheet" href="/libs/css/hamburgers.min.css">
@@ -84,11 +84,24 @@
 		</button>
 	</div>
 </header>
-<section class="section extensions-section section__white main-screen">
+<section class="section extensions-section section__white main-screen" itemscope itemtype="https://schema.org/Product">
 	<div class="container section__container">
 		<div class="heading-content mb-xl">
-			<h1 class="header-section__h1">JS Readmore для описания категории</h1>
-			<p class="header-section__text">Позволяет скрыть часть длинного текста, с возможностью скрывать / развертывать описание категории</p>
+			<h1 class="header-section__h1" itemprop="name">JS Readmore для описания категории</h1>
+			<p class="header-section__text" itemprop="description">Позволяет скрыть часть длинного текста, с возможностью скрывать / развертывать описание категории</p>
+			<link itemprop="image" href="/libs/images/docs/category_description_readmore/cd_readmore_logo.webp">
+			<div class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+				<meta itemprop="priceCurrency" content="USD">
+				<meta itemprop="price" content="5">
+				<meta itemprop="priceValidUntil" content="2029-12-31">
+				<link itemprop="availability" href="https://schema.org/InStock">
+				<meta itemprop="brand" content="RoS">
+				<meta itemprop="manufacturer" content="RoS" />
+			</div>
+			<div class="rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+				<meta itemprop="ratingValue" content="5">
+				<meta itemprop="reviewCount" content="1">
+			</div>
 		</div>
 		<div class="documentation-gallery spotlight-group">
 			<div class="itc-slider" data-autoplay="false" data-loop="false" data-refresh="true" data-slider="itc-slider">
@@ -96,18 +109,18 @@
 					<div class="itc-slider__wrapper">
 						<div class="itc-slider__items">
 							<div class="itc-slider__item">
-								<a class="spotlight" href="/libs/images/docs/category_description_readmore/cd_readmore_mod_general.jpg">
-									<img src="/libs/images/docs/category_description_readmore/cd_readmore_mod_general.jpg">
+								<a class="spotlight" href="/libs/images/docs/category_description_readmore/cd_readmore_mod_general.webp">
+									<img src="/libs/images/docs/category_description_readmore/cd_readmore_mod_general.webp">
 								</a>
 							</div>
 							<div class="itc-slider__item">
-								<a class="spotlight" href="/libs/images/docs/category_description_readmore/cd_readmore_form.jpg">
-									<img src="/libs/images/docs/category_description_readmore/cd_readmore_form.jpg">
+								<a class="spotlight" href="/libs/images/docs/category_description_readmore/cd_readmore_form.webp">
+									<img src="/libs/images/docs/category_description_readmore/cd_readmore_form.webp">
 								</a>
 							</div>
 							<div class="itc-slider__item">
-								<a class="spotlight" href="/libs/images/docs/category_description_readmore/cd_readmore_frontend.jpg">
-									<img src="/libs/images/docs/category_description_readmore/cd_readmore_frontend.jpg">
+								<a class="spotlight" href="/libs/images/docs/category_description_readmore/cd_readmore_frontend.webp">
+									<img src="/libs/images/docs/category_description_readmore/cd_readmore_frontend.webp">
 								</a>
 							</div>
 						</div>
