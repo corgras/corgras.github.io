@@ -61,75 +61,10 @@ $(document).ready(function(){
 			}, 400);
 			return false;
 		});
+		
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
 });
-
-
-
-/*jq*/
-(function() {
-	"use strict";
-
-	var app = {
-		init: function() {
-			this.btnHover();
-		},
- 
-		setUpListeners: function() {
-			$(".ripple").on("click", this.btnRipple);
-		},
-
-		//=== Ripple effect for buttons ===\\
-		btnRipple: function(e) {
-		var _this = $(this),
-			offset = $(this).offset(),
-			positionX = e.originalEvent.pageX - offset.left,
-			positionY = e.originalEvent.pageY - offset.top;
-		_this.append("<div class='ripple-effect'>");
-		_this
-			.find(".ripple-effect")
-			.css({
-				left: positionX,
-				top: positionY
-			})
-			.animate({
-				opacity: 0
-			}, 1500, function() {
-				$(this).remove();
-			});
-		},
-
-		btnHover: function() {
-			var btns = document.querySelectorAll(".btn, .el-ripple"),
-			btn = [];
-
-			btns.forEach(function(element, index) {
-				var span = document.createElement("span");
-				span.className = "el-ripple-circle";
-				element.appendChild(span);
-
-				// If The span element for this element does not exist in the array, add it.
-				if (!btn[index])
-				btn[index] = element.querySelector(".el-ripple-circle");
-
-				element.addEventListener("mouseenter", function(e) {
-					btnHandler(element, index, e);
-				});
-
-				element.addEventListener("mouseleave", function(e) {
-					btnHandler(element, index, e);
-				});
-			});
-
-			const btnHandler = function(element, index, e) {
-
-				let offset = element.getBoundingClientRect(),
-				left = e.pageX - offset.left - window.scrollX,
-				top = e.pageY - offset.top - window.scrollY;
-
-				btn[index].style.left = left + "px";
-				btn[index].style.top = top + "px";
-			}
-		},
-	}
-	app.init();
-}());
