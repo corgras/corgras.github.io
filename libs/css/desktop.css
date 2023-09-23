@@ -32,12 +32,12 @@
 		white-space:normal;
 		z-index:2;
 		cursor:pointer;
-		color:var(--color-d);
+		color:var(--color-gd);
 	}
 	.navigation__list li:focus > a,
 	.navigation__list .active > a,
 	.navigation__list a:hover{
-		color:var(--color-gd)
+		color:var(--color-w)
 	}
 	.navigation__list i,
 	.navigation__list span+span{
@@ -55,9 +55,8 @@
 	}
 
 	/* -- SECTION HEADER -- */
-	section.header-section{
+	section.home-section{
 		height:calc(100vh - 60px);
-		padding:85px 0 0;
 	}
 
 	/* -- SLIDE -- */
@@ -68,31 +67,36 @@
 		visibility:visible;
 	}
 
-	/* -- SECTION HEADER SLIDES BOOK -- */
-	@keyframes header_book{
+	/* -- SECTION HEADER SLIDES FLOWER -- */
+	@keyframes header_flower{
 		0%{
-			transform:rotate(36deg);
-			left:-255px;
+			transform: rotate(45deg);
+			transform-origin:50% 50% 0px;
+			right:-250px;
+			top:-420px;
 		}
 		100%{
 			transform:rotate(0deg);
-			left:6px;
+			transform-origin:50% 50% 0px;
+			top:-142px;
+			right:20px;
 		}
 	}
-	.slide-book{
-		left:6px;
-		bottom:-64px;
-		z-index:8;
+	.slide-flower{
+		top:-142px;
+		right:20px;
+		z-index:10;
 		visibility:hidden;
 	}
-	.animate-book{
-		animation:header_book 1.6s linear;
-		animation-delay:6ms;
+	.animate-flower{
+		animation:header_flower 1.2s ease;
+		animation-delay:0ms;
 		visibility:visible
 	}
-	.slide-book img{
+	.slide-flower img{
 		z-index:8;
-		width:260px;
+		width:488px;
+		
 	}
 
 	/* -- SECTION HEADER SLIDES PAPERCLIP 1 -- */
@@ -148,31 +152,35 @@
 		transform:rotate(310deg);
 	}
 
-	/* -- SECTION HEADER SLIDES OCULOS -- */
-	@keyframes header_oculos{
+	/* -- SECTION HEADER SLIDES LIST -- */
+	@keyframes header_list{
 		0%{
-			transform:rotate(-90deg);
-			bottom:-190px;
+			transform:rotate(30deg);
+			transform-origin:50% 50% 0px;
+			bottom:-350px;
+			left:-470px;
 		}
 		100%{
 			transform:rotate(0deg);
-			bottom:46px;
+			transform-origin:50% 50% 0px;
+			bottom:-350px;
+			left:-259px;
 		}
 	}
-	.slide-oculos{
-		left:135px;
-		bottom:46px;
+	.slide-list{
+		left:-259px;
+		bottom:-350px;
 		z-index:9;
 		visibility:hidden;
 	}
-	.animate-oculos{
-		animation:header_oculos 1s linear;
+	.animate-list{
+		animation:header_list 1.2s ease;
 		animation-delay:20ms;
 		visibility:visible
 	}
-	.slide-oculos img{
+	.slide-list img{
 		z-index:9;
-		width:208px;
+		width:628px;
 	}
 
 	/* -- SECTION HEADER SLIDES TABLET -- */
@@ -231,9 +239,9 @@
 	}
 	
 	/* -- ALERT --*/
-	.bd-callout{
+	/*.bd-callout{
 		margin-bottom:6rem;
-	}
+	}*/
 	.bd-callout .icon > i{
 		font-size:4rem;
 		margin-bottom:0;
