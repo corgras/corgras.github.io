@@ -1,5 +1,42 @@
 User-agent: *
 Clean-param: tracking
 
+Disallow: /ru/docs/additional_description_categories.html
+Disallow: /ru/docs/additional_description_categories
+Disallow: /en/docs/additional_description_categories.html
+Disallow: /en/docs/additional_description_categories
+Disallow: /docs/additional_description_categories.html
+Disallow: /docs/additional_description_categories
+Disallow: /index.html
+Disallow: /en/index.html
+Disallow: /ru/index.html
+Disallow: /warez.html
+Disallow: /warez
+Disallow: /ru/warez.html
+Disallow: /ru/warez
+Disallow: /en/warez.html
+Disallow: /en/warez
+
+Disallow: /support.html
+Disallow: /support
+Disallow: /ru/support.html
+Disallow: /ru/support
+Disallow: /en/support.html
+Disallow: /en/support
+
+Disallow: /services.html
+Disallow: /services
+Disallow: /ru/services.html
+Disallow: /ru/services
+Disallow: /en/services.html
+Disallow: /en/services
+
+Disallow: /faq.html
+Disallow: /faq
+Disallow: /ru/faq.html
+Disallow: /ru/faq
+Disallow: /en/faq.html
+Disallow: /en/faq
+
 Host: corgras.github.io
 Sitemap: https://corgras.github.io/sitemap.xml
