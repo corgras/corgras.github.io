@@ -38,5 +38,16 @@ Disallow: /ru/faq
 Disallow: /en/faq.html
 Disallow: /en/faq
 
+Disallow:/en/blog/problems_and_solutions.html
+Disallow:/ua/product.html
+Disallow:/en/demo.html
+Disallow:/ua/services.html
+Disallow:/product.html
+Disallow:/docs/reply_to_reviews/
+Disallow:/en/docs/custom_templates/index.html
+Disallow:/docs/html_pro/index_ru.html
+Disallow:/docs/extra_description_category/
+Disallow:/docs/reply_to_reviews/index_ru.html
+
 Host: corgras.github.io
 Sitemap: https://corgras.github.io/sitemap.xml
