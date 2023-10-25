@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="uk" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="index, follow">
+	<!--<base href="https://corgras.github.io/">-->
+
+	<title>Readmore.js - Плагин на Vanilla JS для скривання та розкривання контенту на веб-сторінці</title>
+	<meta name="description" content="Плавний і відгукливий плагін на Vanilla JS для згортання та розгортання довгих текстових блоків з посиланнями «Читати далі» та «Закрити»">
+
+	<link rel="icon" type="image/svg+xml" href="/libs/images/logo/favicon.svg?v=2">
+	<link rel="shortcut alternate icon" type="image/png" href="/libs/images/logo/favicon.png?v=2">
+	<link rel="stylesheet" href="/libs/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/libs/css/ics.css">
+	<link rel="stylesheet" href="/libs/css/prism.css">
+	<link rel="stylesheet" href="/libs/css/stylesheet-project.css">
+
+	<link rel="alternate" href="https://corgras.github.io/en/readmore/" hreflang="en">
+	<link rel="alternate" href="https://corgras.github.io/readmore/" hreflang="uk">
+	<link rel="canonical" href="https://corgras.github.io/readmore/">
+	<link rel="alternate" href="https://corgras.github.io/ru/readmore/" hreflang="ru">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="msapplication-TileColor">
+	<meta name="theme-color">
+	<meta name="apple-mobile-web-app-status-bar-style">
+	<meta name="msapplication-navbutton-color">
+
+	<script src="/libs/js/theme.js"></script>
+
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "WebSite",
+			"name": "Readmore.js - Плагин на Vanilla JS",
+			"url": "https://corgras.github.io/readmore/",
+			"description": "Плавний і відгукливий плагін на Vanilla JS для згортання та розгортання довгих текстових блоків з посиланнями «Читати далі» та «Закрити»",
+			"@language": "uk"
+		}
+
+		{
+			"@context": "http://schema.org",
+			"@type": "Article",
+			"headline": "«Readmore.js» - Плагин на Vanilla JS",
+			"description": "Плагін на Vanilla JS, який дозволяє приховувати та відображати додатковий вміст на веб-сторінці, такий як текст, зображення та інший вміст, для поліпшення зручності читання і економії місця. Він додає кнопку «Читати далі», яку користувачі можуть натиснути, щоб розкрити схований вміст. Це особливо корисно на мобільних пристроях або для керування довгими текстами на сторінках.",
+			"url": "https://corgras.github.io/readmore/",
+			"datePublished": "2023-10-25",
+			"author": {
+				"@type": "Person",
+				"name": "RoS"
+			},
+			"@language": "uk"
+		}
+	</script>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNSWFP3MCV"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-ZNSWFP3MCV');
+	</script>
+</head>
+<body class="project">
+	<header class="header">
+		<div class="header__content">
+			<div class="header__item left">
+				<a class="header__logo" href="/">
+					<span class="header__logo-text">
+						<img class="header__logo-image" src="/libs/images/logo/logo_text.svg" alt="«CORGRAS»">
+					</span>
+				</a>
+			</div>
+			<div class="header__item header__navigation right">
+				<div class="header__wallet-button dropdown dropdown-right">
+					<a href="https://www.paypal.com/donate/?hosted_button_id=DMETJT5YE55HN" target="_blank" class="header__btn"><i class="header__icon ics-wallet"></i></a>
+					<div class="dropdown-menu header__dropdown-menu min-w-0" aria-labelledby="dropdownDonat">
+						<div class="header__dropdown-text">Підтримайте розробника плагіна через Donate</div>
+					</div>
+				</div>
+				<div class="header__language-button dropdown-right">
+					<button type="button" class="header__btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+						<i class="header__icon ics-lang2"></i>
+					</button>
+					<div class="dropdown-menu header__dropdown-menu min-w-0" aria-labelledby="dropdownMenuLang">
+						<a class="dropdown-item header__dropdown-item link" href="/en/readmore/" hreflang="en" data-title="English"><span>English</span></a>
+						<a class="dropdown-item header__dropdown-item link" href="/ru/readmore/" hreflang="ru" data-title="Русский"><span>Русский</span></a>
+						<a class="dropdown-item header__dropdown-item link active" href="#" hreflang="uk" data-title="Українська"><span>Українська</span></a>
+					</div>
+				</div>
+				<div class="header__theme-switch">
+					<input type="checkbox" id="switch" class="header__theme-input">
+					<label for="switch" class="header__theme-label">
+						<div class="header__theme-inner">
+							<div class="header__theme-icon sun">
+								<span class="header__theme-icon-inner">
+									<i class="header__icon header__icon-sun ics-sun"></i>
+									<i class="header__icon header__icon-moon ics-moon"></i>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<article class="home">
+			<div class="container">
+				<div class="heading-content">
+					<h1>Readmore.js</h1>
+					<p class="subtitle">Плавний і відгукливий плагін написаний на Vanilla JS для складання і розгортання довгих текстових блоків із посиланнями «Читати далі» та «Закрити».</p>
+				</div>
+				<div class="row justify-content-center buttons">
+					<div class="col-12 col-md-6">
+						<a href="https://github.com/corgras/Readmore.js" class="btn btn-dark btn-default btn-xl"><i class="ics-github btn-icon-right"></i><span>GitHub v.1.2</span></a>
+					</div>
+					<div class="col-12 col-md-6">
+						<a href="/docs" class="btn btn-light btn-default btn-xl"><i class="ics-terminal btn-icon-right"></i><span>Документація</span></a>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article class="about" id="about">
+			<div class="container">
+				<div class="about-text">
+					<p>
+						<strong>«Readmore.js»</strong> - Це плагін, який дозволяє приховувати та показувати додатковий вміст на веб-сторінці, такий як текст, зображення та інший вміст, для поліпшення зручності читання та збереження місця. Він додає кнопку "Читати далі", яку користувачі можуть натиснути, щоб розгорнути прихований вміст. Це особливо корисно на мобільних пристроях або для управління довгими текстами на сторінках.
+					</p>
+				</div>
+				<div class="row cards g-5">
+					<div class="col-12 col-md-6 col-xxl-3">
+						<div class="card h-100">
+							<div class="card-body">
+								<h3 class="card-title"><i class="ics-arrow-square"></i>Розгортаючі розділи</h3>
+								<p class="card-text">«Readmore.js» дозволяє створювати розгортаючі та згортаючі секції вмісту. Ви можете відображати лише невеликий фрагмент тексту, і за потреби користувач може розгорнути повний вміст.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-xxl-3">
+						<div class="card h-100">
+							<div class="card-body">
+								<h3 class="card-title"><i class="ics-sliders-v"></i>Налаштування</h3>
+								<p class="card-text">Плагін надає широкі можливості для налаштування зовнішнього вигляду і поведінки. Ви можете визначити висоту розгорнутого та згорнутого стану, швидкість анімації та навіть замінити текст кнопок на власний.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-xxl-3">
+						<div class="card h-100">
+							<div class="card-body">
+								<h3 class="card-title"><i class="ics-adaptive"></i>Адаптивність</h3>
+								<p class="card-text">«Readmore.js» є адаптивним і може активуватися лише при певній ширині екрану. Це дозволяє вам оптимально керувати відображенням вмісту на різних пристроях.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-xxl-3">
+						<div class="card h-100">
+							<div class="card-body">
+								<h3 class="card-title"><i class="ics-seo"></i>Доступність</h3>
+								<p class="card-text">Повний вміст завжди доступний для пошукових систем, що сприяє SEO-оптимізації вашого сайту.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+	</main>
+	<footer class="footer">
+		<div class="footer__content">
+			<div class="footer__item left">
+				<a href="#" class="footer__link" data-bs-toggle="modal" data-bs-target="#licenseModal">
+					<i class="footer__icon prev"></i>Ліцензія MIT
+				</a>
+			</div>
+			<div class="footer__item center">
+				<a href="#about" class="footer__link anchor">
+					<i class="footer__icon prev"></i>Детальніше про модуль<i class="footer__icon next"></i>
+				</a>
+			</div>
+			<div class="footer__item right">
+				<span class="footer__link">© <script>document.write(new Date().getFullYear());</script> CORGRAS. Всі права захищені<i class="footer__icon next"></i></span>
+			</div> 
+		</div>
+	</footer>
+	<div class="modal" id="licenseModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title">MIT License</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Copyright (c) 2023 CORGRAS (Author: RoS)</p>
+
+					<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+					of this software and associated documentation files (the "Software"), to deal
+					in the Software without restriction, including without limitation the rights
+					to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+					copies of the Software, and to permit persons to whom the Software is
+					furnished to do so, subject to the following conditions:</p>
+
+					<p>The above copyright notice and this permission notice shall be included in all
+					copies or substantial portions of the Software.</p>
+
+					<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+					IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+					FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+					AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+					LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+					OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+					SOFTWARE.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- SCRIPT -->
+<script src="/libs/js/bootstrap.bundle.min.js"></script>
+<script src="/libs/js/common.js"></script>
+<!-- END SCRIPT -->
+
+</body>
+</html>
