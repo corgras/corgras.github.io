@@ -42,7 +42,7 @@
 	--bg: #020408;
 	--bg-2: #121416;
 	--border: #30363D;
-	--border-2: #30363D;
+	--border-2: #424242;
 	--link: #020408;
 	--hover: #2f81f7;
 	--icon:#2f81f7;
@@ -669,6 +669,21 @@ footer {
 	font-size:1.5rem;
 }
 .about-text i {
+	color:var(--icon);
+}
+.browser-text {
+	font-size:1.5rem;
+	text-align:center;
+}
+.browser-text h3{
+	margin-top:5rem;
+	margin-bottom:5rem;
+	font-weight: 400;
+}
+.browser-text i {
+	margin-bottom: 1.5rem;
+	display:block;
+	font-size:3rem;
 	color:var(--icon);
 }
 
