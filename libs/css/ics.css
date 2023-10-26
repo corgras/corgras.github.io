@@ -25,6 +25,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ics-chrome:before {
+  content: "\e93a";
+}
+.ics-safari:before {
+  content: "\e93c";
+}
 .ics-terminal:before {
   content: "\e938";
 }
