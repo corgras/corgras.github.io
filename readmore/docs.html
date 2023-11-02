@@ -5,7 +5,7 @@
 	<meta name="robots" content="index, follow">
 	<!--<base href="https://corgras.github.io/">-->
 
-	<title>Readmore.js - Плагин на Vanilla JS для скривання та розкривання контенту на веб-сторінці</title>
+	<title>Документація плагина Readmore.js на Vanilla JS для скривання та розкривання контенту на веб-сторінці</title>
 	<meta name="description" content="Плавний і відгукливий плагін на Vanilla JS для згортання та розгортання довгих текстових блоків з посиланнями «Читати далі» та «Закрити»">
 
 	<link rel="icon" type="image/svg+xml" href="/libs/images/logo/favicon.svg?v=2">
@@ -15,8 +15,8 @@
 	<link rel="stylesheet" href="/libs/css/prism.css">
 	<link rel="stylesheet" href="/libs/css/stylesheet-project.css">
 
-	<link rel="alternate" href="https://corgras.github.io/en/readmore/" hreflang="en">
-	<link rel="alternate" href="https://corgras.github.io/ru/readmore/" hreflang="ru">
+	<link rel="alternate" href="https://corgras.github.io/en/readmore/docs" hreflang="en">
+	<link rel="alternate" href="https://corgras.github.io/ru/readmore/docs" hreflang="ru">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="msapplication-TileColor">
@@ -30,8 +30,8 @@
 		{
 			"@context": "http://schema.org",
 			"@type": "WebSite",
-			"name": "Readmore.js - Плагин на Vanilla JS",
-			"url": "https://corgras.github.io/readmore/",
+			"name": "Документація плагина Readmore.js на Vanilla JS",
+			"url": "https://corgras.github.io/readmore/docs",
 			"description": "Плавний і відгукливий плагін на Vanilla JS для згортання та розгортання довгих текстових блоків з посиланнями «Читати далі» та «Закрити»",
 			"@language": "uk"
 		}
@@ -47,11 +47,11 @@
 		gtag('config', 'G-ZNSWFP3MCV');
 	</script>
 </head>
-<body class="projec">
+<body class="doc">
 	<header class="header">
 		<div class="header__content">
 			<div class="header__item left">
-				<a class="header__logo" href="/">
+				<a class="header__logo" href="/readmore/">
 					<span class="header__logo-text">
 						<img class="header__logo-image" src="/libs/images/logo/logo_text.svg" alt="«CORGRAS»">
 					</span>
@@ -69,8 +69,8 @@
 						<i class="header__icon ics-lang2"></i>
 					</button>
 					<div class="dropdown-menu header__dropdown-menu min-w-0" aria-labelledby="dropdownMenuLang">
-						<a class="dropdown-item header__dropdown-item link" href="/en/readmore/" hreflang="en" data-title="English"><span>English</span></a>
-						<a class="dropdown-item header__dropdown-item link" href="/ru/readmore/" hreflang="ru" data-title="Русский"><span>Русский</span></a>
+						<a class="dropdown-item header__dropdown-item link" href="/en/readmore/docs" hreflang="en" data-title="English"><span>English</span></a>
+						<a class="dropdown-item header__dropdown-item link" href="/ru/readmore/docs" hreflang="ru" data-title="Русский"><span>Русский</span></a>
 						<a class="dropdown-item header__dropdown-item link active" href="#" hreflang="uk" data-title="Українська"><span>Українська</span></a>
 					</div>
 				</div>
@@ -92,21 +92,22 @@
 	</header>
 	<main>
 		<div class="container">
-			<div class="row">
-				<div class="col-3">
-					<a href="#introduction">Вступ</a>
-					<a href="#installation">Встановлення</a>
-					<a href="#basic-usage">Основне використання</a>
-					<a href="#customization">Користувацька настройка</a>
-					<a href="#responsive-behavior">Адаптивна поведінка</a>
-					<a href="#advanced-usage">Розширене використання</a>
-					<a href="#browser-support">Підтримка браузерів</a>
-					<a href="#license">Ліцензія</a>
+			<div class="row g-5">
+				<div class="col-3 navs">
+					<ul class="nav">
+						<li><span>Початок</span></li>
+						<li><a href="#overview">Огляд</a></li>
+						<li><a href="#installation">Стандартне встановлення</a></li>
+						<li><a href="#installation-npm">NPM встановлення</a></li>
+						<li><a href="#options">Опції</a></li>
+						<li><a href="#advanced-usage">Розширене використання</a></li>
+						<li><a href="#example">Приклад налаштувань</a></li>
+					</ul>
 				</div>
 				<div class="col content">
-					<article name="introduction">
-						<h2>1. Вступ</h2>
-						<p>«Readmore.js» - це плагін JavaScript, який дозволяє створювати функціональність «Читати далі» для вашого веб-контенту. Він розроблений для зроблення довгих блоків тексту або контенту розширюваними за допомогою кнопки «Читати далі» для кращого взаємодії з користувачами.</p>
+					<article id="overview">
+						<h1>Документація Readmore.js</h1>
+						<p>Цей плагін JavaScript, який дозволяє створювати функціональність «Читати далі» для вашого веб-контенту. Він розроблений для зроблення довгих блоків тексту або контенту розширюваними за допомогою кнопки «Читати далі» для кращого взаємодії з користувачами.</p>
 						<h3>Особливості</h3>
 						<ul>
 							<li>Автоматично додає кнопку «Читати далі» до довгих блоків контенту;</li>
@@ -115,95 +116,76 @@
 							<li>Підтримує адаптивний дизайн для активації функціональності в залежності від ширини екрану.</li>
 						</ul>
 					</article>
-					<article name="installation">
-					<h2>2. Встановлення</h2>
-					<p>Щоб використовувати «Readmore.js», вам потрібно включити скрипт у свій HTML-файл:</p>
-					<pre><code class="language-html show-language">
-						&lt;script src="readmore.js"&gt;&lt;/script&gt;
-					</code></pre>
-					<p>Переконайтеся, що цей тег скрипту розміщено в розділі <span class="code">&lt;head&gt;</span> вашого HTML-документа.</p>
-				</article>
-				<article name="basic-usage">
-					<h2>3. Основне використання</h2>
-					<h3>3.1 Структура HTML</h3>
-					<p>Створіть HTML-елемент, який ви хочете зробити розширюваним. Дайте йому конкретний клас, наприклад, «readmore»:</p>
-					<pre><code class="language-html show-language">
-						&lt;div class="readmore"&gt;
-							&lt;!-- Ваш контент тут --&gt;
-						&lt;/div&gt;
-					</code></pre>
-					<h3>3.2 Ініціалізація JavaScript</h3>
-					<p>Ініціалізуйте плагін «Readmore.js» у вашому JavaScript-коді. Наведений нижче код показує, як це зробити:</p>
-					<pre><code class="language-javascript show-language">
-					document.addEventListener('DOMContentLoaded', function () {
-						initReadMore('.readmore', {
-							collapsedHeight: 200,  // Налаштування розміру згорнутого контенту (в пікселях)
-							speed: 100,            // Налаштування швидкості анімації (в мілісекундах)
-							heightMargin: 16,      // Налаштування відступу при розширенні (в пікселях)
-							moreLink: '&lt;a href="#"&gt;Читати далі&lt;/a&gt;',  // Налаштування HTML для «Читати далі»
-							lessLink: '&lt;a href="#"&gt;Закрити&lt;/a&gt;'      // Налаштування HTML для «Закрити»
-						}, 768);  // Необов'язково: Встановлення максимальної ширини для адаптивної поведінки
-					});
-					</code></pre>
-					<h3>3.3 Функціональність</h3>
-					<p>При перегляді вашої сторінки, якщо вміст всередині цього елемента вищий за вказаний <span class="code">collapsedHeight</span>, буде автоматично додана кнопка «Читати далі». Клацання цієї кнопки розгорне вміст, а подальше клацання знову згорне його.</p>
-				</article>
-				<article name="customization">
-					<h2>4. Користувацька настройка</h2>
-					<p>Ви можете налаштовувати поведінку та вигляд плагіну «Readmore.js», змінюючи опції, передані у функцію <span class="code">initReadMore</span>.</p>
-					<ul>
-						<li><span class="code">collapsedHeight</span>: Налаштування розміру згорнутого контенту (в пікселях);</li>
-						<li><span class="code">speed</span>: Встановлення швидкості анімації при розгортанні або згортанні (в мілісекундах);</li>
-						<li><span class="code">heightMargin</span>: Встановлення відступу при розширенні (в пікселях);</li>
-						<li><span class="code">moreLink</span>: Налаштування HTML для посилання «Читати далі»;</li>
-						<li><span class="code">lessLink</span>: Налаштування HTML для посилання «Закрити».</li>
-					</ul>					
-					<p>Не соромтесь налаштовувати ці параметри відповідно до вашого дизайну та потреб.</p>
-				</article>
-				<article name="responsive-behavior">
-					<h2>5. Адаптивна поведінка</h2>
-					<p>Для активації адаптивної поведінки ви можете передати параметр <span class="code">maxWidth</span> під час ініціалізації плагіну. Якщо ширина екрану менше вказаного <span class="code">maxWidth</span>, функціональність «Читати далі» буде активною.</p>
-					<pre><code class="language-javascript show-language">
-					initReadMore('.readmore', options, 768);
-					</code></pre>
-					<p>Це дозволить вам контролювати, коли функціональність «Читати далі» активна на основі ширини екрану.</p>
-				</article>
-				<article name="advanced-usage">
-					<h2>6. Розширене використання</h2>
-					<p>Для більш розширеного використання та інтеграції з іншими скриптами або бібліотеками ви можете безпосередньо викликати функцію <span class="code">initReadMore</span> з вашими параметрами.</p>
-					<pre><code class="language-javascript show-language">
-					initReadMore('.custom-class', {
-					   // Користувацькі параметри
-					});
-					</code></pre>
-				</article>
-				<article name="browser-support">
-					<h2>7. Підтримка браузерів</h2>
-					<p>Readmore.js розроблено для роботи в сучасних веб-браузерах.</p>
-					<div class="browser-text">
-					<h3>Сумісність з браузерами:</h3>
-					<div class="row cards g-5">
-						<div class="col"><i class="ics-chrome"></i>Google Chrome 7.0+</div>
-						<div class="col"><i class="ics-ie"></i>Internet Explorer 9.0+</div>
-						<div class="col"><i class="ics-edge"></i>Microsoft Edge</div>
-						<div class="col"><i class="ics-firefox"></i>Firefox 4.0+</div>
-						<div class="col"><i class="ics-safari"></i>Safari 5.1.4+</div>
-						<div class="col"><i class="ics-opera"></i>Opera 12.0+</div>
-					</div>
-					<h3>Сумісність з мобільними браузерами:</h3>
-					<div class="row cards g-5">
-						<div class="col"><i class="ics-chrome"></i>Google Chrome 90+</div>
-						<div class="col"><i class="ics-edge"></i>Microsoft Edge 90+</div>
-						<div class="col"><i class="ics-firefox"></i>Mozilla Firefox 89+</div>
-						<div class="col"><i class="ics-safari"></i>Apple Safari 14+</div>
-						<div class="col"><i class="ics-opera"></i>Opera 76+</div>
-					</div>
-					</div>
-				</article>
-				<article name="license">
-					<h2>8. Ліцензія</h2>
-					<p>Readmore.js ліцензовано під MIT ліцензією. Ви можете знайти повний текст ліцензії у файлі скрипту або на GitHub-репозиторії проекту.</p>
-				</article>
+					<article id="installation">
+						<h2>Стандартне встановлення</h2>
+						<h3>Крок 1: Підключення бібліотеки</h3>
+						<p>Першим кроком є підключення бібліотеки до вашого проекту. Ви можете зробити це, вставивши наступний код у розділ <span class="code">&lt;head&gt;</span> вашої HTML-сторінки:
+						<pre><code class="language-html show-language">
+							&lt;script src="readmore.js"&gt;&lt;/script&gt;
+						</code></pre>
+						<p>Замініть «readmore.js» на шлях до файлу на вашому сервері.</p>
+						<h3>Крок 2: Ініціалізація</h3>
+						<p>Зараз, коли бібліотека «Readmore.js» підключена, ви можете почати її використовувати на вашій веб-сторінці. Для цього вам знадобиться JavaScript-код для ініціалізації плагіна. Ось приклад коду ініціалізації:</p>
+						<pre><code class="language-javascript show-language">
+							initReadMore('.readmore');
+						</code></pre>
+						<h3>Крок 3: Додавання елементу клас</h3>
+						<p>Тепер, коли скрипт ініціалізований на вашій сторінці, ви можете почати використовувати його. Додайте елементу конкретний клас наприклад <span class="code">.readmore</span> до вашої HTML-розмітки. Наприклад:</p>
+						<pre><code class="language-html show-language">
+							&lt;div class="readmore"&gt;
+								&lt;!-- Ваш великий контент тут --&gt;
+							&lt;/div&gt;
+						</code></pre>
+    					<p>Скрипт автоматично виявить ці елементи і додасть кнопку «Читати далі» для приховування та розкриття контенту.</p>
+					</article>
+					<article id="installation-npm">
+						<h2>NPM Встановлення</h2>
+						<p>Встановіть бібліотеку «readmore-javascript» за допомогою npm:</p>
+						<pre><code class="language-npm show-language">
+							$ npm install readmore-javascript
+						</code></pre>
+						<p>Після встановлення можна імпортувати бібліотеку у вашому JavaScript-коді:</p>
+						<pre><code class="language-javascript show-language">
+							import { initReadMore } from 'readmore-javascript';
+							// Решта коду
+						</code></pre>
+					</article>
+					<article id="options">
+						<h2>Опції</h2>
+						<p>Ви можете налаштувати поведінку функціональності «Читати більше», налаштувавши об'єкт опцій, який передається функції <span class="code">initReadMore</span>. Ось детальний опис доступних опцій:</p>
+						<ul>
+							<li><span class="code">collapsedHeight</span> Налаштування розміру згорнутого контенту (в пікселях);</li>
+							<li><span class="code">speed</span> Встановлення швидкості анімації при розгортанні або згортанні (в мілісекундах);</li>
+							<li><span class="code">heightMargin</span> Встановлення відступу при розширенні (в пікселях);</li>
+							<li><span class="code">moreLink</span> Налаштування HTML для посилання «Читати далі»;</li>
+							<li><span class="code">lessLink</span> Налаштування HTML для посилання «Закрити»;</li>
+							<li><span class="code">maxWidth</span> Якщо вказано значення, функціональність активується, коли ширина вікна дорівнює або менше вказаного. Якщо не вказано значення, функціональність завжди активна.</li>
+						</ul>
+					</article>
+					<article id="advanced-usage">
+						<h2>Розширене використання</h2>
+						<p>Для більш розширеного використання та інтеграції з іншими скриптами або бібліотеками ви можете безпосередньо викликати функцію <span class="code">initReadMore</span> з вашими параметрами.</p>
+						<pre><code class="language-javascript show-language">
+						initReadMore('.custom-class', {
+							// Користувацькі параметри
+						});
+						</code></pre>
+					</article>
+					<article id="example">	
+						<h2>Приклад налаштувань</h2>
+						<p>Ініціалізуйте плагін «Readmore.js» у вашому JavaScript-коді. Наведений нижче код показує, як це зробити:</p>
+						<pre><code class="language-javascript show-language">
+						document.addEventListener('DOMContentLoaded', function () {
+							initReadMore('.readmore', {
+								collapsedHeight: 200,  // Налаштування розміру згорнутого контенту (в пікселях)
+								speed: 100,            // Налаштування швидкості анімації (в мілісекундах)
+								heightMargin: 16,      // Налаштування відступу при розширенні (в пікселях)
+								moreLink: '&lt;a href="#"&gt;Читати далі&lt;/a&gt;',  // Налаштування HTML для «Читати далі»
+								lessLink: '&lt;a href="#"&gt;Закрити&lt;/a&gt;'      // Налаштування HTML для «Закрити»
+							}, 768);  // Необов'язково: Встановлення максимальної ширини для адаптивної поведінки
+						});
+						</code></pre>
+					</article>
 				</div>
 			</div>
 		</div>
