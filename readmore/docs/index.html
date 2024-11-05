@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="uk" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="index, follow">
+	<!--<base href="https://corgras.github.io/">-->
+
+	<title>Документація ReadMore.js – зручний JavaScript-плагін для керування текстом</title>
+	<meta name="description" content="Швидко освойте ReadMore.js за допомогою нашої детальної документації. Дізнайтеся, як легко налаштувати плагін під свої потреби та інтегрувати його в будь-який проект.">
+	<meta name="keywords" content="ReadMore.js, документація, JavaScript плагін, розширюваний текст, читати далі, управління текстом, адаптивність, SEO">
+
+	<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+	<link rel="alternate icon" type="image/png" href="/assets/images/favicon.png">
+	<link rel="stylesheet" href="/assets/css/framework.css">
+	<link rel="stylesheet" href="/assets/css/ics.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link rel="canonical" href="https://corgras.github.io/readmore/docs/">
+	<link rel="alternate" href="https://corgras.github.io/readmore/docs/" hreflang="x-default">
+	<link rel="alternate" href="https://corgras.github.io/readmore/docs/" hreflang="uk">
+	<link rel="alternate" href="https://corgras.github.io/en/readmore/docs/" hreflang="en">
+	<link rel="alternate" href="https://corgras.github.io/ru/readmore/docs/" hreflang="ru">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="color-scheme" content="light dark">
+	<meta name="theme-color" content="#F9F9FB" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)">
+	<meta name="msapplication-TileColor" content="#F9F9FB">
+
+	<script src="/assets/js/theme.js"></script>
+
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "WebSite",
+			"name": "Документація ReadMore.js – зручний JavaScript-плагін для керування текстом",
+			"url": "https://corgras.github.io/readmore/docs",
+			"description": "Швидко освойте ReadMore.js за допомогою нашої детальної документації. Дізнайтеся, як легко налаштувати плагін під свої потреби та інтегрувати його в будь-який проект.",
+			"@language": "uk"
+		}
+	</script>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNSWFP3MCV"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-ZNSWFP3MCV');
+	</script>
+</head>
+<body class="documentation">
+	<header class="header">
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<aside class="col menu-docs-mobile">
+						<div class="nav-icons">
+							<button class="menu-docs-trigger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</aside>
+					<div class="col-2">
+						<a class="logo" href="/">
+							<img src="/assets/images/logo.svg" alt="CORGRAS" width="44" height="auto">
+						</a>
+					</div>
+					<div class="col navigation">
+						<nav>
+							<ul>
+								<li>
+									<a href="https://github.com/corgras/readmore.js" class="link" aria-label="Github">
+										<i class="ics-github"></i><span>Github</span>
+									</a>
+								</li>
+								<li class="active">
+									<a href="/readmore/docs/" class="link" aria-label="Документація">
+										<i class="ics-book-open"></i><span>Документація</span>
+									</a>
+								</li>
+								<li>
+									<a href="/readmore/demo" class="link" aria-label="Демо">
+										<i class="ics-demo"></i><span>Демо</span>
+									</a>
+								</li>
+								<li>
+									<a href="/donate" class="link" aria-label="Підтримка">
+										<i class="ics-coffee"></i><span>Підтримка</span>
+									</a>
+								</li>
+								<li>
+									<a href="/readmore/сontacts" class="link" aria-label="Контакти">
+										<i class="ics-envelope"></i><span>Контакти</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<aside>
+							<div class="language dropdown">
+								<a role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Вибір мови">
+									<i class="ics-lang2"></i><span class="language-text">Українська</span>
+								</a>
+								<div class="dropdown-menu">
+									<ul>
+										<li class="dropdown-item active"><span>Українська</span></li>
+										<li class="dropdown-item"><a href="/en/" hreflang="en"><span>English</span></a></li>
+										<li class="dropdown-item"><a href="/ru/" hreflang="ru"><span>Русский</span></a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="theme">
+								<div class="theme-text">Тема:</div>
+								<div class="dark-mode-toggle">
+									<input type="checkbox" id="switch" class="toggle-input">
+									<label for="switch" class="toggle-label">
+										<div class="toggle-inner">
+											<div class="toggle-icon sun">
+												<span class="toggle-icon-inner">
+													<i class="icon icon-sun ics-sun"></i>
+													<i class="icon icon-moon ics-moon"></i>
+												</span>
+											</div>
+										</div>
+									</label>
+								</div>
+							</div>
+						</aside>
+					</div>
+					<aside class="col menu-mobile">
+						<div class="nav-icons">
+							<button class="menu-trigger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</div>
+		<aside class="header-bottom">
+			<div class="container">
+				<ul class="nav">
+					<li class="active"><a href="/readmore/docs/"><i class="ics ics-book"></i> Вступ</a></li>
+					<li><a href="/readmore/docs/install"><i class="ics ics-tool"></i> Встановлення</a></li>
+					<li><a href="/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Ініціалізація</a></li>
+					<li><a href="/readmore/docs/options"><i class="ics ics-sliders-h"></i> Параметри скрипта</a></li>
+					<li><a href="/readmore/docs/stylization"><i class="ics ics-paint"></i> Стилізація</a></li>
+				</ul>
+			</div>
+		</aside>
+	</header>
+	<main class="common">
+		<div class="container">
+			<article>
+				<h1>Документація ReadMore.js</h1>
+				<p>Це легкий і потужний JavaScript-плагін, розроблений для зручного управління великими обсягами тексту на вебсторінках. За допомогою цього плагіна ви можете легко створювати розширювані текстові блоки з інтуїтивно зрозумілими кнопками «Читати далі» та «Приховати». Це ідеальне рішення для покращення читабельності та економії місця на мобільних пристроях та десктопах.</p>
+				<div class="note note-info">
+					<div class="note-label">Примітка</div>
+					<ul>
+						<li>Скрипт не залежить від сторонніх бібліотек (наприклад, jQuery).</li>
+						<li>Контент, що відображається за допомогою Readmore.js, спочатку повністю доступний для пошукових систем, оскільки HTML-структура не змінюється.</li>
+					</ul>
+				</div>
+			</article>
+			<article>
+				<div class="row cards">
+					<div class="col-6 card card-hor">
+						<div class="card-image">
+							<i class="ics-code"></i>
+						</div>
+						<div class="card-content">
+							<h3>Легке впровадження</h3>
+							<p>Легко інтегрується на будь-яку веб-сторінку, не потребуючи сторонніх бібліотек. Ви можете швидко підключити його до свого проєкту та налаштувати за допомогою простого коду.</p>
+						</div>
+					</div>
+					<div class="col-6 card card-hor">
+						<div class="card-image">
+							<i class="ics-sliders-v"></i>
+						</div>
+						<div class="card-content">
+							<h3>Налаштування</h3>
+							<p>Надає широкі можливості для налаштування зовнішнього вигляду і поведінки. Ви можете визначити висоту розгорнутого та згорнутого стану, швидкість анімації та навіть замінити текст кнопок на власний.</p>
+						</div>
+					</div>
+					<div class="col-6 card card-hor">
+						<div class="card-image">
+							<i class="ics-adaptive"></i>
+						</div>
+						<div class="card-content">
+							<h3>Адаптивність</h3>
+							<p>Є адаптивним і може активуватися лише при певній ширині екрану. Це дозволяє вам оптимально керувати відображенням вмісту на різних пристроях.</p>
+						</div>
+					</div>
+					<div class="col-6 card card-hor">
+						<div class="card-image">
+							<i class="ics-seo"></i>
+						</div>
+						<div class="card-content">
+							<h3>Доступність</h3>
+							<p>Повний вміст завжди доступний для пошукових систем, що сприяє SEO-оптимізації вашого сайту.</p>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article>
+				<h2>Ліцензія</h2>
+				<p>Readmore.js розповсюджується під ліцензією MIT. Ви можете вільно використовувати цей скрипт як у комерційних, так і в некомерційних проєктах. За умови збереження повідомлення про ліцензію.</p>
+				<p>Це означає, що ви повинні залишити моє ім'я, посилання на мою домашню сторінку та інформацію про ліцензію без змін. Жоден з цих елементів не обов'язково має бути видимим для користувача і може залишатися в коді.</p>
+			</article>
+			<article class="browsers">
+				<h2>Підтримка браузерами</h2>
+				<div class="row">
+					<div class="col">
+						<figure>
+							<img src="/assets/images/icons/chrome.svg" alt="Google Chrome">
+						</figure>
+						<p><i class="ics-pc"></i>Chrome 7.0+</p>
+						<p><i class="ics-mobile"></i>Chrome 90+</p>
+					</div>
+					<div class="col">
+						<figure>
+							<img src="/assets/images/icons/edge.svg" alt="Microsoft Edge">
+						</figure>
+						<p><i class="ics-pc"></i>Edge</p>
+						<p><i class="ics-mobile"></i>Edge 90+</p>
+					</div>
+					<div class="col">
+						<figure>
+							<img src="/assets/images/icons/firefox.svg" alt="Mozilla Firefox">
+						</figure>
+						<p><i class="ics-pc"></i>Firefox 4.0+</p>
+						<p><i class="ics-mobile"></i>Firefox 89+</p>
+					</div>
+					<div class="col">
+						<figure>
+							<img src="/assets/images/icons/safari-ios.svg" alt="Safari">
+						</figure>
+						<p><i class="ics-pc"></i>Safari 5.1.4+</p>
+						<p><i class="ics-mobile"></i>Safari 14+</p>
+					</div>
+					<div class="col">
+						<figure>
+							<img src="/assets/images/icons/opera.svg" alt="Opera">
+						</figure>
+						<p><i class="ics-pc"></i>Opera 12.0+</p>
+						<p><i class="ics-mobile"></i>Opera 76+</p>
+					</div>
+				</div>
+			</article>
+		</div>
+	</main>
+	<footer>
+		<div class="copyrights">© <script>document.write(new Date().getFullYear());</script> CORGRAS. Всі права захищені</div>
+	</footer>
+	<!-- SCRIPT -->
+	<script src="/assets/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/js/common.js"></script>
+	<!-- END SCRIPT -->
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="uk" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="index, follow">
+	<!--<base href="https://corgras.github.io/">-->
+
+	<title>Ініціалізація ReadMore.js – налаштуйте плагін для вашого сайту | Документація</title>
+	<meta name="description" content="Дізнайтеся, як ініціалізувати скрипт ReadMore.js на вашому сайті. Ознайомтеся з прикладами коду та параметрами, щоб налаштувати плагін відповідно до ваших потреб та покращити відображення контенту.">
+	<meta name="keywords" content="ініціалізація ReadMore.js, налаштування плагіна, JavaScript, розширювані текстові блоки, код приклади, веб-розробка">
+
+	<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+	<link rel="alternate icon" type="image/png" href="/assets/images/favicon.png">
+	<link rel="stylesheet" href="/assets/css/framework.css">
+	<link rel="stylesheet" href="/assets/css/ics.css">
+	<link rel="stylesheet" href="/assets/css/prism.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link rel="canonical" href="https://corgras.github.io/readmore/docs/initialization">
+	<link rel="alternate" href="https://corgras.github.io/readmore/docs/initialization" hreflang="x-default">
+	<link rel="alternate" href="https://corgras.github.io/readmore/docs/initialization" hreflang="uk">
+	<link rel="alternate" href="https://corgras.github.io/en/readmore/docs/initialization" hreflang="en">
+	<link rel="alternate" href="https://corgras.github.io/ru/readmore/docs/initialization" hreflang="ru">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="color-scheme" content="light dark">
+	<meta name="theme-color" content="#F9F9FB" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)">
+	<meta name="msapplication-TileColor" content="#F9F9FB">
+
+	<script src="/assets/js/theme.js"></script>
+
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "WebSite",
+			"name": "Ініціалізація ReadMore.js – налаштуйте плагін для вашого сайту | Документація",
+			"url": "https://corgras.github.io/readmore/docs/initialization",
+			"description": "Дізнайтеся, як ініціалізувати скрипт ReadMore.js на вашому сайті. Ознайомтеся з прикладами коду та параметрами, щоб налаштувати плагін відповідно до ваших потреб та покращити відображення контенту.",
+			"@language": "uk"
+		}
+	</script>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNSWFP3MCV"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-ZNSWFP3MCV');
+	</script>
+</head>
+<body class="documentation">
+	<header class="header">
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<aside class="col menu-docs-mobile">
+						<div class="nav-icons">
+							<button class="menu-docs-trigger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</aside>
+					<div class="col-2">
+						<a class="logo" href="/">
+							<img src="/assets/images/logo.svg" alt="CORGRAS" width="44" height="auto">
+						</a>
+					</div>
+					<div class="col navigation">
+						<nav>
+							<ul>
+								<li>
+									<a href="https://github.com/corgras/readmore.js" class="link" aria-label="Github">
+										<i class="ics-github"></i><span>Github</span>
+									</a>
+								</li>
+								<li class="active">
+									<a href="/readmore/docs/" class="link" aria-label="Документація">
+										<i class="ics-book-open"></i><span>Документація</span>
+									</a>
+								</li>
+								<li>
+									<a href="/readmore/demo" class="link" aria-label="Демо">
+										<i class="ics-demo"></i><span>Демо</span>
+									</a>
+								</li>
+								<li>
+									<a href="/donate" class="link" aria-label="Підтримка">
+										<i class="ics-coffee"></i><span>Підтримка</span>
+									</a>
+								</li>
+								<li>
+									<a href="/readmore/сontacts" class="link" aria-label="Контакти">
+										<i class="ics-envelope"></i><span>Контакти</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<aside>
+							<div class="language dropdown">
+								<a role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Вибір мови">
+									<i class="ics-lang2"></i><span class="language-text">Українська</span>
+								</a>
+								<div class="dropdown-menu">
+									<ul>
+										<li class="dropdown-item active"><span>Українська</span></li>
+										<li class="dropdown-item"><a href="/en/" hreflang="en"><span>English</span></a></li>
+										<li class="dropdown-item"><a href="/ru/" hreflang="ru"><span>Русский</span></a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="theme">
+								<div class="theme-text">Тема:</div>
+								<div class="dark-mode-toggle">
+									<input type="checkbox" id="switch" class="toggle-input">
+									<label for="switch" class="toggle-label">
+										<div class="toggle-inner">
+											<div class="toggle-icon sun">
+												<span class="toggle-icon-inner">
+													<i class="icon icon-sun ics-sun"></i>
+													<i class="icon icon-moon ics-moon"></i>
+												</span>
+											</div>
+										</div>
+									</label>
+								</div>
+							</div>
+						</aside>
+					</div>
+					<aside class="col menu-mobile">
+						<div class="nav-icons">
+							<button class="menu-trigger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</div>
+		<aside class="header-bottom">
+			<div class="container">
+				<ul class="nav">
+					<li><a href="/readmore/docs/"><i class="ics ics-book"></i> Вступ</a></li>
+					<li><a href="/readmore/docs/install"><i class="ics ics-tool"></i> Встановлення</a></li>
+					<li class="active"><a href="/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Ініціалізація</a></li>
+					<li><a href="/readmore/docs/options"><i class="ics ics-sliders-h"></i> Параметри скрипта</a></li>
+					<li><a href="/readmore/docs/stylization"><i class="ics ics-paint"></i> Стилізація</a></li>
+				</ul>
+			</div>
+		</aside>
+	</header>
+	<main>
+		<div class="container">
+			<article>
+				<h1>Ініціалізація скрипта</h1>
+				<p>Скрипт Readmore.js підтримує будь-які елементи, що містять текст, який необхідно приховати, наприклад, <code class="code">&lt;div&gt;</code>, <code class="code">&lt;p&gt;</code>, <code class="code">&lt;section&gt;</code>. </p>
+				<p>Використовуйте клас <code class="code">.readmore</code> або інший, зазначений вами в селекторі ініціалізації, для цільових елементів.</p>
+				<pre><code class="language-html show-language">
+					&lt;div class="readmore"&gt;
+					&lt;!-- Ваш великий контент тут --&gt;
+					&lt;/div&gt;
+				</code></pre>
+				<div class="note note-warning">
+					<div class="note-label">Важливо</div>
+					<p>Переконайтеся, що текст достатньо довгий, щоб перевищити значення <code class="code">collapsedHeight</code> — висоту, яку ви вкажете в налаштуваннях.</p>
+				</div>
+			</article>
+			<article>
+				<h2>Ініціалізація без параметрів</h2>
+				<p>Якщо вам потрібно ініціалізувати скрипт Readmore.js без вказання додаткових <a href="/readmore/docs/options">параметрів</a>, його можна запустити з мінімальними налаштуваннями.</p>
+				<p>У цьому випадку скрипт використовуватиме всі значення за замовчуванням.</p>
+				<pre><code class="language-javascript show-language">
+					document.addEventListener('DOMContentLoaded', function () {
+						initReadMore('.readmore');
+					});
+				</code></pre>
+			</article>
+			<article>
+				<h2>Ініціалізація з параметрами</h2>
+				<p>Цей спосіб підходить, якщо потрібно, щоб скрипт працював на всіх пристроях без обмеження по ширині екрана.</p>
+				<pre><code class="language-javascript show-language">
+					document.addEventListener('DOMContentLoaded', function () {
+						initReadMore('.readmore', {
+							collapsedHeight: 200,
+							speed: 200,
+							heightMargin: 16,
+							moreLink: '&lt;a href="#"&gt;Читати далі&lt;/a&gt;',
+							lessLink: '&lt;a href="#"&gt;Приховати&lt;/a&gt;'
+						});
+					});
+				</code></pre>
+				<div class="note note-info">
+					<div class="note-label">Примітка</div>
+					<p>Параметр <code class="code">maxWidth</code> у цьому випадку не вказується. Скрипт буде активний на всіх пристроях незалежно від ширини екрана.</p>
+				</div>
+			</article>
+			<article>
+				<h2>Ініціалізація з обмеженням по ширині екрана</h2>
+				<p>Цей варіант зручний, коли потрібно приховувати частину тексту на пристроях із певною шириною екрана.</p>
+				<p>При встановленні параметра <code class="code">maxWidth</code> (наприклад, 992px), скрипт активується лише на екранах до 992px, тоді як на ширших екранах текст відображатиметься повністю без кнопки «Читати далі».</p>
+				<pre><code class="language-javascript show-language">
+					document.addEventListener('DOMContentLoaded', function () {
+						initReadMore('.read-more', {
+							collapsedHeight: 200,
+							speed: 200,
+							heightMargin: 16,
+							moreLink: '&lt;a href="#"&gt;Читати далі&lt;/a&gt;',
+							lessLink: '&lt;a href="#"&gt;Приховати&lt;/a&gt;'
+						});
+					}, 992);
+				</code></pre>
+			</article>
+		</div>
+	</main>
+	<footer>
+		<div class="copyrights">© <script>document.write(new Date().getFullYear());</script> CORGRAS. Всі права захищені</div>
+	</footer>
+	<!-- SCRIPT -->
+	<script src="/assets/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/js/prism.js"></script>
+	<script src="/assets/js/common.js"></script>
+	<!-- END SCRIPT -->
+</body>
+</html>

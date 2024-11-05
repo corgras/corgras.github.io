@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="uk" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="index, follow">
+	<!--<base href="https://corgras.github.io/">-->
+
+	<title>Параметри скрипта ReadMore.js – налаштування функціональності | Документація</title>
+	<meta name="description" content="Ознайомтеся з параметрами скрипта ReadMore.js, які дозволяють налаштувати поведінку функціональності плагіна. Дізнайтеся, як адаптувати висоту, швидкість анімації та інші опції для створення унікального користувацького досвіду на вашому сайті.">
+	<meta name="keywords" content="ReadMore.js, параметри скрипта, налаштування, функціональність анімація, адаптація контенту, веб-розробка, JavaScript">
+
+	<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+	<link rel="alternate icon" type="image/png" href="/assets/images/favicon.png">
+	<link rel="stylesheet" href="/assets/css/framework.css">
+	<link rel="stylesheet" href="/assets/css/ics.css">
+	<link rel="stylesheet" href="/assets/css/prism.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link rel="canonical" href="https://corgras.github.io/readmore/docs/options">
+	<link rel="alternate" href="https://corgras.github.io/readmore/docs/options" hreflang="x-default">
+	<link rel="alternate" href="https://corgras.github.io/readmore/docs/options" hreflang="uk">
+	<link rel="alternate" href="https://corgras.github.io/en/readmore/docs/options" hreflang="en">
+	<link rel="alternate" href="https://corgras.github.io/ru/readmore/docs/options" hreflang="ru">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="color-scheme" content="light dark">
+	<meta name="theme-color" content="#F9F9FB" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)">
+	<meta name="msapplication-TileColor" content="#F9F9FB">
+
+	<script src="/assets/js/theme.js"></script>
+
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "WebSite",
+			"name": "Параметри скрипта ReadMore.js – налаштування функціональності | Документація",
+			"url": "https://corgras.github.io/readmore/docs/options",
+			"description": "Ознайомтеся з параметрами скрипта ReadMore.js, які дозволяють налаштувати поведінку функціональності плагіна. Дізнайтеся, як адаптувати висоту, швидкість анімації та інші опції для створення унікального користувацького досвіду на вашому сайті.",
+			"@language": "uk"
+		}
+	</script>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNSWFP3MCV"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-ZNSWFP3MCV');
+	</script>
+</head>
+<body class="documentation">
+	<header class="header">
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<aside class="col menu-docs-mobile">
+						<div class="nav-icons">
+							<button class="menu-docs-trigger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</aside>
+					<div class="col-2">
+						<a class="logo" href="/">
+							<img src="/assets/images/logo.svg" alt="CORGRAS" width="44" height="auto">
+						</a>
+					</div>
+					<div class="col navigation">
+						<nav>
+							<ul>
+								<li>
+									<a href="https://github.com/corgras/readmore.js" class="link" aria-label="Github">
+										<i class="ics-github"></i><span>Github</span>
+									</a>
+								</li>
+								<li class="active">
+									<a href="/readmore/docs/" class="link" aria-label="Документація">
+										<i class="ics-book-open"></i><span>Документація</span>
+									</a>
+								</li>
+								<li>
+									<a href="/readmore/demo" class="link" aria-label="Демо">
+										<i class="ics-demo"></i><span>Демо</span>
+									</a>
+								</li>
+								<li>
+									<a href="/donate" class="link" aria-label="Підтримка">
+										<i class="ics-coffee"></i><span>Підтримка</span>
+									</a>
+								</li>
+								<li>
+									<a href="/readmore/сontacts" class="link" aria-label="Контакти">
+										<i class="ics-envelope"></i><span>Контакти</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<aside>
+							<div class="language dropdown">
+								<a role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Вибір мови">
+									<i class="ics-lang2"></i><span class="language-text">Українська</span>
+								</a>
+								<div class="dropdown-menu">
+									<ul>
+										<li class="dropdown-item active"><span>Українська</span></li>
+										<li class="dropdown-item"><a href="/en/" hreflang="en"><span>English</span></a></li>
+										<li class="dropdown-item"><a href="/ru/" hreflang="ru"><span>Русский</span></a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="theme">
+								<div class="theme-text">Тема:</div>
+								<div class="dark-mode-toggle">
+									<input type="checkbox" id="switch" class="toggle-input">
+									<label for="switch" class="toggle-label">
+										<div class="toggle-inner">
+											<div class="toggle-icon sun">
+												<span class="toggle-icon-inner">
+													<i class="icon icon-sun ics-sun"></i>
+													<i class="icon icon-moon ics-moon"></i>
+												</span>
+											</div>
+										</div>
+									</label>
+								</div>
+							</div>
+						</aside>
+					</div>
+					<aside class="col menu-mobile">
+						<div class="nav-icons">
+							<button class="menu-trigger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</div>
+		<aside class="header-bottom">
+			<div class="container">
+				<ul class="nav">
+					<li><a href="/readmore/docs/"><i class="ics ics-book"></i> Вступ</a></li>
+					<li><a href="/readmore/docs/install"><i class="ics ics-tool"></i> Встановлення</a></li>
+					<li><a href="/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Ініціалізація</a></li>
+					<li class="active"><a href="/readmore/docs/options"><i class="ics ics-sliders-h"></i> Параметри скрипта</a></li>
+					<li><a href="/readmore/docs/stylization"><i class="ics ics-paint"></i> Стилізація</a></li>
+				</ul>
+			</div>
+		</aside>
+	</header>
+	<main>
+		<div class="container">
+			<article>
+				<h1>Параметри скрипта</h1>
+				<p>Ви можете налаштувати поведінку функціональності, налаштувавши об'єкт опцій функції <code class="code">initReadMore</code>.</p>
+				<p>Це дозволить вам тонко налаштувати відображення та анімацію контенту на вашому сайті. Завдяки цим опціям ви можете створити унікальний користувацький досвід, який відповідає вашим вимогам та естетичним уподобанням.</p>
+				<p>Ось детальний опис доступних опцій:</p>
+				<div class="table-options">
+					<div class="tr-options-head">
+						<div class="td-option" id="option">Опції</div>
+						<div class="td-type" id="type" aria-label-type="Тип:">Тип</div>
+						<div class="td-default" id="default" aria-label-default="По замовчуванню:">По замовчуванню</div>
+						<div class="td-desc"id="desc">Опис</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">collapsedHeight</div>
+						<div class="td-type" id="type">Число</div>
+						<div class="td-default" id="default">200</div>
+						<div class="td-desc" id="desc">Встановлює початкову висоту контенту в згорнутому стані (в пікселях).</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">speed</div>
+						<div class="td-type" id="type">Число</div>
+						<div class="td-default" id="default">100</div>
+						<div class="td-desc" id="desc">Визначає швидкість анімації зміни висоти елемента в мілісекундах (в мілісекундах).</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">heightMargin</div>
+						<div class="td-type" id="type">Число</div>
+						<div class="td-default" id="default">16</div>
+						<div class="td-desc" id="desc">Додатковий відступ для висоти, щоб забезпечити зазор при розгортанні контенту (в пікселях).</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">moreLink</div>
+						<div class="td-type" id="type">Рядок</div>
+						<div class="td-default" id="default">&lt;a href="#"&gt;Read More&lt;/a&gt;</div>
+						<div class="td-desc" id="desc">HTML-вміст посилання або кнопки, що відображається для розкриття прихованого контенту.</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">lessLink</div>
+						<div class="td-type" id="type">Рядок</div>
+						<div class="td-default" id="default">&lt;a href="#"&gt;Close&lt;/a&gt;</div>
+						<div class="td-desc" id="desc">HTML-вміст посилання або кнопки, що відображається для згортання контенту після його розкриття.</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">maxWidth</div>
+						<div class="td-type" id="type">Число</div>
+						<div class="td-default" id="default">Опція не обов'язкова</div>
+						<div class="td-desc" id="desc">Встановлює максимальну ширину екрану в пікселях, за якої плагін буде активовано. Якщо ширина екрану перевищує це значення, плагін не активується, і кнопка «Читати далі» не відображається.</div>
+					</div>
+				</div>
+			</article>
+			<article>
+				<h2>Приклад налаштувань</h2>
+				<p>Щоб налаштувати функціональність на вашому сайті, вам потрібно <a href="/readmore/docs/initialization">ініціалізувати</a> плагін з параметрами у вашому JavaScript-коді.</p>
+				<p>Це можна зробити, передавши об'єкт опцій у функцію <code class="code">initReadMore</code>. Нижче наведено приклад коду, який демонструє, як це зробити:</p>
+				<pre><code class="language-javascript show-language">
+					document.addEventListener('DOMContentLoaded', function () {
+						initReadMore('.readmore', {
+							collapsedHeight: 200,  // Встановлює висоту згорнутого контенту
+							speed: 100,            // Швидкість анімації у мілісекундах
+							heightMargin: 16,      // Додатковий відступ для висоти
+							moreLink: '&lt;a href="#"&gt;Читати далі&lt;/a&gt;',  // HTML для кнопки «Читати далі»
+							lessLink: '&lt;a href="#"&gt;Приховати&lt;/a&gt;'      // HTML для кнопки "Закрити"
+						}, 768);  // Необов'язково: Встановлення максимальної ширини для адаптивної поведінки
+					});
+				</code></pre>
+				<br>
+				<p>У цьому прикладі плагін ініціалізується для всіх елементів з класом <code class="code">.readmore</code>.</p>
+				<p>Ви можете змінювати значення опцій відповідно до ваших потреб, щоб адаптувати поведінку плагіна до вашого сайту.</p>
+				<p>Це дає вам можливість створити інтерактивний та зручний інтерфейс для відображення контенту.</p>
+			</article>
+		</div>
+	</main>
+	<footer>
+		<div class="copyrights">© <script>document.write(new Date().getFullYear());</script> CORGRAS. Всі права захищені</div>
+	</footer>
+	<!-- SCRIPT -->
+	<script src="/assets/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/js/prism.js"></script>
+	<script src="/assets/js/common.js"></script>
+	<!-- END SCRIPT -->
+</body>
+</html>
