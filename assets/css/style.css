@@ -570,6 +570,10 @@ p.em{font-style:italic; color: var(--cs-body-color-secondary);}
 	font-size: 1.4rem;
 	text-align: left
 }
+.card-content a {
+	margin: 15px 0 0;
+	text-align: left
+}
 
 /*buttons*/
 .buttons {
@@ -593,6 +597,20 @@ p.em{font-style:italic; color: var(--cs-body-color-secondary);}
 	overflow: hidden;
 	z-index: 1;
 	height: 48px;
+}
+.btn-sm {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 8px 23px;
+	border-radius: var(--cs-border-radius-md);
+	font-size: 1.4rem;
+	text-decoration: none;
+	transition: background 0.3s ease, color 0.3s ease;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	height: 38px;
 }
 .btn-primary {
 	border: 1px solid var(--cs-btn-border-primary);

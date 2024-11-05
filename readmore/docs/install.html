@@ -8,9 +8,27 @@
 	<title>Установка Readmore.js – простий процес інтеграції плагіна | Документація</title>
 	<meta name="description" content="Дізнайтеся, як встановити ReadMore.js на ваш сайт. Огляд простих кроків для інтеграції плагіна без сторонніх бібліотек та налаштування його функціональності для оптимізації відображення тексту.">
 	<meta name="keywords" content="установка ReadMore.js, інтеграція плагіна, JavaScript, налаштування плагіна, безкоштовний плагін, веб-розробка">
-	
-	<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-	<link rel="alternate icon" type="image/png" href="/assets/images/favicon.png">
+
+	<!-- Favicon-->
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon/favicon-48x48.png">
+	<link rel="icon" type="image/x-icon" href="/assets/images/favicon/favicon.ico">
+	<link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
+	<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="/assets/images/favicon/android-icon-256x256.png">
+	<link rel="icon" type="image/png" sizes="384x384" href="/assets/images/favicon/android-icon-384x384.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-icon-512x512.png">
+	<link rel="manifest" href="/assets/images/favicon/manifest.json">
 
 	<link rel="stylesheet" href="/assets/css/framework.css">
 	<link rel="stylesheet" href="/assets/css/ics.css">
@@ -90,13 +108,13 @@
 									</a>
 								</li>
 								<li>
-									<a href="/donate" class="link" aria-label="Підтримка">
-										<i class="ics-coffee"></i><span>Підтримка</span>
+									<a href="/readmore/contacts" class="link" aria-label="Підтримка">
+										<i class="ics-envelope"></i><span>Підтримка</span>
 									</a>
 								</li>
 								<li>
-									<a href="/readmore/сontacts" class="link" aria-label="Контакти">
-										<i class="ics-envelope"></i><span>Контакти</span>
+									<a href="/donate" class="link" aria-label="Подякувати">
+										<i class="ics-coffee"></i><span>Подякувати</span>
 									</a>
 								</li>
 							</ul>
@@ -188,7 +206,7 @@
 				<p>&mdash; Після підключення вам потрібно <a href="/readmore/docs/initialization">ініціалізувати</a> скрипт, щоб він почав працювати з обраними елементами на вашій сторінці.</p>
 				<hr>
 				<h2>Підключення через CDN</h2>
-				<p class="lead-normal">Скрипт можна підключити з віддаленого сервера, що покращує швидкість завантаження сайту та дозволяє не завантажувати його локально. CDN пропонує кешовані версії скрипта, забезпечуючи доступ з різних географічних точок світу. Ви можете скористатися одним із популярних CDN-сервісів, таких як jsDelivr або Unpkg.</p>
+				<p class="lead-normal">Скрипт можна підключити з віддаленого сервера, що значно прискорює завантаження вашого сайту та позбавляє необхідності зберігати його локально. Використання CDN забезпечує доступ до кешованих версій скрипта з різних куточків світу. Ви можете скористатися одним із популярних сервісів CDN, таких як jsDelivr або Unpkg.</p>
 				<p>&mdash; Для підключення, вставте один із наведених нижче рядків коду в секцію <code class="code">&lt;head&gt;</code> або перед закриттям тега <code class="code">&lt;/body&gt;</code> на вашій HTML-сторінці:</p>			
 				<p><strong>CDN jsDelivr:</strong></p>
 				<pre><code class="language-html show-language">

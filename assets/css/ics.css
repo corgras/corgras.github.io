@@ -25,7 +25,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+.ics-message-lines:before {
+  content: "\e970";
+}
+.ics-star:before {
+  content: "\e971";
+}
 .ics-clipboard:before {
   content: "\e96f";
 }
