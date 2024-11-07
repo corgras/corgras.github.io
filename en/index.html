@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html lang="uk" prefix="og: https://ogp.me/ns#">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
 	<meta charset="utf-8">
 	<meta name="robots" content="index, follow">
 	<!--<base href="https://corgras.github.io/">-->
 
-	<title>Документація плагина Readmore.js на Vanilla JS для скривання та розкривання контенту на веб-сторінці</title>
-	<meta name="description" content="Плавний і відгукливий плагін на Vanilla JS для згортання та розгортання довгих текстових блоків з посиланнями «Читати далі» та «Закрити»">
+	<title>Enhance Your Website with CORGRAS - Solutions for Any Task</title>
+	<meta name="description" content="CORGRAS offers tools to improve the functionality of your web project. From OpenCart modules to modern JS scripts – we provide effective solutions for your website.">
+	<meta name="keywords" content="website functionality enhancement, OpenCart modules, JS ReadMore, website development, website improvement, conversion rate optimization, user experience, web development, online marketing, CORGRAS">
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"name": "CORGRAS",
+		"url": "https://corgras.github.io/en/",
+		"logo": "https://corgras.github.io/assets/images/logo.svg"
+	}
+	</script>
 
 	<!-- Favicon-->
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
@@ -28,23 +39,22 @@
 	<link rel="icon" type="image/png" sizes="384x384" href="/assets/images/favicon/android-icon-384x384.png">
 	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-icon-512x512.png">
 	<link rel="manifest" href="/assets/images/favicon/manifest.json">
-	
+
 	<link rel="stylesheet" href="/assets/css/framework.css">
 	<link rel="stylesheet" href="/assets/css/ics.css">
 	<link rel="stylesheet" href="/assets/css/style.css">
 
-	<link rel="canonical" href="https://corgras.github.io/readmore/demo">
-	<link rel="alternate" href="https://corgras.github.io/readmore/demo" hreflang="uk">
-	<link rel="alternate" href="https://corgras.github.io/en/readmore/demo" hreflang="en">
-	<link rel="alternate" href="https://corgras.github.io/ru/readmore/demo" hreflang="ru">
+	<link rel="canonical" href="https://corgras.github.io/en/">
+	<link rel="alternate" href="https://corgras.github.io/" hreflang="x-default">
+	<link rel="alternate" href="https://corgras.github.io/" hreflang="uk">
+	<link rel="alternate" href="https://corgras.github.io/en/" hreflang="en">
+	<link rel="alternate" href="https://corgras.github.io/ru/" hreflang="ru">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="color-scheme" content="light dark">
 	<meta name="theme-color" content="#F9F9FB" media="(prefers-color-scheme: light)">
 	<meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)">
 	<meta name="msapplication-TileColor" content="#F9F9FB">
-
-	<script src="/assets/js/theme.js"></script>
 
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNSWFP3MCV"></script>
@@ -55,14 +65,16 @@
 
 		gtag('config', 'G-ZNSWFP3MCV');
 	</script>
+
+	<script src="/assets/js/theme.js"></script>
 </head>
 <body>
-	<header class="header">
+	<header>
 		<div class="header-top">
 			<div class="container">
 				<div class="row">
 					<div class="col-2">
-						<a class="logo" href="/">
+						<a class="logo" href="/en/">
 							<img src="/assets/images/logo.svg" alt="CORGRAS" width="44" height="auto">
 						</a>
 					</div>
@@ -70,47 +82,42 @@
 						<nav>
 							<ul>
 								<li>
-									<a href="https://github.com/corgras/readmore.js" class="link" aria-label="Github">
-										<i class="ics-github"></i><span>Github</span>
+									<a href="/en/opencart/" class="link" aria-label="OpenCart">
+										<i class="ics-opencart"></i><span>OpenCart</span>
 									</a>
 								</li>
 								<li>
-									<a href="/readmore/docs/" class="link" aria-label="Документація">
-										<i class="ics-book-open"></i><span>Документація</span>
-									</a>
-								</li>
-								<li class="active">
-									<a href="/readmore/demo" class="link" aria-label="Демо">
-										<i class="ics-demo"></i><span>Демо</span>
+									<a href="/en/readmore/" class="link" aria-label="JS ReadMore">
+										<i class="ics-js"></i><span>JS ReadMore</span>
 									</a>
 								</li>
 								<li>
-									<a href="/readmore/contacts" class="link" aria-label="Підтримка">
-										<i class="ics-envelope"></i><span>Підтримка</span>
+									<a href="/en/contacts" class="link" aria-label="Contacts">
+										<i class="ics-envelope"></i><span>Contacts</span>
 									</a>
 								</li>
 								<li>
-									<a href="/donate" class="link" aria-label="Подякувати">
-										<i class="ics-coffee"></i><span>Подякувати</span>
+									<a href="/en/donate" class="link" aria-label="Donate">
+										<i class="ics-coffee"></i><span>Donate</span>
 									</a>
 								</li>
 							</ul>
 						</nav>
 						<aside>
 							<div class="language dropdown">
-								<a role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Вибір мови:">
-									<i class="ics-lang2"></i><span class="language-text">Українська</span>
+								<a role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language:">
+									<i class="ics-lang2"></i><span class="language-text">English</span>
 								</a>
 								<div class="dropdown-menu">
 									<ul>
-										<li class="dropdown-item active"><span>Українська</span></li>
-										<li class="dropdown-item"><a href="/en/readmore/demo" hreflang="en"><span>English</span></a></li>
-										<li class="dropdown-item"><a href="/ru/readmore/demo" hreflang="ru"><span>Русский</span></a></li>
+										<li class="dropdown-item"><a href="/" hreflang="uk"><span>Українська</span></a></li>
+										<li class="dropdown-item active"><span>English</span></li>
+										<li class="dropdown-item"><a href="/ru/" hreflang="ru"></a><span>Русский</span></a></li>
 									</ul>
 								</div>
 							</div>
 							<div class="theme">
-								<div class="theme-text">Тема:</div>
+								<div class="theme-text">Theme:</div>
 								<div class="dark-mode-toggle">
 									<input type="checkbox" id="switch" class="toggle-input">
 									<label for="switch" class="toggle-label">
@@ -141,12 +148,43 @@
 		</div>
 	</header>
 	<main>
-		<div class="container">
-			
-		</div>
+		<section class="common">
+			<div class="container">
+				<div class="row">
+					<div class="col-11">
+						<h1>Enhance Your Website with «CORGRAS»</h1>
+						<p class="lead">We create tools that help improve the functionality and usability of your web project. Whatever the task, our solutions provide effective and simple answers to meet any need.</p>
+					</div>
+				</div>
+				<div class="row cards">
+					<div class="col">
+						<a href="/en/opencart/" class="card card-hor">
+							<div class="card-image">
+								<i class="ics-opencart"></i>
+							</div>
+							<div class="card-content">
+								<h3>OpenCart Extensions</h3>
+								<p>Modules to expand your online store's functionality, enhancing site performance and improving the user experience for customers.</p>
+							</div>
+						</a>
+					</div>
+					<div class="col">
+						<a href="/en/readmore/" class="card card-hor">
+							<div class="card-image">
+								<i class="ics-js"></i>
+							</div>
+							<div class="card-content">
+								<h3>JS ReadMore</h3>
+								<p><p>Allows you to hide long text by adding a "Read More" button. This simplifies pages and makes content easier to read on any device.</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 	<footer>
-		<div class="copyrights">© <script>document.write(new Date().getFullYear());</script> CORGRAS. Всі права захищені</div>
+		<div class="copyrights">© <script>document.write(new Date().getFullYear());</script> CORGRAS. All rights reserved</div>
 	</footer>
 	<!-- SCRIPT -->
 	<script src="/assets/js/bootstrap.bundle.min.js"></script>

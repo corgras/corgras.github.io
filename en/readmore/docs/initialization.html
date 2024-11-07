@@ -5,9 +5,9 @@
 	<meta name="robots" content="index, follow">
 	<!--<base href="https://corgras.github.io/">-->
 
-	<title>ReadMore.js: Convenient Text Collapsing for Your Website | JavaScript Plugin</title>
-	<meta name="description" content="ReadMore.js - a lightweight and fast JavaScript plugin for collapsing and expanding text. Enhance user experience and improve your website's interface without extra libraries.">
-	<meta name="keywords" content="readmore.js, javascript plugin, text collapsing, text expanding, readability, UX design, mobile web design, long text, web development, front-end development, js plugin, hide text, show text, text animation">
+	<title>Initializing ReadMore.js – Configure the Plugin for Your Site | Documentation</title>
+	<meta name="description" content="Learn how to initialize the ReadMore.js script on your website. Explore code examples and parameters to customize the plugin according to your needs and improve content display.">
+	<meta name="keywords" content="ReadMore.js initialization, plugin settings, JavaScript, text blocks, code examples, web development">
 
 	<!-- Favicon-->
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
@@ -29,16 +29,17 @@
 	<link rel="icon" type="image/png" sizes="384x384" href="/assets/images/favicon/android-icon-384x384.png">
 	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-icon-512x512.png">
 	<link rel="manifest" href="/assets/images/favicon/manifest.json">
-	
+
 	<link rel="stylesheet" href="/assets/css/framework.css">
 	<link rel="stylesheet" href="/assets/css/ics.css">
+	<link rel="stylesheet" href="/assets/css/prism.css">
 	<link rel="stylesheet" href="/assets/css/style.css">
 
-	<link rel="canonical" href="https://corgras.github.io/en/readmore/">
-	<link rel="alternate" href="https://corgras.github.io/readmore/" hreflang="x-default">
-	<link rel="alternate" href="https://corgras.github.io/readmore/" hreflang="uk">
-	<link rel="alternate" href="https://corgras.github.io/en/readmore/" hreflang="en">
-	<link rel="alternate" href="https://corgras.github.io/ru/readmore/" hreflang="ru">
+	<link rel="canonical" href="https://corgras.github.io/en/readmore/docs/initialization">
+	<link rel="alternate" href="https://corgras.github.io/readmore/docs/initialization" hreflang="x-default">
+	<link rel="alternate" href="https://corgras.github.io/readmore/docs/initialization" hreflang="uk">
+	<link rel="alternate" href="https://corgras.github.io/en/readmore/docs/initialization" hreflang="en">
+	<link rel="alternate" href="https://corgras.github.io/ru/readmore/docs/initialization" hreflang="ru">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="color-scheme" content="light dark">
@@ -52,9 +53,9 @@
 		{
 			"@context": "http://schema.org",
 			"@type": "WebSite",
-			"name": "ReadMore.js: Convenient Text Collapsing for Your Website | JavaScript Plugin",
-			"url": "https://corgras.github.io/en/readmore/",
-			"description": "ReadMore.js - a lightweight and fast JavaScript plugin for collapsing and expanding text. Enhance user experience and improve your website's interface without extra libraries.",
+			"name": "Initializing ReadMore.js – Configure the Plugin for Your Site | Documentation",
+			"url": "https://corgras.github.io/en/readmore/docs/initialization",
+			"description": "Learn how to initialize the ReadMore.js script on your website. Explore code examples and parameters to customize the plugin according to your needs and improve content display.",
 			"@language": "en"
 		}
 	</script>
@@ -69,11 +70,20 @@
 		gtag('config', 'G-ZNSWFP3MCV');
 	</script>
 </head>
-<body>
+<body class="documentation">
 	<header class="header">
 		<div class="header-top">
 			<div class="container">
 				<div class="row">
+					<aside class="col menu-docs-mobile">
+						<div class="nav-icons">
+							<button class="menu-docs-trigger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</aside>
 					<div class="col-2">
 						<a class="logo" href="/en/">
 							<img src="/assets/images/logo.svg" alt="CORGRAS" width="44" height="auto">
@@ -87,7 +97,7 @@
 										<i class="ics-github"></i><span>Github</span>
 									</a>
 								</li>
-								<li>
+								<li class="active">
 									<a href="/en/readmore/docs/" class="link" aria-label="Documentation">
 										<i class="ics-book-open"></i><span>Documentation</span>
 									</a>
@@ -116,9 +126,9 @@
 								</a>
 								<div class="dropdown-menu">
 									<ul>
-										<li class="dropdown-item"><a href="/readmore/" hreflang="uk"><span>Українська</span></a></li>
+										<li class="dropdown-item"><a href="/readmore/docs/initialization" hreflang="uk"><span>Українська</span></a></li>
 										<li class="dropdown-item active"><span>English</span></li>
-										<li class="dropdown-item"><a href="/ru/readmore/" hreflang="ru"></a><span>Русский</span></a></li>
+										<li class="dropdown-item"><a href="/ru/readmore/docs/initialization" hreflang="ru"></a><span>Русский</span></a></li>
 									</ul>
 								</div>
 							</div>
@@ -152,35 +162,86 @@
 				</div>
 			</div>
 		</div>
+		<aside class="header-bottom">
+			<div class="container">
+				<ul class="nav">
+					<li><a href="/en/readmore/docs/"><i class="ics ics-book"></i> Get Started</a></li>
+					<li><a href="/en/readmore/docs/install"><i class="ics ics-tool"></i> Installation</a></li>
+					<li class="active"><a href="/en/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Initialization</a></li>
+					<li><a href="/en/readmore/docs/options"><i class="ics ics-sliders-h"></i> Options</a></li>
+					<li><a href="/en/readmore/docs/stylization"><i class="ics ics-paint"></i> Stylization</a></li>
+				</ul>
+			</div>
+		</aside>
 	</header>
 	<main>
-		<section class="common-project">
-			<div class="container">
-				<div class="row">
-					<div class="col-11">
-						<h1>ReadMore.js<br><span>Simple and Effective Pure JS Solution</span></h1>
-						<p class="lead">A pure JavaScript plugin that helps collapse long text blocks. With "Read more" and "Close" buttons, you can easily show or hide additional content, making reading more convenient and saving space on the page. This plugin is ideal for mobile devices and helps to manage large amounts of text comfortably.</p>
-						<div class="buttons">
-							<div class="code-snippet">
-								<code class="language-sh" data-lang="sh">
-									<span class="line">npm i @corgras/readmore-js</span>
-								</code>
-								<button type="button" class="btn-clipboard" title=""><i class="ics ics-clipboard"></i></button>
-							</div>
-							<a href="https://github.com/corgras/readmore.js" class="btn btn-primary"><span>Download</span><i class="ics-download btn-i-l"></i></a>
-							<a href="/en/readmore/docs/" class="btn btn-secondary"><span>Get Started</span><i class="ics-chevron-right btn-i-l"></i></a>
-						</div>
-						<div class="info"><i class="ics-scale"></i> MIT License. Released version 1.0</div>
-					</div>
+		<div class="container">
+			<article>
+				<h1>Initialization</h1>
+				<p>The Readmore.js script supports any elements containing text that needs to be hidden, such as <code class="code">&lt;div&gt;</code>, <code class="code">&lt;p&gt;</code>, <code class="code">&lt;section&gt;</code>.</p>
+				<p>Use the <code class="code">.readmore</code> class or any other class specified in the initialization selector for target elements.</p>
+				<pre><code class="language-html show-language">
+					&lt;div class="readmore"&gt;
+					&lt;!-- Your long content here --&gt;
+					&lt;/div&gt;
+				</code></pre>
+				<div class="note note-warning">
+					<div class="note-label">Important</div>
+					<p>Ensure that the text is long enough to exceed the <code class="code">collapsedHeight</code> value you set in the options.</p>
 				</div>
-			</div>
-		</section>
+			</article>
+			<article>
+				<h2>Initialization Without Parameters</h2>
+				<p>If you need to initialize the Readmore.js script without specifying additional <a href="/en/readmore/docs/options">parameters</a>, it can be started with the default settings.</p>
+				<pre><code class="language-javascript show-language">
+					document.addEventListener('DOMContentLoaded', function () {
+						initReadMore('.readmore');
+					});
+				</code></pre>
+			</article>
+			<article>
+				<h2>Initialization with Parameters</h2>
+				<p>This method is suitable if you want the script to work on all devices without screen width limitations.</p>
+				<pre><code class="language-javascript show-language">
+					document.addEventListener('DOMContentLoaded', function () {
+						initReadMore('.readmore', {
+							collapsedHeight: 200,
+							speed: 200,
+							heightMargin: 16,
+							moreLink: '&lt;a href="#"&gt;Read more&lt;/a&gt;',
+							lessLink: '&lt;a href="#"&gt;Close&lt;/a&gt;'
+						});
+					});
+				</code></pre>
+				<div class="note note-info">
+					<div class="note-label">Note</div>
+					<p>The <code class="code">maxWidth</code> parameter is not specified in this case. The script will be active on all devices, regardless of screen width.</p>
+				</div>
+			</article>
+			<article>
+				<h2>Initialization with Screen Width Restriction</h2>
+				<p>This option is convenient when you want to hide part of the text on devices with a specific screen width.</p>
+				<p>By setting the <code class="code">maxWidth</code> parameter (e.g., 992px), the script will activate only on screens up to 992px, while on larger screens, the text will display in full without the "Read more" button.</p>
+				<pre><code class="language-javascript show-language">
+					document.addEventListener('DOMContentLoaded', function () {
+						initReadMore('.read-more', {
+							collapsedHeight: 200,
+							speed: 200,
+							heightMargin: 16,
+							moreLink: '&lt;a href="#"&gt;Read more&lt;/a&gt;',
+							lessLink: '&lt;a href="#"&gt;Close&lt;/a&gt;'
+						});
+					}, 992);
+				</code></pre>
+			</article>
+		</div>
 	</main>
 	<footer>
 		<div class="copyrights">© <script>document.write(new Date().getFullYear());</script> CORGRAS. All rights reserved</div>
 	</footer>
 	<!-- SCRIPT -->
 	<script src="/assets/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/js/prism.js"></script>
 	<script src="/assets/js/common.js"></script>
 	<!-- END SCRIPT -->
 </body>

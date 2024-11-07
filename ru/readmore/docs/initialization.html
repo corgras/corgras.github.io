@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="uk" prefix="og: https://ogp.me/ns#">
+<html lang="ru" prefix="og: https://ogp.me/ns#">
 <head>
 	<meta charset="utf-8">
 	<meta name="robots" content="index, follow">
 	<!--<base href="https://corgras.github.io/">-->
 
-	<title>Ініціалізація ReadMore.js – налаштуйте плагін для вашого сайту | Документація</title>
-	<meta name="description" content="Дізнайтеся, як ініціалізувати скрипт ReadMore.js на вашому сайті. Ознайомтеся з прикладами коду та параметрами, щоб налаштувати плагін відповідно до ваших потреб та покращити відображення контенту.">
-	<meta name="keywords" content="ініціалізація ReadMore.js, налаштування плагіна, JavaScript, розширювані текстові блоки, код приклади, веб-розробка">
+	<title>Инициализация ReadMore.js – настройте плагин для вашего сайта | Документация</title>
+	<meta name="description" content="Узнайте, как инициализировать ReadMore.js скрипт на вашем сайте. Ознакомьтесь с примерами кода и параметрами, чтобы настроить плагин в соответствии с вашими потребностями и улучшить отображение контента.">
+	<meta name="keywords" content="инициализация ReadMore.js, настройки плагина, JavaScript, текстовые блоки, код примеры, веб-разработка">
 
 	<!-- Favicon-->
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
@@ -35,7 +35,7 @@
 	<link rel="stylesheet" href="/assets/css/prism.css">
 	<link rel="stylesheet" href="/assets/css/style.css">
 
-	<link rel="canonical" href="https://corgras.github.io/readmore/docs/initialization">
+	<link rel="canonical" href="https://corgras.github.io/ru/readmore/docs/initialization">
 	<link rel="alternate" href="https://corgras.github.io/readmore/docs/initialization" hreflang="x-default">
 	<link rel="alternate" href="https://corgras.github.io/readmore/docs/initialization" hreflang="uk">
 	<link rel="alternate" href="https://corgras.github.io/en/readmore/docs/initialization" hreflang="en">
@@ -53,10 +53,10 @@
 		{
 			"@context": "http://schema.org",
 			"@type": "WebSite",
-			"name": "Ініціалізація ReadMore.js – налаштуйте плагін для вашого сайту | Документація",
-			"url": "https://corgras.github.io/readmore/docs/initialization",
-			"description": "Дізнайтеся, як ініціалізувати скрипт ReadMore.js на вашому сайті. Ознайомтеся з прикладами коду та параметрами, щоб налаштувати плагін відповідно до ваших потреб та покращити відображення контенту.",
-			"@language": "uk"
+			"name": "Инициализация ReadMore.js – настройте плагин для вашего сайта | Документация",
+			"url": "https://corgras.github.io/ru/readmore/docs/initialization",
+			"description": "Узнайте, как инициализировать ReadMore.js скрипт на вашем сайте. Ознакомьтесь с примерами кода и параметрами, чтобы настроить плагин в соответствии с вашими потребностями и улучшить отображение контента.",
+			"@language": "ru"
 		}
 	</script>
 
@@ -85,7 +85,7 @@
 						</div>
 					</aside>
 					<div class="col-2">
-						<a class="logo" href="/">
+						<a class="logo" href="/ru/">
 							<img src="/assets/images/logo.svg" alt="CORGRAS" width="44" height="auto">
 						</a>
 					</div>
@@ -98,37 +98,37 @@
 									</a>
 								</li>
 								<li class="active">
-									<a href="/readmore/docs/" class="link" aria-label="Документація">
-										<i class="ics-book-open"></i><span>Документація</span>
+									<a href="/ru/readmore/docs/" class="link" aria-label="Документация">
+										<i class="ics-book-open"></i><span>Документация</span>
 									</a>
 								</li>
 								<li>
-									<a href="/readmore/demo" class="link" aria-label="Демо">
+									<a href="/ru/readmore/demo" class="link" aria-label="Демо">
 										<i class="ics-demo"></i><span>Демо</span>
 									</a>
 								</li>
 								<li>
-									<a href="/readmore/contacts" class="link" aria-label="Підтримка">
-										<i class="ics-envelope"></i><span>Підтримка</span>
+									<a href="/ru/readmore/contacts" class="link" aria-label="Поддержка">
+										<i class="ics-envelope"></i><span>Поддержка</span>
 									</a>
 								</li>
 								<li>
-									<a href="/donate" class="link" aria-label="Подякувати">
-										<i class="ics-coffee"></i><span>Подякувати</span>
+									<a href="/ru/donate" class="link" aria-label="Благодарность">
+										<i class="ics-coffee"></i><span>Благодарность</span>
 									</a>
 								</li>
 							</ul>
 						</nav>
 						<aside>
 							<div class="language dropdown">
-								<a role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Вибір мови:">
-									<i class="ics-lang2"></i><span class="language-text">Українська</span>
+								<a role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Выбор языка:">
+									<i class="ics-lang2"></i><span class="language-text">Русский</span>
 								</a>
 								<div class="dropdown-menu">
 									<ul>
-										<li class="dropdown-item active"><span>Українська</span></li>
+										<li class="dropdown-item"><a href="/readmore/docs/initialization" hreflang="uk"><span>Українська</span></a></li>
 										<li class="dropdown-item"><a href="/en/readmore/docs/initialization" hreflang="en"><span>English</span></a></li>
-										<li class="dropdown-item"><a href="/ru/readmore/docs/initialization" hreflang="ru"><span>Русский</span></a></li>
+										<li class="dropdown-item active"><span>Русский</span></li>
 									</ul>
 								</div>
 							</div>
@@ -165,11 +165,11 @@
 		<aside class="header-bottom">
 			<div class="container">
 				<ul class="nav">
-					<li><a href="/readmore/docs/"><i class="ics ics-book"></i> Вступ</a></li>
-					<li><a href="/readmore/docs/install"><i class="ics ics-tool"></i> Встановлення</a></li>
-					<li class="active"><a href="/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Ініціалізація</a></li>
-					<li><a href="/readmore/docs/options"><i class="ics ics-sliders-h"></i> Параметри скрипта</a></li>
-					<li><a href="/readmore/docs/stylization"><i class="ics ics-paint"></i> Стилізація</a></li>
+					<li><a href="/ru/readmore/docs/"><i class="ics ics-book"></i> Введение</a></li>
+					<li><a href="/ru/readmore/docs/install"><i class="ics ics-tool"></i> Установка</a></li>
+					<li class="active"><a href="/ru/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Инициализация</a></li>
+					<li><a href="/ru/readmore/docs/options"><i class="ics ics-sliders-h"></i> Параметры скрипта</a></li>
+					<li><a href="/ru/readmore/docs/stylization"><i class="ics ics-paint"></i> Стилизация</a></li>
 				</ul>
 			</div>
 		</aside>
@@ -177,22 +177,22 @@
 	<main>
 		<div class="container">
 			<article>
-				<h1>Ініціалізація</h1>
-				<p>Скрипт Readmore.js підтримує будь-які елементи, що містять текст, який необхідно приховати, наприклад, <code class="code">&lt;div&gt;</code>, <code class="code">&lt;p&gt;</code>, <code class="code">&lt;section&gt;</code>.</p>
-				<p>Використовуйте клас <code class="code">.readmore</code> або інший, зазначений вами в селекторі ініціалізації, для цільових елементів.</p>
+				<h1>Инициализация</h1>
+				<p>Скрипт Readmore.js поддерживает любые элементы, содержащие текст, который необходимо скрыть, например, <code class="code">&lt;div&gt;</code>, <code class="code">&lt;p&gt;</code>, <code class="code">&lt;section&gt;</code>.</p>
+				<p>Используйте класс <code class="code">.readmore</code> или другой, указанный вами в селекторе инициализации, для целевых элементов.
 				<pre><code class="language-html show-language">
 					&lt;div class="readmore"&gt;
-					&lt;!-- Ваш великий контент тут --&gt;
+					&lt;!-- Ваш длинный контент здесь --&gt;
 					&lt;/div&gt;
 				</code></pre>
 				<div class="note note-warning">
-					<div class="note-label">Важливо</div>
-					<p>Переконайтеся, що текст достатньо довгий, щоб перевищити значення <code class="code">collapsedHeight</code> — висоту, яку ви вкажете в налаштуваннях.</p>
+					<div class="note-label">Важно</div>
+					<p>Убедитесь, что текст достаточно длинный, чтобы превышать значение <code class="code">collapsedHeight</code> — высоту, которую вы укажете в настройках.</p>
 				</div>
 			</article>
 			<article>
-				<h2>Ініціалізація без параметрів</h2>
-				<p>Якщо вам потрібно ініціалізувати скрипт Readmore.js без вказання додаткових <a href="/readmore/docs/options">параметрів</a>, його можна запустити з налаштуваннями за замовчуванням.</p>
+				<h2>Инициализация без параметров</h2>
+				<p>Если вам нужно инициализировать скрипт Readmore.js без указания дополнительных <a href="/ru/readmore/docs/options">параметров</a>, его можно запустить с настройками по-умолчанию.</p>
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.readmore');
@@ -200,36 +200,36 @@
 				</code></pre>
 			</article>
 			<article>
-				<h2>Ініціалізація з параметрами</h2>
-				<p>Цей спосіб підходить, якщо потрібно, щоб скрипт працював на всіх пристроях без обмеження по ширині екрана.</p>
+				<h2>Инициализация с параметрами</h2>
+				<p>Этот способ подходит, если нужно, чтобы скрипт работал на всех устройствах без ограничения по ширине экрана.</p>
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.readmore', {
 							collapsedHeight: 200,
 							speed: 200,
 							heightMargin: 16,
-							moreLink: '&lt;a href="#"&gt;Читати далі&lt;/a&gt;',
-							lessLink: '&lt;a href="#"&gt;Приховати&lt;/a&gt;'
+							moreLink: '&lt;a href="#"&gt;Читать далее&lt;/a&gt;',
+							lessLink: '&lt;a href="#"&gt;Скрыть&lt;/a&gt;'
 						});
 					});
 				</code></pre>
 				<div class="note note-info">
-					<div class="note-label">Примітка</div>
-					<p>Параметр <code class="code">maxWidth</code> у цьому випадку не вказується. Скрипт буде активний на всіх пристроях незалежно від ширини екрана.</p>
+					<div class="note-label">Примечание</div>
+					<p>Параметр <code class="code">maxWidth</code> в этом случае не указывается. Скрипт будет активен на всех устройствах независимо от ширины экрана.</p>
 				</div>
 			</article>
 			<article>
-				<h2>Ініціалізація з обмеженням по ширині екрана</h2>
-				<p>Цей варіант зручний, коли потрібно приховувати частину тексту на пристроях із певною шириною екрана.</p>
-				<p>При встановленні параметра <code class="code">maxWidth</code> (наприклад, 992px), скрипт активується лише на екранах до 992px, тоді як на ширших екранах текст відображатиметься повністю без кнопки «Читати далі».</p>
+				<h2>Инициализация с ограничением по ширине экрана</h2>
+				<p>Этот вариант удобен, когда нужно скрывать часть текста на устройствах с определенной шириной экрана.</p>
+				<p>При установке параметра <code class="code">maxWidth</code> (например, 992px), скрипт активируется только на экранах до 992px, тогда как на более широких экранах текст будет отображаться полностью без кнопки «Читать далее».</p>
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.read-more', {
 							collapsedHeight: 200,
 							speed: 200,
 							heightMargin: 16,
-							moreLink: '&lt;a href="#"&gt;Читати далі&lt;/a&gt;',
-							lessLink: '&lt;a href="#"&gt;Приховати&lt;/a&gt;'
+							moreLink: '&lt;a href="#"&gt;Читать далее&lt;/a&gt;',
+							lessLink: '&lt;a href="#"&gt;Скрыть&lt;/a&gt;'
 						});
 					}, 992);
 				</code></pre>
@@ -237,7 +237,7 @@
 		</div>
 	</main>
 	<footer>
-		<div class="copyrights">© <script>document.write(new Date().getFullYear());</script> CORGRAS. Всі права захищені</div>
+		<div class="copyrights">© <script>document.write(new Date().getFullYear());</script> CORGRAS. Все права защищены</div>
 	</footer>
 	<!-- SCRIPT -->
 	<script src="/assets/js/bootstrap.bundle.min.js"></script>
