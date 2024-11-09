@@ -5,8 +5,9 @@
 	<meta name="robots" content="index, follow">
 	<!--<base href="https://corgras.github.io/">-->
 
-	<title>Документація плагина Readmore.js  для скривання та розкривання контенту на веб-сторінці</title>
-	<meta name="description" content="Плавний і відгукливий плагін на Vanilla JS для згортання та розгортання довгих текстових блоків з посиланнями «Читати далі» та «Закрити»">
+	<title>Readmore.js Demonstration: Script for collapsing and expanding text</title>
+	<meta name="description" content="Demonstration of the Readmore.js script. Learn how to easily expand or collapse long text on a page using JavaScript.">
+	<meta name="keywords" content="Readmore.js, JavaScript, text expansion, text collapsing, demo, JavaScript plugin, CORGRAS">
 
 	<!-- Favicon-->
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
@@ -85,8 +86,8 @@
 									</a>
 								</li>
 								<li>
-									<a href="/en/readmore/contacts" class="link" aria-label="Contacts">
-										<i class="ics-envelope"></i><span>Contacts</span>
+									<a href="/en/readmore/support" class="link" aria-label="Support">
+										<i class="ics-envelope"></i><span>Support</span>
 									</a>
 								</li>
 								<li>
@@ -142,7 +143,57 @@
 	</header>
 	<main>
 		<div class="container">
-			
+			<h1>Demonstration</h1>
+			<p class="lead">Here you can test the functionality of a script that allows you to expand and collapse long text.</p>
+			<p class="lead">Enter your own values for the parameters in the form below to see how they affect the text behavior on the page. Adjust the settings and see how the appearance and animation of the text change.</p>
+			<hr>
+			<div class="row">
+				<div class="col-8 block-readmore">
+					<div class="readmore">
+						<h3>What is Lorem Ipsum?</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						<h3>Where does it come from?</h3>
+						<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+					</div>
+				</div>
+				<div class="col-4 block-options">
+					<div class="form-container">
+						<h2 class="form-title">Options</h2>
+						<form>
+							<div class="form-group">
+								<label class="form-label" for="collapsedHeight">Collapsed content height (collapsedHeight):</label>
+								<div class="input-group">
+									<input type="number" class="form-control" name="collapsedHeight" value="200" min="0" placeholder="collapsedHeight" id="collapsedHeight">
+									<span class="input-group-text">px</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="speed">Speed:</label>
+								<div class="input-group">
+									<input type="number" class="form-control" name="speed" value="200" min="0" placeholder="speed" id="speed">
+									<span class="input-group-text">ms</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="heightMargin">Indent for height (heightMargin):</label>
+								<div class="input-group">
+									<input type="number" class="form-control" name="heightMargin" value="16" min="0" placeholder="heightMargin" id="heightMargin">
+									<span class="input-group-text">px</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="moreLink">HTML for the «Read more» button (moreLink):</label>
+								<input type="text" id="moreLink" name="moreLink" value='<a href="#">Read more</a>' class="form-control">
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="lessLink">HTML for the «Close» button (lessLink):</label>
+								<input type="text" id="lessLink" name="lessLink" value='<a href="#">Close</a>' class="form-control">
+							</div>
+							<button type="button" class="btn btn-primary" id="applySettings">Apply</button>
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
 	</main>
 	<footer>
@@ -151,6 +202,40 @@
 	<!-- SCRIPT -->
 	<script src="/assets/js/bootstrap.bundle.min.js"></script>
 	<script src="/assets/js/common.js"></script>
+	<script src="/assets/js/readmore.min.js"></script>
+
+	<script>
+   		document.addEventListener('DOMContentLoaded', function () {
+    		function initReadMoreWithParams(params) {
+      			initReadMore('.readmore', params);
+    		}
+
+			let defaultParams = {
+        		collapsedHeight: 200,
+        		speed: 200,
+        		heightMargin: 16,
+        		moreLink: '<a href="#">Read more</a>',
+        		lessLink: '<a href="#">Close</a>'
+    		};
+
+    		initReadMoreWithParams(defaultParams);
+
+    		document.getElementById('applySettings').addEventListener('click', function () {
+        		let newParams = {
+            		collapsedHeight: parseInt(document.getElementById('collapsedHeight').value, 10) || 200,
+            		speed: parseInt(document.getElementById('speed').value, 10) || 200,
+            		heightMargin: parseInt(document.getElementById('heightMargin').value, 10) || 16,
+            		moreLink: document.getElementById('moreLink').value || '<a href="#">Read more</a>',
+            		lessLink: document.getElementById('lessLink').value || '<a href="#">Close</a>'
+        		};
+
+        		document.querySelectorAll('.readmore-button').forEach(button => button.remove());
+        		document.querySelector('.readmore').style.height = ''; 
+				
+				initReadMoreWithParams(newParams);
+    		});
+		});
+    </script>
 	<!-- END SCRIPT -->
 </body>
 </html>

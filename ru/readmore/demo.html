@@ -5,8 +5,9 @@
 	<meta name="robots" content="index, follow">
 	<!--<base href="https://corgras.github.io/">-->
 
-	<title>Документація плагина Readmore.js  для скривання та розкривання контенту на веб-сторінці</title>
-	<meta name="description" content="Плавний і відгукливий плагін на Vanilla JS для згортання та розгортання довгих текстових блоків з посиланнями «Читати далі» та «Закрити»">
+	<title>Демонстрация Readmore.js: Скрипт для сворачивания и разворачивания текста</title>
+	<meta name="description" content="Демонстрация работы скрипта Readmore.js. Узнайте, как с помощью JavaScript легко развернуть или свернуть длинный текст на странице.">
+	<meta name="keywords" content="Readmore.js, JavaScript, разворачивание текста, сворачивание текста, демонстрация, JavaScript плагин, CORGRAS">
 
 	<!-- Favicon-->
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
@@ -85,7 +86,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="/ru/readmore/contacts" class="link" aria-label="Поддержка">
+									<a href="/ru/readmore/support" class="link" aria-label="Поддержка">
 										<i class="ics-envelope"></i><span>Поддержка</span>
 									</a>
 								</li>
@@ -142,7 +143,57 @@
 	</header>
 	<main>
 		<div class="container">
-			
+			<h1>Демонстрация</h1>
+			<p class="lead">Здесь вы можете протестировать работу скрипта, который позволяет сворачивать и разворачивать длинный текст.</p>
+			<p class="lead">Введите свои значения для параметров в форму ниже, чтобы увидеть, как они влияют на поведение текста на странице. Настройте параметры и оцените, как меняются внешний вид и анимация текста.</p>
+			<hr>
+			<div class="row">
+				<div class="col-8 block-readmore">
+					<div class="readmore">
+						<h3>Что такое Lorem Ipsum?</h3>
+						<p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+						<h3>Откуда он появился?</h3>
+						<p>Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur", и занялся его поисками в классической латинской литературе. В результате он нашёл неоспоримый первоисточник Lorem Ipsum в разделах 1.10.32 и 1.10.33 книги "de Finibus Bonorum et Malorum" ("О пределах добра и зла"), написанной Цицероном в 45 году н.э. Этот трактат по теории этики был очень популярен в эпоху Возрождения. Первая строка Lorem Ipsum, "Lorem ipsum dolor sit amet..", происходит от одной из строк в разделе 1.10.32</p>
+					</div>
+				</div>
+				<div class="col-4 block-options">
+					<div class="form-container">
+						<h2 class="form-title">Параметры</h2>
+						<form>
+							<div class="form-group">
+								<label class="form-label" for="collapsedHeight">Высота свернутого контента (collapsedHeight):</label>
+								<div class="input-group">
+									<input type="number" class="form-control" name="collapsedHeight" value="200" min="0" placeholder="collapsedHeight" id="collapsedHeight">
+									<span class="input-group-text">px</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="speed">Скорость (speed):</label>
+								<div class="input-group">
+									<input type="number" class="form-control" name="speed" value="200" min="0" placeholder="speed" id="speed">
+									<span class="input-group-text">мс</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="heightMargin">Отступ для высоты (heightMargin):</label>
+								<div class="input-group">
+									<input type="number" class="form-control" name="heightMargin" value="16" min="0" placeholder="heightMargin" id="heightMargin">
+									<span class="input-group-text">px</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="moreLink">HTML для кнопки «Читать далее» (moreLink):</label>
+								<input type="text" id="moreLink" name="moreLink" value='<a href="#">Читать далее</a>' class="form-control">
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="lessLink">HTML для кнопки «Скрыть» (lessLink):</label>
+								<input type="text" id="lessLink" name="lessLink" value='<a href="#">Скрыть</a>' class="form-control">
+							</div>
+							<button type="button" class="btn btn-primary" id="applySettings">Применить</button>
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
 	</main>
 	<footer>
@@ -151,6 +202,40 @@
 	<!-- SCRIPT -->
 	<script src="/assets/js/bootstrap.bundle.min.js"></script>
 	<script src="/assets/js/common.js"></script>
+	<script src="/assets/js/readmore.min.js"></script>
+
+	<script>
+   		document.addEventListener('DOMContentLoaded', function () {
+    		function initReadMoreWithParams(params) {
+      			initReadMore('.readmore', params);
+    		}
+
+			let defaultParams = {
+        		collapsedHeight: 200,
+        		speed: 200,
+        		heightMargin: 16,
+        		moreLink: '<a href="#">Читать далее</a>',
+        		lessLink: '<a href="#">Скрыть</a>'
+    		};
+
+    		initReadMoreWithParams(defaultParams);
+
+    		document.getElementById('applySettings').addEventListener('click', function () {
+        		let newParams = {
+            		collapsedHeight: parseInt(document.getElementById('collapsedHeight').value, 10) || 200,
+            		speed: parseInt(document.getElementById('speed').value, 10) || 200,
+            		heightMargin: parseInt(document.getElementById('heightMargin').value, 10) || 16,
+            		moreLink: document.getElementById('moreLink').value || '<a href="#">Читать далее</a>',
+            		lessLink: document.getElementById('lessLink').value || '<a href="#">Скрыть</a>'
+        		};
+
+        		document.querySelectorAll('.readmore-button').forEach(button => button.remove());
+        		document.querySelector('.readmore').style.height = ''; 
+				
+				initReadMoreWithParams(newParams);
+    		});
+		});
+    </script>
 	<!-- END SCRIPT -->
 </body>
 </html>
