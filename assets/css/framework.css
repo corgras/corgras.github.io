@@ -570,6 +570,109 @@ progress {
 	display: none !important;
 }
 
+
+
+
+
+
+.form-group{
+	margin-bottom: 2rem;
+}
+.form-label {
+    margin-bottom: .8rem;
+	font-size: 1.3rem;
+}
+.form-text {
+    margin-top: .4rem;
+    font-size: 14px;
+    color: var(--cs-body-color-secondary);
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .6rem 1.2rem;
+    font-size: 1.3rem;
+	border: 1px solid var(--cs-border-primary);
+	outline: none;
+	transition: border-color 0.3s;
+	background: var(--cs-body-bg-primary);
+	border-radius: var(--cs-border-radius-md);
+
+    color: var(--cs-body-color-primary);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-clip: padding-box;
+	height: 3.6rem;
+   }
+
+.input-group {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	width: 100%;
+  }
+  .input-group > .form-control,
+  .input-group > .form-select,
+  .input-group > .form-floating {
+	position: relative;
+	flex: 1 1 auto;
+	width: 1%;
+	min-width: 0;
+  }
+  .input-group > .form-control:focus,
+  .input-group > .form-select:focus,
+  .input-group > .form-floating:focus-within {
+	z-index: 5;
+  }
+  .input-group .btn {
+	position: relative;
+	z-index: 2;
+  }
+  .input-group .btn:focus {
+	z-index: 5;
+  }
+  
+  .input-group-text {
+	display: flex;
+	align-items: center;
+	padding: 6px 12px;
+	font-size: 1.3rem;
+	color: var(--cs-body-color-secondary);
+	text-align: center;
+	white-space: nowrap;
+	background-color: var(--cs-body-bg-secondary);
+	border: 1px solid var(--cs-border-primary);
+	border-radius: var(--cs-border-radius-md);
+  }
+  .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
+  .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3),
+  .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-control,
+  .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-select {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+  }
+  .input-group.has-validation > :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
+  .input-group.has-validation > .dropdown-toggle:nth-last-child(n+4),
+  .input-group.has-validation > .form-floating:nth-last-child(n+3) > .form-control,
+  .input-group.has-validation > .form-floating:nth-last-child(n+3) > .form-select {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+  }
+  .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+	margin-left: calc(1px * -1);
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+  }
+  .input-group > .form-floating:not(:first-child) > .form-control,
+  .input-group > .form-floating:not(:first-child) > .form-select {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+  }
+
+
 /*GRID*/
 .container {
 	width: 100%;
@@ -627,6 +730,7 @@ progress {
 .row {
 	display: flex;
 	flex-wrap: wrap;
+	gap: var(--cs-gap);
 }
 .row > * {
 	box-sizing: border-box;
@@ -651,7 +755,7 @@ progress {
 }
 .col-4 {
 	flex: 0 0 auto;
-	width: calc(33.33333333% - (var(--cs-gap) / 1.5));
+	width: calc(33.33333333% - (var(--cs-gap) / 2));
 }
 .col-5 {
 	flex: 0 0 auto;
