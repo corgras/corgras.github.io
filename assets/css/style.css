@@ -815,8 +815,82 @@ footer .copyrights {
 	color: var(--cs-body-color-secondary);
 }
 
+/* TAble event*/
+.table-events{
+	margin-top: 4rem;
+}
+.tr-events-head{
+	background: var(--cs-body-bg-secondary);
+	color: var(--cs-body-color-secondary);
+	
+}
+.tr-events-head > *{
+	font-weight: 400;
+}
+.tr-events-head,
+.tr-events {
+	display: grid;
+	gap: var(--cs-gap);
+	grid-template-rows: auto;
+	grid-template-columns: 250px 1fr;
+	grid-template-areas:
+		"event desc";
+	width: 100%;
+	height: auto;
+	align-items: center;
+	padding: 16px 25px;
+}
+.tr-events {
+	border-bottom: 1px solid var(--cs-border-primary);
+}
 
 
+#event {
+	grid-area: event;
+	font-weight: 400
+}
+#desc {
+	grid-area: desc;
+}
+
+
+/* TAble class*/
+.table-class{
+	margin-top: 4rem;
+}
+.tr-class-head{
+	background: var(--cs-body-bg-secondary);
+	color: var(--cs-body-color-secondary);
+	
+}
+.tr-class-head > *{
+	font-weight: 400;
+}
+.tr-class-head,
+.tr-class {
+	display: grid;
+	gap: var(--cs-gap);
+	grid-template-rows: auto;
+	grid-template-columns: 300px 1fr;
+	grid-template-areas:
+		"class desc";
+	width: 100%;
+	height: auto;
+	align-items: center;
+	padding: 16px 25px;
+}
+.tr-class {
+	border-bottom: 1px solid var(--cs-border-primary);
+}
+#class {
+	grid-area: class;
+	font-weight: 400
+}
+#desc {
+	grid-area: desc;
+}
+#desc p{margin-bottom: 1rem;}
+#desc li{margin-bottom: 1rem;}
 
 
 .form-container {
@@ -864,21 +938,28 @@ footer .copyrights {
 
 
 
-.readmore-button {
+.cs_readmore-btn-wrapper {
+	margin: 15px auto 0;
+	text-align: center;
+}
+.cs_readmore-btn-wrapper:before{
 	border-top: 1px solid var(--cs-border-primary);
 	color: var(--cs-body-color-secondary);
-	margin: 25px auto 0;
-	text-align: center;
+	content:'';
+	display:block;
+	width:100%;
+	z-index: -1;
+    position: relative;
+	transform: translateY(15px);
 }
-.readmore-button a{
+.cs_readmore-btn{
 	color: var(--cs-body-color-secondary);
-	margin: 15px 0 0;
+	background: var(--cs-body-bg-primary);
+	border: 0;
+	margin: 0;
+	padding: 0 20px;
 	text-align: center;
-	display: inline-block;
 }
-.readmore-button a:hover{
+.cs_readmore-btn:hover{
 	color: var(--cs-body-color-primary);
-	margin: 15px 0 0;
-	text-align: center;
-	display: inline-block;
 }
