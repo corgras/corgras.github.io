@@ -168,7 +168,8 @@
 					<li><a href="/ru/readmore/docs/"><i class="ics ics-book"></i> Введение</a></li>
 					<li><a href="/ru/readmore/docs/install"><i class="ics ics-tool"></i> Установка</a></li>
 					<li class="active"><a href="/ru/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Инициализация</a></li>
-					<li><a href="/ru/readmore/docs/options"><i class="ics ics-sliders-h"></i> Параметры скрипта</a></li>
+					<li><a href="/ru/readmore/docs/options"><i class="ics ics-sliders-h"></i> Параметры</a></li>
+					<li><a href="/ru/readmore/docs/events"><i class="ics ics-sliders-h"></i> События</a></li>
 					<li><a href="/ru/readmore/docs/stylization"><i class="ics ics-paint"></i> Стилизация</a></li>
 				</ul>
 			</div>
@@ -187,7 +188,7 @@
 				</code></pre>
 				<div class="note note-warning">
 					<div class="note-label">Важно</div>
-					<p>Убедитесь, что текст достаточно длинный, чтобы превышать значение <code class="code">collapsedHeight</code> — высоту, которую вы укажете в настройках.</p>
+					<p>Убедитесь, что текст достаточно длинный, чтобы превышать значение <code class="code">collapsedSize</code> — высоту, которую вы укажете в настройках.</p>
 				</div>
 			</article>
 			<article>
@@ -205,33 +206,40 @@
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.readmore', {
-							collapsedHeight: 200,
+							collapsedSize: 200,
 							speed: 200,
 							heightMargin: 16,
-							moreLink: '&lt;a href="#"&gt;Читать далее&lt;/a&gt;',
-							lessLink: '&lt;a href="#"&gt;Скрыть&lt;/a&gt;'
+							moreLink: '&lt;span&gt;Читать далее&lt;/span&gt;',
+							lessLink: '&lt;span&gt;Скрыть&lt;/span&gt;'
 						});
 					});
 				</code></pre>
-				<div class="note note-info">
-					<div class="note-label">Примечание</div>
-					<p>Параметр <code class="code">maxWidth</code> в этом случае не указывается. Скрипт будет активен на всех устройствах независимо от ширины экрана.</p>
-				</div>
 			</article>
 			<article>
-				<h2>Инициализация с ограничением по ширине экрана</h2>
-				<p>Этот вариант удобен, когда нужно скрывать часть текста на устройствах с определенной шириной экрана.</p>
-				<p>При установке параметра <code class="code">maxWidth</code> (например, 992px), скрипт активируется только на экранах до 992px, тогда как на более широких экранах текст будет отображаться полностью без кнопки «Читать далее».</p>
+				<h2>Инициализация для разных размеров экрана</h2>
+				<p>Этот вариант удобен, когда нужно менять параметры для разных ширин устройств или активировать скрипт на экранах с определённой шириной.</p>
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.readmore', {
-							collapsedHeight: 200,
+							collapsedSize: 200,
 							speed: 200,
 							heightMargin: 16,
-							moreLink: '&lt;a href="#"&gt;Читать далее&lt;/a&gt;',
-							lessLink: '&lt;a href="#"&gt;Скрыть&lt;/a&gt;'
+							moreLink: '&lt;span&gt;Читать далее&lt;/span&gt;',
+							lessLink: '&lt;span&gt;Скрыть&lt;/span&gt;',
+							breakpoints: {
+								576: {
+									collapsedSize: 100,
+									speed: 200,
+									moreLink: '&lt;span&gt;Подробнее&lt;/span&gt;',
+									lessLink: '&lt;span&gt;Свернуть&lt;/span&gt;',
+								},
+								768: {
+									collapsedSize: 150,
+									speed: 250,
+								},
+							}
 						});
-					}, 992);
+					});
 				</code></pre>
 			</article>
 		</div>

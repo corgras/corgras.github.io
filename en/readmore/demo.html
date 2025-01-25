@@ -29,7 +29,7 @@
 	<link rel="icon" type="image/png" sizes="384x384" href="/assets/images/favicon/android-icon-384x384.png">
 	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-icon-512x512.png">
 	<link rel="manifest" href="/assets/images/favicon/manifest.json">
-	
+
 	<link rel="stylesheet" href="/assets/css/framework.css">
 	<link rel="stylesheet" href="/assets/css/ics.css">
 	<link rel="stylesheet" href="/assets/css/style.css">
@@ -152,14 +152,18 @@
 					<div class="readmore">
 						<h3>What is Lorem Ipsum?</h3>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						<p style="text-align:center"><img src="/assets/images/placeholder.jpg"></p>
 						<h3>Where does it come from?</h3>
 						<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+						<p style="text-align:center"><img src="/assets/images/placeholder.jpg"></p>
+						<h3>Why do we use it?</h3>
+						<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
 					</div>
 				</div>
 				<div class="col-4 block-options">
 					<div class="form-container">
 						<h2 class="form-title">Options</h2>
-						<form>
+						<form id="settings-form">
 							<div class="form-group">
 								<label class="form-label" for="collapsedHeight">Collapsed content height (collapsedHeight):</label>
 								<div class="input-group">
@@ -168,7 +172,7 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="form-label" for="speed">Speed:</label>
+								<label class="form-label" for="speed">Animation speed (speed):</label>
 								<div class="input-group">
 									<input type="number" class="form-control" name="speed" value="200" min="0" placeholder="speed" id="speed">
 									<span class="input-group-text">ms</span>
@@ -182,14 +186,28 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="form-label" for="moreLink">HTML for the «Read more» button (moreLink):</label>
-								<input type="text" id="moreLink" name="moreLink" value='<a href="#">Read more</a>' class="form-control">
+								<label class="form-label" for="moreLink">Text for the button «Read more» (moreLink):</label>
+								<input type="text" id="moreLink" name="moreLink" value='<span>Read more</span>' class="form-control">
 							</div>
 							<div class="form-group">
-								<label class="form-label" for="lessLink">HTML for the «Close» button (lessLink):</label>
-								<input type="text" id="lessLink" name="lessLink" value='<a href="#">Close</a>' class="form-control">
+								<label class="form-label" for="lessLink">Text for the button «Close» (lessLink):</label>
+								<input type="text" id="lessLink" name="lessLink" value='<span>Close</span>' class="form-control">
 							</div>
-							<button type="button" class="btn btn-primary" id="applySettings">Apply</button>
+							<div class="form-group">
+								<label class="form-label" for="lazyLoad">Lazy initialization (lazyLoad):</label>
+								<select class="form-select" name="lazyLoad" id="lazyLoad">
+									<option value="true" selected>true</option>
+									<option value="false">false</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="hideButtonCollapse">Hide the minimize button (hideButtonCollapse):</label>
+								<select class="form-select" name="hideButtonCollapse" id="hideButtonCollapse">
+									<option value="true">true</option>
+									<option value="false" selected>false</option>
+								</select>
+							</div>
+							<button type="submit" class="btn btn-primary" id="applySettings">Apply</button>
 						</form>
 					</div>
 				</div>
@@ -205,37 +223,37 @@
 	<script src="/assets/js/readmore.min.js"></script>
 
 	<script>
-   		document.addEventListener('DOMContentLoaded', function () {
-    		function initReadMoreWithParams(params) {
-      			initReadMore('.readmore', params);
-    		}
+		let currentOptions = {
+			collapsedHeight: 200,
+			speed: 100,
+			moreLink: '<span>Read more</span>',
+			lessLink: '<span>Close</span>',
+			heightMargin: 16,
+			lazyLoad: true,
+			hideButtonCollapse: false
+		};
 
-			let defaultParams = {
-        		collapsedHeight: 200,
-        		speed: 200,
-        		heightMargin: 16,
-        		moreLink: '<a href="#">Read more</a>',
-        		lessLink: '<a href="#">Close</a>'
-    		};
+		initReadMore('.readmore', currentOptions);
 
-    		initReadMoreWithParams(defaultParams);
+		document.getElementById('settings-form').addEventListener('submit', function (e) {
+			e.preventDefault();
 
-    		document.getElementById('applySettings').addEventListener('click', function () {
-        		let newParams = {
-            		collapsedHeight: parseInt(document.getElementById('collapsedHeight').value, 10) || 200,
-            		speed: parseInt(document.getElementById('speed').value, 10) || 200,
-            		heightMargin: parseInt(document.getElementById('heightMargin').value, 10) || 16,
-            		moreLink: document.getElementById('moreLink').value || '<a href="#">Read more</a>',
-            		lessLink: document.getElementById('lessLink').value || '<a href="#">Close</a>'
-        		};
+			const formData = new FormData(e.target);
+			const updatedOptions = {
+				collapsedHeight: Number(formData.get('collapsedHeight')),
+				speed: Number(formData.get('speed')),
+				heightMargin: Number(formData.get('heightMargin')),
+				moreLink: formData.get('moreLink'),
+				lessLink: formData.get('lessLink'),
+				lazyLoad: formData.get('lazyLoad') === 'true',
+				hideButtonCollapse: formData.get('hideButtonCollapse') === 'true'
+			};
 
-        		document.querySelectorAll('.readmore-button').forEach(button => button.remove());
-        		document.querySelector('.readmore').style.height = ''; 
-				
-				initReadMoreWithParams(newParams);
-    		});
+			currentOptions = { ...currentOptions, ...updatedOptions };
+			document.querySelectorAll('.cs_readmore-btn-wrapper').forEach(el => el.remove());
+			initReadMore('.readmore', currentOptions);
 		});
-    </script>
+	</script>
 	<!-- END SCRIPT -->
 </body>
 </html>

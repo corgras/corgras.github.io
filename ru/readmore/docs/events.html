@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="index, follow">
+	<!--<base href="https://corgras.github.io/">-->
+
+	<title>События ReadMore.js – настройки функциональности | Документация</title>
+	<meta name="description" content="Документация по событиям JavaScript для управления элементами поведения на сайте. Узнайте, как использовать события развертывания и свертывания с библиотекой Readmore.js для создания интерактивного пользовательского интерфейса.">
+	<meta name="keywords" content="JavaScript, события, Readmore.js, развертывание, свертывание, интерактивный интерфейс, события JavaScript, веб-разработка, анимация, программирование">
+
+	<!-- Favicon-->
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon/favicon-48x48.png">
+	<link rel="icon" type="image/x-icon" href="/assets/images/favicon/favicon.ico">
+	<link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
+	<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="/assets/images/favicon/android-icon-256x256.png">
+	<link rel="icon" type="image/png" sizes="384x384" href="/assets/images/favicon/android-icon-384x384.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-icon-512x512.png">
+	<link rel="manifest" href="/assets/images/favicon/manifest.json">
+
+	<link rel="stylesheet" href="/assets/css/framework.css">
+	<link rel="stylesheet" href="/assets/css/ics.css">
+	<link rel="stylesheet" href="/assets/css/prism.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link rel="canonical" href="https://corgras.github.io/ru/readmore/docs/events">
+	<link rel="alternate" href="https://corgras.github.io/readmore/docs/events" hreflang="x-default">
+	<link rel="alternate" href="https://corgras.github.io/readmore/docs/events" hreflang="uk">
+	<link rel="alternate" href="https://corgras.github.io/en/readmore/docs/events" hreflang="en">
+	<link rel="alternate" href="https://corgras.github.io/ru/readmore/docs/events" hreflang="ru">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="color-scheme" content="light dark">
+	<meta name="theme-color" content="#F9F9FB" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)">
+	<meta name="msapplication-TileColor" content="#F9F9FB">
+
+	<script src="/assets/js/theme.js"></script>
+
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "WebSite",
+			"name": "События ReadMore.js – настройки функциональности | Документация",
+			"url": "https://corgras.github.io/ru/readmore/docs/events",
+			"description": "Документация по событиям JavaScript для управления элементами поведения на сайте. Узнайте, как использовать события развертывания и свертывания с библиотекой Readmore.js для создания интерактивного пользовательского интерфейса.",
+			"@language": "ru"
+		}
+	</script>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNSWFP3MCV"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-ZNSWFP3MCV');
+	</script>
+</head>
+<body class="documentation">
+	<header class="header">
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<aside class="col menu-docs-mobile">
+						<div class="nav-icons">
+							<button class="menu-docs-trigger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</aside>
+					<div class="col-2">
+						<a class="logo" href="/ru/">
+							<img src="/assets/images/logo.svg" alt="CORGRAS" width="44" height="auto">
+						</a>
+					</div>
+					<div class="col navigation">
+						<nav>
+							<ul>
+								<li>
+									<a href="https://github.com/corgras/readmore.js" class="link" aria-label="Github">
+										<i class="ics-github"></i><span>Github</span>
+									</a>
+								</li>
+								<li class="active">
+									<a href="/ru/readmore/docs/" class="link" aria-label="Документация">
+										<i class="ics-book-open"></i><span>Документация</span>
+									</a>
+								</li>
+								<li>
+									<a href="/ru/readmore/demo" class="link" aria-label="Демо">
+										<i class="ics-demo"></i><span>Демо</span>
+									</a>
+								</li>
+								<li>
+									<a href="/ru/readmore/support" class="link" aria-label="Поддержка">
+										<i class="ics-envelope"></i><span>Поддержка</span>
+									</a>
+								</li>
+								<li>
+									<a href="/ru/donate" class="link" aria-label="Благодарность">
+										<i class="ics-coffee"></i><span>Благодарность</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<aside>
+							<div class="language dropdown">
+								<a role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Выбор языка:">
+									<i class="ics-lang2"></i><span class="language-text">Русский</span>
+								</a>
+								<div class="dropdown-menu">
+									<ul>
+										<li class="dropdown-item"><a href="/readmore/docs/events" hreflang="uk"><span>Українська</span></a></li>
+										<li class="dropdown-item"><a href="/en/readmore/docs/events" hreflang="en"><span>English</span></a></li>
+										<li class="dropdown-item active"><span>Русский</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="theme">
+								<div class="theme-text">Тема:</div>
+								<div class="dark-mode-toggle">
+									<input type="checkbox" id="switch" class="toggle-input">
+									<label for="switch" class="toggle-label">
+										<div class="toggle-inner">
+											<div class="toggle-icon sun">
+												<span class="toggle-icon-inner">
+													<i class="icon icon-sun ics-sun"></i>
+													<i class="icon icon-moon ics-moon"></i>
+												</span>
+											</div>
+										</div>
+									</label>
+								</div>
+							</div>
+						</aside>
+					</div>
+					<aside class="col menu-mobile">
+						<div class="nav-icons">
+							<button class="menu-trigger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</div>
+		<aside class="header-bottom">
+			<div class="container">
+				<ul class="nav">
+					<li><a href="/ru/readmore/docs/"><i class="ics ics-book"></i> Введение</a></li>
+					<li><a href="/ru/readmore/docs/install"><i class="ics ics-tool"></i> Установка</a></li>
+					<li><a href="/ru/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Инициализация</a></li>
+					<li><a href="/ru/readmore/docs/options"><i class="ics ics-sliders-h"></i> Параметры</a></li>
+					<li class="active"><a href="/ru/readmore/docs/events"><i class="ics ics-sliders-h"></i> События</a></li>
+					<li><a href="/ru/readmore/docs/stylization"><i class="ics ics-paint"></i> Стилизация</a></li>
+				</ul>
+			</div>
+		</aside>
+	</header>
+	<main>
+		<div class="container">
+			<article>
+				<h1>События</h1>
+				<p>Readmore.js генерирует два основных события: <code class="code">readmore:beforeToggle</code> и <code class="code">readmore:afterToggle</code>. Эти события можно слушать и использовать для добавления кастомной логики в процессе переключения состояния элемента.</p>
+				<h3>readmore:beforeToggle</h3>
+				<p>Это событие вызывается перед изменением состояния элемента. Оно предоставляет возможность настроить поведение до того, как состояние элемента будет изменено.</p>
+				<pre><code class="language-javascript show-language">
+					element.addEventListener('readmore:beforeToggle', function(event) {
+						// Пример: изменяем стиль кнопки перед переключением состояния
+						event.target.style.backgroundColor = 'gray';
+					});
+				</code></pre>
+				<h3>readmore:afterToggle</h3>
+				<p>Это событие вызывается после изменения состояния элемента. Оно позволяет выполнить действия, как только состояние элемента изменится.</p>
+				<pre><code class="language-javascript show-language">
+					element.addEventListener('readmore:afterToggle', function(event) {
+						// Пример: изменяем текст кнопки после переключения состояния
+						const button = event.target;
+						button.textContent = button.textContent === 'Читать далее' ? 'Скрыть' : 'Читать далее';
+					});
+				</code></pre>
+			</article>
+			<article>
+				<h1>Обратные вызовы (Callbacks)</h1>
+				<p>Readmore.js поддерживает использование callback-функций, которые можно передать в параметрах конфигурации. Это позволяет выполнять определенные действия на различных этапах работы плагина.</p>
+				<p>Обратные вызовы <code class="code">beforeToggle</code> и <code class="code">afterToggle</code> получают следующие аргументы: trigger, element и isExpanded.</p>
+				<ul>
+					<li><code class="code">trigger</code> — элемент, который инициирует действие (например, кнопка «Читать далее» или «Закрыть»).</li>
+					<li><code class="code">element</code> — элемент, содержащий контент, который сворачивается или раскрывается.</li>
+					<li><code class="code">isExpanded</code> — значение, указывающее на состояние контента: (true — развернут, false — свернут).</li>
+				</ul>
+				<h3>beforeToggle</h3>
+				<p>Срабатывает до переключения состояния элемента. Он позволяет выполнить действия перед изменением состояния.</p>
+				<pre><code class="language-javascript show-language">
+					beforeToggle: function(trigger, element, isExpanded) {
+						// Пример: делаем элемент полупрозрачным перед переключением состояния
+						element.style.opacity = 0.5;
+					}
+				</code></pre>
+				<h3>afterToggle</h3>
+				<p>Срабатывает после переключения состояния элемента. Он позволяет вернуть элемент в исходное состояние после изменения.</p>
+				<pre><code class="language-javascript show-language">
+					afterToggle: function(trigger, element, isExpanded) {
+						// Пример: восстанавливаем непрозрачность элемента после изменения состояния
+						element.style.opacity = 1;
+					}
+				</code></pre>
+				<h3>blockProcessed</h3>
+				<p>Вызывается после завершения обработки элемента, но до его отображения. Это полезно для выполнения первоначальных настроек или анализа.</p>
+				<p>Обратный вызов «blockProcessed» получает следующие аргументы: element и isExpandable</p>
+				<ul>
+					<li><code class="code">element</code> — текущий элемент, который обрабатывается.</li>
+					<li><code class="code">isExpandable</code> — логическое значение, указывающее, нужно ли сворачивание.</li>
+				</ul>
+				<pre><code class="language-javascript show-language">
+					blockProcessed: function(element, isExpandable) {
+						// Пример: если элемент можно развернуть, скрываем кнопку «Читать далее»
+						if (isExpandable) {
+							const button = element.querySelector('.cs_readmore-btn');
+							if (button) {
+								button.style.display = 'block';
+							}
+						} else {
+							// Если элемент нельзя развернуть, скрываем кнопку
+							const button = element.querySelector('.cs_readmore-btn');
+							if (button) {
+								button.style.display = 'none';
+							}
+						}
+					}
+				</code></pre>
+			</article>
+			<article>
+				<h1>Пример комплексного использования</h1>
+				<p>Этот пример демонстрирует использование callback-функций для изменения внешнего вида и текста кнопки в зависимости от состояния элемента. В данном примере показано, как можно изменить стиль кнопки до и после переключения состояния:</p>
+				<pre><code class="language-javascript show-language">
+					initReadMore('.content', {
+						beforeToggle: function(trigger, element, isExpanded) {
+							// Пример: изменяем цвет фона кнопки до переключения состояния
+							trigger.style.backgroundColor = isExpanded ? '#90EE90' : '#FF7F7F';
+						},
+						afterToggle: function(trigger, element, isExpanded) {
+							// Пример: обновляем текст кнопки после переключения состояния
+							trigger.textContent = isExpanded ? 'Скрыть' : 'Читать далее';
+						},
+						blockProcessed: function(element, isExpandable) {
+							// Пример: добавляем класс, если элемент можно развернуть
+							if (isExpandable) {
+								element.classList.add('expandable');
+							}
+						}
+					});
+				</code></pre>
+			</article>
+		</div>
+	</main>
+	<footer>
+		<div class="copyrights">© <script>document.write(new Date().getFullYear());</script> CORGRAS. Все права защищены</div>
+	</footer>
+	<!-- SCRIPT -->
+	<script src="/assets/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/js/prism.js"></script>
+	<script src="/assets/js/common.js"></script>
+	<!-- END SCRIPT -->
+</body>
+</html>

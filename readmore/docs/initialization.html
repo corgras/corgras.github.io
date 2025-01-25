@@ -168,7 +168,8 @@
 					<li><a href="/readmore/docs/"><i class="ics ics-book"></i> Вступ</a></li>
 					<li><a href="/readmore/docs/install"><i class="ics ics-tool"></i> Встановлення</a></li>
 					<li class="active"><a href="/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Ініціалізація</a></li>
-					<li><a href="/readmore/docs/options"><i class="ics ics-sliders-h"></i> Параметри скрипта</a></li>
+					<li><a href="/readmore/docs/options"><i class="ics ics-sliders-h"></i> Параметри</a></li>
+					<li><a href="/readmore/docs/events"><i class="ics ics-sliders-h"></i> Події</a></li>
 					<li><a href="/readmore/docs/stylization"><i class="ics ics-paint"></i> Стилізація</a></li>
 				</ul>
 			</div>
@@ -187,7 +188,7 @@
 				</code></pre>
 				<div class="note note-warning">
 					<div class="note-label">Важливо</div>
-					<p>Переконайтеся, що текст достатньо довгий, щоб перевищити значення <code class="code">collapsedHeight</code> — висоту, яку ви вкажете в налаштуваннях.</p>
+					<p>Переконайтеся, що текст достатньо довгий, щоб перевищити значення <code class="code">collapsedSize</code> — висоту, яку ви вкажете в налаштуваннях.</p>
 				</div>
 			</article>
 			<article>
@@ -205,33 +206,40 @@
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.readmore', {
-							collapsedHeight: 200,
+							collapsedSize: 200,
 							speed: 200,
 							heightMargin: 16,
-							moreLink: '&lt;a href="#"&gt;Читати далі&lt;/a&gt;',
-							lessLink: '&lt;a href="#"&gt;Приховати&lt;/a&gt;'
+							moreLink: '&lt;span&gt;Читати далі&lt;/span&gt;',
+							lessLink: '&lt;span&gt;Приховати&lt;/span&gt;'
 						});
 					});
 				</code></pre>
-				<div class="note note-info">
-					<div class="note-label">Примітка</div>
-					<p>Параметр <code class="code">maxWidth</code> у цьому випадку не вказується. Скрипт буде активний на всіх пристроях незалежно від ширини екрана.</p>
-				</div>
 			</article>
 			<article>
-				<h2>Ініціалізація з обмеженням по ширині екрана</h2>
-				<p>Цей варіант зручний, коли потрібно приховувати частину тексту на пристроях із певною шириною екрана.</p>
-				<p>При встановленні параметра <code class="code">maxWidth</code> (наприклад, 992px), скрипт активується лише на екранах до 992px, тоді як на ширших екранах текст відображатиметься повністю без кнопки «Читати далі».</p>
+				<h2>Ініціалізація для різних розмірів екрана</h2>
+				<p>Цей варіант зручний, коли потрібно змінювати параметри для різних ширин пристроїв або активувати скрипт на екранах із конкретною шириною.</p>
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.readmore', {
-							collapsedHeight: 200,
+							collapsedSize: 200,
 							speed: 200,
 							heightMargin: 16,
-							moreLink: '&lt;a href="#"&gt;Читати далі&lt;/a&gt;',
-							lessLink: '&lt;a href="#"&gt;Приховати&lt;/a&gt;'
+							moreLink: '&lt;span&gt;Читати далі&lt;/span&gt;',
+							lessLink: '&lt;span&gt;Приховати&lt;/span&gt;',
+							breakpoints: {
+								576: {
+									collapsedSize: 100,
+									speed: 200,
+									moreLink: '&lt;span&gt;Детальніше&lt;/span&gt;',
+									lessLink: '&lt;span&gt;Згорнути&lt;/span&gt;',
+								},
+								768: {
+									collapsedSize: 150,
+									speed: 250,
+								},
+							}
 						});
-					}, 992);
+					});
 				</code></pre>
 			</article>
 		</div>

@@ -168,7 +168,8 @@
 					<li><a href="/readmore/docs/"><i class="ics ics-book"></i> Вступ</a></li>
 					<li class="active"><a href="/readmore/docs/install"><i class="ics ics-tool"></i> Встановлення</a></li>
 					<li><a href="/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Ініціалізація</a></li>
-					<li><a href="/readmore/docs/options"><i class="ics ics-sliders-h"></i> Параметри скрипта</a></li>
+					<li><a href="/readmore/docs/options"><i class="ics ics-sliders-h"></i> Параметри</a></li>
+					<li><a href="/readmore/docs/events"><i class="ics ics-sliders-h"></i> Події</a></li>
 					<li><a href="/readmore/docs/stylization"><i class="ics ics-paint"></i> Стилізація</a></li>
 				</ul>
 			</div>
@@ -198,11 +199,15 @@
 				<h2>Ручне підключення</h2>
 				<p class="lead-normal">Цей спосіб дозволяє додати файл безпосередньо до вашого HTML-коду. Просто завантажте скрипт, збережіть його у папці вашого проєкту та підключіть до документа. Таке підключення дає вам повний контроль над версією скрипта, яку ви використовуєте.</p>
 				<p>&mdash; Завантажте файли скрипта Readmore.js з <a href="https://github.com/corgras/Readmore.js/releases">GitHub</a></p>
-				<p>&mdash; Після завантаження файлу в певну папку на сайті, потрібно підключити його до HTML-сторінки. Вставте наведений нижче код у секцію <code class="code">&lt;head&gt;</code> або перед закриттям тегу <code class="code">&lt;/body&gt;</code> на вашій HTML-сторінці:</p>
+				<p>&mdash; Після завантаження файлів в певну папку на сайті, потрібно підключити CSS та JS до HTML-сторінки.</p> <p>&mdash; Додайте файл стилів до секції <code class="code">&lt;head&gt;</code> вашої HTML-сторінки. Використовуйте наведений нижче код:</p>
+				<pre><code class="language-html show-language">
+					&lt;link rel="stylesheet" href="шлях_до_вашої_папки/readmore.css"&gt;
+				</code></pre><br>
+				<p>&mdash; Для підключення JavaScript-файлу, вставте наступний код у секцію <code class="code">&lt;head&gt;</code> або перед закриттям тегу <code class="code">&lt;/body&gt;</code> вашої HTML-сторінки:</p>
 				<pre><code class="language-html show-language">
 					&lt;script src="шлях_до_вашої_папки/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
-				<p class="em">У тегу <code class="code">&lt;script&gt;</code> використовується атрибут <code class="code">defer</code>. Скрипт буде виконано після завантаження HTML, але перед подією <code class="code">DOMContentLoaded</code>.</p>
+				<p class="em">У тегу <code class="code">&lt;script&gt;</code> використовується атрибут <code class="code">defer</code>. Скрипт буде виконано після завантаження HTML, але перед подією <code class="code">DOMContentLoaded</code>.</p><br>
 				<p>&mdash; Після підключення вам потрібно <a href="/readmore/docs/initialization">ініціалізувати</a> скрипт, щоб він почав працювати з обраними елементами на вашій сторінці.</p>
 				<hr>
 				<h2>Підключення через CDN</h2>
@@ -210,11 +215,13 @@
 				<p>&mdash; Для підключення, вставте один із наведених нижче рядків коду в секцію <code class="code">&lt;head&gt;</code> або перед закриттям тега <code class="code">&lt;/body&gt;</code> на вашій HTML-сторінці:</p>			
 				<p><strong>CDN jsDelivr:</strong></p>
 				<pre><code class="language-html show-language">
-					&lt;script src="https://cdn.jsdelivr.net/npm/@corgras/readmore-js@1.1.0/readmore.min.js" defer&gt;&lt;/script&gt;
+					&lt;link href="https://cdn.jsdelivr.net/npm/@corgras/readmore-js@2.0.0/readmore.css" rel="stylesheet"&gt;
+					&lt;script src="https://cdn.jsdelivr.net/npm/@corgras/readmore-js@2.0.0/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre><br>
 				<p><strong>CDN Unpkg:</strong></p>
 				<pre><code class="language-html show-language">
-					&lt;script src="https://unpkg.com/@corgras/readmore-js@1.1.0/readmore.min.js" defer&gt;&lt;/script&gt;
+					&lt;link href="https://unpkg.com/@corgras/readmore-js@2.0.0/readmore.css" rel="stylesheet"&gt;
+					&lt;script src="https://unpkg.com/@corgras/readmore-js@2.0.0/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
 				<p class="em">У тегу <code class="code">&lt;script&gt;</code> використовується атрибут <code class="code">defer</code>. Скрипт буде виконано після завантаження HTML, але перед подією <code class="code">DOMContentLoaded</code>.</p>
 				<p>&mdash; Після підключення вам потрібно <a href="/readmore/docs/initialization">ініціалізувати</a> скрипт, щоб він почав працювати з обраними елементами на вашій сторінці.</p>

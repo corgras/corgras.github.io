@@ -5,9 +5,9 @@
 	<meta name="robots" content="index, follow">
 	<!--<base href="https://corgras.github.io/">-->
 
-	<title>Initializing ReadMore.js – Configure the Plugin for Your Site | Documentation</title>
-	<meta name="description" content="Learn how to initialize the ReadMore.js script on your website. Explore code examples and parameters to customize the plugin according to your needs and improve content display.">
-	<meta name="keywords" content="ReadMore.js initialization, plugin settings, JavaScript, text blocks, code examples, web development">
+	<title>Events ReadMore.js – Functionality Settings | Documentation</title>
+	<meta name="description" content="Documentation on JavaScript events for controlling the behavior of elements on your site. Learn how to use expand and collapse events with the Readmore.js library to create interactive user interfaces.">
+	<meta name="keywords" content="ReadMore.js, script parameters, settings, functionality, animation, content adaptation, web development, JavaScript">
 
 	<!-- Favicon-->
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
@@ -35,11 +35,11 @@
 	<link rel="stylesheet" href="/assets/css/prism.css">
 	<link rel="stylesheet" href="/assets/css/style.css">
 
-	<link rel="canonical" href="https://corgras.github.io/en/readmore/docs/initialization">
-	<link rel="alternate" href="https://corgras.github.io/readmore/docs/initialization" hreflang="x-default">
-	<link rel="alternate" href="https://corgras.github.io/readmore/docs/initialization" hreflang="uk">
-	<link rel="alternate" href="https://corgras.github.io/en/readmore/docs/initialization" hreflang="en">
-	<link rel="alternate" href="https://corgras.github.io/ru/readmore/docs/initialization" hreflang="ru">
+	<link rel="canonical" href="https://corgras.github.io/en/readmore/docs/events">
+	<link rel="alternate" href="https://corgras.github.io/readmore/docs/events" hreflang="x-default">
+	<link rel="alternate" href="https://corgras.github.io/readmore/docs/events" hreflang="uk">
+	<link rel="alternate" href="https://corgras.github.io/en/readmore/docs/events" hreflang="en">
+	<link rel="alternate" href="https://corgras.github.io/ru/readmore/docs/events" hreflang="ru">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="color-scheme" content="light dark">
@@ -53,9 +53,9 @@
 		{
 			"@context": "http://schema.org",
 			"@type": "WebSite",
-			"name": "Initializing ReadMore.js – Configure the Plugin for Your Site | Documentation",
-			"url": "https://corgras.github.io/en/readmore/docs/initialization",
-			"description": "Learn how to initialize the ReadMore.js script on your website. Explore code examples and parameters to customize the plugin according to your needs and improve content display.",
+			"name": "Events ReadMore.js – Functionality Settings | Documentation",
+			"url": "https://corgras.github.io/en/readmore/docs/events",
+			"description": "Documentation on JavaScript events for controlling the behavior of elements on your site. Learn how to use expand and collapse events with the Readmore.js library to create interactive user interfaces.",
 			"@language": "en"
 		}
 	</script>
@@ -126,9 +126,9 @@
 								</a>
 								<div class="dropdown-menu">
 									<ul>
-										<li class="dropdown-item"><a href="/readmore/docs/initialization" hreflang="uk"><span>Українська</span></a></li>
+										<li class="dropdown-item"><a href="/readmore/docs/events" hreflang="uk"><span>Українська</span></a></li>
 										<li class="dropdown-item active"><span>English</span></li>
-										<li class="dropdown-item"><a href="/ru/readmore/docs/initialization" hreflang="ru"><span>Русский</span></a></li>
+										<li class="dropdown-item"><a href="/ru/readmore/docs/events" hreflang="ru"><span>Русский</span></a></li>
 									</ul>
 								</div>
 							</div>
@@ -167,9 +167,9 @@
 				<ul class="nav">
 					<li><a href="/en/readmore/docs/"><i class="ics ics-book"></i> Get Started</a></li>
 					<li><a href="/en/readmore/docs/install"><i class="ics ics-tool"></i> Installation</a></li>
-					<li class="active"><a href="/en/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Initialization</a></li>
+					<li><a href="/en/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Initialization</a></li>
 					<li><a href="/en/readmore/docs/options"><i class="ics ics-sliders-h"></i> Options</a></li>
-					<li><a href="/en/readmore/docs/events"><i class="ics ics-sliders-h"></i> Events</a></li>
+					<li class="active"><a href="/en/readmore/docs/events"><i class="ics ics-sliders-h"></i> Events</a></li>
 					<li><a href="/en/readmore/docs/stylization"><i class="ics ics-paint"></i> Stylization</a></li>
 				</ul>
 			</div>
@@ -178,67 +178,95 @@
 	<main>
 		<div class="container">
 			<article>
-				<h1>Initialization</h1>
-				<p>The Readmore.js script supports any elements containing text that needs to be hidden, such as <code class="code">&lt;div&gt;</code>, <code class="code">&lt;p&gt;</code>, <code class="code">&lt;section&gt;</code>.</p>
-				<p>Use the <code class="code">.readmore</code> class or any other class specified in the initialization selector for target elements.</p>
-				<pre><code class="language-html show-language">
-					&lt;div class="readmore"&gt;
-					&lt;!-- Your long content here --&gt;
-					&lt;/div&gt;
-				</code></pre>
-				<div class="note note-warning">
-					<div class="note-label">Important</div>
-					<p>Ensure that the text is long enough to exceed the <code class="code">collapsedSize</code> value you set in the options.</p>
-				</div>
-			</article>
-			<article>
-				<h2>Initialization Without Parameters</h2>
-				<p>If you need to initialize the Readmore.js script without specifying additional <a href="/en/readmore/docs/options">parameters</a>, it can be started with the default settings.</p>
+				<h1>Events</h1>
+				<p>Readmore.js generates two primary events: <code class="code">readmore:beforeToggle</code> and <code class="code">readmore:afterToggle</code>. These events can be listened to and used to add custom logic during the element's state transition.</p>
+				<h3>readmore:beforeToggle</h3>
+				<p>This event is triggered before the element's state changes. It allows configuring behavior before the state is modified.</p>
 				<pre><code class="language-javascript show-language">
-					document.addEventListener('DOMContentLoaded', function () {
-						initReadMore('.readmore');
+					element.addEventListener('readmore:beforeToggle', function(event) {
+						// Example: Change button style before toggling state
+						event.target.style.backgroundColor = 'gray';
+					});
+				</code></pre>
+				<h3>readmore:afterToggle</h3>
+				<p>This event is triggered after the element's state changes. It allows actions to be performed immediately after the state is updated.</p>
+				<pre><code class="language-javascript show-language">
+					element.addEventListener('readmore:afterToggle', function(event) {
+						// Example: Change button text after toggling state
+						const button = event.target;
+						button.textContent = button.textContent === 'Read more' ? 'Hide' : 'Read more';
 					});
 				</code></pre>
 			</article>
 			<article>
-				<h2>Initialization with Parameters</h2>
-				<p>This method is suitable if you want the script to work on all devices without screen width limitations.</p>
+				<h1>Callbacks</h1>
+				<p>Readmore.js supports the use of callback functions, which can be passed in the configuration options. This allows performing specific actions at various stages of the plugin's operation.</p>
+				<p>The <code class="code">beforeToggle</code> and <code class="code">afterToggle</code> callbacks receive the following arguments: trigger, element, and isExpanded.</p>
+				<ul>
+					<li><code class="code">trigger</code> — the element that triggers the action (e.g., the «Read more» or «Close» button).</li>
+					<li><code class="code">element</code> — the element containing the content to be expanded or collapsed.</li>
+					<li><code class="code">isExpanded</code> — a value indicating the content's state: (true — expanded, false — collapsed).</li>
+				</ul>
+				<h3>beforeToggle</h3>
+				<p>The callback is triggered before the element's state changes. It allows actions to be taken before the state transition.</p>
 				<pre><code class="language-javascript show-language">
-					document.addEventListener('DOMContentLoaded', function () {
-						initReadMore('.readmore', {
-							collapsedSize: 200,
-							speed: 200,
-							heightMargin: 16,
-							moreLink: '&lt;span&gt;Read More&lt;/span&gt;',
-							lessLink: '&lt;span&gt;Close&lt;/span&gt;'
-						});
-					});
+					beforeToggle: function(trigger, element, isExpanded) {
+						// Example: Make the element semi-transparent before state change
+						element.style.opacity = 0.5;
+					}
 				</code></pre>
-			</article>
-			<article>
-				<h2>Initialization for Different Screen Sizes</h2>
-				<p>This option is convenient when you need to change parameters for different device widths or activate the script on screens with specific widths.</p>
+				<h3>afterToggle</h3>
+				<p>The callback is triggered after the element's state changes. It allows restoring the element's state after the change.</p>
 				<pre><code class="language-javascript show-language">
-					document.addEventListener('DOMContentLoaded', function () {
-						initReadMore('.readmore', {
-							collapsedSize: 200,
-							speed: 200,
-							heightMargin: 16,
-							moreLink: '&lt;span&gt;Read More&lt;/span&gt;',
-							lessLink: '&lt;span&gt;Close&lt;/span&gt;',
-							breakpoints: {
-								576: {
-									collapsedSize: 100,
-									speed: 200,
-									moreLink: '&lt;span&gt;More&lt;/span&gt;',
-									lessLink: '&lt;span&gt;Collapse&lt;/span&gt;',
-								},
-								768: {
-									collapsedSize: 150,
-									speed: 250,
-								},
+					afterToggle: function(trigger, element, isExpanded) {
+						// Example: Restore element opacity after state change
+						element.style.opacity = 1;
+					}
+				</code></pre>
+				<h3>blockProcessed</h3>
+				<p>Called after the element has been processed but before it is displayed. This is useful for performing initial setup or analysis.</p>
+				<p>The «blockProcessed» callback receives the following arguments: element and isExpandable</p>
+				<ul>
+					<li><code class="code">element</code> — the block that has just been processed.</li>
+					<li><code class="code">isExpandable</code> — a boolean value indicating whether collapsing is needed.</li>
+				</ul>
+				<pre><code class="language-javascript show-language">
+					blockProcessed: function(element, isExpandable) {
+						// Example: Show the «Read more» button if the element is expandable
+						if (isExpandable) {
+							const button = element.querySelector('.cs_readmore-btn');
+							if (button) {
+								button.style.display = 'block';
 							}
-						});
+						} else {
+							// Hide the button if the element is not expandable
+							const button = element.querySelector('.cs_readmore-btn');
+							if (button) {
+								button.style.display = 'none';
+							}
+						}
+					}
+				</code></pre>
+			</article>
+			<article>
+				<h1>Comprehensive Usage Example</h1>
+				<p>This example demonstrates the use of callback functions to modify the button's appearance and text depending on the element's state. It shows how the button style can be changed before and after state toggling:</p>
+				<pre><code class="language-javascript show-language">
+					initReadMore('.content', {
+						beforeToggle: function(trigger, element, isExpanded) {
+							// Example: Change the button background color before state change
+							trigger.style.backgroundColor = isExpanded ? '#90EE90' : '#FF7F7F';
+						},
+						afterToggle: function(trigger, element, isExpanded) {
+							// Example: Update the button text after state change
+							trigger.textContent = isExpanded ? 'Hide' : 'Read more';
+						},
+						blockProcessed: function(element, isExpandable) {
+							// Example: Add a class if the element is expandable
+							if (isExpandable) {
+								element.classList.add('expandable');
+							}
+						}
 					});
 				</code></pre>
 			</article>

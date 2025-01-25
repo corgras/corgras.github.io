@@ -169,6 +169,7 @@
 					<li class="active"><a href="/en/readmore/docs/install"><i class="ics ics-tool"></i> Installation</a></li>
 					<li><a href="/en/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Initialization</a></li>
 					<li><a href="/en/readmore/docs/options"><i class="ics ics-sliders-h"></i> Options</a></li>
+					<li><a href="/en/readmore/docs/events"><i class="ics ics-sliders-h"></i> Events</a></li>
 					<li><a href="/en/readmore/docs/stylization"><i class="ics ics-paint"></i> Stylization</a></li>
 				</ul>
 			</div>
@@ -198,11 +199,16 @@
 				<h2>Manual Integration</h2>
 				<p class="lead-normal">This method allows you to add the file directly to your HTML code. Simply download the script, save it in your project folder, and link it to your document. This setup gives you full control over the script version you're using.</p>
 				<p>&mdash; Download the Readmore.js script files from <a href="https://github.com/corgras/Readmore.js/releases">GitHub</a></p>
-				<p>&mdash; After downloading the file to a designated folder on your site, link it to your HTML page. Insert the code below in the <code class="code">&lt;head&gt;</code> section or before the closing <code class="code">&lt;/body&gt;</code> tag on your HTML page:</p>
+				<p>&mdash; After uploading the files to a specific folder on the website, you need to connect the CSS and JS to the HTML page.</p>
+				<p>&mdash; Add the stylesheet file to the <code class="code">&lt;head&gt;</code> section of your HTML page. Use the code below:</p>
 				<pre><code class="language-html show-language">
-					&lt;script src="your_folder_path/readmore.min.js" defer&gt;&lt;/script&gt;
+					&lt;link rel="stylesheet" href="path_to_your_folder/readmore.css"&gt;
+				</code></pre><br>
+				<p>&mdash; To include the JavaScript file, insert the following code into the <code class="code">&lt;head&gt;</code> section or before the closing <code class="code">&lt;/body&gt;</code> tag of your HTML page:</p>
+				<pre><code class="language-html show-language">
+					&lt;script src="path_to_your_folder/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
-				<p class="em">The <code class="code">&lt;script&gt;</code> tag uses the <code class="code">defer</code>. attribute, ensuring the script runs after the HTML loads but before the <code class="code">DOMContentLoaded</code> event.</p>
+				<p class="em">The <code class="code">&lt;script&gt;</code> tag uses the <code class="code">defer</code>. attribute, ensuring the script runs after the HTML loads but before the <code class="code">DOMContentLoaded</code> event.</p><br>
 				<p>&mdash; After linking, you need to <a href="/en/readmore/docs/initialization">initialize</a> the script to make it work with selected elements on your page.</p>
 				<hr>
 				
@@ -211,11 +217,13 @@
 				<p>&mdash; To connect, insert one of the lines of code below into the <code class="code">&lt;head&gt;</code> section or before the closing <code class="code">&lt;/body&gt;</code> tag on your HTML page:</p>
 				<p><strong>CDN jsDelivr:</strong></p>
 				<pre><code class="language-html show-language">
-					&lt;script src="https://cdn.jsdelivr.net/npm/@corgras/readmore-js@1.1.0/readmore.min.js" defer&gt;&lt;/script&gt;
+					&lt;link href="https://cdn.jsdelivr.net/npm/@corgras/readmore-js@2.0.0/readmore.css" rel="stylesheet"&gt;
+					&lt;script src="https://cdn.jsdelivr.net/npm/@corgras/readmore-js@2.0.0/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre><br>
 				<p><strong>CDN Unpkg:</strong></p>
 				<pre><code class="language-html show-language">
-					&lt;script src="https://unpkg.com/@corgras/readmore-js@1.1.0/readmore.min.js" defer&gt;&lt;/script&gt;
+					&lt;link href="https://unpkg.com/@corgras/readmore-js@2.0.0/readmore.css" rel="stylesheet"&gt;
+					&lt;script src="https://unpkg.com/@corgras/readmore-js@2.0.0/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
 				<p class="em">The <code class="code">&lt;script&gt;</code> tag uses the <code class="code">defer</code> attribute. The script will be executed after the HTML is loaded but before the <code class="code">DOMContentLoaded</code> event.</p>
 				<p>&mdash; After connecting, you need to <a href="/en/readmore/docs/initialization">initialize</a> the script for it to start working with the selected elements on your page.</p>

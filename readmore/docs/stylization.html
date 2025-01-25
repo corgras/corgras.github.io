@@ -168,7 +168,8 @@
 					<li><a href="/readmore/docs/"><i class="ics ics-book"></i> Вступ</a></li>
 					<li><a href="/readmore/docs/install"><i class="ics ics-tool"></i> Встановлення</a></li>
 					<li><a href="/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Ініціалізація</a></li>
-					<li><a href="/readmore/docs/options"><i class="ics ics-sliders-h"></i> Параметри скрипта</a></li>
+					<li><a href="/readmore/docs/options"><i class="ics ics-sliders-h"></i> Параметри</a></li>
+					<li><a href="/readmore/docs/events"><i class="ics ics-sliders-h"></i> Події</a></li>
 					<li class="active"><a href="/readmore/docs/stylization"><i class="ics ics-paint"></i> Стилізація</a></li>
 				</ul>
 			</div>
@@ -178,45 +179,66 @@
 		<div class="container">
 			<article>
 				<h1>Стилізація</h1>
-				<p>Ви можете стилізувати кнопку для розгортання та приховування контенту, яка додається скриптом за замовчуванням або може бути налаштована через <a href="/readmore/docs/options">параметри</a> <code class="code">moreLink</code> і <code class="code">lessLink</code>.</p>
-				<p>&mdash; Наприклад, ви можете використовувати такі параметри:</p>
-				<pre><code class="language-javascript show-language">
-					//Інші параметри...
-					moreLink: '&lt;div class="btn-readmore"&gt;&lt;a href="#"&gt;Читати далі &lt;i class="fa fa-angle-down"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/div&gt;',
-					lessLink: '&lt;div class="btn-readmore"&gt;&lt;a href="#"&gt;Приховати &lt;i class="fa fa-angle-up"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/div&gt;',
-				</code></pre>
-				<br>
-				<p>У цьому прикладі параметр <code class="code">moreLink</code> додає HTML-код для кнопки «Читати далі» з іконкою, що вказує на розгортання, а параметр <code class="code">lessLink</code> — для кнопки «Приховати» з іконкою для згортання. Вони оформлені у вигляді посилань із класом <code class="code">btn-readmore</code> та містять іконки з бібліотеки FontAwesome.</p><br>
-
-				<p>&mdash; Для стилізації кнопки додайте наступний CSS-код до своєї таблиці стилів:</p>
-				<pre><code class="language-css show-language">
-					.btn-readmore {
-						border-top: 1px solid #DDDDDD;
-						color: #444;
-						margin: 25px auto 0;
-						text-align: center;
-					}
-					.btn-readmore a {
-						background: #fff;
-						display: inline-block;
-						padding: 0 20px;
-						position: relative;
-						top: -12px;
-						font-size: 14px;
-					}
-					.btn-readmore a i{
-						padding: 0 0 0 7px;
-						font-size: 16px;
-					}
-				</code></pre>
-				<br>
-				<p>Цей CSS-код відповідає за оформлення кнопки:</p>
-				<ul>
-					<li><code class="code">.btn-readmore</code> додає верхню рамку, відступи та вирівнює кнопку по центру;</li>
-					<li><code class="code">.btn-readmore a</code> встановлює білий фон, відступи та розмір шрифту для тексту, а також позиціонує його на кілька пікселів вище;</li>
-					<li><code class="code">.btn-readmore a i</code> керує відступом і розміром іконки для покращення візуального сприйняття.</li>
-				</ul>
-				<p>У результаті ви отримаєте кнопку, вирівняну по центру, з сірими лініями з боків, які візуально підкреслюють межі контенту.</p>
+				<p>Ви можете ознайомитися з CSS класами та атрибутами даних, що використовуються в плагіні Readmore.js, а також з їхнім описом. Ці класи та атрибути допоможуть вам стилізувати елементи та контролювати їхню поведінку при розгортанні та згортанні контенту.</p>
+				<div class="table-class">
+					<div class="tr-class-head">
+						<div class="td-class" id="class">CSS класи</div>
+						<div class="td-desc" id="desc">Опис</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">.cs_readmore-btn-wrapper</div>
+						<div class="td-desc" id="desc">
+							<ul>
+								<li>Застосовується до контейнера кнопки, яка керує діями «Читати далі» або «Закрити».</li>
+								<li>Служить обгорткою для кнопки.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">.cs_readmore-btn</div>
+						<div class="td-desc" id="desc">
+							<ul>
+								<li>Призначається кнопці, яка дозволяє користувачеві розгортати або згортати контент.</li>
+								<li>Керує стилями самої кнопки.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">.cs_readmore-animation</div>
+						<div class="td-desc" id="desc">
+							<p>Використовується, якщо активовано режим CSS-анімації <code class="code">animationMode: 'css'</code>.</p>
+							<ul>
+								<li>Додається для створення анімацій через CSS.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tr-class-head">
+						<div class="td-class" id="class">Data-атрибути</div>
+						<div class="td-desc" id="desc">Опис</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">data-readmore-btn-toggle</div>
+						<div class="td-desc" id="desc">
+							<p>Застосовується до кнопки «Читати далі» або «Закрити». Використовується для відстеження стану кнопки.</p>
+							<p>Атрибут зберігає стан кнопки:</p>
+							<ul>
+								<li><code class="code">collapsed</code> — кнопка у стані згортання контенту.</li>
+								<li><code class="code">expanded</code> — кнопка у стані розгорнутого контенту.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">data-readmore-block-toggle</div>
+						<div class="td-desc" id="desc">
+							<p>Застосовується до елемента, що містить контент. Допомагає відстежувати поточний стан контенту (згорнутий чи розгорнутий).</p>
+							<p>Атрибут керує станом блоку контенту:</p>
+							<ul>
+								<li><code class="code">collapsed</code> — блок згорнутий.</li>
+								<li><code class="code">expanded</code> — блок розгорнутий.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</article>
 		</div>
 	</main>

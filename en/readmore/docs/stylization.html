@@ -169,6 +169,7 @@
 					<li><a href="/en/readmore/docs/install"><i class="ics ics-tool"></i> Installation</a></li>
 					<li><a href="/en/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Initialization</a></li>
 					<li><a href="/en/readmore/docs/options"><i class="ics ics-sliders-h"></i> Options</a></li>
+					<li><a href="/en/readmore/docs/events"><i class="ics ics-sliders-h"></i> Events</a></li>
 					<li class="active"><a href="/en/readmore/docs/stylization"><i class="ics ics-paint"></i> Stylization</a></li>
 				</ul>
 			</div>
@@ -178,45 +179,66 @@
 		<div class="container">
 			<article>
 				<h1>Stylization</h1>
-				<p>You can style the expand and collapse button that the script adds by default, or configure it via the <a href="/en/readmore/docs/options">parameters</a> <code class="code">moreLink</code> and <code class="code">lessLink</code>.</p>
-				<p>&mdash; For instance, you can use parameters like this:</p>
-				<pre><code class="language-javascript show-language">
-					//Other parameters...
-					moreLink: '&lt;div class="btn-readmore"&gt;&lt;a href="#"&gt;Read More &lt;i class="fa fa-angle-down"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/div&gt;',
-					lessLink: '&lt;div class="btn-readmore"&gt;&lt;a href="#"&gt;Close &lt;i class="fa fa-angle-up"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/div&gt;',
-				</code></pre>
-				<br>
-				<p>In this example, <code class="code">moreLink</code> adds HTML for a «Read More» button with an icon indicating expansion, while the <code class="code">lessLink</code> parameter is for the «Close» button with an icon indicating collapse. These buttons are styled as links with the class <code class="code">btn-readmore</code> and contain icons from the FontAwesome library.</p><br>
-
-				<p>&mdash; To style the button, add the following CSS code to your stylesheet:</p>
-				<pre><code class="language-css show-language">
-					.btn-readmore {
-						border-top: 1px solid #DDDDDD;
-						color: #444;
-						margin: 25px auto 0;
-						text-align: center;
-					}
-					.btn-readmore a {
-						background: #fff;
-						display: inline-block;
-						padding: 0 20px;
-						position: relative;
-						top: -12px;
-						font-size: 14px;
-					}
-					.btn-readmore a i{
-						padding: 0 0 0 7px;
-						font-size: 16px;
-					}
-				</code></pre>
-				<br>
-				<p>This CSS code customizes the button’s appearance:</p>
-				<ul>
-					<li><code class="code">.btn-readmore</code> adds a top border, padding, and centers the button;</li>
-					<li><code class="code">.btn-readmore a</code> sets a white background, padding, and font size for the text, and positions it a few pixels higher;</li>
-					<li><code class="code">.btn-readmore a i</code> manages spacing and icon size to enhance visual appeal.</li>
-				</ul>
-				<p>As a result, you’ll get a button centered with gray lines on the sides, visually emphasizing the content boundaries.</p>
+				<p>You can familiarize yourself with the CSS classes and data attributes used in the Readmore.js plugin, as well as their descriptions. These classes and attributes will help you style elements and control their behavior when expanding and collapsing content.</p>
+				<div class="table-class">
+					<div class="tr-class-head">
+						<div class="td-class" id="class">CSS Classes</div>
+						<div class="td-desc" id="desc">Description</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">.cs_readmore-btn-wrapper</div>
+						<div class="td-desc" id="desc">
+							<ul>
+								<li>Applied to the container of the button that manages the «Read More» or «Close» actions.</li>
+								<li>Serves as a wrapper for the button.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">.cs_readmore-btn</div>
+						<div class="td-desc" id="desc">
+							<ul>
+								<li>Assigned to the button that allows the user to expand or collapse the content.</li>
+								<li>Manages the styles of the button itself.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">.cs_readmore-animation</div>
+						<div class="td-desc" id="desc">
+							<p>Used if the CSS animation mode <code class="code">animationMode: 'css'</code> is enabled.</p>
+							<ul>
+								<li>Added to create animations through CSS.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tr-class-head">
+						<div class="td-class" id="class">Data Attributes</div>
+						<div class="td-desc" id="desc">Description</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">data-readmore-btn-toggle</div>
+						<div class="td-desc" id="desc">
+							<p>Applied to the «Read More» or «Close» button. Used to track the button's state.</p>
+							<p>The attribute stores the button state:</p>
+							<ul>
+								<li><code class="code">collapsed</code> — the button is in the collapsed state.</li>
+								<li><code class="code">expanded</code> — the button is in the expanded state.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">data-readmore-block-toggle</div>
+						<div class="td-desc" id="desc">
+							<p>Applied to the element containing the content. Helps track the current state of the content (collapsed or expanded).</p>
+							<p>The attribute manages the content block's state:</p>
+							<ul>
+								<li><code class="code">collapsed</code> — the block is collapsed.</li>
+								<li><code class="code">expanded</code> — the block is expanded.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</article>
 		</div>
 	</main>

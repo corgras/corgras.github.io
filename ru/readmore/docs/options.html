@@ -168,7 +168,8 @@
 					<li><a href="/ru/readmore/docs/"><i class="ics ics-book"></i> Введение</a></li>
 					<li><a href="/ru/readmore/docs/install"><i class="ics ics-tool"></i> Установка</a></li>
 					<li><a href="/ru/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Инициализация</a></li>
-					<li class="active"><a href="/readmore/docs/options"><i class="ics ics-sliders-h"></i> Параметры скрипта</a></li>
+					<li class="active"><a href="/ru/readmore/docs/options"><i class="ics ics-sliders-h"></i> Параметры</a></li>
+					<li><a href="/ru/readmore/docs/events"><i class="ics ics-sliders-h"></i> События</a></li>
 					<li><a href="/ru/readmore/docs/stylization"><i class="ics ics-paint"></i> Стилизация</a></li>
 				</ul>
 			</div>
@@ -192,13 +193,15 @@
 						<div class="td-option" id="option">collapsedHeight</div>
 						<div class="td-type" id="type">Число</div>
 						<div class="td-default" id="default">200</div>
-						<div class="td-desc" id="desc">Устанавливает начальную высоту контента в свернутом состоянии (в пикселях).</div>
+						<div class="td-desc" id="desc">
+							<p>Устанавливает начальную высоту контента в свернутом состоянии (в пикселях).</p>
+						</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">speed</div>
 						<div class="td-type" id="type">Число</div>
 						<div class="td-default" id="default">100</div>
-						<div class="td-desc" id="desc">Определяет скорость анимации изменения высоты элемента (в миллисекундах).</div>
+						<div class="td-desc" id="desc">Определяет скорость анимации изменения высоты элемента в миллисекундах.</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">heightMargin</div>
@@ -209,20 +212,54 @@
 					<div class="tr-options">
 						<div class="td-option" id="option">moreLink</div>
 						<div class="td-type" id="type">Строка</div>
-						<div class="td-default" id="default">&lt;a href="#"&gt;Read More&lt;/a&gt;</div>
-						<div class="td-desc" id="desc">HTML-содержимое ссылки или кнопки, отображаемой для раскрытия скрытого контента.</div>
+						<div class="td-default" id="default">&lt;span&gt;Читать далее&lt;/span&gt;</div>
+						<div class="td-desc" id="desc">Текст кнопки «Читать далее» с поддержкой HTML. Используется внутри элемента <code class="code"><button></code>, который отображается для раскрытия скрытого контента.</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">lessLink</div>
 						<div class="td-type" id="type">Строка</div>
-						<div class="td-default" id="default">&lt;a href="#"&gt;Close&lt;/a&gt;</div>
-						<div class="td-desc" id="desc">HTML-содержимое ссылки или кнопки, отображаемой для сворачивания контента после его раскрытия.</div>
+						<div class="td-default" id="default">&lt;span&gt;Закрыть&lt;/span&gt;</div>
+						<div class="td-desc" id="desc">Текст кнопки «Закрыть» с поддержкой HTML. Используется внутри элемента <code class="code"><button></code>, который отображается для сворачивания контента после его раскрытия.</div>
 					</div>
 					<div class="tr-options">
-						<div class="td-option" id="option">maxWidth</div>
-						<div class="td-type" id="type">Число</div>
-						<div class="td-default" id="default">Опция не обязательна</div>
-						<div class="td-desc" id="desc">Устанавливает максимальную ширину экрана в пикселях, при которой плагин будет активирован. Если ширина экрана превышает это значение, плагин не активируется, и кнопка «Читать далее» не отображается.</div>
+						<div class="td-option" id="option">lazyLoad</div>
+						<div class="td-type" id="type">Логический</div>
+						<div class="td-default" id="default">true</div>
+						<div class="td-desc" id="desc">Если включено, элементы (контент или мультимедиа) будут инициализироваться только при их появлении в области видимости.</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">hideButtonCollapse</div>
+						<div class="td-type" id="type">Логический</div>
+						<div class="td-default" id="default">false</div>
+						<div class="td-desc" id="desc">Если установлено <code class="code">true</code>, кнопка «Читать далее» не отображается, когда весь контент помещается в видимую область без необходимости сокращения.</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">animationMode</div>
+						<div class="td-type" id="type">Строка</div>
+						<div class="td-default" id="default">js</div>
+						<div class="td-desc" id="desc">
+							<p>Режим анимации для изменения высоты:</p>
+							<p><code class="code">js</code> — используется JavaScript анимация;</p>
+							<p><code class="code">css</code> — используется CSS-анимация. При активации этого режима к элементу добавляется класс <code class="code">cs_readmore-animation</code>.</p>
+						</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">breakpoints</div>
+						<div class="td-type" id="type">Объект</div>
+						<div class="td-default" id="default">{}</div>
+						<div class="td-desc" id="desc">
+							<p>Позволяет указать разные значения для других опций в зависимости от ширины экрана. Ключи — это ширина экрана (в пикселях), а значения — объекты с новыми значениями опций.</p>
+							<p><strong>Пример:</strong></p>
+							<pre><code class="language-javascript show-language">
+								breakpoints: {
+									768: {
+										collapsedHeight: 150,
+										moreLink: '&lt;span&gt;Читать далее&lt;/span&gt;'
+									},
+									1200: { collapsedHeight: 200 }
+								}</code></pre>
+							<p>Этот параметр помогает адаптировать поведение скрипта под разные размеры экранов.</p>
+						</div>
 					</div>
 				</div>
 			</article>
@@ -233,12 +270,27 @@
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.readmore', {
-							collapsedHeight: 200,  // Устанавливает высоту свернутого контента
-							speed: 100,            // Скорость анимации в миллисекундах
-							heightMargin: 16,      // Дополнительный отступ для высоты
-							moreLink: '&lt;a href="#"&gt;Читать далее&lt;/a&gt;',  // HTML для кнопки «Читать далее»
-							lessLink: '&lt;a href="#"&gt;Скрыть&lt;/a&gt;'      // HTML для кнопки «Скрыть»
-						}, 768);  // Необязательно: Установка максимальной ширины для адаптивного поведения
+							collapsedHeight: 200,		// Высота свернутого блока в пикселях
+							speed: 300,					// Скорость анимации в миллисекундах
+							heightMargin: 16,			// Дополнительный отступ от высоты
+							moreLink: '&lt;span&gt;Читать далее&lt;/span&gt;',	// HTML для кнопки «Читать далее»
+							lessLink: '&lt;span&gt;Закрыть&lt;/span&gt;',		// HTML для кнопки «Закрыть»
+							lazyLoad: true,				// Ленивое инициализирование (отображается только при прокрутке)
+							animationMode: 'css',		// Режим анимации ('js' или 'css')
+							hideButtonCollapse: false,	// Скрыть кнопку «Читать далее» после развертывания
+							breakpoints: {				// Адаптивные настройки для разных экранов
+								576: {					// Для экранов до 576px
+									collapsedHeight: 100,
+									speed: 200,
+									moreLink: '&lt;span&gt;Подробнее&lt;/span&gt;',
+									lessLink: '&lt;span&gt;Свернуть&lt;/span&gt;',
+								},
+								768: {					// Для экранов до 768px
+									collapsedHeight: 150,
+									speed: 250,
+								},
+							}
+						});
 					});
 				</code></pre>
 				<br>

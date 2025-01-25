@@ -169,6 +169,7 @@
 					<li><a href="/en/readmore/docs/install"><i class="ics ics-tool"></i> Installation</a></li>
 					<li><a href="/en/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Initialization</a></li>
 					<li class="active"><a href="/en/readmore/docs/options"><i class="ics ics-sliders-h"></i> Options</a></li>
+					<li><a href="/en/readmore/docs/events"><i class="ics ics-sliders-h"></i> Events</a></li>
 					<li><a href="/en/readmore/docs/stylization"><i class="ics ics-paint"></i> Stylization</a></li>
 				</ul>
 			</div>
@@ -192,37 +193,73 @@
 						<div class="td-option" id="option">collapsedHeight</div>
 						<div class="td-type" id="type">Number</div>
 						<div class="td-default" id="default">200</div>
-						<div class="td-desc" id="desc">Sets the initial content height in collapsed state (in pixels).</div>
+						<div class="td-desc" id="desc">
+							<p>Sets the initial content height in collapsed state (in pixels).</p>
+						</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">speed</div>
 						<div class="td-type" id="type">Number</div>
 						<div class="td-default" id="default">100</div>
-						<div class="td-desc" id="desc">Defines the animation speed for changing element height (in milliseconds).</div>
+						<div class="td-desc" id="desc">Defines the speed of the height change animation in milliseconds.</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">heightMargin</div>
 						<div class="td-type" id="type">Number</div>
 						<div class="td-default" id="default">16</div>
-						<div class="td-desc" id="desc">Additional height margin to ensure spacing when expanding content (in pixels).</div>
+						<div class="td-desc" id="desc">Additional margin for height to provide space when expanding the content (in pixels).</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">moreLink</div>
 						<div class="td-type" id="type">String</div>
-						<div class="td-default" id="default">&lt;a href="#"&gt;Read More&lt;/a&gt;</div>
-						<div class="td-desc" id="desc">HTML content of the link or button displayed to reveal hidden content.</div>
+						<div class="td-default" id="default">&lt;span&gt;Read More&lt;/span&gt;</div>
+						<div class="td-desc" id="desc">The «Read More» button text with HTML support. Used inside the <code class="code">&lt;button&gt;</code> element, which is displayed to expand hidden content.</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">lessLink</div>
 						<div class="td-type" id="type">String</div>
-						<div class="td-default" id="default">&lt;a href="#"&gt;Close&lt;/a&gt;</div>
-						<div class="td-desc" id="desc">HTML content of the link or button displayed to collapse content after expansion.</div>
+						<div class="td-default" id="default">&lt;span&gt;Close&lt;/span&gt;</div>
+						<div class="td-desc" id="desc">The «Close» button text with HTML support. Used inside the <code class="code">&lt;button&gt;</code> element, which is displayed to collapse content after it has been expanded.</div>
 					</div>
 					<div class="tr-options">
-						<div class="td-option" id="option">maxWidth</div>
-						<div class="td-type" id="type">Number</div>
-						<div class="td-default" id="default">Optional</div>
-						<div class="td-desc" id="desc">Sets the maximum screen width in pixels at which the plugin will activate. If the screen width exceeds this value, the plugin will not activate, and the «Read More» button will not appear.</div>
+						<div class="td-option" id="option">lazyLoad</div>
+						<div class="td-type" id="type">Boolean</div>
+						<div class="td-default" id="default">true</div>
+						<div class="td-desc" id="desc">When enabled, elements (content or media) will only be initialized when they appear in the viewport.</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">hideButtonCollapse</div>
+						<div class="td-type" id="type">Boolean</div>
+						<div class="td-default" id="default">false</div>
+						<div class="td-desc" id="desc">If set to <code class="code">true</code>, the «Read More» button is not displayed when the entire content fits in the visible area without needing to be collapsed.</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">animationMode</div>
+						<div class="td-type" id="type">String</div>
+						<div class="td-default" id="default">js</div>
+						<div class="td-desc" id="desc">
+							<p>Animation mode for height change:</p>
+							<p><code class="code">js</code> — use JavaScript animation;</p>
+							<p><code class="code">css</code> — CSS animation is used. When this mode is activated, the class <code class="code">cs_readmore-animation</code> is added to the element.</p>
+						</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">breakpoints</div>
+						<div class="td-type" id="type">Object</div>
+						<div class="td-default" id="default">{}</div>
+						<div class="td-desc" id="desc">
+							<p>Allows specifying different values for other options depending on the screen width. Keys are screen widths (in pixels), and values are objects with new option values.</p>
+							<p><strong>Example:</strong></p>
+							<pre><code class="language-javascript show-language">
+								breakpoints: {
+									768: {
+										collapsedHeight: 150,
+										moreLink: '&lt;span&gt;Read More&lt;/span&gt;'
+									},
+									1200: { collapsedHeight: 200 }
+							}</code></pre>
+							<p>This parameter helps adapt the script's behavior to different screen sizes.</p>
+						</div>
 					</div>
 				</div>
 			</article>
@@ -233,12 +270,27 @@
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.readmore', {
-							collapsedHeight: 200,  // Sets the collapsed content height
-							speed: 100,            // Animation speed in milliseconds
-							heightMargin: 16,      // Additional height margin
-							moreLink: '&lt;a href="#"&gt;Read More&lt;/a&gt;',  // HTML for «Read More» button
-							lessLink: '&lt;a href="#"&gt;Close&lt;/a&gt;'      // HTML for «Close» button
-						}, 768);  // Optional: Set maximum width for responsive behavior
+							collapsedHeight: 200,		// Height of the collapsed block in pixels
+							speed: 300,					// Animation speed in milliseconds
+							heightMargin: 16,			// Additional margin from the height
+							moreLink: '&lt;span&gt;Read More&lt;/span&gt;',		// HTML for the «Read More» button
+							lessLink: '&lt;span&gt;Close&lt;/span&gt;',			// HTML for the «Close» button
+							lazyLoad: true,				// Lazy initialization (displays only during scrolling)
+							animationMode: 'css',		// Animation mode ('js' or 'css')
+							hideButtonCollapse: false,	// Hide the «Read More» button after expansion
+							breakpoints: {				// Responsive settings for different screens
+								576: {					// For screens up to 576px
+									collapsedHeight: 100,
+									speed: 200,
+									moreLink: '&lt;span&gt;More&lt;/span&gt;',
+									lessLink: '&lt;span&gt;Collapse&lt;/span&gt;',
+								},
+								768: {					// For screens up to 768px
+									collapsedHeight: 150,
+									speed: 250,
+								},
+							}
+						});
 					});
 				</code></pre>
 				<br>
