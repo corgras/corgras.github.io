@@ -199,12 +199,7 @@
 				<h2>Ручное подключение</h2>
 				<p class="lead-normal">Этот способ позволяет добавить файл непосредственно в ваш HTML-код. Просто загрузите скрипт, сохраните его в папке вашего проекта и подключите к документу. Такое подключение дает вам полный контроль над версией скрипта, которую вы используете.</p>
 				<p>&mdash; Загрузите файлы скрипта Readmore.js с <a href="https://github.com/corgras/Readmore.js/releases">GitHub</a></p>
-				<p>&mdash; После загрузки файлов в определенную папку на сайте, нужно подключить CSS и JS к HTML-странице.</p>
-				<p>&mdash; Добавьте файл стилей в секцию <code class="code">&lt;head&gt;</code> вашей HTML-страницы. Используйте приведенный ниже код:</p>
-				<pre><code class="language-html show-language">
-					&lt;link rel="stylesheet" href="путь_к_вашей_папке/readmore.css"&gt;
-				</code></pre><br>
-				<p>&mdash; Для подключения JavaScript-файла вставьте следующий код в секцию <code class="code">&lt;head&gt;</code> или перед закрытием тега <code class="code">&lt;/body&gt;</code> вашей HTML-страницы:</p>
+				<p>&mdash; После загрузки файла в указанную папку на вашем сайте подключите JavaScript-файл, добавив следующий код в секцию <code class="code">&lt;head&gt;</code> или непосредственно перед закрывающим тегом <code class="code">&lt;/body&gt;</code> вашей HTML-страницы:</p>
 				<pre><code class="language-html show-language">
 					&lt;script src="путь_к_вашей_папке/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
@@ -217,12 +212,10 @@
 				<p>&mdash; Для подключения вставьте один из приведенных ниже строк кода в секцию <code class="code">&lt;head&gt;</code> или перед закрытием тега <code class="code">&lt;/body&gt;</code> на вашей HTML-странице:</p>
 				<p><strong>CDN jsDelivr:</strong></p>
 				<pre><code class="language-html show-language">
-					&lt;link href="https://cdn.jsdelivr.net/npm/@corgras/readmore-js@2.0.0/readmore.css" rel="stylesheet"&gt;
 					&lt;script src="https://cdn.jsdelivr.net/npm/@corgras/readmore-js@2.0.0/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre><br>
 				<p><strong>CDN Unpkg:</strong></p>
 				<pre><code class="language-html show-language">
-					&lt;link href="https://unpkg.com/@corgras/readmore-js@2.0.0/readmore.css" rel="stylesheet"&gt;
 					&lt;script src="https://unpkg.com/@corgras/readmore-js@2.0.0/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
 				<p class="em">В теге <code class="code">&lt;script&gt;</code> используется атрибут <code class="code">defer</code>. Скрипт будет выполнен после загрузки HTML, но перед событием <code class="code">DOMContentLoaded</code>.</p>

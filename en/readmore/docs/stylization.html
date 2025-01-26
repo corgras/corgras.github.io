@@ -240,6 +240,36 @@
 					</div>
 				</div>
 			</article>
+			<article>
+				<h2>Example of Styling</h2>
+				<p>The code creates styles for the button container and the button itself, adding padding, text alignment, and user interaction styles, including color changes on hover.</p>
+				<pre><code class="language-css show-language">
+					.cs_readmore-btn-wrapper {
+						margin: 15px auto 0;
+						text-align: center;
+					}
+					.cs_readmore-btn-wrapper:before {
+						border-top: 1px solid #ddd;
+						content: '';
+						display: block;
+						width: 100%;
+						z-index: -1;
+						position: relative;
+						transform: translateY(15px);
+					}
+					.cs_readmore-btn {
+						color: #005EFF;
+						background: #fff;
+						border: 0;
+						margin: 0;
+						padding: 0 20px;
+						text-align: center;
+					}
+					.cs_readmore-btn:hover {
+						color: #0051DE;
+					}
+				</code></pre>
+			</article>
 		</div>
 	</main>
 	<footer>
