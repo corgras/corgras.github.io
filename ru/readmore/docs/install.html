@@ -191,7 +191,7 @@
 				<br>
 				<p>&mdash; После установки подключите скрипт в вашем проекте. Например, добавьте его в HTML-файл:</p>
 				<pre><code class="language-html show-language">
-					&lt;script src="./node_modules/@corgras/readmore-js/dist/readmore.min.js" defer&gt;&lt;/script&gt;
+					&lt;script src="./node_modules/@corgras/readmore-js/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
 				<p class="em">Атрибут <code class="code">defer</code> обеспечивает выполнение скрипта после полной загрузки DOM, что повышает производительность.</p>
 				<p>&mdash; Если вы используете модульную систему, импортируйте библиотеку в вашем JavaScript-коде (см. разделы ниже).</p>
@@ -218,7 +218,7 @@
 				<p>&mdash; Пример подключения с типом модуля:</p>
 				<pre><code class="language-html show-language">
 					&lt;script type="module"&gt;
-						import initReadMore from './node_modules/@corgras/readmore-js/dist/readmore.min.js';
+						import initReadMore from './node_modules/@corgras/readmore-js/readmore.min.js';
 						initReadMore('.content', { collapsedHeight: 200 });
 					&lt;/script&gt;
 				</code></pre>
