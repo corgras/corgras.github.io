@@ -179,47 +179,77 @@
 		<div class="container">
 			<article>
 				<h1>Getting Started</h1>
-				<p class="lead">There are several ways to integrate Readmore.js into your project. Choose the one that best suits your needs.</p>
+				<p class="lead">Readmore.js can be integrated into your project in several ways. Choose the one that best suits your needs, depending on the type of project and the tools you are using.</p>
 				<hr>
-				<h2>Connecting via NPM</h2>
-				<p class="lead-normal">This is a convenient option for larger projects using NPM. NPM also makes it easy to update the library and manage your project dependencies, as well as integrate it into large JavaScript-based systems like React or Vue.js.</p>
-				<p>&mdash; In the command line, run:</p>
+
+				<h2>Installation via NPM</h2>
+				<p class="lead-normal">This method is ideal for projects using the npm package manager. Installing via NPM simplifies dependency management, library updates, and integration with modern JavaScript frameworks such as React, Vue.js, or Angular.</p>
+				<p>&mdash; Run the following command in your terminal:</p>
 				<pre><code class="language-npm show-language">
 					$ npm i @corgras/readmore-js
 				</code></pre>
 				<br>
-				<p>&mdash; After installation, you can import the <code class="code">initReadMore</code> function in your JavaScript file.</p>
-				<pre><code class="language-javascript show-language">
-					import { initReadMore } from '@corgras/readmore-js';
-					// Remaining code
+				<p>&mdash; After installation, include the script in your project. For example, add it to your HTML file:</p>
+				<pre><code class="language-html show-language">
+					&lt;script src="./node_modules/@corgras/readmore-js/dist/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
-				<p>&mdash; Then you can call <code class="code">initReadMore</code> with the necessary <a href="/en/readmore/docs/options">parameters</a>.</p>
+				<p class="em">The <code class="code">defer</code> attribute ensures the script executes after the DOM is fully loaded, improving performance.</p>
+				<p>&mdash; If you are using a module system, import the library in your JavaScript code (see sections below).</p>
 				<hr>
 
-				<h2>Manual Integration</h2>
-				<p class="lead-normal">This method allows you to add the file directly to your HTML code. Simply download the script, save it in your project folder, and link it to your document. This setup gives you full control over the script version you're using.</p>
-				<p>&mdash; Download the Readmore.js script files from <a href="https://github.com/corgras/Readmore.js/releases">GitHub</a></p>
-				<p>&mdash; After uploading the file to the specified folder on your website, include the JavaScript file by adding the following code to the <code class="code"><head></code> section or directly before the closing <code class="code"></body></code> tag of your HTML page:</p>
+				<h2>Using in Node.js / CommonJS</h2>
+				<p class="lead-normal">For projects using CommonJS (e.g., in Node.js or with tools like Webpack), you can import the main Readmore.js function after installing via NPM.</p>
+				<p>&mdash; Add the following code to your JavaScript file:</p>
+				<pre><code class="language-javascript show-language">
+					const initReadMore = require('@corgras/readmore-js');
+					// Initialization: initReadMore('.selector', { /* options */ });
+				</code></pre>
+				<p class="em">Ensure your project is configured to work with CommonJS modules.</p>
+				<hr>
+
+				<h2>Using as an ES Module</h2>
+				<p class="lead-normal">For modern projects using ES modules (e.g., with Vite, Rollup, or modern versions of Webpack), import Readmore.js as a module after installing via NPM.</p>
+				<p>&mdash; Add the following code to your JavaScript file:</p>
+				<pre><code class="language-javascript show-language">
+					import initReadMore from '@corgras/readmore-js';
+					// Initialization: initReadMore('.selector', { /* options */ });
+				</code></pre>
+				<p class="em">Ensure your HTML file includes the <code class="code">type="module"</code> attribute in the <code class="code">&lt;script&gt;</code> tag if you are including the script directly.</p>
+				<p>&mdash; Example of including with module type:</p>
+				<pre><code class="language-html show-language">
+					&lt;script type="module"&gt;
+						import initReadMore from './node_modules/@corgras/readmore-js/dist/readmore.min.js';
+						initReadMore('.content', { collapsedHeight: 200 });
+					&lt;/script&gt;
+				</code></pre>
+				<hr>
+
+				<h2>Manual Inclusion</h2>
+				<p class="lead-normal">If you are not using package managers, you can include Readmore.js by manually downloading the script file. This method gives you full control over the library version and does not rely on external tools.</p>
+				<p>&mdash; Download the latest version of <code class="code">readmore.min.js</code> from the <a href="https://github.com/corgras/Readmore.js/releases">official GitHub repository</a>.</p>
+				<p>&mdash; Place the downloaded file in your project folder (e.g., <code class="code">/js/</code>).</p>
+				<p>&mdash; Include the script in your HTML file by adding the following code in the <code class="code">&lt;head&gt;</code> section or before the closing <code class="code">&lt;/body&gt;</code> tag:</p>
 				<pre><code class="language-html show-language">
 					&lt;script src="path_to_your_folder/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
-				<p class="em">The <code class="code">&lt;script&gt;</code> tag uses the <code class="code">defer</code>. attribute, ensuring the script runs after the HTML loads but before the <code class="code">DOMContentLoaded</code> event.</p><br>
-				<p>&mdash; After linking, you need to <a href="/en/readmore/docs/initialization">initialize</a> the script to make it work with selected elements on your page.</p>
+				<p class="em">The <code class="code">defer</code> attribute ensures the script executes after the DOM is loaded, avoiding page rendering delays.</p>
+				<p>&mdash; After inclusion, initialize the script by calling the <code class="code">initReadMore</code> function. Learn more about initialization in the <a href="/en/readmore/docs/initialization">initialization section</a>.</p>
 				<hr>
-				
-				<h2>Connecting via CDN</h2>
-				<p class="lead-normal">The script can be loaded from a remote server, which significantly speeds up your website's loading time and eliminates the need to store it locally. Using a CDN provides access to cached versions of the script from different parts of the world. You can use one of the popular CDN services, such as jsDelivr or Unpkg.</p>
-				<p>&mdash; To connect, insert one of the lines of code below into the <code class="code">&lt;head&gt;</code> section or before the closing <code class="code">&lt;/body&gt;</code> tag on your HTML page:</p>
+
+				<h2>Including via CDN</h2>
+				<p class="lead-normal">Using a CDN (Content Delivery Network) allows you to quickly include Readmore.js without locally storing files. CDNs provide fast loading speeds due to caching and a global server network.</p>
+				<p>&mdash; Add one of the following scripts to the <code class="code">&lt;head&gt;</code> section or before the closing <code class="code">&lt;/body&gt;</code> tag:</p>
 				<p><strong>CDN jsDelivr:</strong></p>
 				<pre><code class="language-html show-language">
-					&lt;script src="https://cdn.jsdelivr.net/npm/@corgras/readmore-js@2.0.0/readmore.min.js" defer&gt;&lt;/script&gt;
-				</code></pre><br>
+					&lt;script src="https://cdn.jsdelivr.net/npm/@corgras/readmore-js/readmore.min.js" defer&gt;&lt;/script&gt;
+				</code></pre>
+				<br>
 				<p><strong>CDN Unpkg:</strong></p>
 				<pre><code class="language-html show-language">
-					&lt;script src="https://unpkg.com/@corgras/readmore-js@2.0.0/readmore.min.js" defer&gt;&lt;/script&gt;
+					&lt;script src="https://unpkg.com/@corgras/readmore-js/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
-				<p class="em">The <code class="code">&lt;script&gt;</code> tag uses the <code class="code">defer</code> attribute. The script will be executed after the HTML is loaded but before the <code class="code">DOMContentLoaded</code> event.</p>
-				<p>&mdash; After connecting, you need to <a href="/en/readmore/docs/initialization">initialize</a> the script for it to start working with the selected elements on your page.</p>
+				<p class="em">Without specifying a version, the latest one will be loaded.</p>
+				<p>&mdash; After inclusion, initialize the script as described in the <a href="/en/readmore/docs/initialization">initialization section</a>.</p>
 			</article>
 		</div>
 	</main>

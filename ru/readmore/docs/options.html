@@ -179,68 +179,90 @@
 		<div class="container">
 			<article>
 				<h1>Параметры</h1>
-				<p>Вы можете настроить поведение функциональности, настроив объект опций функции <code class="code">initReadMore</code>.</p>
-				<p>Это позволит вам детально управлять отображением и анимацией контента на вашем сайте. Благодаря этим опциям вы можете создать уникальный пользовательский опыт, который соответствует вашим требованиям и эстетическим предпочтениям.</p>
-				<p>Подробное описание доступных опций:</p>
+				<p>Функция <code class="code">initReadMore</code> позволяет настроить поведение плагина «Читать далее» через объект параметров. Это дает возможность адаптировать отображение контента, анимацию и взаимодействие к потребностям вашего сайта.</p>
+				<p>Благодаря гибким настройкам вы можете создавать удобный и эстетически привлекательный интерфейс, соответствующий дизайну и функциональным требованиям вашего проекта.</p>
+				<p>Ниже приведено подробное описание всех доступных параметров:</p>
 				<div class="table-options">
 					<div class="tr-options-head">
 						<div class="td-option" id="option">Опции</div>
 						<div class="td-type" id="type" aria-label-type="Тип:">Тип</div>
 						<div class="td-default" id="default" aria-label-default="По умолчанию:">По умолчанию</div>
-						<div class="td-desc"id="desc">Описание</div>
+						<div class="td-desc" id="desc">Описание</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">collapsedHeight</div>
 						<div class="td-type" id="type">Число</div>
-						<div class="td-default" id="default">200</div>
+						<div class="td-default" id="default">250</div>
 						<div class="td-desc" id="desc">
-							<p>Устанавливает начальную высоту контента в свернутом состоянии (в пикселях).</p>
+							<p>Определяет начальную высоту свернутого контента в пикселях. Если содержимое короче этой высоты, кнопка «Читать далее» не отображается.</p>
 						</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">speed</div>
 						<div class="td-type" id="type">Число</div>
-						<div class="td-default" id="default">100</div>
-						<div class="td-desc" id="desc">Определяет скорость анимации изменения высоты элемента в миллисекундах.</div>
-					</div>
-					<div class="tr-options">
-						<div class="td-option" id="option">heightMargin</div>
-						<div class="td-type" id="type">Число</div>
-						<div class="td-default" id="default">16</div>
-						<div class="td-desc" id="desc">Дополнительный отступ для высоты, чтобы обеспечить зазор при разворачивании контента (в пикселях).</div>
+						<div class="td-default" id="default">300</div>
+						<div class="td-desc" id="desc">
+							<p>Задает длительность анимации разворачивания/сворачивания в миллисекундах. Для сворачивания в режиме <code class="code">animationMode: 'js'</code> скорость уменьшается вдвое.</p>
+						</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">moreLink</div>
 						<div class="td-type" id="type">Строка</div>
 						<div class="td-default" id="default">&lt;span&gt;Читать далее&lt;/span&gt;</div>
-						<div class="td-desc" id="desc">Текст кнопки «Читать далее» с поддержкой HTML. Используется внутри элемента <code class="code">&lt;button&gt;</code>, который отображается для раскрытия скрытого контента.</div>
+						<div class="td-desc" id="desc">
+							<p>HTML-строка для кнопки «Читать далее», отображаемой в свернутом состоянии. Вставляется в элемент <code class="code">&lt;button&gt;</code>. Для безопасности HTML очищается от потенциально опасных атрибутов.</p>
+						</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">lessLink</div>
 						<div class="td-type" id="type">Строка</div>
 						<div class="td-default" id="default">&lt;span&gt;Закрыть&lt;/span&gt;</div>
-						<div class="td-desc" id="desc">Текст кнопки «Закрыть» с поддержкой HTML. Используется внутри элемента <code class="code">&lt;button&gt;</code>, который отображается для сворачивания контента после его раскрытия.</div>
-					</div>
-					<div class="tr-options">
-						<div class="td-option" id="option">lazyLoad</div>
-						<div class="td-type" id="type">Логический</div>
-						<div class="td-default" id="default">true</div>
-						<div class="td-desc" id="desc">Если включено, элементы (контент или мультимедиа) будут инициализироваться только при их появлении в области видимости.</div>
+						<div class="td-desc" id="desc">
+							<p>HTML-строка для кнопки «Закрыть», отображаемой в развернутом состоянии. Вставляется в элемент <code class="code">&lt;button&gt;</code>. Поддерживает очистку HTML от опасного кода.</p>
+						</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">hideButtonCollapse</div>
 						<div class="td-type" id="type">Логический</div>
 						<div class="td-default" id="default">false</div>
-						<div class="td-desc" id="desc">Если установлено <code class="code">true</code>, кнопка «Читать далее» не отображается, когда весь контент помещается в видимую область без необходимости сокращения.</div>
+						<div class="td-desc" id="desc">
+							<p>Если <code class="code">true</code>, кнопка скрывается после разворачивания контента, позволяя избежать лишних элементов интерфейса.</p>
+						</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">disableCollapse</div>
+						<div class="td-type" id="type">Логический</div>
+						<div class="td-default" id="default">false</div>
+						<div class="td-desc" id="desc">
+							<p>Если <code class="code">true</code>, отключает функцию сворачивания для элемента или диапазона ширины экрана, отображая весь контент.</p>
+						</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">animationMode</div>
 						<div class="td-type" id="type">Строка</div>
 						<div class="td-default" id="default">js</div>
 						<div class="td-desc" id="desc">
-							<p>Режим анимации для изменения высоты:</p>
-							<p><code class="code">js</code> — используется JavaScript анимация;</p>
-							<p><code class="code">css</code> — используется CSS-анимация. При активации этого режима к элементу добавляется класс <code class="code">cs_readmore-animation</code>.</p>
+							<p>Определяет тип анимации:</p>
+							<ul>
+								<li><code class="code">js</code>: анимация через JavaScript с плавным изменением высоты.</li>
+								<li><code class="code">css</code>: анимация через CSS, добавляется класс <code class="code">cs_readmore-animation</code> для стилизации.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">animationType</div>
+						<div class="td-type" id="type">Строка</div>
+						<div class="td-default" id="default">ease-in-out</div>
+						<div class="td-desc" id="desc">
+							<p>Задает тип перехода для анимации в режиме <code class="code">animationMode: 'js'</code>. Доступные значения: <code class="code">linear</code>, <code class="code">ease</code>, <code class="code">ease-in</code>, <code class="code">ease-out</code>, <code class="code">ease-in-out</code>.</p>
+						</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">scrollToTopOnCollapse</div>
+						<div class="td-type" id="type">Логический</div>
+						<div class="td-default" id="default">true</div>
+						<div class="td-desc" id="desc">
+							<p>Если <code class="code">true</code>, страница плавно прокручивается к верхней части контента после его сворачивания, улучшая удобство просмотра.</p>
 						</div>
 					</div>
 					<div class="tr-options">
@@ -248,7 +270,7 @@
 						<div class="td-type" id="type">Объект</div>
 						<div class="td-default" id="default">{}</div>
 						<div class="td-desc" id="desc">
-							<p>Позволяет указать разные значения для других опций в зависимости от ширины экрана. Ключи — это ширина экрана (в пикселях), а значения — объекты с новыми значениями опций.</p>
+							<p>Позволяет задавать различные значения параметров в зависимости от ширины экрана. Ключи — максимальная ширина экрана в пикселях, значения — объект с параметрами.</p>
 							<p><strong>Пример:</strong></p>
 							<pre><code class="language-javascript show-language">
 								breakpoints: {
@@ -257,46 +279,101 @@
 										moreLink: '&lt;span&gt;Читать далее&lt;/span&gt;'
 									},
 									1200: { collapsedHeight: 200 }
-								}</code></pre>
-							<p>Этот параметр помогает адаптировать поведение скрипта под разные размеры экранов.</p>
+								}
+							</code></pre>
+							<p>Если ширина экрана больше максимального ключа, сворачивание отключается.</p>
+						</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">beforeToggle</div>
+						<div class="td-type" id="type">Функция</div>
+						<div class="td-default" id="default">null</div>
+						<div class="td-desc" id="desc">
+							<p>Коллбэк, вызываемый перед началом разворачивания/сворачивания. Получает аргументы: <code class="code">button</code> (кнопка), <code class="code">element</code> (элемент контента), <code class="code">isExpanded</code> (логическое значение состояния).</p>
+							<p><strong>Пример:</strong></p>
+							<pre><code class="language-javascript show-language">
+								beforeToggle: (button, element, isExpanded) => {
+									console.log('Переключение начнется, состояние:', isExpanded);
+								}
+							</code></pre>
+						</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">afterToggle</div>
+						<div class="td-type" id="type">Функция</div>
+						<div class="td-default" id="default">null</div>
+						<div class="td-desc" id="desc">
+							<p>Коллбэк, вызываемый после завершения разворачивания/сворачивания. Получает те же аргументы: <code class="code">button</code>, <code class="code">element</code>, <code class="code">isExpanded</code>.</p>
+							<p><strong>Пример:</strong></p>
+							<pre><code class="language-javascript show-language">
+								afterToggle: (button, element, isExpanded) => {
+									console.log('Переключение завершено, состояние:', isExpanded);
+								}
+							</code></pre>
+						</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">blockProcessed</div>
+						<div class="td-type" id="type">Функция</div>
+						<div class="td-default" id="default">null</div>
+						<div class="td-desc" id="desc">
+							<p>Коллбэк, вызываемый после обработки элемента плагином. Получает аргументы: <code class="code">element</code> (элемент контента), <code class="code">needsToggle</code> (логическое значение, нужна ли кнопка).</p>
+							<p><strong>Пример:</strong></p>
+							<pre><code class="language-javascript show-language">
+								blockProcessed: (element, needsToggle) => {
+									console.log('Элемент обработан, нужна кнопка:', needsToggle);
+								}
+							</code></pre>
 						</div>
 					</div>
 				</div>
 			</article>
 			<article>
 				<h2>Пример настроек</h2>
-				<p>Чтобы настроить функциональность на вашем сайте, вам нужно <a href="/ru/readmore/docs/initialization">инициализировать</a> плагин с параметрами в вашем JavaScript-коде.</p>
-				<p>Это можно сделать, передав объект опций в функцию <code class="code">initReadMore</code>. Ниже приведен пример кода, который демонстрирует, как это сделать:</p>
+				<p>Для использования плагина инициализируйте его через функцию <code class="code">initReadMore</code>, передав селектор и объект параметров. Это позволяет адаптировать поведение к вашему сайту.</p>
+				<p>Ниже приведен пример инициализации с различными параметрами:</p>
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.readmore', {
-							collapsedHeight: 200,		// Высота свернутого блока в пикселях
-							speed: 300,					// Скорость анимации в миллисекундах
-							heightMargin: 16,			// Дополнительный отступ от высоты
-							moreLink: '&lt;span&gt;Читать далее&lt;/span&gt;',	// HTML для кнопки «Читать далее»
-							lessLink: '&lt;span&gt;Закрыть&lt;/span&gt;',		// HTML для кнопки «Закрыть»
-							lazyLoad: true,				// Ленивое инициализирование (отображается только при прокрутке)
-							animationMode: 'css',		// Режим анимации ('js' или 'css')
-							hideButtonCollapse: false,	// Скрыть кнопку «Читать далее» после развертывания
-							breakpoints: {				// Адаптивные настройки для разных экранов
-								576: {					// Для экранов до 576px
+							collapsedHeight: 200,
+							speed: 400,
+							moreLink: '&lt;span&gt;Подробнее&lt;/span&gt;',
+							lessLink: '&lt;span&gt;Свернуть&lt;/span&gt;',
+							animationMode: 'js',
+							animationType: 'ease-in-out',
+							scrollToTopOnCollapse: true,
+							hideButtonCollapse: true,
+							disableCollapse: false,
+							breakpoints: {
+								576: {
 									collapsedHeight: 100,
 									speed: 200,
-									moreLink: '&lt;span&gt;Подробнее&lt;/span&gt;',
-									lessLink: '&lt;span&gt;Свернуть&lt;/span&gt;',
+									moreLink: '&lt;span&gt;Показать&lt;/span&gt;',
+									lessLink: '&lt;span&gt;Скрыть&lt;/span&gt;'
 								},
-								768: {					// Для экранов до 768px
+								768: {
 									collapsedHeight: 150,
-									speed: 250,
+									speed: 300
 								},
+								1024: {
+									disableCollapse: true
+								}
+							},
+							beforeToggle: (button, element, isExpanded) => {
+								console.log('Начинается переключение:', isExpanded);
+							},
+							afterToggle: (button, element, isExpanded) => {
+								console.log('Переключение завершено:', isExpanded);
+							},
+							blockProcessed: (element, needsToggle) => {
+								console.log('Обработка элемента завершена, кнопка:', needsToggle);
 							}
 						});
 					});
 				</code></pre>
 				<br>
-				<p>В этом примере плагин инициализируется для всех элементов с классом <code class="code">.readmore</code>.</p>
-				<p>Вы можете изменять значения опций в соответствии с вашими потребностями, чтобы адаптировать поведение плагина к вашему сайту.</p>
-				<p>Это дает вам возможность создать интерактивный и удобный интерфейс для отображения контента.</p>
+				<p>Этот код применяет плагин ко всем элементам с классом <code class="code">.readmore</code>, настраивая высоту, анимацию, текст кнопок и адаптивное поведение.</p>
+				<p>Вы можете изменять параметры, чтобы достичь желаемой функциональности, создавая удобный и интерактивный интерфейс для пользователей.</p>
 			</article>
 		</div>
 	</main>

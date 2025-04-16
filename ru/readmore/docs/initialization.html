@@ -179,68 +179,91 @@
 		<div class="container">
 			<article>
 				<h1>Инициализация</h1>
-				<p>Скрипт Readmore.js поддерживает любые элементы, содержащие текст, который необходимо скрыть, например, <code class="code">&lt;div&gt;</code>, <code class="code">&lt;p&gt;</code>, <code class="code">&lt;section&gt;</code>.</p>
-				<p>Используйте класс <code class="code">.readmore</code> или другой, указанный вами в селекторе инициализации, для целевых элементов.</p>
+				<p>Плагин <strong>Readmore.js</strong> позволяет создавать функционал «Читать далее» для любых элементов с текстовым содержимым, таких как <code class="code">&lt;div&gt;</code>, <code class="code">&lt;p&gt;</code>, <code class="code">&lt;section&gt;</code> или <code class="code">&lt;article&gt;</code>. Скрипт обрезает содержимое до заданной высоты и добавляет кнопку для разворачивания/сворачивания текста.</p>
+				<p>Для инициализации используйте CSS-селектор, например, класс <code class="code">.readmore</code>, который нужно добавить к целевым элементам. Убедитесь, что элемент содержит достаточно контента, чтобы его высота превышала параметр <code class="code">collapsedHeight</code>, иначе кнопка не появится.</p>
 				<pre><code class="language-html show-language">
 					&lt;div class="readmore"&gt;
-					&lt;!-- Ваш длинный контент здесь --&gt;
+						&lt;!-- Ваш текстовый контент, например, несколько абзацев --&gt;
+						&lt;p&gt;Это пример длинного текста, который будет частично скрыт...&lt;/p&gt;
+						&lt;p&gt;Дополнительный контент, который появится после нажатия "Читать далее".&lt;/p&gt;
 					&lt;/div&gt;
 				</code></pre>
 				<div class="note note-warning">
 					<div class="note-label">Важно</div>
-					<p>Убедитесь, что текст достаточно длинный, чтобы превышать значение <code class="code">collapsedSize</code> — высоту, которую вы укажете в настройках.</p>
+					<p>Если содержимое элемента короче значения <code class="code">collapsedHeight</code> или состоит только из пробелов или пустых тегов, плагин автоматически отключит функционал для этого элемента. Для корректной работы рекомендуется проверить высоту содержимого перед инициализацией.</p>
+				</div>
+				<div class="note note-info">
+					<div class="note-label">Совет</div>
+					<p>Добавляйте уникальные классы или идентификаторы для элементов, если планируете применять разные настройки к отдельным блокам на одной странице.</p>
 				</div>
 			</article>
 			<article>
 				<h2>Инициализация без параметров</h2>
-				<p>Если вам нужно инициализировать скрипт Readmore.js без указания дополнительных <a href="/ru/readmore/docs/options">параметров</a>, его можно запустить с настройками по-умолчанию.</p>
+				<p>Для быстрого запуска Readmore.js можно вызвать функцию <code class="code">initReadMore</code> с селектором, используя настройки по умолчанию. В таком случае плагин применит стандартные значения: высота 250 пикселей, анимация длительностью 300 мс, текст кнопок <code class="code">&lt;span&gt;Читать далее&lt;/span&gt;</code> и <code class="code">&lt;span&gt;Закрыть&lt;/span&gt;</code>.</p>
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.readmore');
 					});
 				</code></pre>
+				<div class="note note-info">
+					<div class="note-label">Примечание</div>
+					<p>Этот способ подходит для базового использования, но для адаптации к дизайну или поведению на разных устройствах рекомендуется указывать собственные параметры.</p>
+				</div>
 			</article>
 			<article>
 				<h2>Инициализация с параметрами</h2>
-				<p>Этот способ подходит, если нужно, чтобы скрипт работал на всех устройствах без ограничения по ширине экрана.</p>
+				<p>Для гибкой настройки Readmore.js передайте объект с параметрами вторым аргументом функции <code class="code">initReadMore</code>. Это позволяет изменять высоту, скорость анимации, текст кнопок и т.д. Этот способ работает одинаково на всех устройствах без ограничений по ширине экрана.</p>
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.readmore', {
-							collapsedSize: 200,
-							speed: 200,
-							heightMargin: 16,
-							moreLink: '&lt;span&gt;Читать далее&lt;/span&gt;',
-							lessLink: '&lt;span&gt;Скрыть&lt;/span&gt;'
+							collapsedHeight: 200, // Высота свернутого блока в пикселях
+							speed: 400,          // Длительность анимации в миллисекундах
+							moreLink: '&lt;span&gt;Читать далее&lt;/span&gt;', // Текст кнопки для разворачивания
+							lessLink: '&lt;span&gt;Свернуть&lt;/span&gt;'     // Текст кнопки для сворачивания
 						});
 					});
 				</code></pre>
+				<div class="note note-success">
+					<div class="note-label">Преимущество</div>
+					<p>Вы можете добавить пользовательские классы или стили к <code class="code">moreLink</code> и <code class="code">lessLink</code>, например: <code class="code">&lt;span class="btn btn-primary"&gt;Читать далее&lt;/span&gt;</code>, чтобы соответствовать дизайну вашего сайта.</p>
+				</div>
 			</article>
 			<article>
-				<h2>Инициализация для разных размеров экрана</h2>
-				<p>Этот вариант удобен, когда нужно менять параметры для разных ширин устройств или активировать скрипт на экранах с определённой шириной.</p>
+				<h2>Инициализация с адаптивными настройками</h2>
+				<p>Для адаптации поведения плагина к разным размерам экрана используйте параметр <code class="code">breakpoints</code>. Это позволяет задавать различные значения <code class="code">collapsedHeight</code>, <code class="code">speed</code> или текст кнопок в зависимости от ширины окна браузера. Ключи объекта <code class="code">breakpoints</code> — это максимальная ширина экрана в пикселях.</p>
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.readmore', {
-							collapsedSize: 200,
-							speed: 200,
-							heightMargin: 16,
+							collapsedHeight: 200,
+							speed: 400,
 							moreLink: '&lt;span&gt;Читать далее&lt;/span&gt;',
-							lessLink: '&lt;span&gt;Скрыть&lt;/span&gt;',
+							lessLink: '&lt;span&gt;Свернуть&lt;/span&gt;',
 							breakpoints: {
-								576: {
-									collapsedSize: 100,
+								576: { // Для экранов до 576 пикселей
+									collapsedHeight: 100,
 									speed: 200,
 									moreLink: '&lt;span&gt;Подробнее&lt;/span&gt;',
-									lessLink: '&lt;span&gt;Свернуть&lt;/span&gt;',
+									lessLink: '&lt;span&gt;Скрыть&lt;/span&gt;'
 								},
-								768: {
-									collapsedSize: 150,
-									speed: 250,
+								768: { // Для экранов до 768 пикселей
+									collapsedHeight: 150,
+									speed: 300
 								},
+								1024: { // Для экранов до 1024 пикселей
+									disableCollapse: true // Отключить функционал
+								}
 							}
 						});
 					});
 				</code></pre>
+				<div class="note note-warning">
+					<div class="note-label">Важно</div>
+					<p>Если ширина экрана превышает наибольшую точку останова (например, 1024 пикселя в примере выше), плагин не будет применяться, если не указано <code class="code">disableCollapse: false</code>. Для больших экранов задавайте глобальные параметры или дополнительные точки останова.</p>
+				</div>
+				<div class="note note-info">
+					<div class="note-label">Совет</div>
+					<p>Используйте параметр <code class="code">disableCollapse</code> в <code class="code">breakpoints</code>, чтобы отключить плагин на определенных устройствах, например, на десктопах, где весь контент должен быть видимым.</p>
+				</div>
 			</article>
 		</div>
 	</main>

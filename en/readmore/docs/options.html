@@ -179,68 +179,90 @@
 		<div class="container">
 			<article>
 				<h1>Changing Options</h1>
-				<p>You can configure the functionality by setting the options object for the <code class="code">initReadMore</code> function.</p>
-				<p>This allows you to manage the display and animation of content on your website in detail. With these options, you can create a unique user experience tailored to your needs and aesthetic preferences.</p>
-				<p>A detailed description of the available options:</p>
+				<p>The <code class="code">initReadMore</code> function allows configuring the behavior of the «Read More» plugin through a parameters object. This enables adapting content display, animation, and interaction to your site's needs.</p>
+				<p>With flexible settings, you can create a user-friendly and aesthetically appealing interface that aligns with your project's design and functional requirements.</p>
+				<p>Below is a detailed description of all available parameters:</p>
 				<div class="table-options">
 					<div class="tr-options-head">
 						<div class="td-option" id="option">Options</div>
 						<div class="td-type" id="type" aria-label-type="Type:">Type</div>
 						<div class="td-default" id="default" aria-label-default="Default:">Default</div>
-						<div class="td-desc"id="desc">Description</div>
+						<div class="td-desc" id="desc">Description</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">collapsedHeight</div>
 						<div class="td-type" id="type">Number</div>
-						<div class="td-default" id="default">200</div>
+						<div class="td-default" id="default">250</div>
 						<div class="td-desc" id="desc">
-							<p>Sets the initial content height in collapsed state (in pixels).</p>
+							<p>Defines the initial height of collapsed content in pixels. If the content is shorter than this height, the «Read More» button is not displayed.</p>
 						</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">speed</div>
 						<div class="td-type" id="type">Number</div>
-						<div class="td-default" id="default">100</div>
-						<div class="td-desc" id="desc">Defines the speed of the height change animation in milliseconds.</div>
-					</div>
-					<div class="tr-options">
-						<div class="td-option" id="option">heightMargin</div>
-						<div class="td-type" id="type">Number</div>
-						<div class="td-default" id="default">16</div>
-						<div class="td-desc" id="desc">Additional margin for height to provide space when expanding the content (in pixels).</div>
+						<div class="td-default" id="default">300</div>
+						<div class="td-desc" id="desc">
+							<p>Sets the duration of the expand/collapse animation in milliseconds. For collapsing in <code class="code">animationMode: 'js'</code> mode, the speed is halved.</p>
+						</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">moreLink</div>
 						<div class="td-type" id="type">String</div>
 						<div class="td-default" id="default">&lt;span&gt;Read More&lt;/span&gt;</div>
-						<div class="td-desc" id="desc">The «Read More» button text with HTML support. Used inside the <code class="code">&lt;button&gt;</code> element, which is displayed to expand hidden content.</div>
+						<div class="td-desc" id="desc">
+							<p>HTML string for the «Read More» button displayed in the collapsed state. Inserted into a <code class="code">&lt;button&gt;</code> element. For security, HTML is sanitized of potentially dangerous attributes.</p>
+						</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">lessLink</div>
 						<div class="td-type" id="type">String</div>
 						<div class="td-default" id="default">&lt;span&gt;Close&lt;/span&gt;</div>
-						<div class="td-desc" id="desc">The «Close» button text with HTML support. Used inside the <code class="code">&lt;button&gt;</code> element, which is displayed to collapse content after it has been expanded.</div>
-					</div>
-					<div class="tr-options">
-						<div class="td-option" id="option">lazyLoad</div>
-						<div class="td-type" id="type">Boolean</div>
-						<div class="td-default" id="default">true</div>
-						<div class="td-desc" id="desc">When enabled, elements (content or media) will only be initialized when they appear in the viewport.</div>
+						<div class="td-desc" id="desc">
+							<p>HTML string for the «Close» button displayed in the expanded state. Inserted into a <code class="code">&lt;button&gt;</code> element. Supports sanitization of HTML from unsafe code.</p>
+						</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">hideButtonCollapse</div>
 						<div class="td-type" id="type">Boolean</div>
 						<div class="td-default" id="default">false</div>
-						<div class="td-desc" id="desc">If set to <code class="code">true</code>, the «Read More» button is not displayed when the entire content fits in the visible area without needing to be collapsed.</div>
+						<div class="td-desc" id="desc">
+							<p>If <code class="code">true</code>, the button is hidden after expanding the content, avoiding unnecessary interface elements.</p>
+						</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">disableCollapse</div>
+						<div class="td-type" id="type">Boolean</div>
+						<div class="td-default" id="default">false</div>
+						<div class="td-desc" id="desc">
+							<p>If <code class="code">true</code>, disables the collapse function for an element or screen width range, displaying the full content.</p>
+						</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">animationMode</div>
 						<div class="td-type" id="type">String</div>
 						<div class="td-default" id="default">js</div>
 						<div class="td-desc" id="desc">
-							<p>Animation mode for height change:</p>
-							<p><code class="code">js</code> — use JavaScript animation;</p>
-							<p><code class="code">css</code> — CSS animation is used. When this mode is activated, the class <code class="code">cs_readmore-animation</code> is added to the element.</p>
+							<p>Defines the type of animation:</p>
+							<ul>
+								<li><code class="code">js</code>: Animation via JavaScript with smooth height transition.</li>
+								<li><code class="code">css</code>: Animation via CSS, adds the <code class="code">cs_readmore-animation</code> class for styling.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">animationType</div>
+						<div class="td-type" id="type">String</div>
+						<div class="td-default" id="default">ease-in-out</div>
+						<div class="td-desc" id="desc">
+							<p>Sets the transition type for animation in <code class="code">animationMode: 'js'</code> mode. Available values: <code class="code">linear</code>, <code class="code">ease</code>, <code class="code">ease-in</code>, <code class="code">ease-out</code>, <code class="code">ease-in-out</code>.</p>
+						</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">scrollToTopOnCollapse</div>
+						<div class="td-type" id="type">Boolean</div>
+						<div class="td-default" id="default">true</div>
+						<div class="td-desc" id="desc">
+							<p>If <code class="code">true</code>, the page smoothly scrolls to the top of the content after collapsing, improving viewing convenience.</p>
 						</div>
 					</div>
 					<div class="tr-options">
@@ -248,7 +270,7 @@
 						<div class="td-type" id="type">Object</div>
 						<div class="td-default" id="default">{}</div>
 						<div class="td-desc" id="desc">
-							<p>Allows specifying different values for other options depending on the screen width. Keys are screen widths (in pixels), and values are objects with new option values.</p>
+							<p>Allows setting different parameter values based on screen width. Keys are the maximum screen width in pixels, values are an object with parameters.</p>
 							<p><strong>Example:</strong></p>
 							<pre><code class="language-javascript show-language">
 								breakpoints: {
@@ -257,46 +279,101 @@
 										moreLink: '&lt;span&gt;Read More&lt;/span&gt;'
 									},
 									1200: { collapsedHeight: 200 }
-							}</code></pre>
-							<p>This parameter helps adapt the script's behavior to different screen sizes.</p>
+								}
+							</code></pre>
+							<p>If the screen width exceeds the maximum key, collapsing is disabled.</p>
+						</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">beforeToggle</div>
+						<div class="td-type" id="type">Function</div>
+						<div class="td-default" id="default">null</div>
+						<div class="td-desc" id="desc">
+							<p>Callback invoked before expanding/collapsing starts. Receives arguments: <code class="code">button</code> (button), <code class="code">element</code> (content element), <code class="code">isExpanded</code> (boolean state).</p>
+							<p><strong>Example:</strong></p>
+							<pre><code class="language-javascript show-language">
+								beforeToggle: (button, element, isExpanded) => {
+									console.log('Toggle will start, state:', isExpanded);
+								}
+							</code></pre>
+						</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">afterToggle</div>
+						<div class="td-type" id="type">Function</div>
+						<div class="td-default" id="default">null</div>
+						<div class="td-desc" id="desc">
+							<p>Callback invoked after expanding/collapsing completes. Receives the same arguments: <code class="code">button</code>, <code class="code">element</code>, <code class="code">isExpanded</code>.</p>
+							<p><strong>Example:</strong></p>
+							<pre><code class="language-javascript show-language">
+								afterToggle: (button, element, isExpanded) => {
+									console.log('Toggle completed, state:', isExpanded);
+								}
+							</code></pre>
+						</div>
+					</div>
+					<div class="tr-options">
+						<div class="td-option" id="option">blockProcessed</div>
+						<div class="td-type" id="type">Function</div>
+						<div class="td-default" id="default">null</div>
+						<div class="td-desc" id="desc">
+							<p>Callback invoked after the plugin processes an element. Receives arguments: <code class="code">element</code> (content element), <code class="code">needsToggle</code> (boolean indicating if a button is needed).</p>
+							<p><strong>Example:</strong></p>
+							<pre><code class="language-javascript show-language">
+								blockProcessed: (element, needsToggle) => {
+									console.log('Element processed, button needed:', needsToggle);
+								}
+							</code></pre>
 						</div>
 					</div>
 				</div>
 			</article>
 			<article>
-				<h2>Settings Example</h2>
-				<p>To configure functionality on your site, you need to <a href="/en/readmore/docs/initialization">initialize</a> the plugin with parameters in your JavaScript code.</p>
-				<p>This can be done by passing an options object to the <code class="code">initReadMore</code> function. Below is a sample code that demonstrates how to do this:</p>
+				<h2>Example Configuration</h2>
+				<p>To use the plugin, initialize it via the <code class="code">initReadMore</code> function, passing a selector and a parameters object. This allows tailoring its behavior to your site.</p>
+				<p>Below is an example initialization with various parameters:</p>
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.readmore', {
-							collapsedHeight: 200,		// Height of the collapsed block in pixels
-							speed: 300,					// Animation speed in milliseconds
-							heightMargin: 16,			// Additional margin from the height
-							moreLink: '&lt;span&gt;Read More&lt;/span&gt;',		// HTML for the «Read More» button
-							lessLink: '&lt;span&gt;Close&lt;/span&gt;',			// HTML for the «Close» button
-							lazyLoad: true,				// Lazy initialization (displays only during scrolling)
-							animationMode: 'css',		// Animation mode ('js' or 'css')
-							hideButtonCollapse: false,	// Hide the «Read More» button after expansion
-							breakpoints: {				// Responsive settings for different screens
-								576: {					// For screens up to 576px
+							collapsedHeight: 200,
+							speed: 400,
+							moreLink: '&lt;span&gt;Read More&lt;/span&gt;',
+							lessLink: '&lt;span&gt;Collapse&lt;/span&gt;',
+							animationMode: 'js',
+							animationType: 'ease-in-out',
+							scrollToTopOnCollapse: true,
+							hideButtonCollapse: true,
+							disableCollapse: false,
+							breakpoints: {
+								576: {
 									collapsedHeight: 100,
 									speed: 200,
-									moreLink: '&lt;span&gt;More&lt;/span&gt;',
-									lessLink: '&lt;span&gt;Collapse&lt;/span&gt;',
+									moreLink: '&lt;span&gt;Show&lt;/span&gt;',
+									lessLink: '&lt;span&gt;Hide&lt;/span&gt;'
 								},
-								768: {					// For screens up to 768px
+								768: {
 									collapsedHeight: 150,
-									speed: 250,
+									speed: 300
 								},
+								1024: {
+									disableCollapse: true
+								}
+							},
+							beforeToggle: (button, element, isExpanded) => {
+								console.log('Toggle starting:', isExpanded);
+							},
+							afterToggle: (button, element, isExpanded) => {
+								console.log('Toggle completed:', isExpanded);
+							},
+							blockProcessed: (element, needsToggle) => {
+								console.log('Element processing completed, button:', needsToggle);
 							}
 						});
 					});
 				</code></pre>
 				<br>
-				<p>In this example, the plugin is initialized for all elements with the class <code class="code">.readmore</code>.</p>
-				<p>You can adjust the option values according to your needs to adapt the plugin behavior to your site.</p>
-				<p>This gives you the ability to create an interactive and user-friendly interface for displaying content.</p>
+				<p>This code applies the plugin to all elements with the <code class="code">.readmore</code> class, configuring height, animation, button text, and responsive behavior.</p>
+				<p>You can adjust parameters to achieve the desired functionality, creating a user-friendly and interactive interface for users.</p>
 			</article>
 		</div>
 	</main>

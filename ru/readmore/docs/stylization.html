@@ -179,7 +179,7 @@
 		<div class="container">
 			<article>
 				<h1>Стилизация</h1>
-				<p>Вы можете ознакомиться с CSS классами и атрибутами данных, используемыми в плагине Readmore.js, а также с их описанием. Эти классы и атрибуты помогут вам стилизовать элементы и контролировать их поведение при расширении и сворачивании контента.</p>
+				<p>Этот раздел поможет вам настроить внешний вид и поведение элементов, управляемых плагином <strong>Readmore.js</strong>. Ниже приведено подробное описание CSS-классов, data-атрибутов и ARIA-атрибутов, используемых в плагине, вместе с рекомендациями по их стилизации. Эти инструменты позволяют создавать адаптивный, доступный и визуально привлекательный интерфейс для функции «Читать далее» / «Свернуть».</p>
 				<div class="table-class">
 					<div class="tr-class-head">
 						<div class="td-class" id="class">CSS классы</div>
@@ -189,8 +189,9 @@
 						<div class="td-class" id="class">.cs_readmore-btn-wrapper</div>
 						<div class="td-desc" id="desc">
 							<ul>
-								<li>Применяется к контейнеру кнопки, которая управляет действиями «Читать далее» или «Закрыть».</li> 
-								<li>Служит оберткой для кнопки.</li>
+								<li>Контейнер для кнопки «Читать далее» или «Свернуть».</li>
+								<li>Используется как обертка для кнопки, чтобы облегчить позиционирование и стилизацию.</li>
+								<li>Автоматически скрывается, если контент короче, чем <code class="code">collapsedHeight</code>, или если <code class="code">hideButtonCollapse: true</code> в развернутом состоянии.</li>
 							</ul>
 						</div>
 					</div>
@@ -198,17 +199,29 @@
 						<div class="td-class" id="class">.cs_readmore-btn</div>
 						<div class="td-desc" id="desc">
 							<ul>
-								<li>Назначается кнопке, которая позволяет пользователю развернуть или свернуть контент.</li>
-								<li>Управляет стилями самой кнопки.</li>
+								<li>Назначается самой кнопке, которая отвечает за развертывание или сворачивание контента.</li>
+								<li>Содержит HTML, определенный в параметрах <code class="code">moreLink</code> или <code class="code">lessLink</code>.</li>
+								<li>Может быть стилизована для изменения цвета, размера, фона и т.д.</li>
 							</ul>
 						</div>
 					</div>
 					<div class="tr-class">
 						<div class="td-class" id="class">.cs_readmore-animation</div>
 						<div class="td-desc" id="desc">
-							<p>Используется, если активирован режим CSS-анимации <code class="code">animationMode: 'css'</code>.</p>
+							<p>Применяется к элементу с контентом в режиме CSS-анимации (<code class="code">animationMode: 'css'</code>).</p>
 							<ul>
-								<li>Добавляется для создания анимаций через CSS.</li>
+								<li>Добавляет плавные переходы для изменения высоты блока.</li>
+								<li>Рекомендуется определить CSS-свойство <code class="code">transition</code> для этого класса.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">.cs_readmore-expanded</div>
+						<div class="td-desc" id="desc">
+							<p>Добавляется к элементу с контентом в развернутом состоянии в режиме CSS-анимации (<code class="code">animationMode: 'css'</code>).</p>
+							<ul>
+								<li>Позволяет стилизовать развернутое состояние, например, изменяя фон или обводку.</li>
+								<li>Полезно для визуального обозначения активного состояния контента.</li>
 							</ul>
 						</div>
 					</div>
@@ -219,25 +232,94 @@
 					<div class="tr-class">
 						<div class="td-class" id="class">data-readmore-btn-toggle</div>
 						<div class="td-desc" id="desc">
-							<p>Применяется к кнопке «Читать далее» или «Закрыть». Используется для отслеживания состояния кнопки.</p>
-							<p>Атрибут хранит состояние кнопки:</p>
+							<p>Добавляется к кнопке «Читать далее» / «Свернуть» для отслеживания ее состояния.</p>
+							<p>Возможные значения:</p>
 							<ul>
-								<li><code class="code">collapsed</code> — кнопка в состоянии сворачивания контента.</li>
-								<li><code class="code">expanded</code> — кнопка в состоянии развернутого контента.</li>
+								<li><code class="code">collapsed</code> — кнопка в состоянии свернутого контента (показывает <code class="code">moreLink</code>).</li>
+								<li><code class="code">expanded</code> — кнопка в состоянии развернутого контента (показывает <code class="code">lessLink</code>).</li>
 							</ul>
+							<p>Может использоваться для условной стилизации кнопки в зависимости от состояния.</p>
 						</div>
 					</div>
 					<div class="tr-class">
 						<div class="td-class" id="class">data-readmore-block-toggle</div>
 						<div class="td-desc" id="desc">
-							<p>Применяется к элементу, содержащему контент. Помогает отслеживать текущее состояние контента (свернут или развернут).</p>
-							<p>Атрибут управляет состоянием блока контента:</p>
+							<p>Применяется к элементу с контентом для отслеживания его состояния.</p>
+							<p>Возможные значения:</p>
 							<ul>
-								<li><code class="code">collapsed</code> — блок свернут.</li>
-								<li><code class="code">expanded</code> — блок развернут.</li>
+								<li><code class="code">collapsed</code> — контент свернут (ограничен высотой <code class="code">collapsedHeight</code>).</li>
+								<li><code class="code">expanded</code> — контент полностью развернут.</li>
+							</ul>
+							<p>Полезно для создания стилей, специфичных для состояния блока.</p>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">data-readmore-processed</div>
+						<div class="td-desc" id="desc">
+							<p>Добавляется к элементу с контентом после обработки плагином.</p>
+							<ul>
+								<li>Значение: <code class="code">true</code>.</li>
+								<li>Используется для обозначения, что элемент уже инициализирован, чтобы избежать повторной обработки.</li>
 							</ul>
 						</div>
 					</div>
+					<div class="tr-class-head">
+						<div class="td-class" id="class">ARIA-атрибуты</div>
+						<div class="td-desc" id="desc">Описание</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">aria-expanded</div>
+						<div class="td-desc" id="desc">
+							<p>Добавляется к элементу с контентом и кнопке для обозначения их состояния.</p>
+							<p>Возможные значения:</p>
+							<ul>
+								<li><code class="code">true</code> — контент развернут.</li>
+								<li><code class="code">false</code> — контент свернут.</li>
+							</ul>
+							<p>Обеспечивает доступность для скринридеров, сообщая о состоянии элемента.</p>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">aria-hidden</div>
+						<div class="td-desc" id="desc">
+							<p>Применяется к элементу с контентом в свернутом состоянии.</p>
+							<p>Возможные значения:</p>
+							<ul>
+								<li><code class="code">true</code> — контент скрыт (свернут, не весь контент доступен).</li>
+								<li>Отсутствует — контент развернут и полностью видим.</li>
+							</ul>
+							<p>Помогает скринридерам игнорировать скрытый контент в свернутом состоянии.</p>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">aria-controls</div>
+						<div class="td-desc" id="desc">
+							<p>Добавляется к кнопке для связи с элементом контента.</p>
+							<ul>
+								<li>Значение: уникальный идентификатор элемента контента.</li>
+								<li>Указывает, какой элемент контролируется кнопкой, улучшая навигацию для пользователей с ассистивными технологиями.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">role</div>
+						<div class="td-desc" id="desc">
+							<p>Добавляется к элементу с контентом.</p>
+							<ul>
+								<li>Значение: <code class="code">area</code>.</li>
+								<li>Обозначает элемент как важную область страницы для скринридеров.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="note note-info">
+					<div class="note-label">Дополнительные замечания</div>
+					<ul>
+						<li><strong>Режим JS-анимации</strong>: Если <code class="code">animationMode: 'js'</code>, стили для <code class="code">.cs_readmore-animation</code> и <code class="code">.cs_readmore-expanded</code> не требуются, поскольку анимация управляется JavaScript.</li>
+						<li><strong>Адаптивность</strong>: Используйте медиа-запросы вместе с параметром <code class="code">breakpoints</code>, чтобы изменять стили для разных размеров экрана.</li>
+						<li><strong>События</strong>: Плагин запускает пользовательские события <code class="code">readmore:beforeToggle</code> и <code class="code">readmore:afterToggle</code>, которые можно использовать для динамического изменения стилей через JavaScript.</li>
+						<li><strong>Очистка стилей</strong>: При вызове метода <code class="code">destroy</code> все классы, атрибуты и стили, добавленные плагином, удаляются, возвращая элементы в исходное состояние.</li>
+					</ul>
 				</div>
 			</article>
 			<article>
@@ -267,6 +349,28 @@
 					}
 					.cs_readmore-btn:hover {
 						color: #0051DE;
+					}
+					.cs_readmore-animation {
+						transition: height 300ms ease-in-out;
+						overflow: hidden;
+					}
+					.cs_readmore-expanded {
+						box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+					}
+					.cs_readmore-btn[data-readmore-btn-toggle="expanded"] {
+						background-color: #dc3545;
+					}
+					.cs_readmore-btn[data-readmore-btn-toggle="expanded"]:hover {
+						background-color: #c82333;
+					}
+
+					/* Иконки для кнопки с помощью CSS */
+					.cs_readmore-btn::after {
+						content: '↓';
+						font-size: 14px;
+					}
+					.cs_readmore-btn[data-readmore-btn-toggle="expanded"]::after {
+						content: '↑';
 					}
 				</code></pre>
 			</article>

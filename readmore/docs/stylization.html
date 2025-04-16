@@ -179,7 +179,7 @@
 		<div class="container">
 			<article>
 				<h1>Стилізація</h1>
-				<p>Ви можете ознайомитися з CSS класами та атрибутами даних, що використовуються в плагіні Readmore.js, а також з їхнім описом. Ці класи та атрибути допоможуть вам стилізувати елементи та контролювати їхню поведінку при розгортанні та згортанні контенту.</p>
+				<p>Цей розділ допоможе вам налаштувати зовнішній вигляд і поведінку елементів, керованих плагіном <strong>Readmore.js</strong>. Нижче наведено детальний опис CSS-класів, data-атрибутів та ARIA-атрибутів, які використовуються в плагіні, разом із рекомендаціями щодо їх стилізації. Ці інструменти дозволяють створювати адаптивний, доступний і візуально привабливий інтерфейс для функції «Читати далі» / «Закрити».</p>
 				<div class="table-class">
 					<div class="tr-class-head">
 						<div class="td-class" id="class">CSS класи</div>
@@ -189,8 +189,9 @@
 						<div class="td-class" id="class">.cs_readmore-btn-wrapper</div>
 						<div class="td-desc" id="desc">
 							<ul>
-								<li>Застосовується до контейнера кнопки, яка керує діями «Читати далі» або «Закрити».</li>
-								<li>Служить обгорткою для кнопки.</li>
+								<li>Контейнер для кнопки «Читати далі» або «Закрити».</li>
+								<li>Використовується як обгортка для кнопки, щоб полегшити позиціонування та стилізацію.</li>
+								<li>Автоматично ховається, якщо контент коротший за <code class="code">collapsedHeight</code> або якщо <code class="code">hideButtonCollapse: true</code> у розгорнутому стані.</li>
 							</ul>
 						</div>
 					</div>
@@ -198,17 +199,29 @@
 						<div class="td-class" id="class">.cs_readmore-btn</div>
 						<div class="td-desc" id="desc">
 							<ul>
-								<li>Призначається кнопці, яка дозволяє користувачеві розгортати або згортати контент.</li>
-								<li>Керує стилями самої кнопки.</li>
+								<li>Призначається самій кнопці, яка відповідає за розгортання або згортання контенту.</li>
+								<li>Містить HTML, визначений у параметрах <code class="code">moreLink</code> або <code class="code">lessLink</code>.</li>
+								<li>Може бути стилізована для зміни кольору, розміру, фону тощо.</li>
 							</ul>
 						</div>
 					</div>
 					<div class="tr-class">
 						<div class="td-class" id="class">.cs_readmore-animation</div>
 						<div class="td-desc" id="desc">
-							<p>Використовується, якщо активовано режим CSS-анімації <code class="code">animationMode: 'css'</code>.</p>
+							<p>Застосовується до елемента з контентом у режимі CSS-анімації (<code class="code">animationMode: 'css'</code>).</p>
 							<ul>
-								<li>Додається для створення анімацій через CSS.</li>
+								<li>Додає плавні переходи для зміни висоти блоку.</li>
+								<li>Рекомендується визначити CSS-властивість <code class="code">transition</code> для цього класу.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">.cs_readmore-expanded</div>
+						<div class="td-desc" id="desc">
+							<p>Додається до елемента з контентом у розгорнутому стані в режимі CSS-анімації (<code class="code">animationMode: 'css'</code>).</p>
+							<ul>
+								<li>Дозволяє стилізувати розгорнутий стан, наприклад, змінюючи тло чи обводку.</li>
+								<li>Корисно для візуального позначення активного стану контенту.</li>
 							</ul>
 						</div>
 					</div>
@@ -219,25 +232,94 @@
 					<div class="tr-class">
 						<div class="td-class" id="class">data-readmore-btn-toggle</div>
 						<div class="td-desc" id="desc">
-							<p>Застосовується до кнопки «Читати далі» або «Закрити». Використовується для відстеження стану кнопки.</p>
-							<p>Атрибут зберігає стан кнопки:</p>
+							<p>Додається до кнопки «Читати далі» / «Закрити» для відстеження її стану.</p>
+							<p>Можливі значення:</p>
 							<ul>
-								<li><code class="code">collapsed</code> — кнопка у стані згортання контенту.</li>
-								<li><code class="code">expanded</code> — кнопка у стані розгорнутого контенту.</li>
+								<li><code class="code">collapsed</code> — кнопка у стані згорнутого контенту (показує <code class="code">moreLink</code>).</li>
+								<li><code class="code">expanded</code> — кнопка у стані розгорнутого контенту (показує <code class="code">lessLink</code>).</li>
 							</ul>
+							<p>Може використовуватися для умовної стилізації кнопки залежно від стану.</p>
 						</div>
 					</div>
 					<div class="tr-class">
 						<div class="td-class" id="class">data-readmore-block-toggle</div>
 						<div class="td-desc" id="desc">
-							<p>Застосовується до елемента, що містить контент. Допомагає відстежувати поточний стан контенту (згорнутий чи розгорнутий).</p>
-							<p>Атрибут керує станом блоку контенту:</p>
+							<p>Застосовується до елемента з контентом для відстеження його стану.</p>
+							<p>Можливі значення:</p>
 							<ul>
-								<li><code class="code">collapsed</code> — блок згорнутий.</li>
-								<li><code class="code">expanded</code> — блок розгорнутий.</li>
+								<li><code class="code">collapsed</code> — контент згорнутий (обмежений висотою <code class="code">collapsedHeight</code>).</li>
+								<li><code class="code">expanded</code> — контент повністю розгорнутий.</li>
+							</ul>
+							<p>Корисно для створення стилів, специфічних для стану блоку.</p>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">data-readmore-processed</div>
+						<div class="td-desc" id="desc">
+							<p>Додається до елемента з контентом після обробки плагіном.</p>
+							<ul>
+								<li>Значення: <code class="code">true</code>.</li>
+								<li>Використовується для позначення, що елемент уже ініціалізований, щоб уникнути повторної обробки.</li>
 							</ul>
 						</div>
 					</div>
+					<div class="tr-class-head">
+						<div class="td-class" id="class">ARIA-атрибути</div>
+						<div class="td-desc" id="desc">Опис</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">aria-expanded</div>
+						<div class="td-desc" id="desc">
+							<p>Додається до елемента з контентом і кнопки для позначення їхнього стану.</p>
+							<p>Можливі значення:</p>
+							<ul>
+								<li><code class="code">true</code> — контент розгорнутий.</li>
+								<li><code class="code">false</code> — контент згорнутий.</li>
+							</ul>
+							<p>Забезпечує доступність для скрінрідерів, повідомляючи про стан елемента.</p>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">aria-hidden</div>
+						<div class="td-desc" id="desc">
+							<p>Застосовується до елемента з контентом у згорнутому стані.</p>
+							<p>Можливі значення:</p>
+							<ul>
+								<li><code class="code">true</code> — контент прихований (згорнутий, не весь вміст доступний).</li>
+								<li>Відсутній — контент розгорнутий і повністю видимий.</li>
+							</ul>
+							<p>Допомагає скрінрідерам ігнорувати прихований вміст у згорнутому стані.</p>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">aria-controls</div>
+						<div class="td-desc" id="desc">
+							<p>Додається до кнопки для зв’язку з елементом контенту.</p>
+							<ul>
+								<li>Значення: унікальний ідентифікатор елемента контенту.</li>
+								<li>Вказує, який елемент контролюється кнопкою, покращуючи навігацію для користувачів із допоміжними технологіями.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">role</div>
+						<div class="td-desc" id="desc">
+							<p>Додається до елемента з контентом.</p>
+							<ul>
+								<li>Значення: <code class="code">area</code>.</li>
+								<li>Позначає елемент як важливу область сторінки для скрінрідерів.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="note note-info">
+					<div class="note-label">Додаткові зауваження</div>
+					<ul>
+						<li><strong>Режим JS-анімації</strong>: Якщо <code class="code">animationMode: 'js'</code>, стилі для <code class="code">.cs_readmore-animation</code> і <code class="code">.cs_readmore-expanded</code> не потрібні, оскільки анімація керується JavaScript.</li>
+						<li><strong>Адаптивність</strong>: Використовуйте медіа-запити разом із параметром <code class="code">breakpoints</code>, щоб змінювати стилі для різних розмірів екрана.</li>
+						<li><strong>Події</strong>: Плагін запускає кастомні події <code class="code">readmore:beforeToggle</code> і <code class="code">readmore:afterToggle</code>, які можна використовувати для динамічної зміни стилів через JavaScript.</li>
+						<li><strong>Очищення стилів</strong>: При виклику методу <code class="code">destroy</code> усі класи, атрибути та стилі, додані плагіном, видаляються, повертаючи елементи до початкового стану.</li>
+					</ul>
 				</div>
 			</article>
 			<article>
@@ -267,6 +349,28 @@
 					}
 					.cs_readmore-btn:hover {
 						color: #0051DE;
+					}
+					.cs_readmore-animation {
+						transition: height 300ms ease-in-out;
+						overflow: hidden;
+					}
+					.cs_readmore-expanded {
+						box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+					}
+					.cs_readmore-btn[data-readmore-btn-toggle="expanded"] {
+						background-color: #dc3545;
+					}
+					.cs_readmore-btn[data-readmore-btn-toggle="expanded"]:hover {
+						background-color: #c82333;
+					}
+
+					/* Іконки для кнопки за допомогою CSS */
+					.cs_readmore-btn::after {
+						content: '↓';
+						font-size: 14px;
+					}
+					.cs_readmore-btn[data-readmore-btn-toggle="expanded"]::after {
+						content: '↑';
 					}
 				</code></pre>
 			</article>

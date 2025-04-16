@@ -179,7 +179,7 @@
 		<div class="container">
 			<article>
 				<h1>Stylization</h1>
-				<p>You can familiarize yourself with the CSS classes and data attributes used in the Readmore.js plugin, as well as their descriptions. These classes and attributes will help you style elements and control their behavior when expanding and collapsing content.</p>
+				<p>This section will help you customize the appearance and behavior of elements controlled by the <strong>Readmore.js</strong> plugin. Below is a detailed description of the CSS classes, data attributes, and ARIA attributes used in the plugin, along with recommendations for their styling. These tools enable you to create a responsive, accessible, and visually appealing interface for the «Read more» / «Collapse» functionality.</p>
 				<div class="table-class">
 					<div class="tr-class-head">
 						<div class="td-class" id="class">CSS Classes</div>
@@ -189,8 +189,9 @@
 						<div class="td-class" id="class">.cs_readmore-btn-wrapper</div>
 						<div class="td-desc" id="desc">
 							<ul>
-								<li>Applied to the container of the button that manages the «Read More» or «Close» actions.</li>
-								<li>Serves as a wrapper for the button.</li>
+								<li>Container for the «Read more» or «Collapse» button.</li>
+								<li>Used as a wrapper for the button to facilitate positioning and styling.</li>
+								<li>Automatically hidden if the content is shorter than <code class="code">collapsedHeight</code> or if <code class="code">hideButtonCollapse: true</code> in the expanded state.</li>
 							</ul>
 						</div>
 					</div>
@@ -198,17 +199,29 @@
 						<div class="td-class" id="class">.cs_readmore-btn</div>
 						<div class="td-desc" id="desc">
 							<ul>
-								<li>Assigned to the button that allows the user to expand or collapse the content.</li>
-								<li>Manages the styles of the button itself.</li>
+								<li>Assigned to the button itself, responsible for expanding or collapsing the content.</li>
+								<li>Contains HTML defined in the <code class="code">moreLink</code> or <code class="code">lessLink</code> parameters.</li>
+								<li>Can be styled to change color, size, background, etc.</li>
 							</ul>
 						</div>
 					</div>
 					<div class="tr-class">
 						<div class="td-class" id="class">.cs_readmore-animation</div>
-						<div class="td-desc" id="desc">
-							<p>Used if the CSS animation mode <code class="code">animationMode: 'css'</code> is enabled.</p>
+						<div class="ti-desc" id="desc">
+							<p>Applied to the content element in CSS animation mode (<code class="code">animationMode: 'css'</code>).</p>
 							<ul>
-								<li>Added to create animations through CSS.</li>
+								<li>Adds smooth transitions for changing the block's height.</li>
+								<li>It is recommended to define the CSS <code class="code">transition</code> property for this class.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">.cs_readmore-expanded</div>
+						<div class="td-desc" id="desc">
+							<p>Added to the content element in the expanded state in CSS animation mode (<code class="code">animationMode: 'css'</code>).</p>
+							<ul>
+								<li>Allows styling the expanded state, e.g., changing the background or border.</li>
+								<li>Useful for visually indicating the active state of the content.</li>
 							</ul>
 						</div>
 					</div>
@@ -219,32 +232,101 @@
 					<div class="tr-class">
 						<div class="td-class" id="class">data-readmore-btn-toggle</div>
 						<div class="td-desc" id="desc">
-							<p>Applied to the «Read More» or «Close» button. Used to track the button's state.</p>
-							<p>The attribute stores the button state:</p>
+							<p>Added to the «Read more» / «Collapse» button to track its state.</p>
+							<p>Possible values:</p>
 							<ul>
-								<li><code class="code">collapsed</code> — the button is in the collapsed state.</li>
-								<li><code class="code">expanded</code> — the button is in the expanded state.</li>
+								<li><code class="code">collapsed</code> — button in the collapsed content state (displays <code class="code">moreLink</code>).</li>
+								<li><code class="code">expanded</code> — button in the expanded content state (displays <code class="code">lessLink</code>).</li>
 							</ul>
+							<p>Can be used for conditional button styling based on its state.</p>
 						</div>
 					</div>
 					<div class="tr-class">
 						<div class="td-class" id="class">data-readmore-block-toggle</div>
 						<div class="td-desc" id="desc">
-							<p>Applied to the element containing the content. Helps track the current state of the content (collapsed or expanded).</p>
-							<p>The attribute manages the content block's state:</p>
+							<p>Applied to the content element to track its state.</p>
+							<p>Possible values:</p>
 							<ul>
-								<li><code class="code">collapsed</code> — the block is collapsed.</li>
-								<li><code class="code">expanded</code> — the block is expanded.</li>
+								<li><code class="code">collapsed</code> — content is collapsed (limited by <code class="code">collapsedHeight</code>).</li>
+								<li><code class="code">expanded</code> — content is fully expanded.</li>
+							</ul>
+							<p>Useful for creating styles specific to the block's state.</p>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">data-readmore-processed</div>
+						<div class="td-desc" id="desc">
+							<p>Added to the content element after being processed by the plugin.</p>
+							<ul>
+								<li>Value: <code class="code">true</code>.</li>
+								<li>Used to indicate that the element has already been initialized to prevent reprocessing.</li>
 							</ul>
 						</div>
 					</div>
+					<div class="tr-class-head">
+						<div class="td-class" id="class">ARIA Attributes</div>
+						<div class="td-desc" id="desc">Description</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">aria-expanded</div>
+						<div class="td-desc" id="desc">
+							<p>Added to the content element and button to indicate their state.</p>
+							<p>Possible values:</p>
+							<ul>
+								<li><code class="code">true</code> — content is expanded.</li>
+								<li><code class="code">false</code> — content is collapsed.</li>
+							</ul>
+							<p>Ensures accessibility for screen readers by indicating the element's state.</p>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">aria-hidden</div>
+						<div class="td-desc" id="desc">
+							<p>Applied to the content element in the collapsed state.</p>
+							<p>Possible values:</p>
+							<ul>
+								<li><code class="code">true</code> — content is hidden (collapsed, not all content is accessible).</li>
+								<li>Absent — content is expanded and fully visible.</li>
+							</ul>
+							<p>Helps screen readers ignore hidden content in the collapsed state.</p>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">aria-controls</div>
+						<div class="td-desc" id="desc">
+							<p>Added to the button to associate it with the content element.</p>
+							<ul>
+								<li>Value: unique identifier of the content element.</li>
+								<li>Indicates which element is controlled by the button, improving navigation for users with assistive technologies.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tr-class">
+						<div class="td-class" id="class">role</div>
+						<div class="td-desc" id="desc">
+							<p>Added to the content element.</p>
+							<ul>
+								<li>Value: <code class="code">area</code>.</li>
+								<li>Marks the element as an important page area for screen readers.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="note note-info">
+					<div class="note-label">Additional Notes</div>
+					<ul>
+						<li><strong>JS Animation Mode</strong>: If <code class="code">animationMode: 'js'</code>, styles for <code class="code">.cs_readmore-animation</code> and <code class="code">.cs_readmore-expanded</code> are not needed, as the animation is handled by JavaScript.</li>
+						<li><strong>Responsiveness</strong>: Use media queries along with the <code class="code">breakpoints</code> parameter to adjust styles for different screen sizes.</li>
+						<li><strong>Events</strong>: The plugin triggers custom events <code class="code">readmore:beforeToggle</code> and <code class="code">readmore:afterToggle</code>, which can be used for dynamic style changes via JavaScript.</li>
+						<li><strong>Style Cleanup</strong>: When the <code class="code">destroy</code> method is called, all classes, attributes, and styles added by the plugin are removed, restoring elements to their original state.</li>
+					</ul>
 				</div>
 			</article>
 			<article>
 				<h2>Example of Styling</h2>
 				<p>The code creates styles for the button container and the button itself, adding padding, text alignment, and user interaction styles, including color changes on hover.</p>
 				<pre><code class="language-css show-language">
-					.cs_readmore-btn-wrapper {
+					cs_readmore-btn-wrapper {
 						margin: 15px auto 0;
 						text-align: center;
 					}
@@ -267,6 +349,28 @@
 					}
 					.cs_readmore-btn:hover {
 						color: #0051DE;
+					}
+					.cs_readmore-animation {
+						transition: height 300ms ease-in-out;
+						overflow: hidden;
+					}
+					.cs_readmore-expanded {
+						box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+					}
+					.cs_readmore-btn[data-readmore-btn-toggle="expanded"] {
+						background-color: #dc3545;
+					}
+					.cs_readmore-btn[data-readmore-btn-toggle="expanded"]:hover {
+						background-color: #c82333;
+					}
+
+					/* Icons for buttons using CSS */
+					.cs_readmore-btn::after {
+						content: '↓';
+						font-size: 14px;
+					}
+					.cs_readmore-btn[data-readmore-btn-toggle="expanded"]::after {
+						content: '↑';
 					}
 				</code></pre>
 			</article>

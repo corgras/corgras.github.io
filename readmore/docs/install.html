@@ -179,46 +179,77 @@
 		<div class="container">
 			<article>
 				<h1>Початок роботи</h1>
-				<p class="lead">Існує кілька способів інтегрувати Readmore.js у ваш проєкт. Оберіть той, що найбільше відповідає вашим потребам.</p>
+				<p class="lead">Readmore.js можна інтегрувати у ваш проєкт кількома способами. Оберіть той, що найкраще відповідає вашим потребам, залежно від типу проєкту та інструментів, які ви використовуєте.</p>
 				<hr>
-				<h2>Підключення через NPM</h2>
-				<p class="lead-normal">Це зручний варіант для більших проєктів, де використовується npm. Використання NPM також дозволяє вам легко оновлювати бібліотеку та керувати залежностями вашого проєкту, а також інтегрувати її в більші системи на базі JavaScript, такі як React або Vue.js.</p>
-				<p>&mdash; У командному рядку виконайте:</p>
+
+				<h2>Встановлення через NPM</h2>
+				<p class="lead-normal">Цей спосіб ідеально підходить для проєктів, що використовують менеджер пакетів npm. Встановлення через NPM полегшує управління залежностями, оновлення бібліотеки та інтеграцію з сучасними JavaScript-фреймворками, такими як React, Vue.js чи Angular.</p>
+				<p>&mdash; Виконайте наступну команду в терміналі:</p>
 				<pre><code class="language-npm show-language">
 					$ npm i @corgras/readmore-js
 				</code></pre>
 				<br>
-				<p>&mdash; Після встановлення ви можете імпортувати функцію <code class="code">initReadMore</code> у вашому JavaScript файлі.</p>
-				<pre><code class="language-javascript show-language">
-					import { initReadMore } from '@corgras/readmore-js';
-					// Решта коду
+				<p>&mdash; Після встановлення підключіть скрипт у вашому проєкті. Наприклад, додайте його до HTML-файлу:</p>
+				<pre><code class="language-html show-language">
+					&lt;script src="./node_modules/@corgras/readmore-js/dist/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
-				<p>&mdash; Потім ви можете викликати <code class="code">initReadMore</code> з необхідними <a href="/readmore/docs/options">параметрами</a>.</p>
+				<p class="em">Атрибут <code class="code">defer</code> забезпечує виконання скрипта після повного завантаження DOM, що підвищує продуктивність.</p>
+				<p>&mdash; Якщо ви використовуєте модульну систему, імпортуйте бібліотеку у вашому JavaScript-коді (див. розділи нижче).</p>
+				<hr>
+
+				<h2>Використання в Node.js / CommonJS</h2>
+				<p class="lead-normal">Для проєктів, що використовують CommonJS (наприклад, у Node.js або з інструментами типу Webpack), ви можете імпортувати основну функцію Readmore.js після встановлення через NPM.</p>
+				<p>&mdash; Додайте наступний код у ваш JavaScript-файл:</p>
+				<pre><code class="language-javascript show-language">
+					const initReadMore = require('@corgras/readmore-js');
+					// Ініціалізація: initReadMore('.selector', { /* опції */ });
+				</code></pre>
+				<p class="em">Переконайтеся, що ваш проєкт налаштований для роботи з CommonJS-модулями.</p>
+				<hr>
+
+				<h2>Використання як ES-модуль</h2>
+				<p class="lead-normal">Для сучасних проєктів, що використовують ES-модулі (наприклад, з Vite, Rollup або сучасними версіями Webpack), імпортуйте Readmore.js як модуль після встановлення через NPM.</p>
+				<p>&mdash; Додайте наступний код у ваш JavaScript-файл:</p>
+				<pre><code class="language-javascript show-language">
+					import initReadMore from '@corgras/readmore-js';
+					// Ініціалізація: initReadMore('.selector', { /* опції */ });
+				</code></pre>
+				<p class="em">Переконайтеся, що ваш HTML-файл містить атрибут <code class="code">type="module"</code> у тегу <code class="code">&lt;script&gt;</code>, якщо ви підключаєте скрипт напряму.</p>
+				<p>&mdash; Приклад підключення з типом модуля:</p>
+				<pre><code class="language-html show-language">
+					&lt;script type="module"&gt;
+						import initReadMore from './node_modules/@corgras/readmore-js/dist/readmore.min.js';
+						initReadMore('.content', { collapsedHeight: 200 });
+					&lt;/script&gt;
+				</code></pre>
 				<hr>
 
 				<h2>Ручне підключення</h2>
-				<p class="lead-normal">Цей спосіб дозволяє додати файл безпосередньо до вашого HTML-коду. Просто завантажте скрипт, збережіть його у папці вашого проєкту та підключіть до документа. Таке підключення дає вам повний контроль над версією скрипта, яку ви використовуєте.</p>
-				<p>&mdash; Завантажте файли скрипта Readmore.js з <a href="https://github.com/corgras/Readmore.js/releases">GitHub</a></p>
-				<p>&mdash; Після завантаження файлу у вказану папку на вашому сайті підключіть JavaScript-файл, додавши наступний код у секцію <code class="code"><head></code> або безпосередньо перед закриваючим тегом <code class="code"></body></code> вашої HTML-сторінки:</p>
+				<p class="lead-normal">Якщо ви не використовуєте менеджери пакетів, можна підключити Readmore.js, завантаживши файл скрипта вручну. Цей спосіб дає повний контроль над версією бібліотеки та не залежить від зовнішніх інструментів.</p>
+				<p>&mdash; Завантажте останню версію <code class="code">readmore.min.js</code> з <a href="https://github.com/corgras/Readmore.js/releases">офіційного репозиторію на GitHub</a></p>
+				<p>&mdash; Розмістіть завантажений файл у папці вашого проєкту (наприклад, <code class="code">/js/</code>).</p>
+				<p>&mdash; Підключіть скрипт до вашого HTML-файлу, додавши наступний код у секцію  <code class="code">&lt;head&gt;</code> або перед закриваючим тегом <code class="code">&lt;/body&gt;</code>:</p>
 				<pre><code class="language-html show-language">
 					&lt;script src="шлях_до_вашої_папки/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
-				<p class="em">У тегу <code class="code">&lt;script&gt;</code> використовується атрибут <code class="code">defer</code>. Скрипт буде виконано після завантаження HTML, але перед подією <code class="code">DOMContentLoaded</code>.</p><br>
-				<p>&mdash; Після підключення вам потрібно <a href="/readmore/docs/initialization">ініціалізувати</a> скрипт, щоб він почав працювати з обраними елементами на вашій сторінці.</p>
+				<p class="em">Атрибут <code class="code">defer</code> гарантує, що скрипт виконається після завантаження DOM, уникаючи блокування рендерингу сторінки.</p>
+				<p>&mdash; Після підключення ініціалізуйте скрипт, викликавши функцію <code class="code">initReadMore</code>. Докладніше про ініціалізацію читайте в <a href="/readmore/docs/initialization">розділі ініціалізації</a>.</p>
 				<hr>
+
 				<h2>Підключення через CDN</h2>
-				<p class="lead-normal">Скрипт можна підключити з віддаленого сервера, що значно прискорить завантаження вашого сайту та позбавляє необхідності зберігати його локально. Використання CDN забезпечує доступ до кешованих версій скрипта з різних куточків світу. Ви можете скористатися одним із популярних сервісів CDN, таких як jsDelivr або Unpkg.</p>
-				<p>&mdash; Для підключення, вставте один із наведених нижче рядків коду в секцію <code class="code">&lt;head&gt;</code> або перед закриттям тега <code class="code">&lt;/body&gt;</code> на вашій HTML-сторінці:</p>			
+				<p class="lead-normal">Використання CDN (Content Delivery Network) дозволяє швидко підключити Readmore.js без локального збереження файлів. CDN забезпечує високу швидкість завантаження завдяки кешуванню та глобальній мережі серверів.</p>
+				<p>&mdash; Додайте один із наведених нижче скриптів у секцію <code class="code">&lt;head&gt;</code> або перед закриваючим тегом <code class="code">&lt;/body&gt;</code>:</p>
 				<p><strong>CDN jsDelivr:</strong></p>
 				<pre><code class="language-html show-language">
-					&lt;script src="https://cdn.jsdelivr.net/npm/@corgras/readmore-js@2.0.0/readmore.min.js" defer&gt;&lt;/script&gt;
-				</code></pre><br>
+					&lt;script src="https://cdn.jsdelivr.net/npm/@corgras/readmore-js/readmore.min.js" defer&gt;&lt;/script&gt;
+				</code></pre>
+				<br>
 				<p><strong>CDN Unpkg:</strong></p>
 				<pre><code class="language-html show-language">
-					&lt;script src="https://unpkg.com/@corgras/readmore-js@2.0.0/readmore.min.js" defer&gt;&lt;/script&gt;
+					&lt;script src="https://unpkg.com/@corgras/readmore-js/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
-				<p class="em">У тегу <code class="code">&lt;script&gt;</code> використовується атрибут <code class="code">defer</code>. Скрипт буде виконано після завантаження HTML, але перед подією <code class="code">DOMContentLoaded</code>.</p>
-				<p>&mdash; Після підключення вам потрібно <a href="/readmore/docs/initialization">ініціалізувати</a> скрипт, щоб він почав працювати з обраними елементами на вашій сторінці.</p>
+				<p class="em">Без зазначення версії завантажиться найновіша.</p>
+				<p>&mdash; Після підключення ініціалізуйте скрипт, як описано в <a href="/readmore/docs/initialization">розділі ініціалізації</a>.</p>
 			</article>
 		</div>
 	</main>

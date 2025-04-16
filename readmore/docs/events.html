@@ -179,96 +179,123 @@
 		<div class="container">
 			<article>
 				<h1>Події</h1>
-				<p>Readmore.js генерує дві основні події: <code class="code">readmore:beforeToggle</code> і <code class="code">readmore:afterToggle</code>. Ці події можна слухати та використовувати для додавання кастомної логіки в процесі перемикання стану елемента.</p>
+				<p>Плагін Readmore.js генерує дві спеціальні події: <code class="code">readmore:beforeToggle</code> та <code class="code">readmore:afterToggle</code>. Вони дозволяють розробникам відстежувати зміну стану елемента (розгортання чи згортання) та додавати власну логіку для кастомізації поведінки.</p>
+				
 				<h3>readmore:beforeToggle</h3>
-				<p>Ця подія викликається перед зміною стану елемента. Вона надає можливість налаштувати поведінку до того, як стан елемента буде змінено.</p>
+				<p>Ця подія спрацьовує <strong>до</strong> зміни стану елемента (розгортання або згортання). Вона корисна для виконання підготовчих дій, наприклад, зміни стилів або запуску анімацій перед перемиканням.</p>
 				<pre><code class="language-javascript show-language">
 					element.addEventListener('readmore:beforeToggle', function(event) {
-						// Приклад: змінюємо стиль кнопки перед перемиканням стану
-						event.target.style.backgroundColor = 'gray';
+						// Приклад: змінюємо колір фону елемента перед перемиканням
+						event.target.style.backgroundColor = '#f0f0f0';
 					});
 				</code></pre>
+				
 				<h3>readmore:afterToggle</h3>
-				<p>Ця подія викликається після зміни стану елемента. Вона дозволяє виконати дії одразу після зміни стану елемента.</p>
+				<p>Ця подія спрацьовує <strong>після</strong> завершення зміни стану елемента. Вона дозволяє виконувати дії, пов’язані з новим станом, наприклад, оновлення тексту кнопки чи стилів.</p>
 				<pre><code class="language-javascript show-language">
 					element.addEventListener('readmore:afterToggle', function(event) {
-						// Приклад: змінюємо текст кнопки після перемикання стану
-						const button = event.target;
-						button.textContent = button.textContent === 'Читати далі' ? 'Сховати' : 'Читати далі';
+						// Приклад: виводимо повідомлення в консоль після перемикання
+						console.log('Елемент змінено. Новий стан:', event.target.getAttribute('aria-expanded'));
 					});
 				</code></pre>
+				
+				<div class="note note-info">
+					<div class="note-label">Примітка</div>
+					<p>Події прив’язуються до елементів, які обробляються плагіном (ті, що відповідають селектору). Використовуйте <code class="code">event.target</code>, щоб отримати доступ до елемента, який викликав подію.</p>
+				</div>
 			</article>
 			<article>
-				<h1>Зворотні виклики (Callbacks)</h1>
-				<p>Readmore.js підтримує використання callback-функцій, які можна передати в параметрах конфігурації. Це дозволяє виконувати певні дії на різних етапах роботи плагіна.</p>
-				<p>Зворотні виклики <code class="code">beforeToggle</code> та <code class="code">afterToggle</code> отримують наступні аргументи: trigger, element і isExpanded.</p>
-				<ul>
-					<li><code class="code">trigger</code> — елемент, який ініціює дію (наприклад, кнопка «Читати далі» або «Закрити»).</li>
-					<li><code class="code">element</code> — елемент, що містить контент, який згортається або розгортається.</li>
-					<li><code class="code">isExpanded</code> — значення, що вказує на стан контенту: (true — розгорнуто, false — згорнуто).</li>
-				</ul>
+				<h2>Зворотні виклики (Callbacks)</h2>
+				<p>Readmore.js підтримує три зворотні виклики, які можна передати в об’єкті конфігурації: <code class="code">beforeToggle</code>, <code class="code">afterToggle</code> та <code class="code">blockProcessed</code>. Вони дозволяють виконувати власний код на різних етапах роботи плагіна, забезпечуючи гнучкість у налаштуванні поведінки.</p>
 				<h3>beforeToggle</h3>
-				<p>Cпрацьовує до перемикання стану елемента. Він дозволяє виконати дії перед зміною стану.</p>
+				<p>Викликається <strong>до</strong> перемикання стану елемента (розгортання чи згортання). Цей виклик корисний для підготовки елементів або зміни їхнього вигляду перед анімацією.</p>
+				<p><strong>Аргументи:</strong></p>
+				<ul>
+					<li><code class="code">trigger</code> — кнопка, яка ініціює перемикання (наприклад, «Читати далі» або «Сховати»).</li>
+					<li><code class="code">element</code> — елемент із контентом, що розгортається або згортається.</li>
+					<li><code class="code">isExpanded</code> — логічне значення: <code class="code">true</code>, якщо елемент буде розгорнуто, <code class="code">false</code> — якщо згорнуто.</li>
+				</ul>
 				<pre><code class="language-javascript show-language">
 					beforeToggle: function(trigger, element, isExpanded) {
-						// Приклад: робимо елемент напівпрозорим перед перемиканням стану
-						element.style.opacity = 0.5;
+						// Приклад: додаємо анімацію затемнення перед перемиканням
+						element.style.transition = 'opacity 0.2s';
+						element.style.opacity = 0.7;
 					}
 				</code></pre>
 				<h3>afterToggle</h3>
-				<p>Cпрацьовує після перемикання стану елемента. Він дозволяє повернути елемент у початковий стан після зміни.</p>
+				<p>Викликається <strong>після</strong> завершення перемикання стану елемента. Дозволяє виконати дії, пов’язані з новим станом, наприклад, оновити стилі чи запустити додаткові ефекти.</p>
+				<p><strong>Аргументи:</strong> такі ж, як у <code class="code">beforeToggle</code> (trigger, element, isExpanded).</p>
 				<pre><code class="language-javascript show-language">
 					afterToggle: function(trigger, element, isExpanded) {
-						// Приклад: відновлюємо непрозорість елемента після зміни стану
+						// Приклад: відновлюємо прозорість після перемикання
 						element.style.opacity = 1;
+						console.log('Контент', isExpanded ? 'розгорнуто' : 'згорнуто');
 					}
 				</code></pre>
 				<h3>blockProcessed</h3>
-				<p>Викликається після завершення обробки елемента, але до його відображення. Це корисно для виконання початкових налаштувань або аналізу.</p>
-				<p>Зворотний виклик <code class="code">blockProcessed</code> отримує такі аргументи: element і isExpandable</p>
+				<p>Викликається <strong>після обробки</strong> кожного елемента плагіном, незалежно від того, чи застосовується згортання. Цей виклик корисний для початкового налаштування елементів або аналізу їхнього стану.</p>
+				<p><strong>Аргументи:</strong></p>
 				<ul>
-					<li><code class="code">element</code> — поточний елемент, який обробляється.</li>
-					<li><code class="code">isExpandable</code> — логічне значення, що вказує, чи потрібне згортання.</li>
+					<li><code class="code">element</code> — елемент, який було оброблено.</li>
+					<li><code class="code">isExpandable</code> — логічне значення: <code class="code">true</code>, якщо контент довший за <code class="code">collapsedHeight</code> і потребує кнопки, <code class="code">false</code> — якщо згортання не потрібне.</li>
 				</ul>
 				<pre><code class="language-javascript show-language">
 					blockProcessed: function(element, isExpandable) {
-						// Приклад: якщо елемент можна розгорнути, показуємо кнопку «Читати далі»
+						// Приклад: додаємо клас для стилізації, якщо елемент можна розгорнути
 						if (isExpandable) {
-							const button = element.querySelector('.cs_readmore-btn');
-							if (button) {
-								button.style.display = 'block';
-							}
+							element.classList.add('has-readmore');
 						} else {
-							// Якщо елемент не можна розгорнути, ховаємо кнопку
-							const button = element.querySelector('.cs_readmore-btn');
-							if (button) {
-								button.style.display = 'none';
-							}
+							element.classList.remove('has-readmore');
 						}
 					}
 				</code></pre>
+				
+				<div class="note note-info">
+					<div class="note-label">Примітка</div>
+					<p>Зворотні виклики не повертають значень, але можуть змінювати елементи чи викликати сторонні функції. Вони викликаються для кожного елемента, який відповідає селектору.</p>
+				</div>				
 			</article>
 			<article>
-				<h1>Приклад комплексного використання</h1>
-				<p>Цей приклад демонструє використання callback-функцій для зміни зовнішнього вигляду та тексту кнопки залежно від стану елемента. У цьому прикладі показано, як можна змінити стиль кнопки до і після перемикання стану:</p>
+				<h2>Приклад комплексного використання</h2>
+				<p>Цей приклад демонструє, як комбінувати події та зворотні виклики для створення інтерактивного досвіду. Ми змінюємо стилі кнопки, оновлюємо текст залежно від стану та додаємо кастомний клас для елементів, які можна розгорнути.</p>
 				<pre><code class="language-javascript show-language">
 					initReadMore('.content', {
+						collapsedHeight: 200,
+						speed: 400,
+						moreLink: '&lt;span&gt;Читати далі&lt;/span&gt;',
+						lessLink: '&lt;span&gt;Сховати&lt;/span&gt;',
 						beforeToggle: function(trigger, element, isExpanded) {
-							// Приклад: змінюємо колір фону кнопки до перемикання стану
-							trigger.style.backgroundColor = isExpanded ? '#90EE90' : '#FF7F7F';
+							// Змінюємо колір кнопки перед перемиканням
+							trigger.style.backgroundColor = isExpanded ? '#d4edda' : '#f8d7da';
 						},
 						afterToggle: function(trigger, element, isExpanded) {
-							// Приклад: оновлюємо текст кнопки після перемикання стану
+							// Оновлюємо текст кнопки та додаємо лог
 							trigger.textContent = isExpanded ? 'Сховати' : 'Читати далі';
+							console.log('Стан змінено:', isExpanded ? 'розгорнуто' : 'згорнуто');
 						},
 						blockProcessed: function(element, isExpandable) {
-							// Приклад: додаємо клас, якщо елемент можна розгорнути
-							if (isExpandable) {
-								element.classList.add('expandable');
-							}
+							// Додаємо або видаляємо клас залежно від можливості розгортання
+							element.classList.toggle('expandable-content', isExpandable);
 						}
 					});
+
+					// Додаємо слухача події для додаткової логіки
+					document.querySelectorAll('.content').forEach(element => {
+						element.addEventListener('readmore:afterToggle', function(event) {
+							// Приклад: додаємо анімацію після розгортання
+							if (event.target.getAttribute('aria-expanded') === 'true') {
+								event.target.style.boxShadow = '0 0 10px rgba(0,0,0,0.2)';
+							} else {
+								event.target.style.boxShadow = 'none';
+							}
+						});
+					});
 				</code></pre>
+
+				<div class="note note-info">
+					<div class="note-label">Примітка</div>
+					<p>У цьому прикладі кнопка змінює колір і текст залежно від стану, елемент отримує клас <code class="code">expandable-content</code>, якщо його можна розгорнути, а після розгортання додається тінь для візуального ефекту.</p>
+				</div>
 			</article>
 		</div>
 	</main>

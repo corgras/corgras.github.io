@@ -167,22 +167,15 @@
 							<div class="form-group">
 								<label class="form-label" for="collapsedHeight">Висота згорнутого контента (collapsedHeight):</label>
 								<div class="input-group">
-									<input type="number" class="form-control" name="collapsedHeight" value="200" min="0" placeholder="collapsedHeight" id="collapsedHeight">
+									<input type="number" class="form-control" name="collapsedHeight" value="250" min="0" placeholder="collapsedHeight" id="collapsedHeight">
 									<span class="input-group-text">px</span>
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="form-label" for="speed">Швидкість анімації (speed):</label>
 								<div class="input-group">
-									<input type="number" class="form-control" name="speed" value="200" min="0" placeholder="speed" id="speed">
+									<input type="number" class="form-control" name="speed" value="300" min="0" placeholder="speed" id="speed">
 									<span class="input-group-text">мс</span>
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="form-label" for="heightMargin">Відступ для висоти (heightMargin):</label>
-								<div class="input-group">
-									<input type="number" class="form-control" name="heightMargin" value="16" min="0" placeholder="heightMargin" id="heightMargin">
-									<span class="input-group-text">px</span>
 								</div>
 							</div>
 							<div class="form-group">
@@ -194,14 +187,24 @@
 								<input type="text" id="lessLink" name="lessLink" value='<span>Приховати</span>' class="form-control">
 							</div>
 							<div class="form-group">
-								<label class="form-label" for="lazyLoad">Лінива ініціалізація (lazyLoad):</label>
-								<select class="form-select" name="lazyLoad" id="lazyLoad">
-									<option value="true" selected>true</option>
-									<option value="false">false</option>
+								<label class="form-label" for="animationType">Тип анімації (animationType):</label>
+								<select class="form-select" name="animationType" id="animationType">
+									<option value="ease-in-out" selected>ease-in-out</option>
+									<option value="linear">linear</option>
+									<option value="ease">ease</option>
+									<option value="ease-in">ease-in</option>
+									<option value="ease-out">ease-out</option>
 								</select>
 							</div>
 							<div class="form-group">
-								<label class="form-label" for="hideButtonCollapse">Скрыть кнопку свернуть (hideButtonCollapse):</label>
+								<label class="form-label" for="scrollToTopOnCollapse">Прокрутіть вгору перед згортанням (scrollToTopOnCollapse):</label>
+								<select class="form-select" name="scrollToTopOnCollapse" id="scrollToTopOnCollapse">
+									<option value="true">true</option>
+									<option value="false" selected>false</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="hideButtonCollapse">Приховати кнопку згортання (hideButtonCollapse):</label>
 								<select class="form-select" name="hideButtonCollapse" id="hideButtonCollapse">
 									<option value="true">true</option>
 									<option value="false" selected>false</option>
@@ -224,12 +227,13 @@
 
 	<script>
 		let currentOptions = {
-			collapsedHeight: 200,
-			speed: 100,
+			collapsedHeight: 250,
+			speed: 300,
 			moreLink: '<span>Читати далі</span>',
 			lessLink: '<span>Приховати</span>',
-			heightMargin: 16,
-			lazyLoad: true,
+			animationMode: 'js',
+			animationType: 'ease-in-out',
+			scrollToTopOnCollapse: true,
 			hideButtonCollapse: false
 		};
 
@@ -242,10 +246,10 @@
 			const updatedOptions = {
 				collapsedHeight: Number(formData.get('collapsedHeight')),
 				speed: Number(formData.get('speed')),
-				heightMargin: Number(formData.get('heightMargin')),
 				moreLink: formData.get('moreLink'),
 				lessLink: formData.get('lessLink'),
-				lazyLoad: formData.get('lazyLoad') === 'true',
+				animationType: formData.get('animationType'),
+				scrollToTopOnCollapse: formData.get('scrollToTopOnCollapse') === 'true',
 				hideButtonCollapse: formData.get('hideButtonCollapse') === 'true'
 			};
 

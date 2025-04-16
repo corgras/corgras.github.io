@@ -179,68 +179,91 @@
 		<div class="container">
 			<article>
 				<h1>Initialization</h1>
-				<p>The Readmore.js script supports any elements containing text that needs to be hidden, such as <code class="code">&lt;div&gt;</code>, <code class="code">&lt;p&gt;</code>, <code class="code">&lt;section&gt;</code>.</p>
-				<p>Use the <code class="code">.readmore</code> class or any other class specified in the initialization selector for target elements.</p>
+				<p>The <strong>Readmore.js</strong> plugin allows you to create a «Read More» functionality for any elements with textual content, such as <code class="code">&lt;div&gt;</code>, <code class="code">&lt;p&gt;</code>, <code class="code">&lt;section&gt;</code>, or <code class="code">&lt;article&gt;</code>. The script trims the content to a specified height and adds a button to expand/collapse the text.</p>
+				<p>For initialization, use a CSS selector, such as the class <code class="code">.readmore</code>, which should be added to the target elements. Ensure the element contains enough content so that its height exceeds the <code class="code">collapsedHeight</code> parameter; otherwise, the button will not appear.</p>
 				<pre><code class="language-html show-language">
 					&lt;div class="readmore"&gt;
-					&lt;!-- Your long content here --&gt;
+						&lt;!-- Your textual content, e.g., several paragraphs --&gt;
+						&lt;p&gt;This is an example of long text that will be partially hidden...&lt;/p&gt;
+						&lt;p&gt;Additional content that will appear after clicking "Read More".&lt;/p&gt;
 					&lt;/div&gt;
 				</code></pre>
 				<div class="note note-warning">
 					<div class="note-label">Important</div>
-					<p>Ensure that the text is long enough to exceed the <code class="code">collapsedSize</code> value you set in the options.</p>
+					<p>If the element's content is shorter than the <code class="code">collapsedHeight</code> value or consists only of whitespace or empty tags, the plugin will automatically disable the functionality for that element. For proper operation, it is recommended to check the content height before initialization.</p>
+				</div>
+				<div class="note note-info">
+					<div class="note-label">Tip</div>
+					<p>Add unique classes or identifiers to elements if you plan to apply different settings to individual blocks on the same page.</p>
 				</div>
 			</article>
 			<article>
-				<h2>Initialization Without Parameters</h2>
-				<p>If you need to initialize the Readmore.js script without specifying additional <a href="/en/readmore/docs/options">parameters</a>, it can be started with the default settings.</p>
+				<h2>Initialization without Parameters</h2>
+				<p>For a quick start, Readmore.js can be invoked by calling the <code class="code">initReadMore</code> function with a selector, using default settings. In this case, the plugin will apply standard values: a height of 250 pixels, animation duration of 300 ms, and button texts <code class="code">&lt;span&gt;Read More&lt;/span&gt;</code> and <code class="code">&lt;span&gt;Close&lt;/span&gt;</code>.</p>
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.readmore');
 					});
 				</code></pre>
+				<div class="note note-info">
+					<div class="note-label">Note</div>
+					<p>This method is suitable for basic use, but for adapting to design or behavior on different devices, it is recommended to specify custom parameters.</p>
+				</div>
 			</article>
 			<article>
 				<h2>Initialization with Parameters</h2>
-				<p>This method is suitable if you want the script to work on all devices without screen width limitations.</p>
+				<p>For flexible configuration, pass an object with parameters as the second argument to the <code class="code">initReadMore</code> function. This allows you to change the height, animation speed, button texts, and more. This method works consistently across all devices without restrictions on screen width.</p>
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.readmore', {
-							collapsedSize: 200,
-							speed: 200,
-							heightMargin: 16,
-							moreLink: '&lt;span&gt;Read More&lt;/span&gt;',
-							lessLink: '&lt;span&gt;Close&lt;/span&gt;'
+							collapsedHeight: 200, // Height of the collapsed block in pixels
+							speed: 400,          // Animation duration in milliseconds
+							moreLink: '&lt;span&gt;Read More&lt;/span&gt;', // Text for the expand button
+							lessLink: '&lt;span&gt;Collapse&lt;/span&gt;'   // Text for the collapse button
 						});
 					});
 				</code></pre>
+				<div class="note note-success">
+					<div class="note-label">Advantage</div>
+					<p>You can add custom classes or styles to <code class="code">moreLink</code> and <code class="code">lessLink</code>, for example: <code class="code">&lt;span class="btn btn-primary"&gt;Read More&lt;/span&gt;</code>, to match your site's design.</p>
+				</div>
 			</article>
 			<article>
-				<h2>Initialization for Different Screen Sizes</h2>
-				<p>This option is convenient when you need to change parameters for different device widths or activate the script on screens with specific widths.</p>
+				<h2>Initialization with Responsive Settings</h2>
+				<p>To adapt the plugin's behavior to different screen sizes, use the <code class="code">breakpoints</code> parameter. This allows you to set different values for <code class="code">collapsedHeight</code>, <code class="code">speed</code>, or button texts depending on the browser window width. The keys of the <code class="code">breakpoints</code> object are the maximum screen width in pixels.</p>
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.readmore', {
-							collapsedSize: 200,
-							speed: 200,
-							heightMargin: 16,
+							collapsedHeight: 200,
+							speed: 400,
 							moreLink: '&lt;span&gt;Read More&lt;/span&gt;',
-							lessLink: '&lt;span&gt;Close&lt;/span&gt;',
+							lessLink: '&lt;span&gt;Collapse&lt;/span&gt;',
 							breakpoints: {
-								576: {
-									collapsedSize: 100,
+								576: { // For screens up to 576 pixels
+									collapsedHeight: 100,
 									speed: 200,
-									moreLink: '&lt;span&gt;More&lt;/span&gt;',
-									lessLink: '&lt;span&gt;Collapse&lt;/span&gt;',
+									moreLink: '&lt;span&gt;Details&lt;/span&gt;',
+									lessLink: '&lt;span&gt;Hide&lt;/span&gt;'
 								},
-								768: {
-									collapsedSize: 150,
-									speed: 250,
+								768: { // For screens up to 768 pixels
+									collapsedHeight: 150,
+									speed: 300
 								},
+								1024: { // For screens up to 1024 pixels
+									disableCollapse: true // Disable functionality
+								}
 							}
 						});
 					});
 				</code></pre>
+				<div class="note note-warning">
+					<div class="note-label">Important</div>
+					<p>If the screen width exceeds the largest breakpoint (e.g., 1024 pixels in the example above), the plugin will not be applied unless <code class="code">disableCollapse: false</code> is specified. For larger screens, set global parameters or additional breakpoints.</p>
+				</div>
+				<div class="note note-info">
+					<div class="note-label">Tip</div>
+					<p>Use the <code class="code">disableCollapse</code> parameter in <code class="code">breakpoints</code> to disable the plugin on specific devices, such as desktops, where all content should be visible.</p>
+				</div>
 			</article>
 		</div>
 	</main>

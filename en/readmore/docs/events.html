@@ -179,96 +179,123 @@
 		<div class="container">
 			<article>
 				<h1>Events</h1>
-				<p>Readmore.js generates two primary events: <code class="code">readmore:beforeToggle</code> and <code class="code">readmore:afterToggle</code>. These events can be listened to and used to add custom logic during the element's state transition.</p>
+				<p>The Readmore.js plugin generates two special events: <code class="code">readmore:beforeToggle</code> and <code class="code">readmore:afterToggle</code>. These allow developers to track changes in an element's state (expanding or collapsing) and add custom logic to tailor behavior.</p>
+
 				<h3>readmore:beforeToggle</h3>
-				<p>This event is triggered before the element's state changes. It allows configuring behavior before the state is modified.</p>
+				<p>This event triggers <strong>before</strong> the element's state changes (expanding or collapsing). It is useful for preparatory actions, such as modifying styles or initiating animations prior to the toggle.</p>
 				<pre><code class="language-javascript show-language">
 					element.addEventListener('readmore:beforeToggle', function(event) {
-						// Example: Change button style before toggling state
-						event.target.style.backgroundColor = 'gray';
+						// Example: change the element's background color before toggling
+						event.target.style.backgroundColor = '#f0f0f0';
 					});
 				</code></pre>
+
 				<h3>readmore:afterToggle</h3>
-				<p>This event is triggered after the element's state changes. It allows actions to be performed immediately after the state is updated.</p>
+				<p>This event triggers <strong>after</strong> the element's state change is complete. It allows for actions related to the new state, such as updating button text or styles.</p>
 				<pre><code class="language-javascript show-language">
 					element.addEventListener('readmore:afterToggle', function(event) {
-						// Example: Change button text after toggling state
-						const button = event.target;
-						button.textContent = button.textContent === 'Read more' ? 'Hide' : 'Read more';
+						// Example: log a message to the console after toggling
+						console.log('Element changed. New state:', event.target.getAttribute('aria-expanded'));
 					});
 				</code></pre>
+				
+				<div class="note note-info">
+					<div class="note-label">Note</div>
+					<p>Events are bound to elements processed by the plugin (those matching the selector). Use <code class="code">event.target</code> to access the element that triggered the event.</p>
+				</div>				
 			</article>
 			<article>
-				<h1>Callbacks</h1>
-				<p>Readmore.js supports the use of callback functions, which can be passed in the configuration options. This allows performing specific actions at various stages of the plugin's operation.</p>
-				<p>The <code class="code">beforeToggle</code> and <code class="code">afterToggle</code> callbacks receive the following arguments: trigger, element, and isExpanded.</p>
-				<ul>
-					<li><code class="code">trigger</code> — the element that triggers the action (e.g., the «Read more» or «Close» button).</li>
-					<li><code class="code">element</code> — the element containing the content to be expanded or collapsed.</li>
-					<li><code class="code">isExpanded</code> — a value indicating the content's state: (true — expanded, false — collapsed).</li>
-				</ul>
+				<h2>Callbacks</h2>
+				<p>Readmore.js supports three callbacks that can be passed in the configuration object: <code class="code">beforeToggle</code>, <code class="code">afterToggle</code>, and <code class="code">blockProcessed</code>. These allow custom code execution at different stages of the plugin's operation, providing flexibility in behavior customization.</p>
 				<h3>beforeToggle</h3>
-				<p>The callback is triggered before the element's state changes. It allows actions to be taken before the state transition.</p>
+				<p>Called <strong>before</strong> toggling the element's state (expanding or collapsing). This callback is useful for preparing elements or altering their appearance before the animation.</p>
+				<p><strong>Arguments:</strong></p>
+				<ul>
+					<li><code class="code">trigger</code> — the button initiating the toggle (e.g., «Read more» or «Hide»).</li>
+					<li><code class="code">element</code> — the element containing the content being expanded or collapsed.</li>
+					<li><code class="code">isExpanded</code> — a boolean: <code class="code">true</code> if the element will be expanded, <code class="code">false</code> if collapsed.</li>
+				</ul>
 				<pre><code class="language-javascript show-language">
 					beforeToggle: function(trigger, element, isExpanded) {
-						// Example: Make the element semi-transparent before state change
-						element.style.opacity = 0.5;
+						// Example: add a fade animation before toggling
+						element.style.transition = 'opacity 0.2s'; element.style.opacity = 0.7;
 					}
 				</code></pre>
+
 				<h3>afterToggle</h3>
-				<p>The callback is triggered after the element's state changes. It allows restoring the element's state after the change.</p>
+				<p>Called <strong>after</strong> the element's state toggle is complete. It enables actions tied to the new state, such as updating styles or triggering additional effects.</p>
+				<p><strong>Arguments:</strong> same as <code class="code">beforeToggle</code> (trigger, element, isExpanded).</p>
 				<pre><code class="language-javascript show-language">
 					afterToggle: function(trigger, element, isExpanded) {
-						// Example: Restore element opacity after state change
-						element.style.opacity = 1;
+						// Example: restore opacity after toggling
+						element.style.opacity = 1; console.log('Content', isExpanded ? 'expanded' : 'collapsed');
 					}
 				</code></pre>
+
 				<h3>blockProcessed</h3>
-				<p>Called after the element has been processed but before it is displayed. This is useful for performing initial setup or analysis.</p>
-				<p>The <code class="code">blockProcessed</code> callback receives the following arguments: element and isExpandable</p>
+				<p>Called <strong>after processing</strong> each element by the plugin, regardless of whether collapsing is applied. This callback is useful for initial element setup or state analysis.</p>
+				<p><strong>Arguments:</strong></p>
 				<ul>
-					<li><code class="code">element</code> — the block that has just been processed.</li>
-					<li><code class="code">isExpandable</code> — a boolean value indicating whether collapsing is needed.</li>
+					<li><code class="code">element</code> — the processed element.</li>
+					<li><code class="code">isExpandable</code> — a boolean: <code class="code">true</code> if the content exceeds <code class="code">collapsedHeight</code> and requires a button, <code class="code">false</code> if collapsing is unnecessary.</li>
 				</ul>
 				<pre><code class="language-javascript show-language">
 					blockProcessed: function(element, isExpandable) {
-						// Example: Show the «Read more» button if the element is expandable
+						// Example: add a class for styling if the element is expandable 
 						if (isExpandable) {
-							const button = element.querySelector('.cs_readmore-btn');
-							if (button) {
-								button.style.display = 'block';
-							}
+							element.classList.add('has-readmore');
 						} else {
-							// Hide the button if the element is not expandable
-							const button = element.querySelector('.cs_readmore-btn');
-							if (button) {
-								button.style.display = 'none';
-							}
+							element.classList.remove('has-readmore');
 						}
 					}
 				</code></pre>
+				
+				<div class="note note-info">
+					<div class="note-label">Note</div>
+					<p>Callbacks do not return values but can modify elements or invoke external functions. They are called for each element matching the selector.</p>
+				</div>
 			</article>
 			<article>
-				<h1>Comprehensive Usage Example</h1>
-				<p>This example demonstrates the use of callback functions to modify the button's appearance and text depending on the element's state. It shows how the button style can be changed before and after state toggling:</p>
+				<h2>Example of Comprehensive Usage</h2>
+				<p>This example demonstrates combining events and callbacks to create an interactive experience. We modify button styles, update text based on state, and add a custom class for expandable elements.</p>
 				<pre><code class="language-javascript show-language">
 					initReadMore('.content', {
+						collapsedHeight: 200,
+						speed: 400,
+						moreLink: '&lt;span&gt;Read more&lt;/span&gt;',
+						lessLink: '&lt;span&gt;Hide&lt;/span&gt;',
 						beforeToggle: function(trigger, element, isExpanded) {
-							// Example: Change the button background color before state change
-							trigger.style.backgroundColor = isExpanded ? '#90EE90' : '#FF7F7F';
+							// Change the button color before toggling
+							trigger.style.backgroundColor = isExpanded ? '#d4edda' : '#f8d7da';
 						},
 						afterToggle: function(trigger, element, isExpanded) {
-							// Example: Update the button text after state change
+							// Update button text and add logging
 							trigger.textContent = isExpanded ? 'Hide' : 'Read more';
+							console.log('State changed:', isExpanded ? 'expanded' : 'collapsed');
 						},
 						blockProcessed: function(element, isExpandable) {
-							// Example: Add a class if the element is expandable
-							if (isExpandable) {
-								element.classList.add('expandable');
-							}
+							// Add or remove class based on expandability
+							element.classList.toggle('expandable-content', isExpandable);
 						}
 					});
+
+					// Add event listener for additional logic
+					document.querySelectorAll('.content').forEach(element => {
+						element.addEventListener('readmore:afterToggle', function(event) {
+							// Example: add animation after expanding
+							if (event.target.getAttribute('aria-expanded') === 'true') {
+								event.target.style.boxShadow = '0 0 10px rgba(0,0,0,0.2)';
+							} else {
+								event.target.style.boxShadow = 'none';
+							}
+						});
+					});
 				</code></pre>
+				
+				<div class="note note-info">
+					<div class="note-label">Note</div>
+					<p>In this example, the button changes color and text based on the state, the element receives the <code class="code">expandable-content</code> class if expandable, and a shadow is added after expanding for a visual effect.</p>
+				</div>
 			</article>
 		</div>
 	</main>

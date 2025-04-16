@@ -179,96 +179,122 @@
 		<div class="container">
 			<article>
 				<h1>События</h1>
-				<p>Readmore.js генерирует два основных события: <code class="code">readmore:beforeToggle</code> и <code class="code">readmore:afterToggle</code>. Эти события можно слушать и использовать для добавления кастомной логики в процессе переключения состояния элемента.</p>
+				<p>Плагин Readmore.js генерирует две специальные события: <code class="code">readmore:beforeToggle</code> и <code class="code">readmore:afterToggle</code>. Они позволяют разработчикам отслеживать изменение состояния элемента (разворачивание или сворачивание) и добавлять собственную логику для кастомизации поведения.</p>
 				<h3>readmore:beforeToggle</h3>
-				<p>Это событие вызывается перед изменением состояния элемента. Оно предоставляет возможность настроить поведение до того, как состояние элемента будет изменено.</p>
+				<p>Это событие срабатывает <strong>до</strong> изменения состояния элемента (разворачивание или сворачивание). Оно полезно для выполнения подготовительных действий, например, изменения стилей или запуска анимаций перед переключением.</p>
 				<pre><code class="language-javascript show-language">
 					element.addEventListener('readmore:beforeToggle', function(event) {
-						// Пример: изменяем стиль кнопки перед переключением состояния
-						event.target.style.backgroundColor = 'gray';
+						// Пример: изменяем цвет фона элемента перед переключением
+						event.target.style.backgroundColor = '#f0f0f0';
 					});
 				</code></pre>
+				
 				<h3>readmore:afterToggle</h3>
-				<p>Это событие вызывается после изменения состояния элемента. Оно позволяет выполнить действия, как только состояние элемента изменится.</p>
+				<p>Это событие срабатывает <strong>после</strong> завершения изменения состояния элемента. Оно позволяет выполнять действия, связанные с новым состоянием, например, обновление текста кнопки или стилей.</p>
 				<pre><code class="language-javascript show-language">
 					element.addEventListener('readmore:afterToggle', function(event) {
-						// Пример: изменяем текст кнопки после переключения состояния
-						const button = event.target;
-						button.textContent = button.textContent === 'Читать далее' ? 'Скрыть' : 'Читать далее';
+						// Пример: выводим сообщение в консоль после переключения 
+						console.log('Элемент изменен. Новое состояние:', event.target.getAttribute('aria-expanded'));
 					});
 				</code></pre>
+				
+				<div class="note note-info">
+					<div class="note-label">Примечание</div>
+					<p>События привязываются к элементам, которые обрабатываются плагином (те, что соответствуют селектору). Используйте <code class="code">event.target</code>, чтобы получить доступ к элементу, который вызвал событие.</p>
+				</div>
 			</article>
 			<article>
-				<h1>Обратные вызовы (Callbacks)</h1>
-				<p>Readmore.js поддерживает использование callback-функций, которые можно передать в параметрах конфигурации. Это позволяет выполнять определенные действия на различных этапах работы плагина.</p>
-				<p>Обратные вызовы <code class="code">beforeToggle</code> и <code class="code">afterToggle</code> получают следующие аргументы: trigger, element и isExpanded.</p>
-				<ul>
-					<li><code class="code">trigger</code> — элемент, который инициирует действие (например, кнопка «Читать далее» или «Закрыть»).</li>
-					<li><code class="code">element</code> — элемент, содержащий контент, который сворачивается или раскрывается.</li>
-					<li><code class="code">isExpanded</code> — значение, указывающее на состояние контента: (true — развернут, false — свернут).</li>
-				</ul>
+				<h2>Обратные вызовы (Callbacks)</h2>
+				<p>Readmore.js поддерживает три обратных вызова, которые можно передать в объекте конфигурации: <code class="code">beforeToggle</code>, <code class="code">afterToggle</code> и <code class="code">blockProcessed</code>. Они позволяют выполнять собственный код на разных этапах работы плагина, обеспечивая гибкость в настройке поведения.</p>
+				
 				<h3>beforeToggle</h3>
-				<p>Срабатывает до переключения состояния элемента. Он позволяет выполнить действия перед изменением состояния.</p>
+				<p>Вызывается <strong>до</strong> переключения состояния элемента (разворачивание или сворачивание). Этот вызов полезен для подготовки элементов или изменения их внешнего вида перед анимацией.</p>
+				<p><strong>Аргументы:</strong></p>
+				<ul>
+					<li><code class="code">trigger</code> — кнопка, которая инициирует переключение (например, «Читать далее» или «Скрыть»).</li>
+					<li><code class="code">element</code> — элемент с контентом, который разворачивается или сворачивается.</li>
+					<li><code class="code">isExpanded</code> — логическое значение: <code class="code">true</code>, если элемент будет развернут, <code class="code">false</code> — если свернут.</li>
+				</ul>
 				<pre><code class="language-javascript show-language">
 					beforeToggle: function(trigger, element, isExpanded) {
-						// Пример: делаем элемент полупрозрачным перед переключением состояния
-						element.style.opacity = 0.5;
+						// Пример: добавляем анимацию затемнения перед переключением
+						element.style.transition = 'opacity 0.2s'; element.style.opacity = 0.7;
 					}
 				</code></pre>
+				
 				<h3>afterToggle</h3>
-				<p>Срабатывает после переключения состояния элемента. Он позволяет вернуть элемент в исходное состояние после изменения.</p>
+				<p>Вызывается <strong>после</strong> завершения переключения состояния элемента. Позволяет выполнить действия, связанные с новым состоянием, например, обновить стили или запустить дополнительные эффекты.</p>
+				<p><strong>Аргументы:</strong> такие же, как в <code class="code">beforeToggle</code> (trigger, element, isExpanded).</p>
 				<pre><code class="language-javascript show-language">
 					afterToggle: function(trigger, element, isExpanded) {
-						// Пример: восстанавливаем непрозрачность элемента после изменения состояния
-						element.style.opacity = 1;
+						// Пример: восстанавливаем прозрачность после переключения
+						element.style.opacity = 1; console.log('Контент', isExpanded ? 'развернут' : 'свернут');
 					}
 				</code></pre>
+				
 				<h3>blockProcessed</h3>
-				<p>Вызывается после завершения обработки элемента, но до его отображения. Это полезно для выполнения первоначальных настроек или анализа.</p>
-				<p>Обратный вызов <code class="code">blockProcessed</code> получает следующие аргументы: element и isExpandable</p>
+				<p>Вызывается <strong>после обработки</strong> каждого элемента плагином, независимо от того, применяется ли сворачивание. Этот вызов полезен для начальной настройки элементов или анализа их состояния.</p>
+				<p><strong>Аргументы:</strong></p>
 				<ul>
-					<li><code class="code">element</code> — текущий элемент, который обрабатывается.</li>
-					<li><code class="code">isExpandable</code> — логическое значение, указывающее, нужно ли сворачивание.</li>
+					<li><code class="code">element</code> — элемент, который был обработан.</li>
+					<li><code class="code">isExpandable</code> — логическое значение: <code class="code">true</code>, если контент длиннее <code class="code">collapsedHeight</code> и требует кнопки, <code class="code">false</code> — если сворачивание не требуется.</li>
 				</ul>
 				<pre><code class="language-javascript show-language">
 					blockProcessed: function(element, isExpandable) {
-						// Пример: если элемент можно развернуть, скрываем кнопку «Читать далее»
+						// Пример: добавляем класс для стилизации, если элемент можно развернуть
 						if (isExpandable) {
-							const button = element.querySelector('.cs_readmore-btn');
-							if (button) {
-								button.style.display = 'block';
-							}
+							element.classList.add('has-readmore');
 						} else {
-							// Если элемент нельзя развернуть, скрываем кнопку
-							const button = element.querySelector('.cs_readmore-btn');
-							if (button) {
-								button.style.display = 'none';
-							}
+							element.classList.remove('has-readmore');
 						}
 					}
 				</code></pre>
+				
+				<div class="note note-info">
+					<div class="note-label">Примечание</div>
+					<p>Обратные вызовы не возвращают значений, но могут изменять элементы или вызывать сторонние функции. Они вызываются для каждого элемента, который соответствует селектору.</p>
+				</div>				
 			</article>
 			<article>
-				<h1>Пример комплексного использования</h1>
-				<p>Этот пример демонстрирует использование callback-функций для изменения внешнего вида и текста кнопки в зависимости от состояния элемента. В данном примере показано, как можно изменить стиль кнопки до и после переключения состояния:</p>
+				<h2>Пример комплексного использования</h2>
+				<p>Этот пример демонстрирует, как комбинировать события и обратные вызовы для создания интерактивного опыта. Мы изменяем стили кнопки, обновляем текст в зависимости от состояния и добавляем пользовательский класс для элементов, которые можно развернуть.</p>
 				<pre><code class="language-javascript show-language">
 					initReadMore('.content', {
+						collapsedHeight: 200,
+						speed: 400,
+						moreLink: '&lt;span&gt;Читать далее&lt;/span&gt;',
+						lessLink: '&lt;span&gt;Скрыть&lt;/span&gt;',
 						beforeToggle: function(trigger, element, isExpanded) {
-							// Пример: изменяем цвет фона кнопки до переключения состояния
-							trigger.style.backgroundColor = isExpanded ? '#90EE90' : '#FF7F7F';
+							// Изменяем цвет кнопки перед переключением
+							trigger.style.backgroundColor = isExpanded ? '#d4edda' : '#f8d7da';
 						},
 						afterToggle: function(trigger, element, isExpanded) {
-							// Пример: обновляем текст кнопки после переключения состояния
-							trigger.textContent = isExpanded ? 'Скрыть' : 'Читать далее';
+							// Обновляем текст кнопки и добавляем лог
+							trigger.textContent = isExpanded ? 'Скрыть' : 'Читать далее'; 
+							console.log('Состояние изменено:', isExpanded ? 'развернуто' : 'свернуто');
 						},
 						blockProcessed: function(element, isExpandable) {
-							// Пример: добавляем класс, если элемент можно развернуть
-							if (isExpandable) {
-								element.classList.add('expandable');
-							}
+							// Добавляем или удаляем класс в зависимости от возможности разворачивания 
+							element.classList.toggle('expandable-content', isExpandable);
 						}
 					});
+
+					// Добавляем слушателя события для дополнительной логики
+					document.querySelectorAll('.content').forEach(element => {
+						element.addEventListener('readmore:afterToggle', function(event) {
+							// Пример: добавляем анимацию после разворачивания
+							if (event.target.getAttribute('aria-expanded') === 'true') {
+								event.target.style.boxShadow = '0 0 10px rgba(0,0,0,0.2)';
+							} else {
+								event.target.style.boxShadow = 'none';
+							}
+						});
+					});
 				</code></pre>
+				<div class="note note-info">
+					<div class="note-label">Примечание</div>
+					<p>В этом примере кнопка изменяет цвет и текст в зависимости от состояния, элемент получает класс <code class="code">expandable-content</code>, если его можно развернуть, а после разворачивания добавляется тень для визуального эффекта.</p>
+				</div>
 			</article>
 		</div>
 	</main>

@@ -1,5 +1,49 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+	// Версия READMORE 
+	// Функция проверки наличия элемента
+	function shouldRunScript() {
+		return document.getElementById('release-version') !== null;
+	}
+
+	async function fetchLatestRelease() {
+		// Проверяем наличие элемента перед выполнением
+		if (!shouldRunScript()) {
+			return; // Если элемента нет, выходим
+		}
+
+		const owner = 'corgras';
+		const repo = 'readmore.js';
+		const url = `https://api.github.com/repos/${owner}/${repo}/releases/latest`;
+
+		try {
+			const response = await fetch(url, {
+				headers: {
+					'Accept': 'application/vnd.github.v3+json'
+				}
+			});
+
+			if (!response.ok) {
+				throw new Error('Ошибка при загрузке данных');
+			}
+
+			const data = await response.json();
+			const version = data.tag_name || '';
+			const releaseElement = document.getElementById('release-version');
+			releaseElement.textContent = `${version}`;
+			releaseElement.classList.remove('loading');
+		} catch (error) {
+			const releaseElement = document.getElementById('release-version');
+			releaseElement.textContent = '';
+			releaseElement.classList.remove('loading');
+			releaseElement.classList.add('error');
+		}
+	}
+
+	// Вызываем функцию при загрузке страницы
+	fetchLatestRelease();
+	// Конец Версия READMORE
+	
 	// Проверка ширины окна перед добавлением класса
 	function checkWindowWidth() {
 		if (window.matchMedia("(min-width: 991px)").matches) {
