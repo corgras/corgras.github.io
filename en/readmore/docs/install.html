@@ -191,7 +191,7 @@
 				<br>
 				<p>&mdash; After installation, include the script in your project. For example, add it to your HTML file:</p>
 				<pre><code class="language-html show-language">
-					&lt;script src="./node_modules/@corgras/readmore-js/dist/readmore.min.js" defer&gt;&lt;/script&gt;
+					&lt;script src="./node_modules/@corgras/readmore-js/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
 				<p class="em">The <code class="code">defer</code> attribute ensures the script executes after the DOM is fully loaded, improving performance.</p>
 				<p>&mdash; If you are using a module system, import the library in your JavaScript code (see sections below).</p>
@@ -218,7 +218,7 @@
 				<p>&mdash; Example of including with module type:</p>
 				<pre><code class="language-html show-language">
 					&lt;script type="module"&gt;
-						import initReadMore from './node_modules/@corgras/readmore-js/dist/readmore.min.js';
+						import initReadMore from './node_modules/@corgras/readmore-js/readmore.min.js';
 						initReadMore('.content', { collapsedHeight: 200 });
 					&lt;/script&gt;
 				</code></pre>
