@@ -228,13 +228,14 @@
 				<h1>Початок роботи</h1>
 				<p class="lead">Readmore.js можна інтегрувати у ваш проєкт кількома способами. Оберіть той, що найкраще відповідає вашим потребам, залежно від типу проєкту та інструментів, які ви використовуєте.</p>
 				<div class="buttons jc">
-				<a class="btn btn-primary">За допомогою NPM</a>
-				<a class="btn btn-primary">Node.js / CommonJS</a>
-				<a class="btn btn-primary">ES-модуль</a>
-				<a class="btn btn-primary">Ручне підключення</a>
-				<a class="btn btn-primary">За допомогою CDN</a>
+					<a href="#npm" class="btn btn-primary">За допомогою NPM</a>
+					<a href="#node" class="btn btn-primary">Node.js / CommonJS</a>
+					<a href="#es" class="btn btn-primary">ES-модуль</a>
+					<a href="#manually" class="btn btn-primary">Ручне підключення</a>
+					<a href="#cdn" class="btn btn-primary">За допомогою CDN</a>
 				</div>
-				<hr>
+
+				<hr id="npm">
 
 				<h2>Встановлення через NPM</h2>
 				<p>Цей спосіб ідеально підходить для проєктів, що використовують менеджер пакетів npm. Встановлення через NPM полегшує управління залежностями, оновлення бібліотеки та інтеграцію з сучасними JavaScript-фреймворками, такими як React, Vue.js чи Angular.</p>
@@ -247,7 +248,8 @@
 					&lt;script src="./node_modules/@corgras/readmore-js/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
 				<p class="em">Атрибут <code class="code">defer</code> забезпечує виконання скрипта після повного завантаження DOM, що підвищує продуктивність.</p>
-				<hr>
+
+				<hr id="node">
 
 				<h2>Використання в Node.js / CommonJS</h2>
 				<p>Для проєктів, що використовують CommonJS (наприклад, у Node.js або з інструментами типу Webpack), ви можете імпортувати основну функцію Readmore.js після встановлення через NPM.</p>
@@ -256,7 +258,8 @@
 					const initReadMore = require('@corgras/readmore-js');
 					// Ініціалізація: initReadMore('.selector', { /* опції */ });
 				</code></pre>
-				<hr>
+
+				<hr id="es">
 
 				<h2>Використання як ES-модуль</h2>
 				<p>Для сучасних проєктів, що використовують ES-модулі (наприклад, з Vite, Rollup або сучасними версіями Webpack), імпортуйте Readmore.js як модуль після встановлення через NPM.</p>
@@ -276,7 +279,8 @@
 					<div class="note-label">Важливо</div>
 					<p>Переконайтеся, що ваш HTML-файл містить атрибут <code class="code">type="module"</code> у тегу <code class="code">&lt;script&gt;</code>, якщо ви підключаєте скрипт напряму.</p>
 				</div>
-				<hr>
+
+				<hr id="manually">
 
 				<h2>Ручне підключення</h2>
 				<p>Якщо ви не використовуєте менеджери пакетів, можна підключити Readmore.js, завантаживши файл скрипта вручну. Цей спосіб дає повний контроль над версією бібліотеки та не залежить від зовнішніх інструментів.</p>
@@ -288,7 +292,8 @@
 				</code></pre>
 				<p class="em">Атрибут <code class="code">defer</code> гарантує, що скрипт виконається після завантаження DOM, уникаючи блокування рендерингу сторінки.</p>
 				<p>&mdash; Після підключення ініціалізуйте скрипт, викликавши функцію <code class="code">initReadMore</code>. Докладніше про ініціалізацію читайте в <a href="/readmore/docs/initialization">розділі ініціалізації</a>.</p>
-				<hr>
+
+				<hr id="cdn">
 
 				<h2>Підключення через CDN</h2>
 				<p>Використання CDN (Content Delivery Network) дозволяє швидко підключити Readmore.js без локального збереження файлів. CDN забезпечує високу швидкість завантаження завдяки кешуванню та глобальній мережі серверів.</p>
