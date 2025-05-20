@@ -1,63 +1,111 @@
 <!DOCTYPE html>
 <html lang="ru" prefix="og: https://ogp.me/ns#">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta name="robots" content="index, follow">
-	<!--<base href="https://corgras.github.io/">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="color-scheme" content="light dark">
+	<meta name="theme-color" content="#FFF" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#010409" media="(prefers-color-scheme: dark)">
+	<meta name="msapplication-TileColor" content="#FFF" media="(prefers-color-scheme: light)">
+	<meta name="msapplication-TileColor" content="#010409" media="(prefers-color-scheme: dark)">
 
-	<title>Параметры ReadMore.js – настройки функциональности | Документация</title>
+	<title>Параметры ReadMore.js – настройка функциональности | Документация</title>
 	<meta name="description" content="Ознакомьтесь с параметрами скрипта ReadMore.js, которые позволяют настроить поведение функциональности плагина. Узнайте, как адаптировать высоту, скорость анимации и другие опции для создания уникального пользовательского опыта на вашем сайте.">
-	<meta name="keywords" content="ReadMore.js, параметры скрипта, настройки, функциональность, анимация, адаптация контента, веб-разработка, JavaScript">
+	<meta name="keywords" content="ReadMore.js, параметры скрипта, настройка, функциональность, анимация, адаптация контента, веб-разработка, JavaScript">
 
-	<!-- Favicon-->
+	<!-- Favicon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon/favicon-48x48.png">
 	<link rel="icon" type="image/x-icon" href="/assets/images/favicon/favicon.ico">
 	<link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
-	<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="256x256" href="/assets/images/favicon/android-icon-256x256.png">
-	<link rel="icon" type="image/png" sizes="384x384" href="/assets/images/favicon/android-icon-384x384.png">
-	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-icon-512x512.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-chrome-512x512.png">
 	<link rel="manifest" href="/assets/images/favicon/manifest.json">
 
+	<!-- Styles -->
 	<link rel="stylesheet" href="/assets/css/framework.css">
 	<link rel="stylesheet" href="/assets/css/ics.css">
 	<link rel="stylesheet" href="/assets/css/prism.css">
 	<link rel="stylesheet" href="/assets/css/style.css">
 
+	<!-- Canonical and Alternate Links -->
 	<link rel="canonical" href="https://corgras.github.io/ru/readmore/docs/options">
 	<link rel="alternate" href="https://corgras.github.io/readmore/docs/options" hreflang="x-default">
 	<link rel="alternate" href="https://corgras.github.io/readmore/docs/options" hreflang="uk">
 	<link rel="alternate" href="https://corgras.github.io/en/readmore/docs/options" hreflang="en">
 	<link rel="alternate" href="https://corgras.github.io/ru/readmore/docs/options" hreflang="ru">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="color-scheme" content="light dark">
-	<meta name="theme-color" content="#F9F9FB" media="(prefers-color-scheme: light)">
-	<meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)">
-	<meta name="msapplication-TileColor" content="#F9F9FB">
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Параметры ReadMore.js – настройка функциональности | Документация">
+	<meta property="og:description" content="Ознакомьтесь с параметрами скрипта ReadMore.js, которые позволяют настроить поведение функциональности плагина. Узнайте, как адаптировать высоту, скорость анимации и другие опции для создания уникального пользовательского опыта на вашем сайте.">
+	<meta property="og:url" content="https://corgras.github.io/ru/readmore/docs/options">
+	<meta property="og:image" content="https://corgras.github.io/assets/images/og-image.png">
+	<meta property="og:locale" content="ru_RU">
+	<meta property="og:site_name" content="ReadMore.js">
 
-	<script src="/assets/js/theme.js"></script>
-
+	<!-- Schema.org Microdata -->
 	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "TechArticle",
+		"name": "Параметры ReadMore.js – настройка функциональности | Документация",
+		"headline": "Параметры ReadMore.js – настройка функциональности | Документация",
+		"description": "Ознакомьтесь с параметрами скрипта ReadMore.js, которые позволяют настроить поведение функциональности плагина. Узнайте, как адаптировать высоту, скорость анимации и другие опции для создания уникального пользовательского опыта на вашем сайте.",
+		"url": "https://corgras.github.io/ru/readmore/docs/options",
+		"image": "https://corgras.github.io/assets/images/og-image.png",
+		"author": {
+			"@type": "Organization",
+			"name": "RoS",
+			"url": "https://corgras.github.io/ru/"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "CORGRAS",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://corgras.github.io/assets/images/logo.svg"
+			}
+		},
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "https://corgras.github.io/ru/readmore/docs/options"
+		},
+		"inLanguage": "ru"
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Главная",
+			"item": "https://corgras.github.io/ru/"
+		},
 		{
-			"@context": "http://schema.org",
-			"@type": "WebSite",
-			"name": "Параметры ReadMore.js – настройки функциональности | Документация",
-			"url": "https://corgras.github.io/ru/readmore/docs/options",
-			"description": "Ознакомьтесь с параметрами скрипта ReadMore.js, которые позволяют настроить поведение функциональности плагина. Узнайте, как адаптировать высоту, скорость анимации и другие опции для создания уникального пользовательского опыта на вашем сайте.",
-			"@language": "ru"
-		}
+			"@type": "ListItem",
+			"position": 2,
+			"name": "ReadMore.js",
+			"item": "https://corgras.github.io/ru/readmore/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 3,
+			"name": "Документация",
+			"item": "https://corgras.github.io/ru/readmore/docs/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 4,
+			"name": "Параметры",
+			"item": "https://corgras.github.io/ru/readmore/docs/options"
+		}]
+	}
 	</script>
 
 	<!-- Google tag (gtag.js) -->
@@ -66,11 +114,12 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-
 		gtag('config', 'G-ZNSWFP3MCV');
 	</script>
+
+	<script defer src="/assets/js/theme.js"></script>
 </head>
-<body class="documentation">
+<body class="readmore documentation">
 	<header class="header">
 		<div class="header-top">
 			<div class="container">
@@ -86,7 +135,7 @@
 					</aside>
 					<div class="col-2">
 						<a class="logo" href="/ru/">
-							<img src="/assets/images/logo.svg" alt="CORGRAS" width="44" height="auto">
+							<img src="/assets/images/logo.svg" alt="CORGRAS Logo" width="44" height="auto" loading="lazy">
 						</a>
 					</div>
 					<div class="col navigation">
@@ -97,8 +146,8 @@
 										<i class="ics-github"></i><span>Github</span>
 									</a>
 								</li>
-								<li class="active">
-									<a href="/ru/readmore/docs/" class="link" aria-label="Документация">
+								<li>
+									<a href="/ru/readmore/docs/" class="link active" aria-label="Документация">
 										<i class="ics-book-open"></i><span>Документация</span>
 									</a>
 								</li>
@@ -113,24 +162,22 @@
 									</a>
 								</li>
 								<li>
-									<a href="/ru/donate" class="link" aria-label="Благодарность">
-										<i class="ics-coffee"></i><span>Благодарность</span>
+									<a href="/ru/donate" class="link" aria-label="Донат">
+										<i class="ics-coffee"></i><span>Донат</span>
 									</a>
 								</li>
 							</ul>
 						</nav>
 						<aside>
 							<div class="language dropdown">
-								<a role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Выбор языка:">
+								<button role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Выбор языка:">
 									<i class="ics-lang2"></i><span class="language-text">Русский</span>
-								</a>
-								<div class="dropdown-menu">
-									<ul>
-										<li class="dropdown-item"><a href="/readmore/docs/options" hreflang="uk"><span>Українська</span></a></li>
-										<li class="dropdown-item"><a href="/en/readmore/docs/options" hreflang="en"><span>English</span></a></li>
-										<li class="dropdown-item active"><span>Русский</span></li>
-									</ul>
-								</div>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="dropdown-item"><a href="/readmore/docs/options" hreflang="uk" lang="uk"><span>Українська</span></a></li>
+									<li class="dropdown-item"><a href="/en/readmore/docs/options" hreflang="en" lang="en"><span>English</span></a></li>
+									<li class="dropdown-item active"><span>Русский</span></li>
+								</ul>
 							</div>
 							<div class="theme">
 								<div class="theme-text">Тема:</div>
@@ -180,7 +227,7 @@
 			<article>
 				<h1>Параметры</h1>
 				<p>Функция <code class="code">initReadMore</code> позволяет настроить поведение плагина «Читать далее» через объект параметров. Это дает возможность адаптировать отображение контента, анимацию и взаимодействие к потребностям вашего сайта.</p>
-				<p>Благодаря гибким настройкам вы можете создавать удобный и эстетически привлекательный интерфейс, соответствующий дизайну и функциональным требованиям вашего проекта.</p>
+				<p>Благодаря гибким настройкам вы можете создавать удобный и эстетически привлекательный интерфейс, который соответствует дизайну и функциональным требованиям вашего проекта.</p>
 				<p>Ниже приведено подробное описание всех доступных параметров:</p>
 				<div class="table-options">
 					<div class="tr-options-head">
@@ -194,7 +241,7 @@
 						<div class="td-type" id="type">Число</div>
 						<div class="td-default" id="default">250</div>
 						<div class="td-desc" id="desc">
-							<p>Определяет начальную высоту свернутого контента в пикселях. Если содержимое короче этой высоты, кнопка «Читать далее» не отображается.</p>
+							<p>Определяет начальную высоту свернутого контента в пикселях. Если контент короче этой высоты, кнопка «Читать далее» не отображается.</p>
 						</div>
 					</div>
 					<div class="tr-options">
@@ -202,23 +249,23 @@
 						<div class="td-type" id="type">Число</div>
 						<div class="td-default" id="default">300</div>
 						<div class="td-desc" id="desc">
-							<p>Задает длительность анимации разворачивания/сворачивания в миллисекундах. Для сворачивания в режиме <code class="code">animationMode: 'js'</code> скорость уменьшается вдвое.</p>
+							<p>Задает длительность анимации развертывания/свертывания в миллисекундах. Для свертывания в режиме <code class="code">animationMode: 'js'</code> скорость уменьшается вдвое.</p>
 						</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">moreLink</div>
 						<div class="td-type" id="type">Строка</div>
-						<div class="td-default" id="default">&lt;span&gt;Читать далее&lt;/span&gt;</div>
+						<div class="td-default" id="default">&lt;span&gt;Read More&lt;/span&gt;</div>
 						<div class="td-desc" id="desc">
-							<p>HTML-строка для кнопки «Читать далее», отображаемой в свернутом состоянии. Вставляется в элемент <code class="code">&lt;button&gt;</code>. Для безопасности HTML очищается от потенциально опасных атрибутов.</p>
+							<p>HTML-строка для кнопки «Читать далее», которая отображается в свернутом состоянии. Вставляется в элемент <code class="code">&lt;button&gt;</code>. Для безопасности HTML очищается от потенциально опасных атрибутов.</p>
 						</div>
 					</div>
 					<div class="tr-options">
 						<div class="td-option" id="option">lessLink</div>
 						<div class="td-type" id="type">Строка</div>
-						<div class="td-default" id="default">&lt;span&gt;Закрыть&lt;/span&gt;</div>
+						<div class="td-default" id="default">&lt;span&gt;Close&lt;/span&gt;</div>
 						<div class="td-desc" id="desc">
-							<p>HTML-строка для кнопки «Закрыть», отображаемой в развернутом состоянии. Вставляется в элемент <code class="code">&lt;button&gt;</code>. Поддерживает очистку HTML от опасного кода.</p>
+							<p>HTML-строка для кнопки «Закрыть», которая отображается в развернутом состоянии. Вставляется в элемент <code class="code">&lt;button&gt;</code>. Поддерживает очистку HTML от опасного кода.</p>
 						</div>
 					</div>
 					<div class="tr-options">
@@ -226,7 +273,7 @@
 						<div class="td-type" id="type">Логический</div>
 						<div class="td-default" id="default">false</div>
 						<div class="td-desc" id="desc">
-							<p>Если <code class="code">true</code>, кнопка скрывается после разворачивания контента, позволяя избежать лишних элементов интерфейса.</p>
+							<p>Если <code class="code">true</code>, кнопка скрывается после развертывания контента, позволяя избежать лишних элементов интерфейса.</p>
 						</div>
 					</div>
 					<div class="tr-options">
@@ -234,7 +281,7 @@
 						<div class="td-type" id="type">Логический</div>
 						<div class="td-default" id="default">false</div>
 						<div class="td-desc" id="desc">
-							<p>Если <code class="code">true</code>, отключает функцию сворачивания для элемента или диапазона ширины экрана, отображая весь контент.</p>
+							<p>Если <code class="code">true</code>, отключает функцию свертывания для элемента или диапазона ширины экрана, отображая весь контент.</p>
 						</div>
 					</div>
 					<div class="tr-options">
@@ -262,7 +309,7 @@
 						<div class="td-type" id="type">Логический</div>
 						<div class="td-default" id="default">true</div>
 						<div class="td-desc" id="desc">
-							<p>Если <code class="code">true</code>, страница плавно прокручивается к верхней части контента после его сворачивания, улучшая удобство просмотра.</p>
+							<p>Если <code class="code">true</code>, страница плавно прокручивается к верхней части контента после его свертывания, улучшая удобство просмотра.</p>
 						</div>
 					</div>
 					<div class="tr-options">
@@ -270,7 +317,7 @@
 						<div class="td-type" id="type">Объект</div>
 						<div class="td-default" id="default">{}</div>
 						<div class="td-desc" id="desc">
-							<p>Позволяет задавать различные значения параметров в зависимости от ширины экрана. Ключи — максимальная ширина экрана в пикселях, значения — объект с параметрами.</p>
+							<p>Позволяет задавать разные значения параметров в зависимости от ширины экрана. Ключи — максимальная ширина экрана в пикселях, значения — объект с параметрами.</p>
 							<p><strong>Пример:</strong></p>
 							<pre><code class="language-javascript show-language">
 								breakpoints: {
@@ -281,7 +328,7 @@
 									1200: { collapsedHeight: 200 }
 								}
 							</code></pre>
-							<p>Если ширина экрана больше максимального ключа, сворачивание отключается.</p>
+							<p>Если ширина экрана больше максимального ключа, свертывание отключается.</p>
 						</div>
 					</div>
 					<div class="tr-options">
@@ -289,11 +336,11 @@
 						<div class="td-type" id="type">Функция</div>
 						<div class="td-default" id="default">null</div>
 						<div class="td-desc" id="desc">
-							<p>Коллбэк, вызываемый перед началом разворачивания/сворачивания. Получает аргументы: <code class="code">button</code> (кнопка), <code class="code">element</code> (элемент контента), <code class="code">isExpanded</code> (логическое значение состояния).</p>
+							<p>Коллбэк, который вызывается перед началом развертывания/свертывания. Получает аргументы: <code class="code">button</code> (кнопка), <code class="code">element</code> (элемент контента), <code class="code">isExpanded</code> (логическое значение состояния).</p>
 							<p><strong>Пример:</strong></p>
 							<pre><code class="language-javascript show-language">
 								beforeToggle: (button, element, isExpanded) => {
-									console.log('Переключение начнется, состояние:', isExpanded);
+									console.log('Toggle начнется, состояние:', isExpanded);
 								}
 							</code></pre>
 						</div>
@@ -303,11 +350,11 @@
 						<div class="td-type" id="type">Функция</div>
 						<div class="td-default" id="default">null</div>
 						<div class="td-desc" id="desc">
-							<p>Коллбэк, вызываемый после завершения разворачивания/сворачивания. Получает те же аргументы: <code class="code">button</code>, <code class="code">element</code>, <code class="code">isExpanded</code>.</p>
+							<p>Коллбэк, который вызывается после завершения развертывания/свертывания. Получает те же аргументы: <code class="code">button</code>, <code class="code">element</code>, <code class="code">isExpanded</code>.</p>
 							<p><strong>Пример:</strong></p>
 							<pre><code class="language-javascript show-language">
 								afterToggle: (button, element, isExpanded) => {
-									console.log('Переключение завершено, состояние:', isExpanded);
+									console.log('Toggle завершено, состояние:', isExpanded);
 								}
 							</code></pre>
 						</div>
@@ -317,7 +364,7 @@
 						<div class="td-type" id="type">Функция</div>
 						<div class="td-default" id="default">null</div>
 						<div class="td-desc" id="desc">
-							<p>Коллбэк, вызываемый после обработки элемента плагином. Получает аргументы: <code class="code">element</code> (элемент контента), <code class="code">needsToggle</code> (логическое значение, нужна ли кнопка).</p>
+							<p>Коллбэк, который вызывается после обработки элемента плагином. Получает аргументы: <code class="code">element</code> (элемент контента), <code class="code">needsToggle</code> (логическое значение, нужна ли кнопка).</p>
 							<p><strong>Пример:</strong></p>
 							<pre><code class="language-javascript show-language">
 								blockProcessed: (element, needsToggle) => {
@@ -371,19 +418,17 @@
 						});
 					});
 				</code></pre>
-				<br>
 				<p>Этот код применяет плагин ко всем элементам с классом <code class="code">.readmore</code>, настраивая высоту, анимацию, текст кнопок и адаптивное поведение.</p>
 				<p>Вы можете изменять параметры, чтобы достичь желаемой функциональности, создавая удобный и интерактивный интерфейс для пользователей.</p>
 			</article>
 		</div>
 	</main>
 	<footer>
-		<div class="copyrights">© <script>document.write(new Date().getFullYear());</script> CORGRAS. Все права защищены</div>
+		<div class="copyrights">© <span id="year"></span> CORGRAS. Все права защищены</div>
 	</footer>
-	<!-- SCRIPT -->
-	<script src="/assets/js/bootstrap.bundle.min.js"></script>
-	<script src="/assets/js/prism.js"></script>
-	<script src="/assets/js/common.js"></script>
-	<!-- END SCRIPT -->
+	<!-- Scripts -->
+	<script defer src="/assets/js/bootstrap.bundle.min.js"></script>
+	<script defer src="/assets/js/prism.js"></script>
+	<script defer src="/assets/js/common.js"></script>
 </body>
 </html>

@@ -1,63 +1,111 @@
 <!DOCTYPE html>
 <html lang="uk" prefix="og: https://ogp.me/ns#">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta name="robots" content="index, follow">
-	<!--<base href="https://corgras.github.io/">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="color-scheme" content="light dark">
+	<meta name="theme-color" content="#FFF" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#010409" media="(prefers-color-scheme: dark)">
+	<meta name="msapplication-TileColor" content="#FFF" media="(prefers-color-scheme: light)">
+	<meta name="msapplication-TileColor" content="#010409" media="(prefers-color-scheme: dark)">
 
 	<title>Стилізація ReadMore.js – налаштування вигляду плагіна | Документація</title>
 	<meta name="description" content="Дізнайтеся, як стилізувати плагін ReadMore.js для досягнення бажаного вигляду на вашому сайті. Ознайомтеся з рекомендаціями щодо CSS та прикладами стилізації, щоб створити унікальний дизайн.">
 	<meta name="keywords" content="стилізація ReadMore.js, CSS, веб-дизайн, плагін, налаштування вигляду, текстові блоки">
 
-	<!-- Favicon-->
+	<!-- Favicon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon/favicon-48x48.png">
 	<link rel="icon" type="image/x-icon" href="/assets/images/favicon/favicon.ico">
 	<link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
-	<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="256x256" href="/assets/images/favicon/android-icon-256x256.png">
-	<link rel="icon" type="image/png" sizes="384x384" href="/assets/images/favicon/android-icon-384x384.png">
-	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-icon-512x512.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-chrome-512x512.png">
 	<link rel="manifest" href="/assets/images/favicon/manifest.json">
 
+	<!-- Styles -->
 	<link rel="stylesheet" href="/assets/css/framework.css">
 	<link rel="stylesheet" href="/assets/css/ics.css">
 	<link rel="stylesheet" href="/assets/css/prism.css">
 	<link rel="stylesheet" href="/assets/css/style.css">
 
+	<!-- Canonical and Alternate Links -->
 	<link rel="canonical" href="https://corgras.github.io/readmore/docs/stylization">
 	<link rel="alternate" href="https://corgras.github.io/readmore/docs/stylization" hreflang="x-default">
 	<link rel="alternate" href="https://corgras.github.io/readmore/docs/stylization" hreflang="uk">
 	<link rel="alternate" href="https://corgras.github.io/en/readmore/docs/stylization" hreflang="en">
 	<link rel="alternate" href="https://corgras.github.io/ru/readmore/docs/stylization" hreflang="ru">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="color-scheme" content="light dark">
-	<meta name="theme-color" content="#F9F9FB" media="(prefers-color-scheme: light)">
-	<meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)">
-	<meta name="msapplication-TileColor" content="#F9F9FB">
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Стилізація ReadMore.js – налаштування вигляду плагіна | Документація">
+	<meta property="og:description" content="Дізнайтеся, як стилізувати плагін ReadMore.js для досягнення бажаного вигляду на вашому сайті. Ознайомтеся з рекомендаціями щодо CSS та прикладами стилізації, щоб створити унікальний дизайн.">
+	<meta property="og:url" content="https://corgras.github.io/readmore/docs/stylization">
+	<meta property="og:image" content="https://corgras.github.io/assets/images/og-image.png">
+	<meta property="og:locale" content="uk_UA">
+	<meta property="og:site_name" content="ReadMore.js">
 
-	<script src="/assets/js/theme.js"></script>
-
+	<!-- Schema.org Microdata -->
 	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "TechArticle",
+		"name": "Стилізація ReadMore.js – налаштування вигляду плагіна | Документація",
+		"headline": "Стилізація ReadMore.js – налаштування вигляду плагіна | Документація",
+		"description": "Дізнайтеся, як стилізувати плагін ReadMore.js для досягнення бажаного вигляду на вашому сайті. Ознайомтеся з рекомендаціями щодо CSS та прикладами стилізації, щоб створити унікальний дизайн.",
+		"url": "https://corgras.github.io/readmore/docs/stylization",
+		"image": "https://corgras.github.io/assets/images/og-image.png",
+		"author": {
+			"@type": "Organization",
+			"name": "RoS",
+			"url": "https://corgras.github.io"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "CORGRAS",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://corgras.github.io/assets/images/logo.svg"
+			}
+		},
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "https://corgras.github.io/readmore/docs/stylization"
+		},
+		"inLanguage": "uk"
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Головна",
+			"item": "https://corgras.github.io/"
+		},
 		{
-			"@context": "http://schema.org",
-			"@type": "WebSite",
-			"name": "Стилізація ReadMore.js – налаштування вигляду плагіна | Документація",
-			"url": "https://corgras.github.io/readmore/docs/stylization",
-			"description": "Дізнайтеся, як стилізувати плагін ReadMore.js для досягнення бажаного вигляду на вашому сайті. Ознайомтеся з рекомендаціями щодо CSS та прикладами стилізації, щоб створити унікальний дизайн.",
-			"@language": "uk"
-		}
+			"@type": "ListItem",
+			"position": 2,
+			"name": "ReadMore.js",
+			"item": "https://corgras.github.io/readmore/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 3,
+			"name": "Документація",
+			"item": "https://corgras.github.io/readmore/docs/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 4,
+			"name": "Стилізація",
+			"item": "https://corgras.github.io/readmore/docs/stylization"
+		}]
+	}
 	</script>
 
 	<!-- Google tag (gtag.js) -->
@@ -66,11 +114,12 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-
 		gtag('config', 'G-ZNSWFP3MCV');
 	</script>
+
+	<script defer src="/assets/js/theme.js"></script>
 </head>
-<body class="documentation">
+<body class="readmore documentation">
 	<header class="header">
 		<div class="header-top">
 			<div class="container">
@@ -86,7 +135,7 @@
 					</aside>
 					<div class="col-2">
 						<a class="logo" href="/">
-							<img src="/assets/images/logo.svg" alt="CORGRAS" width="44" height="auto">
+							<img src="/assets/images/logo.svg" alt="CORGRAS Logo" width="44" height="auto" loading="lazy">
 						</a>
 					</div>
 					<div class="col navigation">
@@ -97,8 +146,8 @@
 										<i class="ics-github"></i><span>Github</span>
 									</a>
 								</li>
-								<li class="active">
-									<a href="/readmore/docs/" class="link" aria-label="Документація">
+								<li>
+									<a href="/readmore/docs/" class="link active" aria-label="Документація">
 										<i class="ics-book-open"></i><span>Документація</span>
 									</a>
 								</li>
@@ -113,24 +162,22 @@
 									</a>
 								</li>
 								<li>
-									<a href="/donate" class="link" aria-label="Подякувати">
-										<i class="ics-coffee"></i><span>Подякувати</span>
+									<a href="/donate" class="link" aria-label="Донат">
+										<i class="ics-coffee"></i><span>Донат</span>
 									</a>
 								</li>
 							</ul>
 						</nav>
 						<aside>
 							<div class="language dropdown">
-								<a role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Вибір мови:">
+								<button role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Вибір мови:">
 									<i class="ics-lang2"></i><span class="language-text">Українська</span>
-								</a>
-								<div class="dropdown-menu">
-									<ul>
-										<li class="dropdown-item active"><span>Українська</span></li>
-										<li class="dropdown-item"><a href="/en/readmore/docs/stylization" hreflang="en"><span>English</span></a></li>
-										<li class="dropdown-item"><a href="/ru/readmore/docs/stylization" hreflang="ru"><span>Русский</span></a></li>
-									</ul>
-								</div>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="dropdown-item active"><span>Українська</span></li>
+									<li class="dropdown-item"><a href="/en/readmore/docs/stylization" hreflang="en" lang="en"><span>English</span></a></li>
+									<li class="dropdown-item"><a href="/ru/readmore/docs/stylization" hreflang="ru" lang="ru"><span>Русский</span></a></li>
+								</ul>
 							</div>
 							<div class="theme">
 								<div class="theme-text">Тема:</div>
@@ -179,7 +226,7 @@
 		<div class="container">
 			<article>
 				<h1>Стилізація</h1>
-				<p>Цей розділ допоможе вам налаштувати зовнішній вигляд і поведінку елементів, керованих плагіном <strong>Readmore.js</strong>. Нижче наведено детальний опис CSS-класів, data-атрибутів та ARIA-атрибутів, які використовуються в плагіні, разом із рекомендаціями щодо їх стилізації. Ці інструменти дозволяють створювати адаптивний, доступний і візуально привабливий інтерфейс для функції «Читати далі» / «Закрити».</p>
+				<p>Цей розділ допоможе вам налаштувати зовнішній вигляд і поведінку елементів, керованих плагіном <strong>Readmore.js</strong>.</p><p>Нижче наведено детальний опис CSS-класів, data-атрибутів та ARIA-атрибутів, які використовуються в плагіні, разом із рекомендаціями щодо їх стилізації.</p><p>Ці інструменти дозволяють створювати адаптивний, доступний і візуально привабливий інтерфейс для функції «Читати далі» / «Закрити».</p>
 				<div class="table-class">
 					<div class="tr-class-head">
 						<div class="td-class" id="class">CSS класи</div>
@@ -377,12 +424,11 @@
 		</div>
 	</main>
 	<footer>
-		<div class="copyrights">© <script>document.write(new Date().getFullYear());</script> CORGRAS. Всі права захищені</div>
+		<div class="copyrights">© <span id="year"></span> CORGRAS. Всі права захищені</div>
 	</footer>
-	<!-- SCRIPT -->
-	<script src="/assets/js/bootstrap.bundle.min.js"></script>
-	<script src="/assets/js/prism.js"></script>
-	<script src="/assets/js/common.js"></script>
-	<!-- END SCRIPT -->
+	<!-- Scripts -->
+	<script defer src="/assets/js/bootstrap.bundle.min.js"></script>
+	<script defer src="/assets/js/prism.js"></script>
+	<script defer src="/assets/js/common.js"></script>
 </body>
 </html>

@@ -1,62 +1,133 @@
 <!DOCTYPE html>
 <html lang="ru" prefix="og: https://ogp.me/ns#">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta name="robots" content="index, follow">
-	<!--<base href="https://corgras.github.io/">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="color-scheme" content="light dark">
+	<meta name="theme-color" content="#FFF" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#010409" media="(prefers-color-scheme: dark)">
+	<meta name="msapplication-TileColor" content="#FFF" media="(prefers-color-scheme: light)">
+	<meta name="msapplication-TileColor" content="#010409" media="(prefers-color-scheme: dark)">
 
-	<title>Вклад в проект ReadMore.js</title>
-	<meta name="description" content="Поддержка проекта ReadMore.js. Ваше участие важно для нас и поможет улучшить этот JavaScript плагин.">
-	<meta name="keywords" content="вклад, поддержка, ReadMore.js, JavaScript плагин, обратная связь, сообщество, веб-разработка, усовершенствование, разработка плагина">
+	<title>Поддержка ReadMore.js</title>
+	<meta name="description" content="Присоединяйтесь к развитию ReadMore.js! Предлагайте функции, сообщайте об ошибках или поддержите проект на GitHub.">
+	<meta name="keywords" content="вклад, помощь, ReadMore.js, JavaScript плагин, обратная связь, сообщество, веб-разработка, улучшение, разработка плагина">
 
-	<!-- Favicon-->
+	<!-- Favicon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon/favicon-48x48.png">
 	<link rel="icon" type="image/x-icon" href="/assets/images/favicon/favicon.ico">
 	<link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
-	<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="256x256" href="/assets/images/favicon/android-icon-256x256.png">
-	<link rel="icon" type="image/png" sizes="384x384" href="/assets/images/favicon/android-icon-384x384.png">
-	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-icon-512x512.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-chrome-512x512.png">
 	<link rel="manifest" href="/assets/images/favicon/manifest.json">
 
+	<!-- Styles -->
 	<link rel="stylesheet" href="/assets/css/framework.css">
 	<link rel="stylesheet" href="/assets/css/ics.css">
 	<link rel="stylesheet" href="/assets/css/style.css">
 
+	<!-- Canonical and Alternate Links -->
 	<link rel="canonical" href="https://corgras.github.io/ru/readmore/support">
 	<link rel="alternate" href="https://corgras.github.io/readmore/support" hreflang="x-default">
 	<link rel="alternate" href="https://corgras.github.io/readmore/support" hreflang="uk">
 	<link rel="alternate" href="https://corgras.github.io/en/readmore/support" hreflang="en">
 	<link rel="alternate" href="https://corgras.github.io/ru/readmore/support" hreflang="ru">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="color-scheme" content="light dark">
-	<meta name="theme-color" content="#F9F9FB" media="(prefers-color-scheme: light)">
-	<meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)">
-	<meta name="msapplication-TileColor" content="#F9F9FB">
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Поддержка ReadMore.js">
+	<meta property="og:description" content="Присоединяйтесь к развитию ReadMore.js! Предлагайте функции, сообщайте об ошибках или поддержите проект на GitHub.">
+	<meta property="og:url" content="https://corgras.github.io/ru/readmore/support">
+	<meta property="og:image" content="https://corgras.github.io/assets/images/og-image.png">
+	<meta property="og:locale" content="ru_RU">
+	<meta property="og:site_name" content="ReadMore.js">
 
-	<script src="/assets/js/theme.js"></script>
-
+	<!-- Schema.org Microdata -->
 	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"name": "Поддержка ReadMore.js",
+		"description": "Присоединяйтесь к развитию ReadMore.js! Предлагайте функции, сообщайте об ошибках или поддержите проект на GitHub.",
+		"url": "https://corgras.github.io/ru/readmore/support",
+		"inLanguage": "ru",
+		"publisher": {
+			"@type": "Organization",
+			"name": "CORGRAS",
+			"url": "https://corgras.github.io/ru/",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://corgras.github.io/assets/images/logo.svg"
+			}
+		},
+		"mainEntity": {
+			"@type": "FAQPage",
+			"mainEntity": [{
+				"@type": "Question",
+				"name": "Как я могу поддержать ReadMore.js?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Вы можете предложить новую функцию, сообщить об ошибке, отправить pull request или поставить звезду проекту на GitHub."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "Где можно сообщить об ошибках?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Ошибки можно сообщить в разделе Issues на GitHub по адресу https://github.com/corgras/readmore.js/issues"
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "Можно ли внести вклад в код проекта?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Да, вы можете сделать fork репозитория, внести изменения и отправить pull request."
+				}
+			}]
+		},
+		"sameAs": [
+			"https://github.com/corgras/readmore.js",
+			"https://corgras.github.io/ru/readmore/"
+		],
+		"potentialAction": [{
+			"@type": "ReadAction",
+			"target": "https://github.com/corgras/readmore.js"
+		},
 		{
-			"@context": "http://schema.org",
-			"@type": "WebSite",
-			"name": "Вклад в проект ReadMore.js",
-			"url": "https://corgras.github.io/ru/readmore/support",
-			"description": "Поддержка проекта ReadMore.js. Ваше участие важно для нас и поможет улучшить этот JavaScript плагин.",
-			"@language": "ru"
-		}
+			"@type": "CommunicateAction",
+			"target": "https://github.com/corgras/readmore.js/issues"
+		}]
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Главная",
+			"item": "https://corgras.github.io/ru/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 2,
+			"name": "ReadMore.js",
+			"item": "https://corgras.github.io/ru/readmore/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 3,
+			"name": "Поддержка",
+			"item": "https://corgras.github.io/ru/readmore/support"
+		}]
+	}
 	</script>
 
 	<!-- Google tag (gtag.js) -->
@@ -65,18 +136,19 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-
 		gtag('config', 'G-ZNSWFP3MCV');
 	</script>
+
+	<script defer src="/assets/js/theme.js"></script>
 </head>
-<body>
-	<header class="header">
+<body class="readmore">
+	<header>
 		<div class="header-top">
 			<div class="container">
 				<div class="row">
 					<div class="col-2">
 						<a class="logo" href="/ru/">
-							<img src="/assets/images/logo.svg" alt="CORGRAS" width="44" height="auto">
+							<img src="/assets/images/logo.svg" alt="CORGRAS Logo" width="44" height="auto" loading="lazy">
 						</a>
 					</div>
 					<div class="col navigation">
@@ -97,30 +169,28 @@
 										<i class="ics-demo"></i><span>Демо</span>
 									</a>
 								</li>
-								<li class="active">
-									<a href="/ru/readmore/support" class="link" aria-label="Поддержка">
+								<li>
+									<a href="/ru/readmore/support" class="link active" aria-label="Поддержка">
 										<i class="ics-envelope"></i><span>Поддержка</span>
 									</a>
 								</li>
 								<li>
-									<a href="/ru/donate" class="link" aria-label="Благодарность">
-										<i class="ics-coffee"></i><span>Благодарность</span>
+									<a href="/ru/donate" class="link" aria-label="Донат">
+										<i class="ics-coffee"></i><span>Донат</span>
 									</a>
 								</li>
 							</ul>
 						</nav>
 						<aside>
 							<div class="language dropdown">
-								<a role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Выбор языка:">
+								<button role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Выбор языка:">
 									<i class="ics-lang2"></i><span class="language-text">Русский</span>
-								</a>
-								<div class="dropdown-menu">
-									<ul>
-										<li class="dropdown-item"><a href="/readmore/support" hreflang="uk"><span>Українська</span></a></li>
-										<li class="dropdown-item"><a href="/en/readmore/support" hreflang="en"><span>English</span></a></li>
-										<li class="dropdown-item active"><span>Русский</span></li>
-									</ul>
-								</div>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="dropdown-item"><a href="/readmore/support" hreflang="uk" lang="uk"><span>Українська</span></a></li>
+									<li class="dropdown-item"><a href="/en/readmore/support" hreflang="en" lang="en"><span>English</span></a></li>
+									<li class="dropdown-item active"><span>Русский</span></li>
+								</ul>
 							</div>
 							<div class="theme">
 								<div class="theme-text">Тема:</div>
@@ -156,57 +226,56 @@
 	<main>
 		<div class="container">
 			<h1>Вклад в проект</h1>
-			<p class="lead">Мне очень приятно, что вы хотите поддержать проект! Есть несколько способов, как вы можете помочь ему расти и развиваться. Я искренне ценю все ваши вклады, даже самые небольшие, ведь каждый из них имеет большое значение. Спасибо вам за вашу поддержку!</p>
+			<p class="lead">Мне очень приятно, что вы хотите поддержать проект! Есть несколько способов, как вы можете помочь ему расти и развиваться. Я искренне ценю любой вклад, даже самый маленький — он имеет значение. Спасибо за вашу поддержку!</p>
 			<div class="row cards">
-				<div class="col-6 card card-hor">
+				<div class="col-6 card">
 					<div class="card-image">
-						<i class="ics-message-lines"></i>
+						<i class="ics-message-lines" aria-hidden="true"></i>
 					</div>
 					<div class="card-content">
-						<h3>Предложите новую функцию</h3>
+						<h2>Предложите новую функцию</h2>
 						<p>Поделитесь своими идеями по улучшению проекта, предложив новые функции или возможности.</p>
-						<a class="btn-sm btn-secondary" href="https://github.com/corgras/readmore.js/issues">Предложить</a>
+						<a class="btn btn-primary" href="https://github.com/corgras/readmore.js/issues">Предложить</a>
 					</div>
 				</div>
-				<div class="col-6 card card-hor">
+				<div class="col-6 card">
 					<div class="card-image">
-						<i class="ics-triangle"></i>
+						<i class="ics-triangle" aria-hidden="true"></i>
 					</div>
 					<div class="card-content">
-						<h3>Сообщите о проблеме</h3>
-						<p>Если вы столкнулись с ошибкой или проблемой, сообщите об этом, чтобы мы могли её устранить.</p>
-						<a class="btn-sm btn-secondary" href="https://github.com/corgras/readmore.js/issues">Сообщить</a>
+						<h2>Сообщите о проблеме</h2>
+						<p>Если вы столкнулись с ошибкой или проблемой — сообщите об этом, чтобы мы могли её исправить.</p>
+						<a class="btn btn-primary" href="https://github.com/corgras/readmore.js/issues">Сообщить</a>
 					</div>
 				</div>
-				<div class="col-6 card card-hor">
+				<div class="col-6 card">
 					<div class="card-image">
-						<i class="ics-pull-request"></i>
+						<i class="ics-pull-request" aria-hidden="true"></i>
 					</div>
 					<div class="card-content">
-						<h3>Отправьте запрос на изменение</h3>
-						<p>Если вы хотите внести изменения в проект, отправьте запрос на изменение, чтобы предложить свои правки.</p>
-						<a class="btn-sm btn-secondary" href="https://github.com/corgras/readmore.js/pulls">Отправить</a>
+						<h2>Отправьте pull request</h2>
+						<p>Если вы хотите внести изменения в проект — сделайте pull request со своими правками.</p>
+						<a class="btn btn-primary" href="https://github.com/corgras/readmore.js/pulls">Отправить</a>
 					</div>
 				</div>
-				<div class="col-6 card card-hor">
+				<div class="col-6 card">
 					<div class="card-image">
-						<i class="ics-star"></i>
+						<i class="ics-star" aria-hidden="true"></i>
 					</div>
 					<div class="card-content">
-						<h3>Поставьте звезду проекту на GitHub</h3>
-						<p>Поддержите проект, поставив ему звезду на GitHub, это поможет повысить его видимость.</p>
-						<a class="btn-sm btn-secondary" href="https://github.com/corgras/readmore.js">Поставить звезду</a>
+						<h2>Поставьте звезду на GitHub</h2>
+						<p>Поддержите проект, поставив звезду на GitHub — это поможет повысить его видимость.</p>
+						<a class="btn btn-primary" href="https://github.com/corgras/readmore.js">Поставить звезду</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</main>
 	<footer>
-		<div class="copyrights">© <script>document.write(new Date().getFullYear());</script> CORGRAS. Все права защищены</div>
+		<div class="copyrights">© <span id="year"></span> CORGRAS. Все права защищены</div>
 	</footer>
-	<!-- SCRIPT -->
-	<script src="/assets/js/bootstrap.bundle.min.js"></script>
-	<script src="/assets/js/common.js"></script>
-	<!-- END SCRIPT -->
+	<!-- Scripts -->
+	<script defer src="/assets/js/bootstrap.bundle.min.js"></script>
+	<script defer src="/assets/js/common.js"></script>
 </body>
 </html>

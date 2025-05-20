@@ -1,63 +1,111 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta name="robots" content="index, follow">
-	<!--<base href="https://corgras.github.io/">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="color-scheme" content="light dark">
+	<meta name="theme-color" content="#FFF" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#010409" media="(prefers-color-scheme: dark)">
+	<meta name="msapplication-TileColor" content="#FFF" media="(prefers-color-scheme: light)">
+	<meta name="msapplication-TileColor" content="#010409" media="(prefers-color-scheme: dark)">
 
-	<title>Initializing ReadMore.js – Configure the Plugin for Your Site | Documentation</title>
-	<meta name="description" content="Learn how to initialize the ReadMore.js script on your website. Explore code examples and parameters to customize the plugin according to your needs and improve content display.">
-	<meta name="keywords" content="ReadMore.js initialization, plugin settings, JavaScript, text blocks, code examples, web development">
+	<title>Initializing ReadMore.js – Configure the Plugin for Your Website | Documentation</title>
+	<meta name="description" content="Learn how to initialize the ReadMore.js script on your website. Explore code examples and parameters to configure the plugin for your needs and enhance content display.">
+	<meta name="keywords" content="ReadMore.js initialization, plugin configuration, JavaScript, expandable text blocks, code examples, web development">
 
-	<!-- Favicon-->
+	<!-- Favicon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon/favicon-48x48.png">
 	<link rel="icon" type="image/x-icon" href="/assets/images/favicon/favicon.ico">
 	<link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
-	<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="256x256" href="/assets/images/favicon/android-icon-256x256.png">
-	<link rel="icon" type="image/png" sizes="384x384" href="/assets/images/favicon/android-icon-384x384.png">
-	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-icon-512x512.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-chrome-512x512.png">
 	<link rel="manifest" href="/assets/images/favicon/manifest.json">
 
+	<!-- Styles -->
 	<link rel="stylesheet" href="/assets/css/framework.css">
 	<link rel="stylesheet" href="/assets/css/ics.css">
 	<link rel="stylesheet" href="/assets/css/prism.css">
 	<link rel="stylesheet" href="/assets/css/style.css">
 
+	<!-- Canonical and Alternate Links -->
 	<link rel="canonical" href="https://corgras.github.io/en/readmore/docs/initialization">
 	<link rel="alternate" href="https://corgras.github.io/readmore/docs/initialization" hreflang="x-default">
 	<link rel="alternate" href="https://corgras.github.io/readmore/docs/initialization" hreflang="uk">
 	<link rel="alternate" href="https://corgras.github.io/en/readmore/docs/initialization" hreflang="en">
 	<link rel="alternate" href="https://corgras.github.io/ru/readmore/docs/initialization" hreflang="ru">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="color-scheme" content="light dark">
-	<meta name="theme-color" content="#F9F9FB" media="(prefers-color-scheme: light)">
-	<meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)">
-	<meta name="msapplication-TileColor" content="#F9F9FB">
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Initializing ReadMore.js – Configure the Plugin for Your Website | Documentation">
+	<meta property="og:description" content="Learn how to initialize the ReadMore.js script on your website. Explore code examples and parameters to configure the plugin for your needs and enhance content display.">
+	<meta property="og:url" content="https://corgras.github.io/en/readmore/docs/initialization">
+	<meta property="og:image" content="https://corgras.github.io/assets/images/og-image.png">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:site_name" content="ReadMore.js">
 
-	<script src="/assets/js/theme.js"></script>
-
+	<!-- Schema.org Microdata -->
 	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "TechArticle",
+		"name": "Initializing ReadMore.js – Configure the Plugin for Your Website | Documentation",
+		"headline": "Initializing ReadMore.js – Configure the Plugin for Your Website | Documentation",
+		"description": "Learn how to initialize the ReadMore.js script on your website. Explore code examples and parameters to configure the plugin for your needs and enhance content display.",
+		"url": "https://corgras.github.io/en/readmore/docs/initialization",
+		"image": "https://corgras.github.io/assets/images/og-image.png",
+		"author": {
+			"@type": "Organization",
+			"name": "RoS",
+			"url": "https://corgras.github.io/en/"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "CORGRAS",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://corgras.github.io/assets/images/logo.svg"
+			}
+		},
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "https://corgras.github.io/en/readmore/docs/initialization"
+		},
+		"inLanguage": "en"
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Home",
+			"item": "https://corgras.github.io/en/"
+		},
 		{
-			"@context": "http://schema.org",
-			"@type": "WebSite",
-			"name": "Initializing ReadMore.js – Configure the Plugin for Your Site | Documentation",
-			"url": "https://corgras.github.io/en/readmore/docs/initialization",
-			"description": "Learn how to initialize the ReadMore.js script on your website. Explore code examples and parameters to customize the plugin according to your needs and improve content display.",
-			"@language": "en"
-		}
+			"@type": "ListItem",
+			"position": 2,
+			"name": "ReadMore.js",
+			"item": "https://corgras.github.io/en/readmore/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 3,
+			"name": "Documentation",
+			"item": "https://corgras.github.io/en/readmore/docs/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 4,
+			"name": "Initialization",
+			"item": "https://corgras.github.io/en/readmore/docs/initialization"
+		}]
+	}
 	</script>
 
 	<!-- Google tag (gtag.js) -->
@@ -66,11 +114,12 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-
 		gtag('config', 'G-ZNSWFP3MCV');
 	</script>
+
+	<script defer src="/assets/js/theme.js"></script>
 </head>
-<body class="documentation">
+<body class="readmore documentation">
 	<header class="header">
 		<div class="header-top">
 			<div class="container">
@@ -86,7 +135,7 @@
 					</aside>
 					<div class="col-2">
 						<a class="logo" href="/en/">
-							<img src="/assets/images/logo.svg" alt="CORGRAS" width="44" height="auto">
+							<img src="/assets/images/logo.svg" alt="CORGRAS Logo" width="44" height="auto" loading="lazy">
 						</a>
 					</div>
 					<div class="col navigation">
@@ -97,8 +146,8 @@
 										<i class="ics-github"></i><span>Github</span>
 									</a>
 								</li>
-								<li class="active">
-									<a href="/en/readmore/docs/" class="link" aria-label="Documentation">
+								<li>
+									<a href="/en/readmore/docs/" class="link active" aria-label="Documentation">
 										<i class="ics-book-open"></i><span>Documentation</span>
 									</a>
 								</li>
@@ -121,16 +170,14 @@
 						</nav>
 						<aside>
 							<div class="language dropdown">
-								<a role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language:">
+								<button role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language:">
 									<i class="ics-lang2"></i><span class="language-text">English</span>
-								</a>
-								<div class="dropdown-menu">
-									<ul>
-										<li class="dropdown-item"><a href="/readmore/docs/initialization" hreflang="uk"><span>Українська</span></a></li>
-										<li class="dropdown-item active"><span>English</span></li>
-										<li class="dropdown-item"><a href="/ru/readmore/docs/initialization" hreflang="ru"><span>Русский</span></a></li>
-									</ul>
-								</div>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="dropdown-item"><a href="/readmore/docs/initialization" hreflang="uk" lang="uk"><span>Українська</span></a></li>
+									<li class="dropdown-item active"><span>English</span></a></li>
+									<li class="dropdown-item"><a href="/ru/readmore/docs/initialization" hreflang="ru" lang="ru"><span>Русский</span></a></li>
+								</ul>
 							</div>
 							<div class="theme">
 								<div class="theme-text">Theme:</div>
@@ -165,8 +212,8 @@
 		<aside class="header-bottom">
 			<div class="container">
 				<ul class="nav">
-					<li><a href="/en/readmore/docs/"><i class="ics ics-book"></i> Get Started</a></li>
-					<li><a href="/en/readmore/docs/install"><i class="ics ics-tool"></i> Installation</a></li>
+					<li><a href="/en/readmore/docs/"><i class="ics ics-book"></i> Introduction</a></li>
+					<li><a href="/en/readmore/docs/install"><i class="ics ics-tool"></i> Install</a></li>
 					<li class="active"><a href="/en/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Initialization</a></li>
 					<li><a href="/en/readmore/docs/options"><i class="ics ics-sliders-h"></i> Options</a></li>
 					<li><a href="/en/readmore/docs/events"><i class="ics ics-sliders-h"></i> Events</a></li>
@@ -179,27 +226,27 @@
 		<div class="container">
 			<article>
 				<h1>Initialization</h1>
-				<p>The <strong>Readmore.js</strong> plugin allows you to create a «Read More» functionality for any elements with textual content, such as <code class="code">&lt;div&gt;</code>, <code class="code">&lt;p&gt;</code>, <code class="code">&lt;section&gt;</code>, or <code class="code">&lt;article&gt;</code>. The script trims the content to a specified height and adds a button to expand/collapse the text.</p>
-				<p>For initialization, use a CSS selector, such as the class <code class="code">.readmore</code>, which should be added to the target elements. Ensure the element contains enough content so that its height exceeds the <code class="code">collapsedHeight</code> parameter; otherwise, the button will not appear.</p>
+				<p>The <strong>Readmore.js</strong> plugin enables «Read More» functionality for any elements with textual content, such as <code class="code">&lt;div&gt;</code>, <code class="code">&lt;p&gt;</code>, <code class="code">&lt;section&gt;</code> or <code class="code">&lt;article&gt;</code>. The script truncates content to a specified height and adds a button to expand or collapse the text.</p>
+				<p>To initialize, use a CSS selector, such as the <code class="code">.readmore</code> class, which should be added to the target elements. Ensure the element contains enough content to exceed the <code class="code">collapsedHeight</code> parameter; otherwise, the button will not appear.</p>
 				<pre><code class="language-html show-language">
 					&lt;div class="readmore"&gt;
-						&lt;!-- Your textual content, e.g., several paragraphs --&gt;
+						&lt;!-- Your textual content, e.g., multiple paragraphs --&gt;
 						&lt;p&gt;This is an example of long text that will be partially hidden...&lt;/p&gt;
 						&lt;p&gt;Additional content that will appear after clicking "Read More".&lt;/p&gt;
 					&lt;/div&gt;
 				</code></pre>
 				<div class="note note-warning">
 					<div class="note-label">Important</div>
-					<p>If the element's content is shorter than the <code class="code">collapsedHeight</code> value or consists only of whitespace or empty tags, the plugin will automatically disable the functionality for that element. For proper operation, it is recommended to check the content height before initialization.</p>
+					<p>If the element's content is shorter than the <code class="code">collapsedHeight</code> value or consists only of whitespace or empty tags, the plugin will automatically disable functionality for that element. It is recommended to verify the content height before initialization.</p>
 				</div>
 				<div class="note note-info">
 					<div class="note-label">Tip</div>
-					<p>Add unique classes or identifiers to elements if you plan to apply different settings to individual blocks on the same page.</p>
+					<p>Add unique classes or IDs to elements if you plan to apply different settings to individual blocks on the same page.</p>
 				</div>
 			</article>
 			<article>
-				<h2>Initialization without Parameters</h2>
-				<p>For a quick start, Readmore.js can be invoked by calling the <code class="code">initReadMore</code> function with a selector, using default settings. In this case, the plugin will apply standard values: a height of 250 pixels, animation duration of 300 ms, and button texts <code class="code">&lt;span&gt;Read More&lt;/span&gt;</code> and <code class="code">&lt;span&gt;Close&lt;/span&gt;</code>.</p>
+				<h2>Initialization Without Parameters</h2>
+				<p>For a quick start, you can call the <code class="code">initReadMore</code> function with a selector, using default settings. In this case, the plugin applies standard values: a height of 250 pixels, a 300ms animation, and button texts <code class="code">&lt;span&gt;Read More&lt;/span&gt;</code> and <code class="code">&lt;span&gt;Close&lt;/span&gt;</code>.</p>
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.readmore');
@@ -207,30 +254,30 @@
 				</code></pre>
 				<div class="note note-info">
 					<div class="note-label">Note</div>
-					<p>This method is suitable for basic use, but for adapting to design or behavior on different devices, it is recommended to specify custom parameters.</p>
+					<p>This method is suitable for basic use, but for adapting to specific designs or behaviors on different devices, it is recommended to specify custom parameters.</p>
 				</div>
 			</article>
 			<article>
-				<h2>Initialization with Parameters</h2>
-				<p>For flexible configuration, pass an object with parameters as the second argument to the <code class="code">initReadMore</code> function. This allows you to change the height, animation speed, button texts, and more. This method works consistently across all devices without restrictions on screen width.</p>
+				<h2>Initialization With Parameters</h2>
+				<p>For flexible configuration, pass an object with parameters as the second argument to the <code class="code">initReadMore</code> function. This allows you to modify the height, animation speed, button text, and more. This method works consistently across all devices without screen width restrictions.</p>
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.readmore', {
-							collapsedHeight: 200, // Height of the collapsed block in pixels
-							speed: 400,          // Animation duration in milliseconds
-							moreLink: '&lt;span&gt;Read More&lt;/span&gt;', // Text for the expand button
-							lessLink: '&lt;span&gt;Collapse&lt;/span&gt;'   // Text for the collapse button
+							collapsedHeight: 200,	// Height of the collapsed block in pixels
+							speed: 400,				// Animation duration in milliseconds
+							moreLink: '&lt;span&gt;Read More&lt;/span&gt;',	// Expand button text
+							lessLink: '&lt;span&gt;Collapse&lt;/span&gt;'	// Collapse button text
 						});
 					});
 				</code></pre>
 				<div class="note note-success">
 					<div class="note-label">Advantage</div>
-					<p>You can add custom classes or styles to <code class="code">moreLink</code> and <code class="code">lessLink</code>, for example: <code class="code">&lt;span class="btn btn-primary"&gt;Read More&lt;/span&gt;</code>, to match your site's design.</p>
+					<p>You can add custom classes or styles to <code class="code">moreLink</code> and <code class="code">lessLink</code>, for example: <code class="code">&lt;span class="btn btn-primary"&gt;Read More&lt;/span&gt;</code>, to match your website's design.</p>
 				</div>
 			</article>
 			<article>
-				<h2>Initialization with Responsive Settings</h2>
-				<p>To adapt the plugin's behavior to different screen sizes, use the <code class="code">breakpoints</code> parameter. This allows you to set different values for <code class="code">collapsedHeight</code>, <code class="code">speed</code>, or button texts depending on the browser window width. The keys of the <code class="code">breakpoints</code> object are the maximum screen width in pixels.</p>
+				<h2>Initialization With Responsive Settings</h2>
+				<p>To adapt the plugin's behavior to different screen sizes, use the <code class="code">breakpoints</code> parameter. This allows you to set different values for <code class="code">collapsedHeight</code>, <code class="code">speed</code>, or button text based on the browser window width. The keys of the <code class="code">breakpoints</code> object represent the maximum screen width in pixels.</p>
 				<pre><code class="language-javascript show-language">
 					document.addEventListener('DOMContentLoaded', function () {
 						initReadMore('.readmore', {
@@ -242,7 +289,7 @@
 								576: { // For screens up to 576 pixels
 									collapsedHeight: 100,
 									speed: 200,
-									moreLink: '&lt;span&gt;Details&lt;/span&gt;',
+									moreLink: '&lt;span&gt;More&lt;/span&gt;',
 									lessLink: '&lt;span&gt;Hide&lt;/span&gt;'
 								},
 								768: { // For screens up to 768 pixels
@@ -268,12 +315,11 @@
 		</div>
 	</main>
 	<footer>
-		<div class="copyrights">© <script>document.write(new Date().getFullYear());</script> CORGRAS. All rights reserved</div>
+		<div class="copyrights">© <span id="year"></span> CORGRAS. All rights reserved</div>
 	</footer>
-	<!-- SCRIPT -->
-	<script src="/assets/js/bootstrap.bundle.min.js"></script>
-	<script src="/assets/js/prism.js"></script>
-	<script src="/assets/js/common.js"></script>
-	<!-- END SCRIPT -->
+	<!-- Scripts -->
+	<script defer src="/assets/js/bootstrap.bundle.min.js"></script>
+	<script defer src="/assets/js/prism.js"></script>
+	<script defer src="/assets/js/common.js"></script>
 </body>
 </html>

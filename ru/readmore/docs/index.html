@@ -1,62 +1,104 @@
 <!DOCTYPE html>
 <html lang="ru" prefix="og: https://ogp.me/ns#">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta name="robots" content="index, follow">
-	<!--<base href="https://corgras.github.io/">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="color-scheme" content="light dark">
+	<meta name="theme-color" content="#FFF" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#010409" media="(prefers-color-scheme: dark)">
+	<meta name="msapplication-TileColor" content="#FFF" media="(prefers-color-scheme: light)">
+	<meta name="msapplication-TileColor" content="#010409" media="(prefers-color-scheme: dark)">
 
-	<title>Документация ReadMore.js – удобный JavaScript-плагин для управления текстом</title>
-	<meta name="description" content="С помощью документации быстро освойте ReadMore.js. Узнайте, как легко настроить плагин под свои потребности и интегрировать его в проект.">
-	<meta name="keywords" content="ReadMore.js, документация, JavaScript плагин, расширяемый текст, читать дальше, управление текстом, адаптивность, SEO">
+	<title>Документация ReadMore.js — удобный JavaScript-плагин для управления текстом</title>
+	<meta name="description" content="Быстро освоите ReadMore.js с помощью документации. Узнайте, как легко настроить плагин под свои задачи и интегрировать его в любой проект.">
+	<meta name="keywords" content="ReadMore.js, документация, JavaScript плагин, раскрывающийся текст, читать далее, управление текстом, адаптивность, SEO">
 
-	<!-- Favicon-->
+	<!-- Favicon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon/favicon-48x48.png">
 	<link rel="icon" type="image/x-icon" href="/assets/images/favicon/favicon.ico">
 	<link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
-	<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="256x256" href="/assets/images/favicon/android-icon-256x256.png">
-	<link rel="icon" type="image/png" sizes="384x384" href="/assets/images/favicon/android-icon-384x384.png">
-	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-icon-512x512.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-chrome-512x512.png">
 	<link rel="manifest" href="/assets/images/favicon/manifest.json">
 
+	<!-- Styles -->
 	<link rel="stylesheet" href="/assets/css/framework.css">
 	<link rel="stylesheet" href="/assets/css/ics.css">
 	<link rel="stylesheet" href="/assets/css/style.css">
 
+	<!-- Canonical and Alternate Links -->
 	<link rel="canonical" href="https://corgras.github.io/ru/readmore/docs/">
 	<link rel="alternate" href="https://corgras.github.io/readmore/docs/" hreflang="x-default">
 	<link rel="alternate" href="https://corgras.github.io/readmore/docs/" hreflang="uk">
 	<link rel="alternate" href="https://corgras.github.io/en/readmore/docs/" hreflang="en">
 	<link rel="alternate" href="https://corgras.github.io/ru/readmore/docs/" hreflang="ru">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="color-scheme" content="light dark">
-	<meta name="theme-color" content="#F9F9FB" media="(prefers-color-scheme: light)">
-	<meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)">
-	<meta name="msapplication-TileColor" content="#F9F9FB">
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Документация ReadMore.js – удобный JavaScript-плагин для управления текстом">
+	<meta property="og:description" content="Быстро освоите ReadMore.js с помощью документации. Узнайте, как легко настроить плагин под свои задачи и интегрировать его в любой проект.">
+	<meta property="og:url" content="https://corgras.github.io/ru/readmore/docs/">
+	<meta property="og:image" content="https://corgras.github.io/assets/images/og-image.png">
+	<meta property="og:locale" content="ru_RU">
+	<meta property="og:site_name" content="ReadMore.js">
 
-	<script src="/assets/js/theme.js"></script>
-
+	<!-- Schema.org Microdata -->
 	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "TechArticle",
+		"name": "Документация ReadMore.js – удобный JavaScript-плагин для управления текстом",
+		"headline": "Документация ReadMore.js – удобный JavaScript-плагин для управления текстом",
+		"description": "Пошаговая документация по ReadMore.js: настройка, параметры, события и интеграция. Оптимизация отображения длинных текстов на сайтах.",
+		"url": "https://corgras.github.io/ru/readmore/docs/",
+		"image": "https://corgras.github.io/assets/images/og-image.png",
+		"author": {
+			"@type": "Organization",
+			"name": "RoS",
+			"url": "https://corgras.github.io/ru/"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "CORGRAS",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://corgras.github.io/assets/images/logo.svg"
+			}
+		},
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "https://corgras.github.io/ru/readmore/docs/"
+		},
+		"inLanguage": "ru"
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Главная",
+			"item": "https://corgras.github.io/ru/"
+		},
 		{
-			"@context": "http://schema.org",
-			"@type": "WebSite",
-			"name": "Документация ReadMore.js – удобный JavaScript-плагин для управления текстом",
-			"url": "https://corgras.github.io/ru/readmore/docs/",
-			"description": "С помощью документации быстро освойте ReadMore.js. Узнайте, как легко настроить плагин под свои потребности и интегрировать его в проект.",
-			"@language": "ru"
-		}
+			"@type": "ListItem",
+			"position": 2,
+			"name": "ReadMore.js",
+			"item": "https://corgras.github.io/ru/readmore/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 3,
+			"name": "Документация",
+			"item": "https://corgras.github.io/ru/readmore/docs/"
+		}]
+	}
 	</script>
 
 	<!-- Google tag (gtag.js) -->
@@ -65,11 +107,12 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-
 		gtag('config', 'G-ZNSWFP3MCV');
 	</script>
+
+	<script defer src="/assets/js/theme.js"></script>
 </head>
-<body class="documentation">
+<body class="readmore documentation">
 	<header class="header">
 		<div class="header-top">
 			<div class="container">
@@ -85,7 +128,7 @@
 					</aside>
 					<div class="col-2">
 						<a class="logo" href="/ru/">
-							<img src="/assets/images/logo.svg" alt="CORGRAS" width="44" height="auto">
+							<img src="/assets/images/logo.svg" alt="CORGRAS Logo" width="44" height="auto" loading="lazy">
 						</a>
 					</div>
 					<div class="col navigation">
@@ -96,8 +139,8 @@
 										<i class="ics-github"></i><span>Github</span>
 									</a>
 								</li>
-								<li class="active">
-									<a href="/ru/readmore/docs/" class="link" aria-label="Документация">
+								<li>
+									<a href="/ru/readmore/docs/" class="link active" aria-label="Документация">
 										<i class="ics-book-open"></i><span>Документация</span>
 									</a>
 								</li>
@@ -112,24 +155,22 @@
 									</a>
 								</li>
 								<li>
-									<a href="/ru/donate" class="link" aria-label="Благодарность">
-										<i class="ics-coffee"></i><span>Благодарность</span>
+									<a href="/ru/donate" class="link" aria-label="Донат">
+										<i class="ics-coffee"></i><span>Донат</span>
 									</a>
 								</li>
 							</ul>
 						</nav>
 						<aside>
 							<div class="language dropdown">
-								<a role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Выбор языка:">
+								<button role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Выбор языка:">
 									<i class="ics-lang2"></i><span class="language-text">Русский</span>
-								</a>
-								<div class="dropdown-menu">
-									<ul>
-										<li class="dropdown-item"><a href="/readmore/docs/" hreflang="uk"><span>Українська</span></a></li>
-										<li class="dropdown-item"><a href="/en/readmore/docs/" hreflang="en"><span>English</span></a></li>
-										<li class="dropdown-item active"><span>Русский</span></li>
-									</ul>
-								</div>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="dropdown-item"><a href="/readmore/docs/" hreflang="uk" lang="uk"><span>Українська</span></a></li>
+									<li class="dropdown-item"><a href="/en/readmore/docs/" hreflang="en" lang="en"><span>English</span></a></li>
+									<li class="dropdown-item active"><span>Русский</span></li>
+								</ul>
 							</div>
 							<div class="theme">
 								<div class="theme-text">Тема:</div>
@@ -178,59 +219,54 @@
 		<div class="container">
 			<article>
 				<h1>Документация</h1>
-				<p><strong>ReadMore.js</strong> — это легкий и гибкий JavaScript-плагин для создания удобных расширяемых текстовых блоков с кнопками «Читать далее» и «Скрыть». Он позволяет оптимизировать отображение больших объемов контента, улучшая читаемость и экономя место на странице. Плагин идеально подходит для веб-сайтов, блогов, новостных порталов и других проектов, где нужно управлять длинными текстами на десктопах и мобильных устройствах.</p>
+				<p><strong>ReadMore.js</strong> — это лёгкий и гибкий JavaScript-плагин для создания удобных разворачивающихся текстовых блоков с кнопками «Читать далее» и «Скрыть». Он позволяет оптимизировать отображение больших объёмов контента, улучшая читаемость и экономя место на странице. Плагин идеально подходит для веб-сайтов, блогов, новостных порталов и других проектов, где необходимо управлять длинными текстами как на десктопах, так и на мобильных устройствах.</p>
 				<div class="note note-info">
 					<div class="note-label">Примечание</div>
 					<ul>
-						<li>Плагин работает автономно, не требуя сторонних библиотек, таких как jQuery.</li>
-						<li>Весь контент остается доступным для поисковых систем, поскольку плагин не изменяет HTML-структуру страницы.</li>
+						<li>Плагин работает автономно и не требует сторонних библиотек, таких как jQuery.</li>
+						<li>Весь контент остаётся доступным для поисковых систем, так как плагин не изменяет HTML-структуру страницы.</li>
 					</ul>
 				</div>
 			</article>
 			<article>
 				<div class="row cards">
-					<div class="col-6 card card-hor">
+					<div class="col-6 card">
 						<div class="card-image">
 							<i class="ics-code"></i>
 						</div>
 						<div class="card-content">
-							<h3>Простая интеграция</h3>
-							<p>Легко подключается к любому проекту с помощью одного JavaScript-файла. Достаточно подключить его к своему проекту и настроить.</p>
+							<h2>Простая интеграция</h2>
+							<p>Легко подключается к любому проекту с помощью одного JavaScript-файла. Достаточно просто подключить его и настроить под свои нужды.</p>
 						</div>
 					</div>
-					<div class="col-6 card card-hor">
+					<div class="col-6 card">
 						<div class="card-image">
 							<i class="ics-sliders-v"></i>
 						</div>
 						<div class="card-content">
-							<h3>Гибкая настройка</h3>
-							<p>Плагин предлагает широкий набор параметров: от высоты свернутого блока до текста кнопок, скорости анимации и даже собственных callback-функций для событий.</p>
+							<h2>Гибкая настройка</h2>
+							<p>Плагин предлагает широкий набор параметров: от высоты свернутого блока до текста кнопок, скорости анимации и даже собственных callback-функций для обработки событий.</p>
 						</div>
 					</div>
-					<div class="col-6 card card-hor">
+					<div class="col-6 card">
 						<div class="card-image">
 							<i class="ics-adaptive"></i>
 						</div>
 						<div class="card-content">
-							<h3>Адаптивный дизайн</h3>
-							<p>Поддерживает адаптивные точки остановки (breakpoints), позволяя настроить поведение плагина в зависимости от ширины экрана, что обеспечивает оптимальный вид на всех устройствах.</p>
+							<h2>Адаптивный дизайн</h2>
+							<p>Поддерживает адаптивные точки останова (breakpoints), позволяя настраивать поведение плагина в зависимости от ширины экрана — для оптимального отображения на всех устройствах.</p>
 						</div>
 					</div>
-					<div class="col-6 card card-hor">
+					<div class="col-6 card">
 						<div class="card-image">
 							<i class="ics-seo"></i>
 						</div>
 						<div class="card-content">
-							<h3>SEO и доступность</h3>
-							<p>Контент остается доступным для поисковых систем, а поддержка ARIA-атрибутов обеспечивает удобство для пользователей с ограниченными возможностями, улучшая общую доступность сайта.</p>
+							<h2>SEO и доступность</h2>
+							<p>Контент остаётся доступным для поисковых систем, а поддержка атрибутов улучшает удобство использования для людей с ограниченными возможностями, повышая общую доступность сайта.</p>
 						</div>
 					</div>
 				</div>
-			</article>
-			<article>
-				<h2>Лицензия</h2>
-				<p>Readmore.js распространяется под лицензией MIT.</p>
-				<p>Вы можете свободно использовать этот скрипт как в коммерческих, так и в некоммерческих проектах при условии сохранения уведомления о лицензии. Это означает, что вы должны оставить моё имя, ссылку на мою домашнюю страницу и информацию о лицензии без изменений. Ничто из этого не обязательно должно быть видно пользователю и может оставаться в коде.</p>
 			</article>
 			<article class="browsers">
 				<h2>Поддержка браузерами</h2>
@@ -274,12 +310,11 @@
 			</article>
 		</div>
 	</main>
-	<footer>
-		<div class="copyrights">© <script>document.write(new Date().getFullYear());</script> CORGRAS. Все права защищены</div>
+		<footer>
+		<div class="copyrights">© <span id="year"></span> CORGRAS. Все права защищены</div>
 	</footer>
-	<!-- SCRIPT -->
-	<script src="/assets/js/bootstrap.bundle.min.js"></script>
-	<script src="/assets/js/common.js"></script>
-	<!-- END SCRIPT -->
+	<!-- Scripts -->
+	<script defer src="/assets/js/bootstrap.bundle.min.js"></script>
+	<script defer src="/assets/js/common.js"></script>
 </body>
 </html>

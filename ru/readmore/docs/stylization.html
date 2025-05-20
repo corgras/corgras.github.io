@@ -1,63 +1,111 @@
 <!DOCTYPE html>
 <html lang="ru" prefix="og: https://ogp.me/ns#">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta name="robots" content="index, follow">
-	<!--<base href="https://corgras.github.io/">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="color-scheme" content="light dark">
+	<meta name="theme-color" content="#FFF" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#010409" media="(prefers-color-scheme: dark)">
+	<meta name="msapplication-TileColor" content="#FFF" media="(prefers-color-scheme: light)">
+	<meta name="msapplication-TileColor" content="#010409" media="(prefers-color-scheme: dark)">
 
-	<title>Стилизация ReadMore.js – настройка вида плагина | Документация</title>
-	<meta name="description" content="Узнайте, как стилизовать плагин ReadMore.js для достижения желаемого вида на вашем сайте. Для создания уникального дизайна ознакомьтесь с рекомендациями по CSS и примерами стилизации.">
-	<meta name="keywords" content="стилизация ReadMore.js, CSS, веб-дизайн, плагин, настройка вида, текстовые блоки">
+	<title>Стилизация ReadMore.js – настройка внешнего вида плагина | Документация</title>
+	<meta name="description" content="Узнайте, как стилизовать плагин ReadMore.js для достижения желаемого внешнего вида на вашем сайте. Ознакомьтесь с рекомендациями по CSS и примерами стилизации, чтобы создать уникальный дизайн.">
+	<meta name="keywords" content="стилизация ReadMore.js, CSS, веб-дизайн, плагин, настройка внешнего вида, текстовые блоки">
 
-	<!-- Favicon-->
+	<!-- Favicon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon/favicon-48x48.png">
 	<link rel="icon" type="image/x-icon" href="/assets/images/favicon/favicon.ico">
 	<link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
-	<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="256x256" href="/assets/images/favicon/android-icon-256x256.png">
-	<link rel="icon" type="image/png" sizes="384x384" href="/assets/images/favicon/android-icon-384x384.png">
-	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-icon-512x512.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-chrome-512x512.png">
 	<link rel="manifest" href="/assets/images/favicon/manifest.json">
 
+	<!-- Styles -->
 	<link rel="stylesheet" href="/assets/css/framework.css">
 	<link rel="stylesheet" href="/assets/css/ics.css">
 	<link rel="stylesheet" href="/assets/css/prism.css">
 	<link rel="stylesheet" href="/assets/css/style.css">
 
+	<!-- Canonical and Alternate Links -->
 	<link rel="canonical" href="https://corgras.github.io/ru/readmore/docs/stylization">
 	<link rel="alternate" href="https://corgras.github.io/readmore/docs/stylization" hreflang="x-default">
 	<link rel="alternate" href="https://corgras.github.io/readmore/docs/stylization" hreflang="uk">
 	<link rel="alternate" href="https://corgras.github.io/en/readmore/docs/stylization" hreflang="en">
 	<link rel="alternate" href="https://corgras.github.io/ru/readmore/docs/stylization" hreflang="ru">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="color-scheme" content="light dark">
-	<meta name="theme-color" content="#F9F9FB" media="(prefers-color-scheme: light)">
-	<meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)">
-	<meta name="msapplication-TileColor" content="#F9F9FB">
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Стилизация ReadMore.js – настройка внешнего вида плагина | Документация">
+	<meta property="og:description" content="Узнайте, как стилизовать плагин ReadMore.js для достижения желаемого внешнего вида на вашем сайте. Ознакомьтесь с рекомендациями по CSS и примерами стилизации, чтобы создать уникальный дизайн.">
+	<meta property="og:url" content="https://corgras.github.io/ru/readmore/docs/stylization">
+	<meta property="og:image" content="https://corgras.github.io/assets/images/og-image.png">
+	<meta property="og:locale" content="ru_RU">
+	<meta property="og:site_name" content="ReadMore.js">
 
-	<script src="/assets/js/theme.js"></script>
-
+	<!-- Schema.org Microdata -->
 	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "TechArticle",
+		"name": "Стилизация ReadMore.js – настройка внешнего вида плагина | Документация",
+		"headline": "Стилизация ReadMore.js – настройка внешнего вида плагина | Документация",
+		"description": "Узнайте, как стилизовать плагин ReadMore.js для достижения желаемого внешнего вида на вашем сайте. Ознакомьтесь с рекомендациями по CSS и примерами стилизации, чтобы создать уникальный дизайн.",
+		"url": "https://corgras.github.io/ru/readmore/docs/stylization",
+		"image": "https://corgras.github.io/assets/images/og-image.png",
+		"author": {
+			"@type": "Organization",
+			"name": "RoS",
+			"url": "https://corgras.github.io/ru/"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "CORGRAS",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://corgras.github.io/assets/images/logo.svg"
+			}
+		},
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "https://corgras.github.io/ru/readmore/docs/stylization"
+		},
+		"inLanguage": "ru"
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Главная",
+			"item": "https://corgras.github.io/ru/"
+		},
 		{
-			"@context": "http://schema.org",
-			"@type": "WebSite",
-			"name": "Стилизация ReadMore.js – настройка вида плагина | Документация",
-			"url": "https://corgras.github.io/ru/readmore/docs/stylization",
-			"description": "Узнайте, как стилизовать плагин ReadMore.js для достижения желаемого вида на вашем сайте. Для создания уникального дизайна ознакомьтесь с рекомендациями по CSS и примерами стилизации.",
-			"@language": "ru"
-		}
+			"@type": "ListItem",
+			"position": 2,
+			"name": "ReadMore.js",
+			"item": "https://corgras.github.io/ru/readmore/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 3,
+			"name": "Документация",
+			"item": "https://corgras.github.io/ru/readmore/docs/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 4,
+			"name": "Стилизация",
+			"item": "https://corgras.github.io/ru/readmore/docs/stylization"
+		}]
+	}
 	</script>
 
 	<!-- Google tag (gtag.js) -->
@@ -66,11 +114,12 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-
 		gtag('config', 'G-ZNSWFP3MCV');
 	</script>
+
+	<script defer src="/assets/js/theme.js"></script>
 </head>
-<body class="documentation">
+<body class="readmore documentation">
 	<header class="header">
 		<div class="header-top">
 			<div class="container">
@@ -86,7 +135,7 @@
 					</aside>
 					<div class="col-2">
 						<a class="logo" href="/ru/">
-							<img src="/assets/images/logo.svg" alt="CORGRAS" width="44" height="auto">
+							<img src="/assets/images/logo.svg" alt="CORGRAS Logo" width="44" height="auto" loading="lazy">
 						</a>
 					</div>
 					<div class="col navigation">
@@ -97,8 +146,8 @@
 										<i class="ics-github"></i><span>Github</span>
 									</a>
 								</li>
-								<li class="active">
-									<a href="/ru/readmore/docs/" class="link" aria-label="Документация">
+								<li>
+									<a href="/ru/readmore/docs/" class="link active" aria-label="Документация">
 										<i class="ics-book-open"></i><span>Документация</span>
 									</a>
 								</li>
@@ -113,24 +162,22 @@
 									</a>
 								</li>
 								<li>
-									<a href="/ru/donate" class="link" aria-label="Благодарность">
-										<i class="ics-coffee"></i><span>Благодарность</span>
+									<a href="/ru/donate" class="link" aria-label="Донат">
+										<i class="ics-coffee"></i><span>Донат</span>
 									</a>
 								</li>
 							</ul>
 						</nav>
 						<aside>
 							<div class="language dropdown">
-								<a role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Выбор языка">
+								<button role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Выбор языка:">
 									<i class="ics-lang2"></i><span class="language-text">Русский</span>
-								</a>
-								<div class="dropdown-menu">
-									<ul>
-										<li class="dropdown-item"><a href="/readmore/docs/stylization" hreflang="uk"><span>Українська</span></a></li>
-										<li class="dropdown-item"><a href="/en/readmore/docs/stylization" hreflang="en"><span>English</span></a></li>
-										<li class="dropdown-item active"><span>Русский</span></li>
-									</ul>
-								</div>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="dropdown-item"><a href="/readmore/docs/stylization" hreflang="uk" lang="uk"><span>Українська</span></a></li>
+									<li class="dropdown-item"><a href="/en/readmore/docs/stylization" hreflang="en" lang="en"><span>English</span></a></li>
+									<li class="dropdown-item active"><span>Русский</span></li>
+								</ul>
 							</div>
 							<div class="theme">
 								<div class="theme-text">Тема:</div>
@@ -179,7 +226,7 @@
 		<div class="container">
 			<article>
 				<h1>Стилизация</h1>
-				<p>Этот раздел поможет вам настроить внешний вид и поведение элементов, управляемых плагином <strong>Readmore.js</strong>. Ниже приведено подробное описание CSS-классов, data-атрибутов и ARIA-атрибутов, используемых в плагине, вместе с рекомендациями по их стилизации. Эти инструменты позволяют создавать адаптивный, доступный и визуально привлекательный интерфейс для функции «Читать далее» / «Свернуть».</p>
+				<p>Этот раздел поможет вам настроить внешний вид и поведение элементов, управляемых плагином <strong>ReadMore.js</strong>.</p><p>Ниже приведено подробное описание CSS-классов, data-атрибутов и ARIA-атрибутов, используемых в плагине, вместе с рекомендациями по их стилизации.</p><p>Эти инструменты позволяют создавать адаптивный, доступный и визуально привлекательный интерфейс для функции «Читать далее» / «Закрыть».</p>
 				<div class="table-class">
 					<div class="tr-class-head">
 						<div class="td-class" id="class">CSS классы</div>
@@ -189,8 +236,8 @@
 						<div class="td-class" id="class">.cs_readmore-btn-wrapper</div>
 						<div class="td-desc" id="desc">
 							<ul>
-								<li>Контейнер для кнопки «Читать далее» или «Свернуть».</li>
-								<li>Используется как обертка для кнопки, чтобы облегчить позиционирование и стилизацию.</li>
+								<li>Контейнер для кнопки «Читать далее» или «Закрыть».</li>
+								<li>Используется как обертка для кнопки, чтобы упростить позиционирование и стилизацию.</li>
 								<li>Автоматически скрывается, если контент короче, чем <code class="code">collapsedHeight</code>, или если <code class="code">hideButtonCollapse: true</code> в развернутом состоянии.</li>
 							</ul>
 						</div>
@@ -232,7 +279,7 @@
 					<div class="tr-class">
 						<div class="td-class" id="class">data-readmore-btn-toggle</div>
 						<div class="td-desc" id="desc">
-							<p>Добавляется к кнопке «Читать далее» / «Свернуть» для отслеживания ее состояния.</p>
+							<p>Добавляется к кнопке «Читать далее» / «Закрыть» для отслеживания ее состояния.</p>
 							<p>Возможные значения:</p>
 							<ul>
 								<li><code class="code">collapsed</code> — кнопка в состоянии свернутого контента (показывает <code class="code">moreLink</code>).</li>
@@ -297,7 +344,7 @@
 							<p>Добавляется к кнопке для связи с элементом контента.</p>
 							<ul>
 								<li>Значение: уникальный идентификатор элемента контента.</li>
-								<li>Указывает, какой элемент контролируется кнопкой, улучшая навигацию для пользователей с ассистивными технологиями.</li>
+								<li>Указывает, какой элемент контролируется кнопкой, улучшая навигацию для пользователей с вспомогательными технологиями.</li>
 							</ul>
 						</div>
 					</div>
@@ -315,7 +362,7 @@
 				<div class="note note-info">
 					<div class="note-label">Дополнительные замечания</div>
 					<ul>
-						<li><strong>Режим JS-анимации</strong>: Если <code class="code">animationMode: 'js'</code>, стили для <code class="code">.cs_readmore-animation</code> и <code class="code">.cs_readmore-expanded</code> не требуются, поскольку анимация управляется JavaScript.</li>
+						<li><strong>Режим JS-анимации</strong>: Если <code class="code">animationMode: 'js'</code>, стили для <code class="code">.cs_readmore-animation</code> и <code class="code">.cs_readmore-expanded</code> не нужны, поскольку анимация управляется JavaScript.</li>
 						<li><strong>Адаптивность</strong>: Используйте медиа-запросы вместе с параметром <code class="code">breakpoints</code>, чтобы изменять стили для разных размеров экрана.</li>
 						<li><strong>События</strong>: Плагин запускает пользовательские события <code class="code">readmore:beforeToggle</code> и <code class="code">readmore:afterToggle</code>, которые можно использовать для динамического изменения стилей через JavaScript.</li>
 						<li><strong>Очистка стилей</strong>: При вызове метода <code class="code">destroy</code> все классы, атрибуты и стили, добавленные плагином, удаляются, возвращая элементы в исходное состояние.</li>
@@ -324,7 +371,7 @@
 			</article>
 			<article>
 				<h2>Пример стилизации</h2>
-				<p>Код створює стиль для контейнера кнопки та самої кнопки, додаючи відступи, вирівнювання тексту та стилі для взаємодії з користувачем, зокрема зміну кольору при наведенні.</p>
+				<p>Код создает стиль для контейнера кнопки и самой кнопки, добавляя отступы, выравнивание текста и стили для взаимодействия с пользователем, включая изменение цвета при наведении.</p>
 				<pre><code class="language-css show-language">
 					.cs_readmore-btn-wrapper {
 						margin: 15px auto 0;
@@ -377,12 +424,11 @@
 		</div>
 	</main>
 	<footer>
-		<div class="copyrights">© <script>document.write(new Date().getFullYear());</script> CORGRAS. Все права защищены</div>
+		<div class="copyrights">© <span id="year"></span> CORGRAS. Все права защищены</div>
 	</footer>
-	<!-- SCRIPT -->
-	<script src="/assets/js/bootstrap.bundle.min.js"></script>
-	<script src="/assets/js/prism.js"></script>
-	<script src="/assets/js/common.js"></script>
-	<!-- END SCRIPT -->
+	<!-- Scripts -->
+	<script defer src="/assets/js/bootstrap.bundle.min.js"></script>
+	<script defer src="/assets/js/prism.js"></script>
+	<script defer src="/assets/js/common.js"></script>
 </body>
 </html>

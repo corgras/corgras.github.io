@@ -1,63 +1,111 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta name="robots" content="index, follow">
-	<!--<base href="https://corgras.github.io/">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="color-scheme" content="light dark">
+	<meta name="theme-color" content="#FFF" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#010409" media="(prefers-color-scheme: dark)">
+	<meta name="msapplication-TileColor" content="#FFF" media="(prefers-color-scheme: light)">
+	<meta name="msapplication-TileColor" content="#010409" media="(prefers-color-scheme: dark)">
 
-	<title>Stylization ReadMore.js – Plugin Appearance Customization | Documentation</title>
-	<meta name="description" content="Learn how to style the ReadMore.js plugin to achieve your desired look on your site. For a unique design, check out our CSS recommendations and styling examples.">
-	<meta name="keywords" content="Stylization ReadMore.js, CSS, web design, plugin, appearance customization, text blocks">
+	<title>Styling ReadMore.js – Customizing the Plugin's Appearance | Documentation</title>
+	<meta name="description" content="Learn how to style the ReadMore.js plugin to achieve the desired appearance on your website. Explore CSS recommendations and styling examples to create a unique design.">
+	<meta name="keywords" content="ReadMore.js styling, CSS, web design, plugin, appearance customization, text blocks">
 
-	<!-- Favicon-->
+	<!-- Favicon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon/favicon-48x48.png">
 	<link rel="icon" type="image/x-icon" href="/assets/images/favicon/favicon.ico">
 	<link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
-	<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="256x256" href="/assets/images/favicon/android-icon-256x256.png">
-	<link rel="icon" type="image/png" sizes="384x384" href="/assets/images/favicon/android-icon-384x384.png">
-	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-icon-512x512.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-chrome-512x512.png">
 	<link rel="manifest" href="/assets/images/favicon/manifest.json">
 
+	<!-- Styles -->
 	<link rel="stylesheet" href="/assets/css/framework.css">
 	<link rel="stylesheet" href="/assets/css/ics.css">
 	<link rel="stylesheet" href="/assets/css/prism.css">
 	<link rel="stylesheet" href="/assets/css/style.css">
 
+	<!-- Canonical and Alternate Links -->
 	<link rel="canonical" href="https://corgras.github.io/en/readmore/docs/stylization">
 	<link rel="alternate" href="https://corgras.github.io/readmore/docs/stylization" hreflang="x-default">
 	<link rel="alternate" href="https://corgras.github.io/readmore/docs/stylization" hreflang="uk">
 	<link rel="alternate" href="https://corgras.github.io/en/readmore/docs/stylization" hreflang="en">
 	<link rel="alternate" href="https://corgras.github.io/ru/readmore/docs/stylization" hreflang="ru">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="color-scheme" content="light dark">
-	<meta name="theme-color" content="#F9F9FB" media="(prefers-color-scheme: light)">
-	<meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)">
-	<meta name="msapplication-TileColor" content="#F9F9FB">
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Styling ReadMore.js – Customizing the Plugin's Appearance | Documentation">
+	<meta property="og:description" content="Learn how to style the ReadMore.js plugin to achieve the desired appearance on your website. Explore CSS recommendations and styling examples to create a unique design.">
+	<meta property="og:url" content="https://corgras.github.io/en/readmore/docs/stylization">
+	<meta property="og:image" content="https://corgras.github.io/assets/images/og-image.png">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:site_name" content="ReadMore.js">
 
-	<script src="/assets/js/theme.js"></script>
-
+	<!-- Schema.org Microdata -->
 	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "TechArticle",
+		"name": "Styling ReadMore.js – Customizing the Plugin's Appearance | Documentation",
+		"headline": "Styling ReadMore.js – Customizing the Plugin's Appearance | Documentation",
+		"description": "Learn how to style the ReadMore.js plugin to achieve the desired appearance on your website. Explore CSS recommendations and styling examples to create a unique design.",
+		"url": "https://corgras.github.io/en/readmore/docs/stylization",
+		"image": "https://corgras.github.io/assets/images/og-image.png",
+		"author": {
+			"@type": "Organization",
+			"name": "RoS",
+			"url": "https://corgras.github.io/en/"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "CORGRAS",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://corgras.github.io/assets/images/logo.svg"
+			}
+		},
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "https://corgras.github.io/en/readmore/docs/stylization"
+		},
+		"inLanguage": "en"
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Home",
+			"item": "https://corgras.github.io/en/"
+		},
 		{
-			"@context": "http://schema.org",
-			"@type": "WebSite",
-			"name": "Stylization ReadMore.js – Plugin Appearance Customization | Documentation",
-			"url": "https://corgras.github.io/en/readmore/docs/stylization",
-			"description": "Learn how to style the ReadMore.js plugin to achieve your desired look on your site. For a unique design, check out our CSS recommendations and styling examples.",
-			"@language": "en"
-		}
+			"@type": "ListItem",
+			"position": 2,
+			"name": "ReadMore.js",
+			"item": "https://corgras.github.io/en/readmore/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 3,
+			"name": "Documentation",
+			"item": "https://corgras.github.io/en/readmore/docs/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 4,
+			"name": "Stylization",
+			"item": "https://corgras.github.io/en/readmore/docs/stylization"
+		}]
+	}
 	</script>
 
 	<!-- Google tag (gtag.js) -->
@@ -66,11 +114,12 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-
 		gtag('config', 'G-ZNSWFP3MCV');
 	</script>
+
+	<script defer src="/assets/js/theme.js"></script>
 </head>
-<body class="documentation">
+<body class="readmore documentation">
 	<header class="header">
 		<div class="header-top">
 			<div class="container">
@@ -86,7 +135,7 @@
 					</aside>
 					<div class="col-2">
 						<a class="logo" href="/en/">
-							<img src="/assets/images/logo.svg" alt="CORGRAS" width="44" height="auto">
+							<img src="/assets/images/logo.svg" alt="CORGRAS Logo" width="44" height="auto" loading="lazy">
 						</a>
 					</div>
 					<div class="col navigation">
@@ -97,8 +146,8 @@
 										<i class="ics-github"></i><span>Github</span>
 									</a>
 								</li>
-								<li class="active">
-									<a href="/en/readmore/docs/" class="link" aria-label="Documentation">
+								<li>
+									<a href="/en/readmore/docs/" class="link active" aria-label="Documentation">
 										<i class="ics-book-open"></i><span>Documentation</span>
 									</a>
 								</li>
@@ -121,16 +170,14 @@
 						</nav>
 						<aside>
 							<div class="language dropdown">
-								<a role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language:">
+								<button role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language:">
 									<i class="ics-lang2"></i><span class="language-text">English</span>
-								</a>
-								<div class="dropdown-menu">
-									<ul>
-										<li class="dropdown-item"><a href="/readmore/docs/stylization" hreflang="uk"><span>Українська</span></a></li>
-										<li class="dropdown-item active"><span>English</span></li>
-										<li class="dropdown-item"><a href="/ru/readmore/docs/stylization" hreflang="ru"><span>Русский</span></a></li>
-									</ul>
-								</div>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="dropdown-item"><a href="/readmore/docs/stylization" hreflang="uk" lang="uk"><span>Українська</span></a></li>
+									<li class="dropdown-item active"><span>English</span></a></li>
+									<li class="dropdown-item"><a href="/ru/readmore/docs/stylization" hreflang="ru" lang="ru"><span>Русский</span></a></li>
+								</ul>
 							</div>
 							<div class="theme">
 								<div class="theme-text">Theme:</div>
@@ -165,8 +212,8 @@
 		<aside class="header-bottom">
 			<div class="container">
 				<ul class="nav">
-					<li><a href="/en/readmore/docs/"><i class="ics ics-book"></i> Get Started</a></li>
-					<li><a href="/en/readmore/docs/install"><i class="ics ics-tool"></i> Installation</a></li>
+					<li><a href="/en/readmore/docs/"><i class="ics ics-book"></i> Introduction</a></li>
+					<li><a href="/en/readmore/docs/install"><i class="ics ics-tool"></i> Install</a></li>
 					<li><a href="/en/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Initialization</a></li>
 					<li><a href="/en/readmore/docs/options"><i class="ics ics-sliders-h"></i> Options</a></li>
 					<li><a href="/en/readmore/docs/events"><i class="ics ics-sliders-h"></i> Events</a></li>
@@ -179,7 +226,8 @@
 		<div class="container">
 			<article>
 				<h1>Stylization</h1>
-				<p>This section will help you customize the appearance and behavior of elements controlled by the <strong>Readmore.js</strong> plugin. Below is a detailed description of the CSS classes, data attributes, and ARIA attributes used in the plugin, along with recommendations for their styling. These tools enable you to create a responsive, accessible, and visually appealing interface for the «Read more» / «Collapse» functionality.</p>
+				<p>This section will help you customize the appearance and behavior of elements managed by the <strong>ReadMore.js</strong> plugin.</p>
+				<p>Below is a detailed description of the CSS classes, data attributes, and ARIA attributes used in the plugin, along with recommendations for styling them.</p><p>These tools allow you to create a responsive, accessible, and visually appealing interface for the «Read More» / «Close» functionality.</p>
 				<div class="table-class">
 					<div class="tr-class-head">
 						<div class="td-class" id="class">CSS Classes</div>
@@ -189,8 +237,8 @@
 						<div class="td-class" id="class">.cs_readmore-btn-wrapper</div>
 						<div class="td-desc" id="desc">
 							<ul>
-								<li>Container for the «Read more» or «Collapse» button.</li>
-								<li>Used as a wrapper for the button to facilitate positioning and styling.</li>
+								<li>Container for the «Read More» or «Close» button.</li>
+								<li>Used as a wrapper for the button to simplify positioning and styling.</li>
 								<li>Automatically hidden if the content is shorter than <code class="code">collapsedHeight</code> or if <code class="code">hideButtonCollapse: true</code> in the expanded state.</li>
 							</ul>
 						</div>
@@ -199,7 +247,7 @@
 						<div class="td-class" id="class">.cs_readmore-btn</div>
 						<div class="td-desc" id="desc">
 							<ul>
-								<li>Assigned to the button itself, responsible for expanding or collapsing the content.</li>
+								<li>Assigned to the button itself, which toggles the content's expansion or collapse.</li>
 								<li>Contains HTML defined in the <code class="code">moreLink</code> or <code class="code">lessLink</code> parameters.</li>
 								<li>Can be styled to change color, size, background, etc.</li>
 							</ul>
@@ -207,10 +255,10 @@
 					</div>
 					<div class="tr-class">
 						<div class="td-class" id="class">.cs_readmore-animation</div>
-						<div class="ti-desc" id="desc">
+						<div class="td-desc" id="desc">
 							<p>Applied to the content element in CSS animation mode (<code class="code">animationMode: 'css'</code>).</p>
 							<ul>
-								<li>Adds smooth transitions for changing the block's height.</li>
+								<li>Adds smooth transitions for height changes.</li>
 								<li>It is recommended to define the CSS <code class="code">transition</code> property for this class.</li>
 							</ul>
 						</div>
@@ -220,7 +268,7 @@
 						<div class="td-desc" id="desc">
 							<p>Added to the content element in the expanded state in CSS animation mode (<code class="code">animationMode: 'css'</code>).</p>
 							<ul>
-								<li>Allows styling the expanded state, e.g., changing the background or border.</li>
+								<li>Allows styling the expanded state, such as changing the background or border.</li>
 								<li>Useful for visually indicating the active state of the content.</li>
 							</ul>
 						</div>
@@ -232,13 +280,13 @@
 					<div class="tr-class">
 						<div class="td-class" id="class">data-readmore-btn-toggle</div>
 						<div class="td-desc" id="desc">
-							<p>Added to the «Read more» / «Collapse» button to track its state.</p>
+							<p>Added to the «Read More» / «Close» button to track its state.</p>
 							<p>Possible values:</p>
 							<ul>
 								<li><code class="code">collapsed</code> — button in the collapsed content state (displays <code class="code">moreLink</code>).</li>
 								<li><code class="code">expanded</code> — button in the expanded content state (displays <code class="code">lessLink</code>).</li>
 							</ul>
-							<p>Can be used for conditional button styling based on its state.</p>
+							<p>Can be used for conditional styling of the button based on its state.</p>
 						</div>
 					</div>
 					<div class="tr-class">
@@ -247,7 +295,7 @@
 							<p>Applied to the content element to track its state.</p>
 							<p>Possible values:</p>
 							<ul>
-								<li><code class="code">collapsed</code> — content is collapsed (limited by <code class="code">collapsedHeight</code>).</li>
+								<li><code class="code">collapsed</code> — content is collapsed (limited to the <code class="code">collapsedHeight</code>).</li>
 								<li><code class="code">expanded</code> — content is fully expanded.</li>
 							</ul>
 							<p>Useful for creating styles specific to the block's state.</p>
@@ -256,10 +304,10 @@
 					<div class="tr-class">
 						<div class="td-class" id="class">data-readmore-processed</div>
 						<div class="td-desc" id="desc">
-							<p>Added to the content element after being processed by the plugin.</p>
+							<p>Added to the content element after processing by the plugin.</p>
 							<ul>
 								<li>Value: <code class="code">true</code>.</li>
-								<li>Used to indicate that the element has already been initialized to prevent reprocessing.</li>
+								<li>Used to indicate that the element has already been initialized to avoid reprocessing.</li>
 							</ul>
 						</div>
 					</div>
@@ -294,10 +342,10 @@
 					<div class="tr-class">
 						<div class="td-class" id="class">aria-controls</div>
 						<div class="td-desc" id="desc">
-							<p>Added to the button to associate it with the content element.</p>
+							<p>Added to the button to link it with the content element.</p>
 							<ul>
 								<li>Value: unique identifier of the content element.</li>
-								<li>Indicates which element is controlled by the button, improving navigation for users with assistive technologies.</li>
+								<li>Indicates which element is controlled by the button, improving navigation for assistive technology users.</li>
 							</ul>
 						</div>
 					</div>
@@ -307,26 +355,26 @@
 							<p>Added to the content element.</p>
 							<ul>
 								<li>Value: <code class="code">area</code>.</li>
-								<li>Marks the element as an important page area for screen readers.</li>
+								<li>Designates the element as an important area of the page for screen readers.</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="note note-info">
-					<div class="note-label">Additional Notes</div>
+					<div class="note-label">Дополнительные замечания</div>
 					<ul>
 						<li><strong>JS Animation Mode</strong>: If <code class="code">animationMode: 'js'</code>, styles for <code class="code">.cs_readmore-animation</code> and <code class="code">.cs_readmore-expanded</code> are not needed, as the animation is handled by JavaScript.</li>
-						<li><strong>Responsiveness</strong>: Use media queries along with the <code class="code">breakpoints</code> parameter to adjust styles for different screen sizes.</li>
-						<li><strong>Events</strong>: The plugin triggers custom events <code class="code">readmore:beforeToggle</code> and <code class="code">readmore:afterToggle</code>, which can be used for dynamic style changes via JavaScript.</li>
-						<li><strong>Style Cleanup</strong>: When the <code class="code">destroy</code> method is called, all classes, attributes, and styles added by the plugin are removed, restoring elements to their original state.</li>
+						<li><strong>Responsiveness</strong>: Use media queries with the <code class="code">breakpoints</code> parameter to adjust styles for different screen sizes.</li>
+						<li><strong>Events</strong>: The plugin triggers custom events <code class="code">readmore:beforeToggle</code> and <code class="code">readmore:afterToggle</code>, which can be used to dynamically change styles via JavaScript.</li>
+						<li><strong>Style Cleanup</strong>: When the <code class="code">destroy</code> method is called, all classes, attributes, and styles added by the plugin are removed, reverting elements to their original state.</li>
 					</ul>
 				</div>
 			</article>
 			<article>
-				<h2>Example of Styling</h2>
-				<p>The code creates styles for the button container and the button itself, adding padding, text alignment, and user interaction styles, including color changes on hover.</p>
+				<h2>Styling Example</h2>
+				<p>The code creates a style for the button container and the button itself, adding padding, text alignment, and styles for user interaction, including color changes on hover.</p>
 				<pre><code class="language-css show-language">
-					cs_readmore-btn-wrapper {
+					.cs_readmore-btn-wrapper {
 						margin: 15px auto 0;
 						text-align: center;
 					}
@@ -364,7 +412,7 @@
 						background-color: #c82333;
 					}
 
-					/* Icons for buttons using CSS */
+					/* Button icons using CSS */
 					.cs_readmore-btn::after {
 						content: '↓';
 						font-size: 14px;
@@ -377,12 +425,11 @@
 		</div>
 	</main>
 	<footer>
-		<div class="copyrights">© <script>document.write(new Date().getFullYear());</script> CORGRAS. All rights reserved</div>
+		<div class="copyrights">© <span id="year"></span> CORGRAS. All rights reserved</div>
 	</footer>
-	<!-- SCRIPT -->
-	<script src="/assets/js/bootstrap.bundle.min.js"></script>
-	<script src="/assets/js/prism.js"></script>
-	<script src="/assets/js/common.js"></script>
-	<!-- END SCRIPT -->
+	<!-- Scripts -->
+	<script defer src="/assets/js/bootstrap.bundle.min.js"></script>
+	<script defer src="/assets/js/prism.js"></script>
+	<script defer src="/assets/js/common.js"></script>
 </body>
 </html>

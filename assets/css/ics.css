@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ics-telegram-plane:before {
+  content: "\e972";
+}
 .ics-message-lines:before {
   content: "\e970";
 }

@@ -2,7 +2,7 @@
 <html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
 	<meta charset="UTF-8">
-	<meta name="robots" content="noindex, nofollow">
+	<meta name="robots" content="index, follow">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="color-scheme" content="light dark">
 	<meta name="theme-color" content="#FFF" media="(prefers-color-scheme: light)">
@@ -10,8 +10,9 @@
 	<meta name="msapplication-TileColor" content="#FFF" media="(prefers-color-scheme: light)">
 	<meta name="msapplication-TileColor" content="#010409" media="(prefers-color-scheme: dark)">
 
-	<title>404 Error - Page Not Found</title>
-	<meta name="description" content="Сторінку не знайдено. Можливо, вона була переміщена або видалена. Поверніться на головну сторінку.">
+	<title>Donate to Support Projects | CORGRAS</title>
+	<meta name="description" content="Support the development of our projects. Your help allows us to create high-quality solutions for OpenCart, JS ReadMore, and other initiatives.">
+	<meta name="keywords" content="donate, CORGRAS, OpenCart, JS ReadMore, project support, charity">
 
 	<!-- Favicon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
@@ -30,22 +31,85 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 
 	<!-- Canonical and Alternate Links -->
-	<link rel="canonical" href="https://corgras.github.io/en/404">
-	<link rel="alternate" href="https://corgras.github.io/404" hreflang="x-default">
-	<link rel="alternate" href="https://corgras.github.io/404" hreflang="uk">
-	<link rel="alternate" href="https://corgras.github.io/en/404" hreflang="en">
-	<link rel="alternate" href="https://corgras.github.io/ru/404" hreflang="ru">
+	<link rel="canonical" href="https://corgras.github.io/en/donate">
+	<link rel="alternate" href="https://corgras.github.io/donate" hreflang="x-default">
+	<link rel="alternate" href="https://corgras.github.io/donate" hreflang="uk">
+	<link rel="alternate" href="https://corgras.github.io/en/donate" hreflang="en">
+	<link rel="alternate" href="https://corgras.github.io/ru/donate" hreflang="ru">
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Donate to Support Projects | CORGRAS">
+	<meta property="og:description" content="Support the development of our projects. Your help allows us to create high-quality solutions for OpenCart, JS ReadMore, and other initiatives.">
+	<meta property="og:url" content="https://corgras.github.io/en/donate">
+	<meta property="og:image" content="https://corgras.github.io/assets/images/og-image.png">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:site_name" content="CORGRAS">
 
 	<!-- Schema.org Microdata -->
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
 		"@type": "WebPage",
-		"name": "404 Error - Page Not Found",
-		"description": "Page not found. It may have been moved or deleted.",
-		"url": "https://corgras.github.io/en/404",
-		"inLanguage": "en"
+		"name": "Donate to Support Projects | CORGRAS",
+		"description": "Support the development of our projects. Your help allows us to create high-quality solutions for OpenCart, JS ReadMore, and other initiatives.",
+		"url": "https://corgras.github.io/en/donate",
+		"inLanguage": "en",
+		"publisher": {
+			"@type": "Organization",
+			"name": "CORGRAS",
+			"url": "https://corgras.github.io/en/",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://corgras.github.io/assets/images/logo.svg"
+			}
+		},
+		"breadcrumb": {
+			"@type": "BreadcrumbList",
+			"itemListElement": [{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Home",
+				"item": "https://corgras.github.io/en/"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": "Donate",
+				"item": "https://corgras.github.io/en/donate"
+			}]
+		}
 	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "DonateAction",
+		"actionStatus": "PotentialActionStatus",
+		"target": {
+			"@type": "EntryPoint",
+			"urlTemplate": "https://www.paypal.com/donate/?hosted_button_id=DMETJT5YE55HN",
+			"inLanguage": "en",
+			"actionPlatform": [
+				"http://schema.org/DesktopWebPlatform",
+				"http://schema.org/MobileWebPlatform"
+			]
+		},
+		"recipient": {
+			"@type": "Organization",
+			"name": "CORGRAS",
+			"url": "https://corgras.github.io/en/"
+		}
+	}
+	</script>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNSWFP3MCV"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-ZNSWFP3MCV');
 	</script>
 
 	<script defer src="/assets/js/theme.js"></script>
@@ -79,7 +143,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="/en/donate" class="link" aria-label="Donate">
+									<a href="/en/donate" class="link active" aria-label="Donate">
 										<i class="ics-coffee"></i><span>Donate</span>
 									</a>
 								</li>
@@ -91,9 +155,9 @@
 									<i class="ics-lang2"></i><span class="language-text">English</span>
 								</button>
 								<ul class="dropdown-menu">
-									<li class="dropdown-item"><a href="/404" hreflang="uk" lang="uk"><span>Українська</span></a></li>
-									<li class="dropdown-item active"><span>English</span></a></li>
-									<li class="dropdown-item"><span><a href="/ru/404" hreflang="ru" lang="ru">Русский</span></a></li>
+									<li class="dropdown-item"><a href="/donate" hreflang="uk" lang="uk"><span>Українська</span></a></li>
+									<li class="dropdown-item active"><span>English</span></li>
+									<li class="dropdown-item"><a href="/ru/donate" hreflang="ru" lang="ru"><span>Русский</span></a></li>
 								</ul>
 							</div>
 							<div class="theme">
@@ -128,19 +192,22 @@
 		</div>
 	</header>
 	<main>
-		<section class="common-project">
-			<div class="container">
-				<div class="row">
-					<div class="col-11">
-						<h1>404 Page not found</h1>
-						<p>The page you were looking for does not exist. It may have been moved or deleted.</p>
-						<div class="buttons">
-							<a href="/en/" class="btn btn-primary"><span>Return to home page</span><i class="ics-arrow-right-long btn-i-l"></i></a>
-						</div>
+		<div class="container">
+			<h1>Support Our Projects</h1>
+			<p class="lead">Your support helps us create and develop high-quality projects. <br>Each donation is a contribution to the future of our initiatives. Thank you for your support!</p>
+			<div class="row cards jc">
+				<div class="col-6 card-center">
+					<div class="card-image">
+						<i class="ics-paypal"></i>
+					</div>
+					<div class="card-content">
+						<h2>PayPal</h2>
+						<p>A fast and secure way to support our projects via PayPal.</p>
+						<a class="btn btn-primary" href="https://www.paypal.com/donate/?hosted_button_id=DMETJT5YE55HN" target="_blank" rel="noopener noreferrer">Donate</a>
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 	</main>
 	<footer>
 		<div class="copyrights">© <span id="year"></span> CORGRAS. All rights reserved</div>

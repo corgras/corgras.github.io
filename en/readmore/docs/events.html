@@ -1,63 +1,111 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta name="robots" content="index, follow">
-	<!--<base href="https://corgras.github.io/">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="color-scheme" content="light dark">
+	<meta name="theme-color" content="#FFF" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#010409" media="(prefers-color-scheme: dark)">
+	<meta name="msapplication-TileColor" content="#FFF" media="(prefers-color-scheme: light)">
+	<meta name="msapplication-TileColor" content="#010409" media="(prefers-color-scheme: dark)">
 
-	<title>Events ReadMore.js – Functionality Settings | Documentation</title>
-	<meta name="description" content="Documentation on JavaScript events for controlling the behavior of elements on your site. Learn how to use expand and collapse events with the Readmore.js library to create interactive user interfaces.">
-	<meta name="keywords" content="ReadMore.js, script parameters, settings, functionality, animation, content adaptation, web development, JavaScript">
+	<title>ReadMore.js Events – Configuring Functionality | Documentation</title>
+	<meta name="description" content="JavaScript events documentation for controlling element behavior on your website. Learn how to use expand and collapse events with the ReadMore.js library to create an interactive user interface.">
+	<meta name="keywords" content="JavaScript, events, ReadMore.js, expand, collapse, interactive interface, JavaScript events, web development, animation, programming">
 
-	<!-- Favicon-->
+	<!-- Favicon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon/favicon-48x48.png">
 	<link rel="icon" type="image/x-icon" href="/assets/images/favicon/favicon.ico">
 	<link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
-	<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="256x256" href="/assets/images/favicon/android-icon-256x256.png">
-	<link rel="icon" type="image/png" sizes="384x384" href="/assets/images/favicon/android-icon-384x384.png">
-	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-icon-512x512.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-chrome-512x512.png">
 	<link rel="manifest" href="/assets/images/favicon/manifest.json">
 
+	<!-- Styles -->
 	<link rel="stylesheet" href="/assets/css/framework.css">
 	<link rel="stylesheet" href="/assets/css/ics.css">
 	<link rel="stylesheet" href="/assets/css/prism.css">
 	<link rel="stylesheet" href="/assets/css/style.css">
 
+	<!-- Canonical and Alternate Links -->
 	<link rel="canonical" href="https://corgras.github.io/en/readmore/docs/events">
 	<link rel="alternate" href="https://corgras.github.io/readmore/docs/events" hreflang="x-default">
 	<link rel="alternate" href="https://corgras.github.io/readmore/docs/events" hreflang="uk">
 	<link rel="alternate" href="https://corgras.github.io/en/readmore/docs/events" hreflang="en">
 	<link rel="alternate" href="https://corgras.github.io/ru/readmore/docs/events" hreflang="ru">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="color-scheme" content="light dark">
-	<meta name="theme-color" content="#F9F9FB" media="(prefers-color-scheme: light)">
-	<meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)">
-	<meta name="msapplication-TileColor" content="#F9F9FB">
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="ReadMore.js Events – Configuring Functionality | Documentation">
+	<meta property="og:description" content="JavaScript events documentation for controlling element behavior on your website. Learn how to use expand and collapse events with the ReadMore.js library to create an interactive user interface.">
+	<meta property="og:url" content="https://corgras.github.io/en/readmore/docs/events">
+	<meta property="og:image" content="https://corgras.github.io/assets/images/og-image.png">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:site_name" content="ReadMore.js">
 
-	<script src="/assets/js/theme.js"></script>
-
+	<!-- Schema.org Microdata -->
 	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "TechArticle",
+		"name": "ReadMore.js Events – Configuring Functionality | Documentation",
+		"headline": "ReadMore.js Events – Configuring Functionality | Documentation",
+		"description": "JavaScript events documentation for controlling element behavior on your website. Learn how to use expand and collapse events with the ReadMore.js library to create an interactive user interface.",
+		"url": "https://corgras.github.io/en/readmore/docs/events",
+		"image": "https://corgras.github.io/assets/images/og-image.png",
+		"author": {
+			"@type": "Organization",
+			"name": "RoS",
+			"url": "https://corgras.github.io/en/"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "CORGRAS",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://corgras.github.io/assets/images/logo.svg"
+			}
+		},
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "https://corgras.github.io/en/readmore/docs/events"
+		},
+		"inLanguage": "en"
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Home",
+			"item": "https://corgras.github.io/en/"
+		},
 		{
-			"@context": "http://schema.org",
-			"@type": "WebSite",
-			"name": "Events ReadMore.js – Functionality Settings | Documentation",
-			"url": "https://corgras.github.io/en/readmore/docs/events",
-			"description": "Documentation on JavaScript events for controlling the behavior of elements on your site. Learn how to use expand and collapse events with the Readmore.js library to create interactive user interfaces.",
-			"@language": "en"
-		}
+			"@type": "ListItem",
+			"position": 2,
+			"name": "ReadMore.js",
+			"item": "https://corgras.github.io/en/readmore/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 3,
+			"name": "Documentation",
+			"item": "https://corgras.github.io/en/readmore/docs/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 4,
+			"name": "Events",
+			"item": "https://corgras.github.io/en/readmore/docs/events"
+		}]
+	}
 	</script>
 
 	<!-- Google tag (gtag.js) -->
@@ -66,11 +114,12 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-
 		gtag('config', 'G-ZNSWFP3MCV');
 	</script>
+
+	<script defer src="/assets/js/theme.js"></script>
 </head>
-<body class="documentation">
+<body class="readmore documentation">
 	<header class="header">
 		<div class="header-top">
 			<div class="container">
@@ -86,7 +135,7 @@
 					</aside>
 					<div class="col-2">
 						<a class="logo" href="/en/">
-							<img src="/assets/images/logo.svg" alt="CORGRAS" width="44" height="auto">
+							<img src="/assets/images/logo.svg" alt="CORGRAS Logo" width="44" height="auto" loading="lazy">
 						</a>
 					</div>
 					<div class="col navigation">
@@ -97,8 +146,8 @@
 										<i class="ics-github"></i><span>Github</span>
 									</a>
 								</li>
-								<li class="active">
-									<a href="/en/readmore/docs/" class="link" aria-label="Documentation">
+								<li>
+									<a href="/en/readmore/docs/" class="link active" aria-label="Documentation">
 										<i class="ics-book-open"></i><span>Documentation</span>
 									</a>
 								</li>
@@ -121,16 +170,14 @@
 						</nav>
 						<aside>
 							<div class="language dropdown">
-								<a role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language:">
+								<button role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language:">
 									<i class="ics-lang2"></i><span class="language-text">English</span>
-								</a>
-								<div class="dropdown-menu">
-									<ul>
-										<li class="dropdown-item"><a href="/readmore/docs/events" hreflang="uk"><span>Українська</span></a></li>
-										<li class="dropdown-item active"><span>English</span></li>
-										<li class="dropdown-item"><a href="/ru/readmore/docs/events" hreflang="ru"><span>Русский</span></a></li>
-									</ul>
-								</div>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="dropdown-item"><a href="/readmore/docs/events" hreflang="uk" lang="uk"><span>Українська</span></a></li>
+									<li class="dropdown-item active"><span>English</span></a></li>
+									<li class="dropdown-item"><a href="/ru/readmore/docs/events" hreflang="ru" lang="ru"><span>Русский</span></a></li>
+								</ul>
 							</div>
 							<div class="theme">
 								<div class="theme-text">Theme:</div>
@@ -165,8 +212,8 @@
 		<aside class="header-bottom">
 			<div class="container">
 				<ul class="nav">
-					<li><a href="/en/readmore/docs/"><i class="ics ics-book"></i> Get Started</a></li>
-					<li><a href="/en/readmore/docs/install"><i class="ics ics-tool"></i> Installation</a></li>
+					<li><a href="/en/readmore/docs/"><i class="ics ics-book"></i> Introduction</a></li>
+					<li><a href="/en/readmore/docs/install"><i class="ics ics-tool"></i> Install</a></li>
 					<li><a href="/en/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Initialization</a></li>
 					<li><a href="/en/readmore/docs/options"><i class="ics ics-sliders-h"></i> Options</a></li>
 					<li class="active"><a href="/en/readmore/docs/events"><i class="ics ics-sliders-h"></i> Events</a></li>
@@ -179,69 +226,71 @@
 		<div class="container">
 			<article>
 				<h1>Events</h1>
-				<p>The Readmore.js plugin generates two special events: <code class="code">readmore:beforeToggle</code> and <code class="code">readmore:afterToggle</code>. These allow developers to track changes in an element's state (expanding or collapsing) and add custom logic to tailor behavior.</p>
-
+				<p>The ReadMore.js plugin generates two custom events: <code class="code">readmore:beforeToggle</code> and <code class="code">readmore:afterToggle</code>. These events allow developers to track changes in an element's state (expanding or collapsing) and add custom logic to enhance behavior.</p>
+				
 				<h3>readmore:beforeToggle</h3>
-				<p>This event triggers <strong>before</strong> the element's state changes (expanding or collapsing). It is useful for preparatory actions, such as modifying styles or initiating animations prior to the toggle.</p>
+				<p>This event is triggered <strong>before</strong> an element's state changes (expanding or collapsing). It is useful for preparatory actions, such as modifying styles or initiating animations before the toggle.</p>
 				<pre><code class="language-javascript show-language">
 					element.addEventListener('readmore:beforeToggle', function(event) {
-						// Example: change the element's background color before toggling
+						// Example: Change the element's background color before toggling
 						event.target.style.backgroundColor = '#f0f0f0';
 					});
 				</code></pre>
-
+				<hr>
 				<h3>readmore:afterToggle</h3>
-				<p>This event triggers <strong>after</strong> the element's state change is complete. It allows for actions related to the new state, such as updating button text or styles.</p>
+				<p>This event is triggered <strong>after</strong> an element's state change is complete. It allows actions related to the new state, such as updating button text or styles.</p>
 				<pre><code class="language-javascript show-language">
 					element.addEventListener('readmore:afterToggle', function(event) {
-						// Example: log a message to the console after toggling
-						console.log('Element changed. New state:', event.target.getAttribute('aria-expanded'));
+						// Example: Log a message to the console after toggling
+						console.log('Element state changed. New state:', event.target.getAttribute('aria-expanded'));
 					});
 				</code></pre>
 				
 				<div class="note note-info">
 					<div class="note-label">Note</div>
 					<p>Events are bound to elements processed by the plugin (those matching the selector). Use <code class="code">event.target</code> to access the element that triggered the event.</p>
-				</div>				
+				</div>
 			</article>
 			<article>
 				<h2>Callbacks</h2>
-				<p>Readmore.js supports three callbacks that can be passed in the configuration object: <code class="code">beforeToggle</code>, <code class="code">afterToggle</code>, and <code class="code">blockProcessed</code>. These allow custom code execution at different stages of the plugin's operation, providing flexibility in behavior customization.</p>
+				<p>ReadMore.js supports three callbacks that can be passed in the configuration object: <code class="code">beforeToggle</code>, <code class="code">afterToggle</code>, and <code class="code">blockProcessed</code>. These allow custom code execution at different stages of the plugin's operation, providing flexibility in behavior customization.</p>
 				<h3>beforeToggle</h3>
-				<p>Called <strong>before</strong> toggling the element's state (expanding or collapsing). This callback is useful for preparing elements or altering their appearance before the animation.</p>
+				<p>Called <strong>before</strong> an element's state is toggled (expanding or collapsing). This callback is useful for preparing elements or modifying their appearance before the animation.</p>
 				<p><strong>Arguments:</strong></p>
 				<ul>
-					<li><code class="code">trigger</code> — the button initiating the toggle (e.g., «Read more» or «Hide»).</li>
-					<li><code class="code">element</code> — the element containing the content being expanded or collapsed.</li>
-					<li><code class="code">isExpanded</code> — a boolean: <code class="code">true</code> if the element will be expanded, <code class="code">false</code> if collapsed.</li>
+					<li><code class="code">trigger</code> — The button that initiates the toggle (e.g., «Read More» or «Hide»).</li>
+					<li><code class="code">element</code> — The content element being expanded or collapsed.</li>
+					<li><code class="code">isExpanded</code> — A boolean value: <code class="code">true</code> if the element will be expanded, <code class="code">false</code> if collapsed.</li>
 				</ul>
 				<pre><code class="language-javascript show-language">
 					beforeToggle: function(trigger, element, isExpanded) {
-						// Example: add a fade animation before toggling
-						element.style.transition = 'opacity 0.2s'; element.style.opacity = 0.7;
+						// Example: Add a fade animation before toggling
+						element.style.transition = 'opacity 0.2s';
+						element.style.opacity = 0.7;
 					}
 				</code></pre>
-
+				<hr>
 				<h3>afterToggle</h3>
-				<p>Called <strong>after</strong> the element's state toggle is complete. It enables actions tied to the new state, such as updating styles or triggering additional effects.</p>
-				<p><strong>Arguments:</strong> same as <code class="code">beforeToggle</code> (trigger, element, isExpanded).</p>
+				<p>Called <strong>after</strong> an element's state toggle is complete. It allows actions related to the new state, such as updating styles or triggering additional effects.</p>
+				<p><strong>Arguments:</strong> Same as <code class="code">beforeToggle</code> (trigger, element, isExpanded).</p>
 				<pre><code class="language-javascript show-language">
 					afterToggle: function(trigger, element, isExpanded) {
-						// Example: restore opacity after toggling
-						element.style.opacity = 1; console.log('Content', isExpanded ? 'expanded' : 'collapsed');
+						// Example: Restore opacity after toggling
+						element.style.opacity = 1;
+						console.log('Content', isExpanded ? 'expanded' : 'collapsed');
 					}
 				</code></pre>
-
+				<hr>
 				<h3>blockProcessed</h3>
 				<p>Called <strong>after processing</strong> each element by the plugin, regardless of whether collapsing is applied. This callback is useful for initial element setup or state analysis.</p>
 				<p><strong>Arguments:</strong></p>
 				<ul>
-					<li><code class="code">element</code> — the processed element.</li>
-					<li><code class="code">isExpandable</code> — a boolean: <code class="code">true</code> if the content exceeds <code class="code">collapsedHeight</code> and requires a button, <code class="code">false</code> if collapsing is unnecessary.</li>
+					<li><code class="code">element</code> — The element that was processed.</li>
+					<li><code class="code">isExpandable</code> — A boolean value: <code class="code">true</code> if the content exceeds <code class="code">collapsedHeight</code> and requires a button, <code class="code">false</code> if collapsing is not needed.</li>
 				</ul>
 				<pre><code class="language-javascript show-language">
 					blockProcessed: function(element, isExpandable) {
-						// Example: add a class for styling if the element is expandable 
+						// Example: Add a class for styling if the element is expandable
 						if (isExpandable) {
 							element.classList.add('has-readmore');
 						} else {
@@ -252,25 +301,25 @@
 				
 				<div class="note note-info">
 					<div class="note-label">Note</div>
-					<p>Callbacks do not return values but can modify elements or invoke external functions. They are called for each element matching the selector.</p>
-				</div>
+					<p>Callbacks do not return values but can modify elements or call external functions. They are invoked for each element matching the selector.</p>
+				</div>				
 			</article>
 			<article>
-				<h2>Example of Comprehensive Usage</h2>
-				<p>This example demonstrates combining events and callbacks to create an interactive experience. We modify button styles, update text based on state, and add a custom class for expandable elements.</p>
+				<h2>Comprehensive Usage Example</h2>
+				<p>This example demonstrates how to combine events and callbacks to create an interactive experience. We modify button styles, update text based on state, and add a custom class for expandable elements.</p>
 				<pre><code class="language-javascript show-language">
 					initReadMore('.content', {
 						collapsedHeight: 200,
 						speed: 400,
-						moreLink: '&lt;span&gt;Read more&lt;/span&gt;',
+						moreLink: '&lt;span&gt;Read More&lt;/span&gt;',
 						lessLink: '&lt;span&gt;Hide&lt;/span&gt;',
 						beforeToggle: function(trigger, element, isExpanded) {
-							// Change the button color before toggling
+							// Change button color before toggling
 							trigger.style.backgroundColor = isExpanded ? '#d4edda' : '#f8d7da';
 						},
 						afterToggle: function(trigger, element, isExpanded) {
-							// Update button text and add logging
-							trigger.textContent = isExpanded ? 'Hide' : 'Read more';
+							// Update button text and log state
+							trigger.textContent = isExpanded ? 'Collapse' : 'Read More';
 							console.log('State changed:', isExpanded ? 'expanded' : 'collapsed');
 						},
 						blockProcessed: function(element, isExpandable) {
@@ -282,7 +331,7 @@
 					// Add event listener for additional logic
 					document.querySelectorAll('.content').forEach(element => {
 						element.addEventListener('readmore:afterToggle', function(event) {
-							// Example: add animation after expanding
+							// Example: Add animation after expanding
 							if (event.target.getAttribute('aria-expanded') === 'true') {
 								event.target.style.boxShadow = '0 0 10px rgba(0,0,0,0.2)';
 							} else {
@@ -291,21 +340,20 @@
 						});
 					});
 				</code></pre>
-				
+
 				<div class="note note-info">
 					<div class="note-label">Note</div>
-					<p>In this example, the button changes color and text based on the state, the element receives the <code class="code">expandable-content</code> class if expandable, and a shadow is added after expanding for a visual effect.</p>
+					<p>In this example, the button changes color and text based on the state, the element receives the <code class="code">expandable-content</code> class if it is expandable, and a shadow is added for a visual effect after expanding.</p>
 				</div>
 			</article>
 		</div>
 	</main>
 	<footer>
-		<div class="copyrights">© <script>document.write(new Date().getFullYear());</script> CORGRAS. All rights reserved</div>
+		<div class="copyrights">© <span id="year"></span> CORGRAS. All rights reserved</div>
 	</footer>
-	<!-- SCRIPT -->
-	<script src="/assets/js/bootstrap.bundle.min.js"></script>
-	<script src="/assets/js/prism.js"></script>
-	<script src="/assets/js/common.js"></script>
-	<!-- END SCRIPT -->
+	<!-- Scripts -->
+	<script defer src="/assets/js/bootstrap.bundle.min.js"></script>
+	<script defer src="/assets/js/prism.js"></script>
+	<script defer src="/assets/js/common.js"></script>
 </body>
 </html>

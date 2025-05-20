@@ -2,7 +2,7 @@
 <html lang="uk" prefix="og: https://ogp.me/ns#">
 <head>
 	<meta charset="UTF-8">
-	<meta name="robots" content="noindex, nofollow">
+	<meta name="robots" content="index, follow">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="color-scheme" content="light dark">
 	<meta name="theme-color" content="#FFF" media="(prefers-color-scheme: light)">
@@ -10,8 +10,9 @@
 	<meta name="msapplication-TileColor" content="#FFF" media="(prefers-color-scheme: light)">
 	<meta name="msapplication-TileColor" content="#010409" media="(prefers-color-scheme: dark)">
 
-	<title>404 Помилка - Сторінка не знайдена</title>
-	<meta name="description" content="Сторінку не знайдено. Можливо, вона була переміщена або видалена.">
+	<title>Контакти — CORGRAS</title>
+	<meta name="description" content="Зв'яжіться з нами через email або Telegram. Ми завжди раді допомогти вам із будь-якими запитаннями чи пропозиціями.">
+	<meta name="keywords" content="контакти, CORGRAS, email, Telegram, підтримка, зв'язок">
 
 	<!-- Favicon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
@@ -30,22 +31,70 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 
 	<!-- Canonical and Alternate Links -->
-	<link rel="canonical" href="https://corgras.github.io/404">
-	<link rel="alternate" href="https://corgras.github.io/404" hreflang="x-default">
-	<link rel="alternate" href="https://corgras.github.io/404" hreflang="uk">
-	<link rel="alternate" href="https://corgras.github.io/en/404" hreflang="en">
-	<link rel="alternate" href="https://corgras.github.io/ru/404" hreflang="ru">
+	<link rel="canonical" href="https://corgras.github.io/contacts">
+	<link rel="alternate" href="https://corgras.github.io/contacts" hreflang="x-default">
+	<link rel="alternate" href="https://corgras.github.io/contacts" hreflang="uk">
+	<link rel="alternate" href="https://corgras.github.io/en/contacts" hreflang="en">
+	<link rel="alternate" href="https://corgras.github.io/ru/contacts" hreflang="ru">
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Контакти — CORGRAS">
+	<meta property="og:description" content="Зв'яжіться з нами через email або Telegram. Ми завжди раді допомогти вам із будь-якими запитаннями чи пропозиціями.">
+	<meta property="og:url" content="https://corgras.github.io/contacts">
+	<meta property="og:image" content="https://corgras.github.io/assets/images/og-image.png">
+	<meta property="og:locale" content="uk_UA">
+	<meta property="og:site_name" content="CORGRAS">
 
 	<!-- Schema.org Microdata -->
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
-		"@type": "WebPage",
-		"name": "404 Помилка - Сторінка не знайдена",
-		"description": "Сторінку не знайдено. Можливо, вона була переміщена або видалена.",
-		"url": "https://corgras.github.io/404",
-		"inLanguage": "uk"
+		"@type": "ContactPage",
+		"name": "Контакти — CORGRAS",
+		"description": "Зв'яжіться з нами через email або Telegram. Ми завжди раді допомогти вам із будь-якими запитаннями чи пропозиціями.",
+		"url": "https://corgras.github.io/contacts",
+		"inLanguage": "uk",
+		"publisher": {
+			"@type": "Organization",
+			"name": "CORGRAS",
+			"url": "https://corgras.github.io",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://corgras.github.io/assets/images/logo.svg"
+			}
+		},
+		"contactPoint": [{
+			"@type": "ContactPoint",
+			"contactType": "Customer Service",
+			"email": "corgras.dev@gmail.com",
+			"url": "https://t.me/corgras"
+		}],
+		"breadcrumb": {
+			"@type": "BreadcrumbList",
+			"itemListElement": [{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Головна",
+				"item": "https://corgras.github.io"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": "Контакти",
+				"item": "https://corgras.github.io/contacts"
+			}]
+		}
 	}
+	</script>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNSWFP3MCV"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-ZNSWFP3MCV');
 	</script>
 
 	<script defer src="/assets/js/theme.js"></script>
@@ -74,7 +123,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="/contacts" class="link" aria-label="Контакти">
+									<a href="/contacts" class="link active" aria-label="Контакти">
 										<i class="ics-envelope"></i><span>Контакти</span>
 									</a>
 								</li>
@@ -92,8 +141,8 @@
 								</button>
 								<ul class="dropdown-menu">
 									<li class="dropdown-item active"><span>Українська</span></li>
-									<li class="dropdown-item"><a href="/en/404" hreflang="en" lang="en"><span>English</span></a></li>
-									<li class="dropdown-item"><a href="/ru/404" hreflang="ru" lang="ru"><span>Русский</span></a></li>
+									<li class="dropdown-item"><a href="/en/contacts" hreflang="en" lang="en"><span>English</span></a></li>
+									<li class="dropdown-item"><a href="/ru/contacts" hreflang="ru" lang="ru"><span>Русский</span></a></li>
 								</ul>
 							</div>
 							<div class="theme">
@@ -128,19 +177,32 @@
 		</div>
 	</header>
 	<main>
-		<section class="common-project">
-			<div class="container">
-				<div class="row">
-					<div class="col-11">
-						<h1>404 Сторінка не знайдена</h1>
-						<p>Сторінку, яку ви шукали, не існує. Можливо, вона була переміщена або видалена.</p>
-						<div class="buttons">
-							<a href="/" class="btn btn-primary"><span>Повернутися на головну</span><i class="ics-arrow-right-long btn-i-l"></i></a>
-						</div>
+		<div class="container">
+			<h1>Контакти</h1>
+			<p class="lead">Маєте питання, пропозиції чи потребуєте підтримки? Ми завжди готові допомогти! Скористайтеся одним із наведених способів, щоб зв'язатися з нами.</p>
+			<div class="row cards">
+				<div class="col-6 card">
+					<div class="card-image">
+						<i class="ics-envelope"></i>
+					</div>
+					<div class="card-content">
+						<h2>E-Mail</h2>
+						<p>Надішліть повідомлення на нашу електронну пошту.</p>
+						<a class="btn btn-primary" href="javascript:void(0)" onclick="window.location.href='mailto:' + 'corgras.dev' + '@' + 'gmail.com'" rel="nofollow" aria-label="Написати на email">Написати</a>
+					</div>
+				</div>
+				<div class="col-6 card">
+					<div class="card-image">
+						<i class="ics-telegram-plane"></i>
+					</div>
+					<div class="card-content">
+						<h2>Telegram</h2>
+						<p>Або зв’яжіться з нами через Telegram.</p>
+						<a class="btn btn-primary" href="https://t.me/corgras" target="_blank" rel="nofollow noopener" aria-label="Написати в Telegram">Написати</a>
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 	</main>
 	<footer>
 		<div class="copyrights">© <span id="year"></span> CORGRAS. Всі права захищені</div>

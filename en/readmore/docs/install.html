@@ -1,63 +1,111 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta name="robots" content="index, follow">
-	<!--<base href="https://corgras.github.io/">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="color-scheme" content="light dark">
+	<meta name="theme-color" content="#FFF" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#010409" media="(prefers-color-scheme: dark)">
+	<meta name="msapplication-TileColor" content="#FFF" media="(prefers-color-scheme: light)">
+	<meta name="msapplication-TileColor" content="#010409" media="(prefers-color-scheme: dark)">
 
-	<title>Installing Readmore.js – Simple Plugin Integration Process | Documentation</title>
-	<meta name="description" content="Learn how to install ReadMore.js on your website. An overview of simple steps to integrate the plugin without external libraries and configure its functionality to optimize text display.">
+	<title>Installing ReadMore.js – A Simple Plugin Integration Process | Documentation</title>
+	<meta name="description" content="Learn how to install ReadMore.js on your website. Overview of simple steps for integrating the plugin without external libraries and configuring its functionality to optimize text display.">
 	<meta name="keywords" content="ReadMore.js installation, plugin integration, JavaScript, plugin configuration, free plugin, web development">
 
-	<!-- Favicon-->
+	<!-- Favicon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon/favicon-48x48.png">
 	<link rel="icon" type="image/x-icon" href="/assets/images/favicon/favicon.ico">
 	<link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
-	<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="256x256" href="/assets/images/favicon/android-icon-256x256.png">
-	<link rel="icon" type="image/png" sizes="384x384" href="/assets/images/favicon/android-icon-384x384.png">
-	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-icon-512x512.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon/android-chrome-512x512.png">
 	<link rel="manifest" href="/assets/images/favicon/manifest.json">
 
+	<!-- Styles -->
 	<link rel="stylesheet" href="/assets/css/framework.css">
 	<link rel="stylesheet" href="/assets/css/ics.css">
 	<link rel="stylesheet" href="/assets/css/prism.css">
 	<link rel="stylesheet" href="/assets/css/style.css">
 
+	<!-- Canonical and Alternate Links -->
 	<link rel="canonical" href="https://corgras.github.io/en/readmore/docs/install">
 	<link rel="alternate" href="https://corgras.github.io/readmore/docs/install" hreflang="x-default">
 	<link rel="alternate" href="https://corgras.github.io/readmore/docs/install" hreflang="uk">
 	<link rel="alternate" href="https://corgras.github.io/en/readmore/docs/install" hreflang="en">
 	<link rel="alternate" href="https://corgras.github.io/ru/readmore/docs/install" hreflang="ru">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="color-scheme" content="light dark">
-	<meta name="theme-color" content="#F9F9FB" media="(prefers-color-scheme: light)">
-	<meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)">
-	<meta name="msapplication-TileColor" content="#F9F9FB">
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Installing ReadMore.js – A Simple Plugin Integration Process | Documentation">
+	<meta property="og:description" content="Learn how to install ReadMore.js on your website. Overview of simple steps for integrating the plugin without external libraries and configuring its functionality to optimize text display.">
+	<meta property="og:url" content="https://corgras.github.io/en/readmore/docs/install">
+	<meta property="og:image" content="https://corgras.github.io/assets/images/og-image.png">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:site_name" content="ReadMore.js">
 
-	<script src="/assets/js/theme.js"></script>
-
+	<!-- Schema.org Microdata -->
 	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "TechArticle",
+		"name": "Installing ReadMore.js – A Simple Plugin Integration Process | Documentation",
+		"headline": "Installing ReadMore.js – A Simple Plugin Integration Process | Documentation",
+		"description": "Learn how to install ReadMore.js on your website. Overview of simple steps for integrating the plugin without external libraries and configuring its functionality to optimize text display.",
+		"url": "https://corgras.github.io/en/readmore/docs/install",
+		"image": "https://corgras.github.io/assets/images/og-image.png",
+		"author": {
+			"@type": "Organization",
+			"name": "RoS",
+			"url": "https://corgras.github.io/en/"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "CORGRAS",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://corgras.github.io/assets/images/logo.svg"
+			}
+		},
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "https://corgras.github.io/en/readmore/docs/install"
+		},
+		"inLanguage": "en"
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Home",
+			"item": "https://corgras.github.io/en/"
+		},
 		{
-			"@context": "http://schema.org",
-			"@type": "WebSite",
-			"name": "Installing Readmore.js – Simple Plugin Integration Process | Documentation",
-			"url": "https://corgras.github.io/en/readmore/docs/install",
-			"description": "Learn how to install ReadMore.js on your website. An overview of simple steps to integrate the plugin without external libraries and configure its functionality to optimize text display.",
-			"@language": "en"
-		}
+			"@type": "ListItem",
+			"position": 2,
+			"name": "ReadMore.js",
+			"item": "https://corgras.github.io/en/readmore/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 3,
+			"name": "Documentation",
+			"item": "https://corgras.github.io/en/readmore/docs/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 4,
+			"name": "Install",
+			"item": "https://corgras.github.io/en/readmore/docs/install"
+		}]
+	}
 	</script>
 
 	<!-- Google tag (gtag.js) -->
@@ -66,11 +114,12 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-
 		gtag('config', 'G-ZNSWFP3MCV');
 	</script>
+
+	<script defer src="/assets/js/theme.js"></script>
 </head>
-<body class="documentation">
+<body class="readmore documentation">
 	<header class="header">
 		<div class="header-top">
 			<div class="container">
@@ -86,7 +135,7 @@
 					</aside>
 					<div class="col-2">
 						<a class="logo" href="/en/">
-							<img src="/assets/images/logo.svg" alt="CORGRAS" width="44" height="auto">
+							<img src="/assets/images/logo.svg" alt="CORGRAS Logo" width="44" height="auto" loading="lazy">
 						</a>
 					</div>
 					<div class="col navigation">
@@ -97,8 +146,8 @@
 										<i class="ics-github"></i><span>Github</span>
 									</a>
 								</li>
-								<li class="active">
-									<a href="/en/readmore/docs/" class="link" aria-label="Documentation">
+								<li>
+									<a href="/en/readmore/docs/" class="link active" aria-label="Documentation">
 										<i class="ics-book-open"></i><span>Documentation</span>
 									</a>
 								</li>
@@ -121,16 +170,14 @@
 						</nav>
 						<aside>
 							<div class="language dropdown">
-								<a role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language:">
+								<button role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language:">
 									<i class="ics-lang2"></i><span class="language-text">English</span>
-								</a>
-								<div class="dropdown-menu">
-									<ul>
-										<li class="dropdown-item"><a href="/readmore/docs/install" hreflang="uk"><span>Українська</span></a></li>
-										<li class="dropdown-item active"><span>English</span></li>
-										<li class="dropdown-item"><a href="/ru/readmore/docs/install" hreflang="ru"><span>Русский</span></a></li>
-									</ul>
-								</div>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="dropdown-item"><a href="/readmore/docs/install" hreflang="uk" lang="uk"><span>Українська</span></a></li>
+									<li class="dropdown-item active"><span>English</span></a></li>
+									<li class="dropdown-item"><a href="/ru/readmore/docs/install" hreflang="ru" lang="ru"><span>Русский</span></a></li>
+								</ul>
 							</div>
 							<div class="theme">
 								<div class="theme-text">Theme:</div>
@@ -165,8 +212,8 @@
 		<aside class="header-bottom">
 			<div class="container">
 				<ul class="nav">
-					<li><a href="/en/readmore/docs/"><i class="ics ics-book"></i> Get Started</a></li>
-					<li class="active"><a href="/en/readmore/docs/install"><i class="ics ics-tool"></i> Installation</a></li>
+					<li><a href="/en/readmore/docs/"><i class="ics ics-book"></i> Introduction</a></li>
+					<li class="active"><a href="/en/readmore/docs/install"><i class="ics ics-tool"></i> Install</a></li>
 					<li><a href="/en/readmore/docs/initialization"><i class="ics ics-cogs-3"></i> Initialization</a></li>
 					<li><a href="/en/readmore/docs/options"><i class="ics ics-sliders-h"></i> Options</a></li>
 					<li><a href="/en/readmore/docs/events"><i class="ics ics-sliders-h"></i> Events</a></li>
@@ -179,87 +226,91 @@
 		<div class="container">
 			<article>
 				<h1>Getting Started</h1>
-				<p class="lead">Readmore.js can be integrated into your project in several ways. Choose the one that best suits your needs, depending on the type of project and the tools you are using.</p>
+				<p class="lead">ReadMore.js can be integrated into your project in several ways. Choose the method that best suits your needs, depending on your project type and tools used.</p>
+				<div class="buttons jc">
+					<a class="btn btn-primary">Using NPM</a>
+					<a class="btn btn-primary">Node.js / CommonJS</a>
+					<a class="btn btn-primary">ES Module</a>
+					<a class="btn btn-primary">Manual Inclusion</a>
+					<a class="btn btn-primary">Using CDN</a>
+				</div>
 				<hr>
 
 				<h2>Installation via NPM</h2>
-				<p class="lead-normal">This method is ideal for projects using the npm package manager. Installing via NPM simplifies dependency management, library updates, and integration with modern JavaScript frameworks such as React, Vue.js, or Angular.</p>
+				<p>This method is ideal for projects using the npm package manager. Installing via NPM simplifies dependency management, library updates, and integration with modern JavaScript frameworks like React, Vue.js, or Angular.</p>
 				<p>&mdash; Run the following command in your terminal:</p>
 				<pre><code class="language-npm show-language">
 					$ npm i @corgras/readmore-js
 				</code></pre>
-				<br>
 				<p>&mdash; After installation, include the script in your project. For example, add it to your HTML file:</p>
 				<pre><code class="language-html show-language">
 					&lt;script src="./node_modules/@corgras/readmore-js/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
 				<p class="em">The <code class="code">defer</code> attribute ensures the script executes after the DOM is fully loaded, improving performance.</p>
-				<p>&mdash; If you are using a module system, import the library in your JavaScript code (see sections below).</p>
 				<hr>
 
 				<h2>Using in Node.js / CommonJS</h2>
-				<p class="lead-normal">For projects using CommonJS (e.g., in Node.js or with tools like Webpack), you can import the main Readmore.js function after installing via NPM.</p>
+				<p>For projects using CommonJS (e.g., in Node.js or with tools like Webpack), you can import the main ReadMore.js function after installing via NPM.</p>
 				<p>&mdash; Add the following code to your JavaScript file:</p>
 				<pre><code class="language-javascript show-language">
 					const initReadMore = require('@corgras/readmore-js');
 					// Initialization: initReadMore('.selector', { /* options */ });
 				</code></pre>
-				<p class="em">Ensure your project is configured to work with CommonJS modules.</p>
 				<hr>
 
 				<h2>Using as an ES Module</h2>
-				<p class="lead-normal">For modern projects using ES modules (e.g., with Vite, Rollup, or modern versions of Webpack), import Readmore.js as a module after installing via NPM.</p>
+				<p>For modern projects using ES modules (e.g., with Vite, Rollup, or modern versions of Webpack), import ReadMore.js as a module after installing via NPM.</p>
 				<p>&mdash; Add the following code to your JavaScript file:</p>
 				<pre><code class="language-javascript show-language">
 					import initReadMore from '@corgras/readmore-js';
 					// Initialization: initReadMore('.selector', { /* options */ });
 				</code></pre>
-				<p class="em">Ensure your HTML file includes the <code class="code">type="module"</code> attribute in the <code class="code">&lt;script&gt;</code> tag if you are including the script directly.</p>
-				<p>&mdash; Example of including with module type:</p>
+				<p>&mdash; Example of inclusion with module type:</p>
 				<pre><code class="language-html show-language">
 					&lt;script type="module"&gt;
 						import initReadMore from './node_modules/@corgras/readmore-js/readmore.min.js';
 						initReadMore('.content', { collapsedHeight: 200 });
 					&lt;/script&gt;
 				</code></pre>
+				<div class="note note-warning">
+					<div class="note-label">Important</div>
+					<p>Ensure your HTML file includes the <code class="code">type="module"</code> attribute in the <code class="code">&lt;script&gt;</code> tag if you are including the script directly.</p>
+				</div>
 				<hr>
 
 				<h2>Manual Inclusion</h2>
-				<p class="lead-normal">If you are not using package managers, you can include Readmore.js by manually downloading the script file. This method gives you full control over the library version and does not rely on external tools.</p>
-				<p>&mdash; Download the latest version of <code class="code">readmore.min.js</code> from the <a href="https://github.com/corgras/Readmore.js/releases">official GitHub repository</a>.</p>
+				<p>If you are not using package managers, you can include ReadMore.js by manually downloading the script file. This method provides full control over the library version and does not rely on external tools.</p>
+				<p>&mdash; Download the latest version of <code class="code">readmore.min.js</code> from the <a href="https://github.com/corgras/Readmore.js/releases">official GitHub repository</a></p>
 				<p>&mdash; Place the downloaded file in your project folder (e.g., <code class="code">/js/</code>).</p>
 				<p>&mdash; Include the script in your HTML file by adding the following code in the <code class="code">&lt;head&gt;</code> section or before the closing <code class="code">&lt;/body&gt;</code> tag:</p>
 				<pre><code class="language-html show-language">
 					&lt;script src="path_to_your_folder/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
 				<p class="em">The <code class="code">defer</code> attribute ensures the script executes after the DOM is loaded, avoiding page rendering delays.</p>
-				<p>&mdash; After inclusion, initialize the script by calling the <code class="code">initReadMore</code> function. Learn more about initialization in the <a href="/en/readmore/docs/initialization">initialization section</a>.</p>
+				<p>&mdash; After inclusion, initialize the script by calling the <code class="code">initReadMore</code>. function. Learn more about initialization in the <a href="/en/readmore/docs/initialization">initialization section</a>.</p>
 				<hr>
 
-				<h2>Including via CDN</h2>
-				<p class="lead-normal">Using a CDN (Content Delivery Network) allows you to quickly include Readmore.js without locally storing files. CDNs provide fast loading speeds due to caching and a global server network.</p>
+				<h2>Inclusion via CDN</h2>
+				<p>Using a CDN (Content Delivery Network) allows you to quickly include ReadMore.js without storing files locally. CDNs provide fast loading through caching and a global server network.</p>
 				<p>&mdash; Add one of the following scripts to the <code class="code">&lt;head&gt;</code> section or before the closing <code class="code">&lt;/body&gt;</code> tag:</p>
 				<p><strong>CDN jsDelivr:</strong></p>
 				<pre><code class="language-html show-language">
 					&lt;script src="https://cdn.jsdelivr.net/npm/@corgras/readmore-js/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
-				<br>
 				<p><strong>CDN Unpkg:</strong></p>
 				<pre><code class="language-html show-language">
 					&lt;script src="https://unpkg.com/@corgras/readmore-js/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
-				<p class="em">Without specifying a version, the latest one will be loaded.</p>
 				<p>&mdash; After inclusion, initialize the script as described in the <a href="/en/readmore/docs/initialization">initialization section</a>.</p>
 			</article>
 		</div>
 	</main>
 	<footer>
-		<div class="copyrights">© <script>document.write(new Date().getFullYear());</script> CORGRAS. All rights reserved</div>
+		<div class="copyrights">© <span id="year"></span> CORGRAS. All rights reserved</div>
 	</footer>
-	<!-- SCRIPT -->
-	<script src="/assets/js/bootstrap.bundle.min.js"></script>
-	<script src="/assets/js/prism.js"></script>
-	<script src="/assets/js/common.js"></script>
-	<!-- END SCRIPT -->
+	<!-- Scripts -->
+	<script defer src="/assets/js/bootstrap.bundle.min.js"></script>
+	<script defer src="/assets/js/prism.js"></script>
+	<script defer src="/assets/js/common.js"></script>
 </body>
 </html>
