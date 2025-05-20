@@ -228,13 +228,14 @@
 				<h1>Getting Started</h1>
 				<p class="lead">ReadMore.js can be integrated into your project in several ways. Choose the method that best suits your needs, depending on your project type and tools used.</p>
 				<div class="buttons jc">
-					<a class="btn btn-primary">Using NPM</a>
-					<a class="btn btn-primary">Node.js / CommonJS</a>
-					<a class="btn btn-primary">ES Module</a>
-					<a class="btn btn-primary">Manual Inclusion</a>
-					<a class="btn btn-primary">Using CDN</a>
+					<a href="#npm" class="btn btn-primary">Using NPM</a>
+					<a href="#node" class="btn btn-primary">Node.js / CommonJS</a>
+					<a href="#es" class="btn btn-primary">ES Module</a>
+					<a href="#manually" class="btn btn-primary">Install Manually</a>
+					<a href="#cdn" class="btn btn-primary">Using CDN</a>
 				</div>
-				<hr>
+
+				<hr id="npm">
 
 				<h2>Installation via NPM</h2>
 				<p>This method is ideal for projects using the npm package manager. Installing via NPM simplifies dependency management, library updates, and integration with modern JavaScript frameworks like React, Vue.js, or Angular.</p>
@@ -247,7 +248,8 @@
 					&lt;script src="./node_modules/@corgras/readmore-js/readmore.min.js" defer&gt;&lt;/script&gt;
 				</code></pre>
 				<p class="em">The <code class="code">defer</code> attribute ensures the script executes after the DOM is fully loaded, improving performance.</p>
-				<hr>
+
+				<hr id="node">
 
 				<h2>Using in Node.js / CommonJS</h2>
 				<p>For projects using CommonJS (e.g., in Node.js or with tools like Webpack), you can import the main ReadMore.js function after installing via NPM.</p>
@@ -256,7 +258,8 @@
 					const initReadMore = require('@corgras/readmore-js');
 					// Initialization: initReadMore('.selector', { /* options */ });
 				</code></pre>
-				<hr>
+
+				<hr id="es">
 
 				<h2>Using as an ES Module</h2>
 				<p>For modern projects using ES modules (e.g., with Vite, Rollup, or modern versions of Webpack), import ReadMore.js as a module after installing via NPM.</p>
@@ -276,9 +279,10 @@
 					<div class="note-label">Important</div>
 					<p>Ensure your HTML file includes the <code class="code">type="module"</code> attribute in the <code class="code">&lt;script&gt;</code> tag if you are including the script directly.</p>
 				</div>
-				<hr>
 
-				<h2>Manual Inclusion</h2>
+				<hr id="manually">
+
+				<h2>Install Manually</h2>
 				<p>If you are not using package managers, you can include ReadMore.js by manually downloading the script file. This method provides full control over the library version and does not rely on external tools.</p>
 				<p>&mdash; Download the latest version of <code class="code">readmore.min.js</code> from the <a href="https://github.com/corgras/Readmore.js/releases">official GitHub repository</a></p>
 				<p>&mdash; Place the downloaded file in your project folder (e.g., <code class="code">/js/</code>).</p>
@@ -288,7 +292,8 @@
 				</code></pre>
 				<p class="em">The <code class="code">defer</code> attribute ensures the script executes after the DOM is loaded, avoiding page rendering delays.</p>
 				<p>&mdash; After inclusion, initialize the script by calling the <code class="code">initReadMore</code>. function. Learn more about initialization in the <a href="/en/readmore/docs/initialization">initialization section</a>.</p>
-				<hr>
+
+				<hr id="cdn">
 
 				<h2>Inclusion via CDN</h2>
 				<p>Using a CDN (Content Delivery Network) allows you to quickly include ReadMore.js without storing files locally. CDNs provide fast loading through caching and a global server network.</p>
